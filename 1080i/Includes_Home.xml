@@ -574,7 +574,7 @@
                     <control type="image">
                         <decription>Bottom shadow</decription>
                         <posx>-92</posx>
-                        <posy>355</posy>
+                        <posy>569</posy>
                         <width>1440</width>
                         <height>150</height>
                         <texture>windows/home/item-shadow.png</texture>
