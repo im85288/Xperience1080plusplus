@@ -175,7 +175,7 @@
                                 	<colordiffuse>bbwhite</colordiffuse>
                                 	<texture>$INFO[VideoPlayer.AudioChannels,flags/channels/,.png]</texture>
                             	</control>
-								<control type="image">
+								<!--<control type="image">
 									<posy>550</posy>
 									<visible>!IsEmpty(VideoPlayer.ListItem.Mpaa)</visible>
 									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
@@ -184,9 +184,39 @@
                                     <height>100</height>
                                 	<colordiffuse>bbwhite</colordiffuse>
                                 	<texture>$INFO[ListItem.Mpaa,flags/mpaa/,.png]</texture>
-                            	</control>
+                            	</control>-->
 							</control>
+							
+							<control type="label">
+								<posx>290</posx>
+                                <posy>744</posy>
+                                <width>1410</width>
+                                <height>56</height>
+                                <label>[UPPERCASE]$VAR[OSDTitle][/UPPERCASE]</label>
+                                <textcolor>bbwhite</textcolor>
+                                <font>Font-Condensed-S50</font>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                                <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                <include>visiblehidefadeinfo</include>
+                            </control>
 								
+			
+			<control type="textbox">
+                <posx>290</posx>
+                <posy>807</posy>
+                <width>1333</width>
+                <height>220</height>
+                <label>$VAR[OSDPlot]</label>
+                <textcolor>aawhite</textcolor>
+                <font>Font-Condensed-S40</font>
+                <align>justify</align>
+                <autoscroll delay="11500" time="5000" repeat="7500" />
+                <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                <include>visiblehidefadeinfo</include>
+            </control>
 			
 			<control type="textbox">
                 <posx>290</posx>
@@ -198,7 +228,7 @@
                 <font>Font-Condensed-S32</font>
                 <align>justify</align>
                 <autoscroll delay="11500" time="5000" repeat="7500" />
-                <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !VideoPlayer.Content(LiveTV)</visible>
                 <include>visiblehidefadeinfo</include>
             </control>
 			

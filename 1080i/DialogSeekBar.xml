@@ -185,34 +185,36 @@
                                 <visible>!VideoPlayer.Content(LiveTV) + Player.Paused</visible>
                             </control>-->
                             <control type="grouplist">
-                                <posx>390</posx>
-                                <posy>779</posy>
+                                <posx>290</posx>
+                                <posy>886</posy>
                                 <width>1300</width>
                                 <height>100</height>
                                 <orientation>horizontal</orientation>
                                 <itemgap>0</itemgap>
                                 <visible>VideoPlayer.Content(LiveTV)</visible>
                                 <usecontrolcoords>true</usecontrolcoords>
-                                <control type="label">
+                                <!-- Channel Number -->
+								<control type="label">
                                     <posx>0</posx>
                                     <posy>0</posy>
                                     <width min="0" max="400">auto</width>
                                     <height>100</height>
                                     <label>[B]$INFO[VideoPlayer.ChannelNumber][/B]</label>
-                                    <textcolor>99FFFFFF</textcolor>
-                                    <font>Font-Condensed-S100</font>
+                                    <textcolor>77FFFFFF</textcolor>
+                                    <font>Font-Condensed-S60-B</font>
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
+								<!-- Channel Name -->
                                 <control type="label">
                                     <posx>0</posx>
-                                    <posy>17</posy>
+                                    <posy>0</posy>
                                     <width>900</width>
                                     <height>100</height>
                                     <label>[UPPERCASE]$INFO[VideoPlayer.ChannelName, ,][/UPPERCASE]</label>
-                                    <textcolor>99FFFFFF</textcolor>
-                                    <font>Font-Condensed-S50</font>
+                                    <textcolor>77FFFFFF</textcolor>
+                                    <font>Font-Condensed-S60</font>
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
@@ -255,6 +257,20 @@
                                 <scroll>false</scroll>
                                 <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
                             </control>
+							<control type="label">
+                                <posx>290</posx>
+                                <posy>77</posy>
+                                <width>1085</width>
+                                <height>56</height>
+                                <label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
+                                <textcolor>bbwhite</textcolor>
+                                <font>Font-Condensed-S50</font>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                                <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+                            </control>
+							
                             <control type="group">
                                 <visible>IsEmpty(Window.Property(ExtendPlot))</visible>
                                 <include>visiblehidefadeinfo</include>
@@ -343,46 +359,50 @@
                             <posy>825</posy>
                             <visible>VideoPlayer.Content(LiveTV)</visible>                          
                             <control type="image">
-                                <posx>130</posx>
-                                <posy>87</posy>
-                                <width>236</width>
+                                <posx>30</posx>
+                                <posy>148</posy>
+                                <width>233</width>
                                 <height>236</height>
                                 <texture background="true">$INFO[Player.Art(thumb)]</texture>
                                 <aspectratio aligny="top">keep</aspectratio>
                             </control>
+							<!-- LiveTV Sendungstitel -->
                             <control type="label">
-                                <posx>390</posx>
-                                <posy>83</posy>
+								<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
+                                <include>visiblehidefadeinfo</include>
+                                <posx>290</posx>
+                                <posy>136</posy>
                                 <width>1410</width>
                                 <height>56</height>
-                                <label>$VAR[OSDTitle]</label>
+                                <label>[UPPERCASE]$VAR[OSDTitle][/UPPERCASE]</label>
                                 <textcolor>bbwhite</textcolor>
-                                <font>Font-Condensed-S50-B</font>
+                                <font>Font-Condensed-S50</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <scroll>false</scroll>
                                 <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								
                             </control>
                             <control type="group">
                                 <visible>IsEmpty(Window.Property(ExtendPlot))</visible>
                                 <include>visiblehidefadeinfo</include>
                                 <control type="label">
-                                    <posx>390</posx>
-                                    <posy>142</posy>
+                                    <posx>290</posx>
+                                    <posy>198</posy>
                                     <width>1100</width>
                                     <height>44</height>
                                     <label>$VAR[OSDNextTitle]</label>
-                                    <textcolor>88FFFFFF</textcolor>
+                                    <textcolor>77FFFFFF</textcolor>
                                     <font>Font-Condensed-S36</font>
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
                                 <control type="textbox">
-                                    <posx>390</posx>
-                                    <posy>192</posy>
-                                    <width>1402</width>
-                                    <height>90</height>
+                                    <posx>290</posx>
+                                    <posy>246</posy>
+                                    <width>1600</width>
+                                    <height>105</height>
                                     <label>$VAR[OSDPlot]</label>
                                     <textcolor>aawhite</textcolor>
                                     <font>Font-Condensed-S32</font>
