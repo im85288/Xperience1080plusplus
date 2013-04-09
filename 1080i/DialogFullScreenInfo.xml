@@ -199,7 +199,7 @@
                                 <aligny>center</aligny>
                                 <scroll>false</scroll>
                                 <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
-								<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+								<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + VideoPlayer.Content(LiveTV)</visible>
                 <include>visiblehidefadeinfo</include>
                             </control>
 								
@@ -214,7 +214,7 @@
                 <font>Font-Condensed-S40</font>
                 <align>justify</align>
                 <autoscroll delay="11500" time="5000" repeat="7500" />
-                <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + VideoPlayer.Content(LiveTV)</visible>
                 <include>visiblehidefadeinfo</include>
             </control>
 			
