@@ -1,0 +1,2653 @@
+<includes>
+
+<!-- ========= -->
+<!-- List (50) -->
+<!-- ========= -->
+    <include name="Viewtype-PictureList">
+        <control type="group">
+            <visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
+            <include>CommonViewAnimations</include>
+            <include>OptionsShutdownAnimation</include>
+        
+            <control type="image">
+                <posx>248</posx>
+                <posy>187</posy>
+                <height>704</height>
+                <width>1424</width>
+                <texture border="4">views/list/panel/panel.png</texture>
+            </control>
+            <control type="image">
+                <description>Shadow</description>
+                <posx>150</posx>
+                <posy>883</posy>
+                <width>1620</width>
+                <height>150</height>
+                <texture>windows/home/item-shadow.png</texture>
+            </control>
+            
+            <control type="list" id="50">
+                <posx>250</posx>
+                <posy>190</posy>
+                <height>700</height>
+                <width>1420</width>
+                <pagecontrol>70</pagecontrol>
+                <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
+                <onleft condition="Skin.HasSetting(KioskMode)">50</onleft>
+                <onright>70</onright>
+                <onup>50</onup>
+                <ondown>50</ondown>
+                <viewtype label="List">list</viewtype>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <preloaditems>2</preloaditems>
+                <itemlayout height="100">
+                    <control type="image">
+                        <description>List separator</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1420</width>
+                        <height>101</height>
+                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
+                    </control>
+                    <control type="label">
+                        <description>Label</description>
+                        <posx>120</posx>
+                        <posy>0</posy>
+                        <width>1280</width>
+                        <height>100</height>
+                        <font>Font-Condensed-S34-B</font>
+                        <align>left</align>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>aawhite</textcolor>
+                        <selectedcolor>aawhite</selectedcolor>
+                        <scroll>false</scroll>
+                        <visible>IsEmpty(ListItem.PictureResolution) + IsEmpty(ListItem.PictureDateTime)</visible>
+                    </control>
+                    <control type="label">
+                        <description>Label</description>
+                        <posx>120</posx>
+                        <posy>0</posy>
+                        <width>1280</width>
+                        <height>62</height>
+                        <font>Font-Condensed-S34-B</font>
+                        <align>left</align>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>aawhite</textcolor>
+                        <selectedcolor>aawhite</selectedcolor>
+                        <scroll>false</scroll>
+                        <visible>![IsEmpty(ListItem.PictureResolution) + IsEmpty(ListItem.PictureDateTime)]</visible>
+                    </control>
+                    <control type="label">
+                        <description>Picture Resolution / Date</description>
+                        <posx>120</posx>
+                        <posy>43</posy>
+                        <width>1280</width>
+                        <height>54</height>
+                        <font>Font-Condensed-S28</font>
+                        <align>left</align>
+                        <label>$INFO[ListItem.PictureResolution]$INFO[ListItem.PictureDateTime, • ,]</label>
+                        <textcolor>99FFFFFF</textcolor>
+                        <selectedcolor>99FFFFFF</selectedcolor>
+                        <scroll>false</scroll>
+                        <visible>![IsEmpty(ListItem.PictureResolution) + IsEmpty(ListItem.PictureDateTime)]</visible>
+                    </control>
+                    <control type="label">
+                        <description>Label 2</description>
+                        <posx>1390</posx>
+                        <posy>0</posy>
+                        <width>1270</width>
+                        <height>100</height>
+                        <font>Font-Condensed-S34-B</font>
+                        <align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textcolor>99FFFFFF</textcolor>
+                        <selectedcolor>99FFFFFF</selectedcolor>
+                        <scroll>false</scroll>
+                    </control>
+                    <control type="image">
+                        <posx>20</posx>
+                        <posy>8</posy>
+                        <width>85</width>
+                        <height>85</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <posx>1391</posx>
+                        <posy>-10</posy>
+                        <width>39</width>
+                        <height>39</height>
+                        <texture>windows/filemanager/selected.png</texture>
+                        <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="100">
+                    <control type="image">
+                        <description>List separator</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1420</width>
+                        <height>101</height>
+                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1420</width>
+                        <height>99</height>
+                        <texture border="150,1,150,1">views/other/focus.png</texture>
+                        <include>defaultfocusanim</include>
+                        <include>visiblehidefadeinfo</include>
+                        <visible>Control.HasFocus(50)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>20</posx>
+                        <posy>8</posy>
+                        <width>85</width>
+                        <height>85</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <posx>1391</posx>
+                        <posy>-10</posy>
+                        <width>39</width>
+                        <height>39</height>
+                        <texture>windows/filemanager/selected.png</texture>
+                        <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
+                    </control>
+                    <control type="group">
+                        <animation type="Focus" condition="Container(50).OnNext | Container(50).OnPrevious" reversible="false">
+                            <effect type="fade" start="64" end="100" time="500" tween="sine" easing="inout" />
+                        </animation>
+                        <animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
+                        <control type="label">
+                            <description>Label</description>
+                            <posx>120</posx>
+                            <posy>0</posy>
+                            <width>1280</width>
+                            <height>100</height>
+                            <font>Font-Condensed-S34-B</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>eewhite</textcolor>
+                            <selectedcolor>eewhite</selectedcolor>
+                            <visible>IsEmpty(ListItem.PictureResolution) + IsEmpty(ListItem.PictureDateTime)</visible>
+                        </control>
+                        <control type="label">
+                            <description>Label</description>
+                            <posx>120</posx>
+                            <posy>0</posy>
+                            <width>1280</width>
+                            <height>62</height>
+                            <font>Font-Condensed-S34-B</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>eewhite</textcolor>
+                            <selectedcolor>eewhite</selectedcolor>
+                            <visible>![IsEmpty(ListItem.PictureResolution) + IsEmpty(ListItem.PictureDateTime)]</visible>
+                        </control>
+                        <control type="label">
+                            <description>Picture Resolution / Date</description>
+                            <posx>120</posx>
+                            <posy>43</posy>
+                            <width>1280</width>
+                            <height>54</height>
+                            <font>Font-Condensed-S28</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.PictureResolution]$INFO[ListItem.PictureDateTime, • ,]</label>
+                            <textcolor>D4FFFFFF</textcolor>
+                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <scroll>false</scroll>
+                            <visible>![IsEmpty(ListItem.PictureResolution) + IsEmpty(ListItem.PictureDateTime)]</visible>
+                        </control>
+                        <control type="label">
+                            <description>Label 2</description>
+                            <posx>1390</posx>
+                            <posy>0</posy>
+                            <width>1270</width>
+                            <height>100</height>
+                            <font>Font-Condensed-S34-B</font>
+                            <align>right</align>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>D4FFFFFF</textcolor>
+                            <selectedcolor>D4FFFFFF</selectedcolor>
+                            <scroll>false</scroll>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <control type="scrollbar" id="70">
+                <description>Scrollbar</description>
+                <posx>1664</posx>
+                <posy>190</posy>
+                <width>6</width>
+                <height>700</height>
+                <onleft condition="!Control.IsVisible(500) | [Control.IsVisible(500) + Skin.HasSetting(KioskMode)]">50</onleft>
+                <onleft condition="Control.IsVisible(500) + !Skin.HasSetting(KioskMode)">9010</onleft>
+                <onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
+                <onright condition="Skin.HasSetting(KioskMode)">50</onright>
+                <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
+                <ondown condition="Skin.HasSetting(KioskMode)">50</ondown>
+                <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
+                <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+                <orientation>vertical</orientation>
+                <showonepage>false</showonepage>
+                <animation effect="fade" start="45" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
+                <visible>Control.IsVisible(50)</visible>
+            </control>
+        </control>
+    </include>
+    
+<!-- ===================== -->
+<!-- Large thumb list (52) -->
+<!-- ===================== -->
+    <include name="Viewtype-PictureListLargeThumb">
+        <control type="group">
+            <include>FullscreenDimensions</include>
+            <include>OptionsShutdownAnimation</include>
+            <!-- List Panel -->
+            <control type="group">
+                <visible>Control.IsVisible(52) + !Window.IsActive(addoninformation)</visible>
+                <animation type="WindowOpen">
+                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="750" />
+                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+                    <effect type="zoom" start="90" end="100" center="300,438" tween="cubic" easing="out" time="400" />
+                </animation>
+                <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="750" delay="300" />
+                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="300" />
+                    <effect type="zoom" start="90" end="100" center="300,438" tween="cubic" easing="out" time="400" delay="300" />
+                </animation>
+                <include>GuideNoAnimation</include>
+                <animation type="WindowClose">
+                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                    <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+                </animation>
+                <animation type="Hidden" reversible="false">
+                    <effect type="zoom" start="100" end="125" center="960,600" tween="sine" easing="out" time="350" /> 
+                    <effect type="fade" start="100" end="0" tween="cubic" easing="out" time="250" />
+                </animation>
+                <control type="image">
+                    <description>Shadow</description>
+                    <posx>0</posx>
+                    <posy>870</posy>
+                    <width>1920</width>
+                    <height>150</height>
+                    <texture>windows/home/item-shadow.png</texture>
+                </control>
+                <control type="image">
+                    <description>Thumb</description>
+                    <posx>100</posx>
+                    <posy>277</posy>
+                    <width>988</width>
+                    <height>600</height>
+                    <texture border="1">windows/common/black.png</texture>
+                </control>
+                <control type="image">
+                    <description>Thumb</description>
+                    <posx>100</posx>
+                    <posy>277</posy>
+                    <width>988</width>
+                    <height>600</height>
+                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                    <fadetime>500</fadetime>
+                    <aspectratio>keep</aspectratio>
+                    <include>visiblehidefadeinfo</include>
+                    <visible>IsEmpty(ListItem.Thumb) | [!IsEmpty(ListItem.Thumb) + stringcompare(Control.GetLabel(521),.)]</visible>
+                </control>
+                <control type="image" id="521">
+                    <description>Thumb</description>
+                    <posx>100</posx>
+                    <posy>277</posy>
+                    <width>988</width>
+                    <height>600</height>
+                    <texture background="true" fallback=".">$INFO[ListItem.FileNameAndPath]</texture>
+                    <fadetime>500</fadetime>
+                    <aspectratio>keep</aspectratio>
+                    <include>visiblehidefadeinfo</include>
+                    <visible>!IsEmpty(ListItem.Thumb)</visible>
+                </control>
+            </control>
+            <control type="group">
+                <visible>Control.IsVisible(52)</visible>
+                <animation type="WindowOpen">
+                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="645" delay="105" />
+                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
+                    <effect type="zoom" start="80" end="100" center="867,438" tween="cubic" easing="out" time="400" delay="105" /> 
+                </animation>
+                <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="645" delay="405" />
+                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="405" />
+                    <effect type="zoom" start="80" end="100" center="867,438" tween="cubic" easing="out" time="400" delay="405" />
+                </animation>
+                <include>GuideNoAnimation</include>
+                <animation type="WindowClose">
+                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                    <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+                </animation>
+                <animation type="Hidden" reversible="false">
+                    <effect type="zoom" start="100" end="125" center="960,600" tween="sine" easing="out" time="350" /> 
+                    <effect type="fade" start="100" end="0" tween="cubic" easing="out" time="250" />
+                </animation>
+                <control type="image">
+                    <description>List Panel</description>
+                    <posx>1098</posx>
+                    <posy>274</posy>
+                    <width>714</width>
+                    <height>604</height>
+                    <texture>views/list/panel/panel.png</texture>
+                </control>
+                <control type="list" id="52">
+                    <visible>Container.HasFiles + !Container.Content(addons)</visible>
+                    <posx>1100</posx>
+                    <posy>277</posy>
+                    <width>710</width>
+                    <height>600</height>
+                    <pagecontrol>70</pagecontrol>
+                    <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
+                    <onleft condition="Skin.HasSetting(KioskMode)">52</onleft>
+                    <onright>70</onright>
+                    <onup>52</onup>
+                    <ondown>52</ondown>
+                    <viewtype label="Large thumb list">list</viewtype>
+                    <preloaditems>2</preloaditems>
+                    <scrolltime tween="cubic" easing="out">500</scrolltime>
+                    <itemlayout height="60">
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>710</width>
+                            <height>61</height>
+                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>1</posy>
+                            <height>60</height>
+                            <width>670</width>
+                            <font>Font-Condensed-S29-B</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>77white</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>690</posx>
+                            <width>670</width>
+                            <height>60</height>
+                            <font>Font-Condensed-S31</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>77white</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <scroll>false</scroll>
+                            <align>right</align>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="60">
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>710</width>
+                            <height>61</height>
+                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>710</width>
+                            <height>59</height>
+                            <texture border="150,1,150,1">views/other/focus.png</texture>
+                            <include>listfocusanim</include>
+                            <include>visiblehidefadeinfo</include>
+                            <visible>Control.HasFocus(52)</visible>
+                        </control>
+                        <control type="group">
+                            <animation type="Focus" condition="Container(52).OnNext | Container(52).OnPrevious" reversible="false">
+                                <effect type="fade" start="50" end="100" time="500" tween="sine" easing="inout" />
+                            </animation>
+                            <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(52)">Conditional</animation>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>1</posy>
+                                <height>60</height>
+                                <width>670</width>
+                                <font>Font-Condensed-S29-B</font>
+                                <label>$INFO[ListItem.Label]</label>
+                                <textcolor>eewhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                            </control>
+                            <control type="label">
+                                <posx>690</posx>
+                                <width>670</width>
+                                <height>60</height>
+                                <font>Font-Condensed-S31</font>
+                                <label>$INFO[ListItem.Label2]</label>
+                                <textcolor>eewhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>right</align>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <control type="scrollbar" id="70">
+                    <description>Scrollbar</description>
+                    <posx>1804</posx>
+                    <posy>277</posy>
+                    <width>6</width>
+                    <height>600</height>
+                    <onleft>52</onleft>
+                    <onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
+                    <onright condition="Skin.HasSetting(KioskMode)">52</onright>
+                    <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
+                    <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+                    <orientation>vertical</orientation>
+                    <showonepage>false</showonepage>
+                    <animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>
+                    <visible>Control.IsVisible(52)</visible>
+                </control>
+            </control>
+        </control>
+    </include>
+   
+<!-- ===================== -->
+<!-- PictureLandscape (54) -->
+<!-- ===================== -->
+    <include name="Viewtype-PictureLandscape">
+        <control type="group">
+            <include>FullscreenDimensions</include>
+            <include>OptionsShutdownAnimation</include>
+            
+            <control type="image" id="82">
+                <animation type="WindowOpen" reversible="false">
+                    <effect type="fade" start="0" end="100" delay="955" time="0" />
+                </animation>
+                <animation effect="fade" start="0" end="100" time="0" delay="1255" reversible="false">Visible</animation>
+                <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                <visible>Control.IsVisible(54) + !Window.IsActive(addoninformation)</visible>
+            </control>
+            
+            <control type="group">
+                <posx>100</posx>
+                <posy>400</posy>
+                <animation effect="fade" start="0" end="100" time="0" reversible="false">Visible</animation>
+                <visible>Window.Next(Home) | Window.Next(programs) | Window.Next(pictures) | Window.Next(filemanager) | Window.Next(settings) | Window.Next(music) | Window.Next(systeminfo) | Window.Next(screencalibration) | Window.Next(picturessettings) | Window.Next(programssettings) | Window.Next(weathersettings) | Window.Next(musicsettings) | Window.Next(systemsettings) | Window.Next(videossettings) | Window.Next(servicesettings) | Window.Next(appearancesettings) | Window.Next(pvrsettings) | Window.Next(videos) | Window.Next(videoplaylist) | Window.Next(LoginScreen) | Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) | Window.Next(smartplaylisteditor) | Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(82)</visible>
+                <control type="group">
+                    <animation type="WindowOpen" reversible="true">
+                        <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="392" end="0" delay="350" tween="cubic" easing="out" time="450" />
+                    </animation>
+                    <animation type="Visible" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="392" end="0" delay="650" tween="cubic" easing="out" time="450" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(54) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>-392</posx>
+                        <control type="group">
+                            <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>485</posy>
+                                <height>50</height>
+                                <width>400</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>375</posy>
+                                <width>390</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>393</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[Container(54).ListItem(-1).Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>429</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[Container(54).ListItem(-1).Label2]$INFO[Container(54).ListItem(-1).PictureResolution, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$INFO[Container(54).ListItem(-1).Thumb]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                        <visible>!IsEmpty(Container(54).ListItemNoWrap(-1).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="WindowOpen" reversible="true">
+                        <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-1568" end="0" delay="350" tween="cubic" easing="out" time="635" />
+                    </animation>
+                    <animation type="Visible" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-1568" end="0" delay="650" tween="cubic" easing="out" time="635" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(54) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>1568</posx>
+                        <control type="group">
+                            <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>485</posy>
+                                <height>50</height>
+                                <width>400</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>375</posy>
+                                <width>390</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>393</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[Container(54).ListItem(4).Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>429</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[Container(54).ListItem(4).Label2]$INFO[Container(54).ListItem(4).PictureResolution, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$INFO[Container(54).ListItem(4).Thumb]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                        <visible>!IsEmpty(Container(54).ListItemNoWrap(4).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="WindowOpen" reversible="true">
+                        <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-1176" end="0" delay="350" tween="cubic" easing="out" time="605" />
+                    </animation>
+                    <animation type="Visible" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-1176" end="0" delay="650" tween="cubic" easing="out" time="605" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(54) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>1176</posx>
+                        <control type="group">
+                            <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>485</posy>
+                                <height>50</height>
+                                <width>400</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>375</posy>
+                                <width>390</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>393</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[Container(54).ListItem(3).Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>429</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[Container(54).ListItem(3).Label2]$INFO[ListItem(3).PictureResolution, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$INFO[Container(54).ListItem(3).Thumb]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                        <visible>!IsEmpty(Container(54).ListItemNoWrap(3).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="WindowOpen" reversible="true">
+                        <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-784" end="0" delay="350" tween="cubic" easing="out" time="540" />
+                    </animation>
+                    <animation type="Visible" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-784" end="0" delay="650" tween="cubic" easing="out" time="540" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(54) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>784</posx>
+                        <control type="group">
+                            <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>485</posy>
+                                <height>50</height>
+                                <width>400</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>375</posy>
+                                <width>390</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>393</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[Container(54).ListItem(2).Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>429</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[Container(54).ListItem(2).Label2]$INFO[Container(54).ListItem(2).PictureResolution, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$INFO[Container(54).ListItem(2).Thumb]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                        <visible>!IsEmpty(Container(54).ListItemNoWrap(2).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="WindowOpen" reversible="true">
+                        <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-392" end="0" delay="350" tween="cubic" easing="out" time="450" />
+                    </animation>
+                    <animation type="Visible" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-392" end="0" delay="650" tween="cubic" easing="out" time="450" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(54) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>392</posx>
+                        <control type="group">
+                            <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>485</posy>
+                                <height>50</height>
+                                <width>400</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>375</posy>
+                                <width>390</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>393</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[Container(54).ListItem(1).Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>429</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[Container(54).ListItem(1).Label2]$INFO[Container(54).ListItem(1).PictureResolution, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$INFO[Container(54).ListItem(1).Thumb]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                        <visible>!IsEmpty(Container(54).ListItemNoWrap(1).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="WindowOpen" reversible="true">
+                        <effect type="zoom" start="65" end="100" center="190,400" tween="sine" easing="out" time="350" /> 
+                        <effect type="fade" start="25" end="100" tween="sine" easing="in" time="250" />
+                    </animation>
+                    <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+                        <effect type="zoom" start="175" end="100" delay="300" center="190,400" tween="sine" easing="out" time="350" /> 
+                        <effect type="fade" start="25" end="100" delay="300" tween="sine" easing="in" time="350" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(54) + !Window.IsActive(addoninformation)</visible>
+                    <control type="image">
+                        <posx>-10</posx>
+                        <posy>485</posy>
+                        <height>50</height>
+                        <width>400</width>
+                        <texture>dialogs/shutdown/shadow.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>-5</posx>
+                        <posy>375</posy>
+                        <width>390</width>
+                        <height>110</height>
+                        <texture border="7">windows/home/tile-grey.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>20</posx>
+                        <posy>393</posy>
+                        <width>340</width>
+                        <height>40</height>
+                        <label>$INFO[Container(54).ListItem(0).Label]</label>
+                        <font>Font-Condensed-S32-B</font>
+                        <textcolor>ddwhite</textcolor>
+                        <shadowcolor>22000000</shadowcolor>
+                        <scroll>true</scroll>
+                        <align>left</align>
+                    </control>
+                    <control type="label">
+                        <posx>20</posx>
+                        <posy>429</posy>
+                        <width>340</width>
+                        <height>40</height>
+                        <label>$INFO[Container(54).ListItem(0).Label2]$INFO[Container(54).ListItem(0).PictureResolution, • ,]</label>
+                        <font>Font-Condensed-S28</font>
+                        <textcolor>aawhite</textcolor>
+                        <shadowcolor>22000000</shadowcolor>
+                        <scroll>false</scroll>
+                        <align>left</align>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>380</width>
+                        <height>380</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture background="true">$INFO[Container(54).ListItem(0).Thumb]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>379</posy>
+                        <width>380</width>
+                        <height>1</height>
+                        <colordiffuse>99000000</colordiffuse>
+                        <texture>windows/common/black.png</texture>
+                    </control>
+                </control>
+            </control>
+            
+            <control type="group">      
+                <visible>Control.IsVisible(54) + !Window.IsActive(addoninformation)</visible>
+                <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                <animation effect="fade" start="0" end="100" time="0" delay="1255" reversible="false">Visible</animation>    
+                <control type="fixedlist" id="54">
+                    <posx>-292</posx>
+                    <posy>400</posy>
+                    <width>2352</width>
+                    <height>550</height>
+                    <pagecontrol>70</pagecontrol>
+                    <scrolltime tween="cubic" easing="out">500</scrolltime>
+                    <orientation>horizontal</orientation>
+                    <viewtype label="Landscape">list</viewtype>
+                    <onleft>54</onleft>
+                    <onright>54</onright>
+                    <onup condition="!Skin.HasSetting(KioskMode)">9010</onup>
+                    <onup condition="Skin.HasSetting(KioskMode)">54</onup>
+                    <ondown>70</ondown>
+                    <focusposition>1</focusposition>
+                    <preloaditems>2</preloaditems>
+                    <animation type="WindowOpen" reversible="false">
+                        <effect type="fade" start="0" end="100" time="0" />
+                        <effect type="slide" start="0,-1500" end="0,0" delay="955" time="0" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="0" />
+                    </animation>
+                    <itemlayout width="392">
+                        <control type="group">
+                            <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>485</posy>
+                                <height>50</height>
+                                <width>400</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>375</posy>
+                                <width>390</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>393</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>429</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Label2]$INFO[ListItem.PictureResolution, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$INFO[ListItem.Thumb]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="392">
+                        <control type="group">
+                            <animation type="Focus" condition="Container(54).OnNext | Container(54).OnPrevious">
+                                <effect type="fade" start="50" end="100" time="300" tween="sine" easing="inout" />
+                            </animation>
+                            <animation type="Unfocus" condition="Container(54).OnNext | Container(54).OnPrevious">
+                                <effect type="fade" start="100" end="50" time="300" tween="sine" easing="inout" />
+                            </animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>485</posy>
+                                <height>50</height>
+                                <width>400</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="group">
+                                <animation type="Focus" condition="Container(54).OnNext | Container(54).OnPrevious">
+                                    <effect type="fade" start="60" end="100" time="300" tween="sine" easing="inout" />
+                                </animation>
+                                <animation type="Unfocus" condition="Container(54).OnNext | Container(54).OnPrevious">
+                                    <effect type="fade" start="100" end="60" time="300" tween="sine" easing="inout" />
+                                </animation>
+                                <control type="image">
+                                    <posx>-5</posx>
+                                    <posy>375</posy>
+                                    <width>390</width>
+                                    <height>110</height>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                </control>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>393</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>true</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>429</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Label2]$INFO[ListItem.PictureResolution, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$INFO[ListItem.Thumb]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+            <control type="group">
+                <animation type="WindowOpen" reversible="false">
+                    <effect type="fade" start="0" end="100" delay="450" time="300" tween="sine" easing="inout" />
+                </animation>
+                <animation type="WindowClose" reversible="false">
+                    <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+                </animation>
+                <animation type="Visible" reversible="true">
+                    <effect type="fade" start="0" end="100" delay="750" time="300" tween="sine" easing="inout" />
+                </animation>
+                <animation type="Hidden" reversible="true">
+                    <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+                </animation>
+                <visible>Control.IsVisible(54) + !Window.IsActive(addoninformation)</visible>
+                <!--Scrollbar-->
+                <control type="image">
+                    <description>Scrollbar background (visible on focus)</description>
+                    <posx>104</posx>
+                    <posy>135r</posy>
+                    <width>1712</width>
+                    <height>6</height>
+                    <texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
+                    <visible>Control.HasFocus(70)</visible>
+                    <animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
+                    <animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
+                </control>
+                <control type="scrollbar" id="70">
+                    <description>Scrollbar</description>
+                    <posx>104</posx>
+                    <posy>135r</posy>
+                    <width>1712</width>
+                    <height>6</height>
+                    <orientation>horizontal</orientation>
+                    <texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
+                    <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
+                    <showonepage>false</showonepage>
+                    <onup>54</onup>
+                    <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
+                    <ondown condition="Skin.HasSetting(KioskMode)">54</ondown>
+                    <animation effect="fade" start="40" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
+                    <visible>Control.IsVisible(54)</visible>
+                </control>
+            </control>
+        </control>
+    </include>    
+   
+<!-- ================ -->
+<!-- PictureView (55) -->
+<!-- ================ -->
+    <include name="Viewtype-PictureView">
+        <control type="group">
+            <include>FullscreenDimensions</include>
+            <include>OptionsShutdownAnimation</include>
+            
+            <control type="image" id="80">
+                <animation type="WindowOpen" reversible="false">
+                    <effect type="fade" start="0" end="100" delay="700" time="0" />
+                </animation>
+                <animation effect="fade" start="0" end="100" time="0" delay="1000" reversible="false">Visible</animation>
+                <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                <visible>Control.IsVisible(55) + !Window.IsActive(addoninformation)</visible>
+            </control>
+            
+            <control type="group">
+                <posx>113</posx>
+                <posy>430</posy>
+                <animation effect="fade" start="0" end="100" time="0" reversible="false">Visible</animation>
+                <visible>Window.Next(Home) | Window.Next(programs) | Window.Next(pictures) | Window.Next(filemanager) | Window.Next(settings) | Window.Next(music) | Window.Next(systeminfo) | Window.Next(screencalibration) | Window.Next(picturessettings) | Window.Next(programssettings) | Window.Next(weathersettings) | Window.Next(musicsettings) | Window.Next(systemsettings) | Window.Next(videossettings) | Window.Next(servicesettings) | Window.Next(appearancesettings) | Window.Next(pvrsettings) | Window.Next(videos) | Window.Next(videoplaylist) | Window.Next(LoginScreen) | Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) | Window.Next(smartplaylisteditor) | Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(80)</visible>
+                <control type="group">
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" start="100" end="94.7368421" time="0" center="-186,206" />
+                    </animation>
+                    <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="-400" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                    <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="400" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="-400" end="0" delay="400" tween="cubic" easing="out" time="600" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(55) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>-372</posx>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-4</posx>
+                            <posy>398</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <colordiffuse>77white</colordiffuse>
+                            <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[Container(55).ListItem(-1).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>-35</posx>
+                            <posy>377</posy>
+                            <width>442</width>
+                            <height>36</height>
+                            <texture>views/posterview/shadow.png</texture>
+                        </control>
+                        <control type="image">
+                            <description>Poster</description>
+                            <posx>-4</posx>
+                            <posy>16</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <colordiffuse>ddwhite</colordiffuse>
+                            <texture background="true">$INFO[Container(55).ListItem(-1).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <visible>!IsEmpty(Container(55).ListItemNoWrap(-1).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" start="100" end="94.7368421" time="0" center="2046,206" />
+                    </animation>
+                    <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="200" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="1600" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                    <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="400" tween="sine" easing="in" time="300"/>
+                        <effect type="slide" start="1600" end="0" delay="400" tween="cubic" easing="out" time="600" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(55) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>1860</posx>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-4</posx>
+                            <posy>398</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <colordiffuse>77white</colordiffuse>
+                            <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[Container(55).ListItem(5).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>-35</posx>
+                            <posy>377</posy>
+                            <width>442</width>
+                            <height>36</height>
+                            <texture>views/posterview/shadow.png</texture>
+                        </control>
+                        <control type="image">
+                            <description>Poster</description>
+                            <posx>-4</posx>
+                            <posy>16</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <colordiffuse>ddwhite</colordiffuse>
+                            <texture background="true">$INFO[Container(55).ListItem(5).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <visible>!IsEmpty(Container(55).ListItemNoWrap(5).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" start="100" end="94.7368421" time="0" center="1674,206" />
+                    </animation>
+                    <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="200" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="1300" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                    <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="400" tween="sine" easing="in" time="300"/>
+                        <effect type="slide" start="1300" end="0" delay="400" tween="cubic" easing="out" time="600" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(55) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>1488</posx>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-4</posx>
+                            <posy>398</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <colordiffuse>77white</colordiffuse>
+                            <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[Container(55).ListItem(4).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>-35</posx>
+                            <posy>377</posy>
+                            <width>442</width>
+                            <height>36</height>
+                            <texture>views/posterview/shadow.png</texture>
+                        </control>
+                        <control type="image">
+                            <description>Poster</description>
+                            <posx>-4</posx>
+                            <posy>16</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <colordiffuse>ddwhite</colordiffuse>
+                            <texture background="true">$INFO[Container(55).ListItem(4).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <visible>!IsEmpty(Container(55).ListItemNoWrap(4).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" start="100" end="94.7368421" time="0" center="1302,206" />
+                    </animation>
+                    <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="1000" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                    <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="400" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="1000" end="0" delay="400" tween="cubic" easing="out" time="600" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(55) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>1116</posx>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-4</posx>
+                            <posy>398</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <colordiffuse>77white</colordiffuse>
+                            <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[Container(55).ListItem(3).Thumb]]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>-35</posx>
+                            <posy>377</posy>
+                            <width>442</width>
+                            <height>36</height>
+                            <texture>views/posterview/shadow.png</texture>
+                        </control>
+                        <control type="image">
+                            <description>Poster</description>
+                            <posx>-4</posx>
+                            <posy>16</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <colordiffuse>ddwhite</colordiffuse>
+                            <texture background="true">$INFO[Container(55).ListItem(3).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <visible>!IsEmpty(Container(55).ListItemNoWrap(3).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" start="100" end="94.7368421" time="0" center="930,206" />
+                    </animation>
+                    <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="700" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                    <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="400" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="700" end="0" delay="400" tween="cubic" easing="out" time="600" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(55) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>744</posx>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-4</posx>
+                            <posy>398</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <colordiffuse>77white</colordiffuse>
+                            <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[Container(55).ListItem(2).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>-35</posx>
+                            <posy>377</posy>
+                            <width>442</width>
+                            <height>36</height>
+                            <texture>views/posterview/shadow.png</texture>
+                        </control>
+                        <control type="image">
+                            <description>Poster</description>
+                            <posx>-4</posx>
+                            <posy>16</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <colordiffuse>ddwhite</colordiffuse>
+                            <texture background="true">$INFO[Container(55).ListItem(2).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <visible>!IsEmpty(Container(55).ListItemNoWrap(2).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" start="100" end="94.7368421" time="0" center="558,206" />
+                    </animation>
+                    <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="400" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                    <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="400" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="400" end="0" delay="400" tween="cubic" easing="out" time="600" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(55) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>372</posx>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-4</posx>
+                            <posy>398</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <colordiffuse>77white</colordiffuse>
+                            <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[Container(55).ListItem(1).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>-35</posx>
+                            <posy>377</posy>
+                            <width>442</width>
+                            <height>36</height>
+                            <texture>views/posterview/shadow.png</texture>
+                        </control>
+                        <control type="image">
+                            <description>Poster</description>
+                            <posx>-4</posx>
+                            <posy>16</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <colordiffuse>ddwhite</colordiffuse>
+                            <texture background="true">$INFO[Container(55).ListItem(1).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <visible>!IsEmpty(Container(55).ListItemNoWrap(1).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="WindowOpen">
+                        <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="700" />
+                        <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+                        <effect type="zoom" start="94.7368421" end="100" center="400,206" tween="cubic" easing="out" time="400" />
+                    </animation>
+                    <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+                        <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="700" delay="300" />
+                        <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="300" />
+                        <effect type="zoom" start="94.7368421" end="100" center="400,206" tween="cubic" easing="out" time="400" delay="300" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="115" center="960,260" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,260" tween="sine" easing="out" />
+                    </animation>
+                    <visible>Control.IsVisible(55) + !Window.IsActive(addoninformation)</visible>
+                    <control type="image">
+                        <description>Reflection</description>
+                        <posx>-4</posx>
+                        <posy>398</posy>
+                        <width>380</width>
+                        <height>380</height>
+                        <colordiffuse>77white</colordiffuse>
+                        <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[Container(55).ListItem(0).Thumb]</texture>
+                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <posx>-16</posx>
+                        <posy>386</posy>
+                        <width>406</width>
+                        <height>406</height>
+                        <texture border="31" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">views/panel/focus.png</texture>
+                    </control>
+                    <control type="image">
+                        <description>Shadow Bottom</description>
+                        <posx>-35</posx>
+                        <posy>377</posy>
+                        <width>442</width>
+                        <height>36</height>
+                        <texture>views/posterview/shadow.png</texture>
+                    </control>
+                    <control type="image">
+                        <description>Shadow Focus</description>
+                        <posx>-120</posx>
+                        <posy>16</posy>
+                        <width>612</width>
+                        <height>381</height>
+                        <texture border="108,0,108,0">views/posterview/shadow-focus.png</texture>
+                    </control>
+                    <control type="image">
+                        <description>Poster</description>
+                        <posx>-4</posx>
+                        <posy>16</posy>
+                        <width>380</width>
+                        <height>380</height>
+                        <texture background="true">$INFO[Container(55).ListItem(0).Thumb]</texture>
+                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <posx>-16</posx>
+                        <posy>4</posy>
+                        <width>406</width>
+                        <height>406</height>
+                        <texture border="31">views/panel/focus.png</texture>
+                    </control>
+                </control>
+            </control>
+            
+            <control type="group">      
+                <visible>Control.IsVisible(55) + !Window.IsActive(addoninformation)</visible>
+                <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                <animation effect="fade" start="0" end="100" time="0" delay="1000" reversible="false">Visible</animation>       
+                <control type="fixedlist" id="55">
+                    <posx>-259</posx>
+                    <posy>430</posy>
+                    <width>2300</width>
+                    <height>830</height>
+                    <pagecontrol>70</pagecontrol>
+                    <scrolltime tween="cubic" easing="out">500</scrolltime>
+                    <orientation>horizontal</orientation>
+                    <viewtype label="Cover">list</viewtype>
+                    <onleft>55</onleft>
+                    <onright>55</onright>
+                    <onup condition="!Skin.HasSetting(KioskMode)">9010</onup>
+                    <onup condition="Skin.HasSetting(KioskMode)">55</onup>
+                    <ondown>70</ondown>
+                    <focusposition>1</focusposition>
+                    <preloaditems>2</preloaditems>
+                    <animation type="WindowOpen" reversible="false">
+                        <effect type="fade" start="0" end="100" time="0" />
+                        <effect type="slide" start="0,-1500" end="0,0" delay="700" time="0" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="0" />
+                    </animation>
+                    <itemlayout width="372">
+                        <control type="group">
+                            <animation effect="Conditional" condition="true">
+                                <effect type="zoom" end="94.7368421" time="0" center="186,206" />
+                            </animation>
+                            <control type="image">
+                                <description>Reflection</description>
+                                <posx>-4</posx>
+                                <posy>398</posy>
+                                <width>380</width>
+                                <height>380</height>
+                                <colordiffuse>77white</colordiffuse>
+                                <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[ListItem.Thumb]</texture>
+                                <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            </control>
+                            <control type="image">
+                                <description>Shadow Bottom</description>
+                                <posx>-35</posx>
+                                <posy>377</posy>
+                                <width>442</width>
+                                <height>36</height>
+                                <texture>views/posterview/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <description>Poster</description>
+                                <posx>-4</posx>
+                                <posy>16</posy>
+                                <width>380</width>
+                                <height>380</height>
+                                <colordiffuse>ddwhite</colordiffuse>
+                                <texture background="true">$INFO[ListItem.Thumb]</texture>
+                                <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="372">
+                        <control type="group">
+                            <animation type="Focus" condition="Container(55).OnNext | Container(55).OnPrevious">
+                                <effect type="zoom" start="94.7368421" end="100" time="350" tween="sine" easing="out" center="186,206" />
+                            </animation>
+                            <animation type="Unfocus" condition="Container(55).OnNext | Container(55).OnPrevious">
+                                <effect type="zoom" start="100" end="94.7368421" time="250" tween="sine" easing="out" center="186,206" />
+                            </animation>
+                            <control type="image">
+                                <description>Reflection</description>
+                                <posx>-4</posx>
+                                <posy>398</posy>
+                                <width>380</width>
+                                <height>380</height>
+                                <colordiffuse>77white</colordiffuse>
+                                <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[ListItem.Thumb]</texture>
+                                <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            </control>
+                            <control type="image">
+                                <posx>-16</posx>
+                                <posy>386</posy>
+                                <width>406</width>
+                                <height>406</height>
+                                <texture border="31" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">views/panel/focus.png</texture>
+                                <animation effect="fade" start="0" end="100" time="200" tween="sine" easing="in" condition="Container(55).OnNext | Container(55).OnPrevious">Focus</animation>
+                                <animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out" condition="Container(55).OnNext | Container(55).OnPrevious">UnFocus</animation>
+                            </control>
+                            <control type="image">
+                                <description>Shadow Bottom</description>
+                                <posx>-35</posx>
+                                <posy>377</posy>
+                                <width>442</width>
+                                <height>36</height>
+                                <texture>views/posterview/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <description>Shadow Focus</description>
+                                <posx>-120</posx>
+                                <posy>16</posy>
+                                <width>612</width>
+                                <height>381</height>
+                                <texture border="108,0,108,0">views/posterview/shadow-focus.png</texture>
+                                <animation effect="fade" start="0" end="100" time="200" tween="sine" easing="in" condition="Container(55).OnNext | Container(55).OnPrevious">Focus</animation>
+                                <animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out" condition="Container(55).OnNext | Container(55).OnPrevious">UnFocus</animation>
+                            </control>
+                            <control type="image">
+                                <description>Poster</description>
+                                <posx>-4</posx>
+                                <posy>16</posy>
+                                <width>380</width>
+                                <height>380</height>
+                                <texture background="true">$INFO[ListItem.Thumb]</texture>
+                                <animation effect="fade" start="86.71875" end="100" time="200" tween="sine" easing="in" condition="Container(55).OnNext | Container(55).OnPrevious">Focus</animation>
+                                <animation effect="fade" start="100" end="86.71875" time="200" tween="sine" easing="out" condition="Container(55).OnNext | Container(55).OnPrevious">UnFocus</animation>
+                                <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            </control>
+                            <control type="image">
+                                <posx>-16</posx>
+                                <posy>4</posy>
+                                <width>406</width>
+                                <height>406</height>
+                                <texture border="31">views/panel/focus.png</texture>
+                                <animation effect="fade" start="0" end="100" time="200" tween="sine" easing="in" condition="Container(55).OnNext | Container(55).OnPrevious">Focus</animation>
+                                <animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out" condition="Container(55).OnNext | Container(55).OnPrevious">UnFocus</animation>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+            <control type="group">
+                <animation type="WindowOpen" reversible="false">
+                    <effect type="fade" start="0" end="100" delay="400" time="300" tween="sine" easing="inout" />
+                </animation>
+                <animation type="Visible" reversible="true">
+                    <effect type="fade" start="0" end="100" delay="700" time="300" tween="sine" easing="inout" />
+                </animation>
+                <animation type="Hidden" reversible="false">
+                    <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                </animation>
+                <animation type="WindowClose" reversible="false">
+                    <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                </animation>
+                <visible>Control.IsVisible(55) + !Window.IsActive(addoninformation)</visible>
+                <control type="group">
+                    <animation type="Visible" reversible="false">
+                        <effect type="fade" start="0" end="100" time="150" delay="150" tween="sine" easing="in" />
+                    </animation>
+                    <visible>!Container(55).OnNext + !Container(55).OnPrevious</visible>
+                    <posx>110</posx>
+                    <posy>845</posy>
+                    <control type="label">
+                        <posx>12</posx>
+                        <posy>15</posy>
+                        <width>1730</width>
+                        <label>$INFO[Container(55).ListItem.Label]</label>
+                        <font>Font-Condensed-S45-B</font>
+                        <textcolor>aawhite</textcolor>
+                        <scroll>false</scroll>
+                        <align>left</align>
+                    </control>
+                    <control type="label">
+                        <posx>13</posx>
+                        <posy>65</posy>
+                        <width>1730</width>
+                        <label>$INFO[Container(55).ListItem.Label2]$INFO[Container(55).ListItem.PictureResolution, • ,]$INFO[Container(55).ListItem.PictureDateTime, • ,]</label>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>77white</textcolor>
+                        <scroll>false</scroll>
+                        <align>left</align>
+                    </control>
+                </control>
+                <!--Scrollbar-->
+                <control type="image">
+                    <description>Scrollbar background (visible on focus)</description>
+                    <posx>104</posx>
+                    <posy>125r</posy>
+                    <width>1712</width>
+                    <height>6</height>
+                    <texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
+                    <visible>Control.HasFocus(70)</visible>
+                    <animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
+                    <animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
+                </control>
+                <control type="scrollbar" id="70">
+                    <description>Scrollbar</description>
+                    <posx>104</posx>
+                    <posy>125r</posy>
+                    <width>1712</width>
+                    <height>6</height>
+                    <orientation>horizontal</orientation>
+                    <texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
+                    <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
+                    <showonepage>false</showonepage>
+                    <onup>55</onup>
+                    <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
+                    <ondown condition="Skin.HasSetting(KioskMode)">55</ondown>
+                    <animation effect="fade" start="40" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
+                    <visible>Control.IsVisible(55)</visible>
+                </control>
+            </control>
+        </control>
+    </include>
+    
+<!-- ======================== -->
+<!-- Classic PictureView (505) -->
+<!-- ======================== -->
+    <include name="Viewtype-ClassicPictureView">       
+        <control type="group">
+            <include>FullscreenDimensions</include>
+            <include>OptionsShutdownAnimation</include>
+            
+            <control type="image" id="81">
+                <animation type="WindowOpen" reversible="false">
+                    <effect type="fade" start="0" end="100" delay="1010" time="0" />
+                </animation>
+                <animation effect="fade" start="0" end="100" time="0" delay="1310" reversible="false">Visible</animation>
+                <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                <visible>Control.IsVisible(505) + !Window.IsActive(addoninformation)</visible>
+            </control>
+            
+            <control type="group">
+                <posx>136</posx>
+                <posy>360</posy>
+                <animation effect="fade" start="0" end="100" time="0" reversible="false">Visible</animation>
+                <visible>Window.Next(Home) | Window.Next(programs) | Window.Next(pictures) | Window.Next(filemanager) | Window.Next(settings) | Window.Next(music) | Window.Next(systeminfo) | Window.Next(screencalibration) | Window.Next(picturessettings) | Window.Next(programssettings) | Window.Next(weathersettings) | Window.Next(musicsettings) | Window.Next(systemsettings) | Window.Next(videossettings) | Window.Next(networksettings) | Window.Next(appearancesettings) | Window.Next(scripts) | Window.Next(videos) | Window.Next(videoplaylist) | Window.Next(LoginScreen) | Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) | Window.Next(smartplaylisteditor) | Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | !Control.IsVisible(81)</visible>
+                <control type="group">
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" start="100" end="78" time="0" center="-190,290" />
+                    </animation>
+                    <animation type="WindowOpen" reversible="true">
+                        <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="380" end="0" delay="350" tween="cubic" easing="out" time="450" />
+                    </animation>
+                    <animation type="WindowClose" reversible="true">
+                        <effect type="slide" start="0" end="380" tween="sine" easing="in" time="200" />
+                        <effect type="fade" delay="150" start="100" end="0" time="100" />
+                    </animation>
+                    <animation type="Visible" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="380" end="0" delay="650" tween="cubic" easing="out" time="450" />
+                    </animation>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="slide" start="0" end="380" tween="sine" easing="in" time="100" />
+                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                    </animation>
+                    <visible>Control.IsVisible(505) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>-380</posx>
+                        <control type="image">
+                            <description>Shadow Back</description>
+                            <posx>-42</posx>
+                            <posy>0</posy>
+                            <width>464</width>
+                            <height>464</height>
+                            <texture border="50">views/posterview/shadow-back.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-32</posx>
+                            <posy>458</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                            <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[Container(505).ListItem(-1).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>-62</posx>
+                            <posy>437</posy>
+                            <width>504</width>
+                            <height>36</height>
+                            <texture>views/posterview/shadow.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                            <texture diffuse="views/posterview/diffuse-square.png">$INFO[Container(505).ListItem(-1).ActualIcon,views/posterview/,]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>IsEmpty(Container(505).ListItem(-1).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Poster</description>
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                            <texture background="true" diffuse="views/posterview/diffuse-square.png" />
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <info>Container(505).ListItem(-1).Thumb</info>
+                            <visible>!IsEmpty(Container(505).ListItem(-1).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Overlay</description>
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <texture border="20">views/posterview/overlay.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <visible>!IsEmpty(Container(505).ListItemNoWrap(-1).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" start="100" end="78" time="0" center="1710,290" />
+                    </animation>
+                    <animation type="Windowopen" reversible="true">
+                        <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-1520" end="0" delay="350" tween="cubic" easing="out" time="635" />
+                    </animation>
+                    <animation type="WindowClose" reversible="true">
+                        <effect type="slide" start="0" end="-1520" tween="sine" easing="in" time="200" />
+                        <effect type="fade" delay="150" start="100" end="0" time="100" />
+                    </animation>
+                    <animation type="Visible" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-1520" end="0" delay="650" tween="cubic" easing="out" time="635" />
+                    </animation>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="slide" start="0" end="-1520" tween="sine" easing="in" time="100" />
+                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                    </animation>
+                    <visible>Control.IsVisible(505) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>1520</posx>
+                        <control type="image">
+                            <description>Shadow Back</description>
+                            <posx>-42</posx>
+                            <posy>0</posy>
+                            <width>464</width>
+                            <height>464</height>
+                            <texture border="50">views/posterview/shadow-back.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-32</posx>
+                            <posy>458</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                            <texture flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[Container(505).ListItem(4).ActualIcon,views/posterview/,]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>IsEmpty(Container(505).ListItem(4).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-32</posx>
+                            <posy>458</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                            <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[Container(505).ListItem(4).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>!IsEmpty(Container(505).ListItem(4).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>-62</posx>
+                            <posy>437</posy>
+                            <width>504</width>
+                            <height>36</height>
+                            <texture>views/posterview/shadow.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                            <texture diffuse="views/posterview/diffuse-square.png">$INFO[Container(505).ListItem(4).ActualIcon,views/posterview/,]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>IsEmpty(Container(505).ListItem(4).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Poster</description>
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                            <texture background="true" diffuse="views/posterview/diffuse-square.png" />
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <info>Container(505).ListItem(4).Thumb</info>
+                            <visible>!IsEmpty(Container(505).ListItem(4).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Overlay</description>
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <texture border="20">views/posterview/overlay.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <visible>!IsEmpty(Container(505).ListItemNoWrap(4).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" start="100" end="78" time="0" center="1330,290" />
+                    </animation>
+                    <animation type="Windowopen" reversible="true">
+                        <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-1140" end="0" delay="350" tween="cubic" easing="out" time="605" />
+                    </animation>
+                    <animation type="WindowClose" reversible="true">
+                        <effect type="slide" start="0" end="-1140" tween="sine" easing="in" time="200" />
+                        <effect type="fade" delay="150" start="100" end="0" time="100" />
+                    </animation>
+                    <animation type="Visible" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-1140" end="0" delay="650" tween="cubic" easing="out" time="605" />
+                    </animation>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="slide" start="0" end="-1140" tween="sine" easing="in" time="100" />
+                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                    </animation>
+                    <visible>Control.IsVisible(505) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>1140</posx>
+                        <control type="image">
+                            <description>Shadow Back</description>
+                            <posx>-42</posx>
+                            <posy>0</posy>
+                            <width>464</width>
+                            <height>464</height>
+                            <texture border="50">views/posterview/shadow-back.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-32</posx>
+                            <posy>458</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                            <texture flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[Container(505).ListItem(3).ActualIcon,views/posterview/,]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>IsEmpty(Container(505).ListItem(3).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-32</posx>
+                            <posy>458</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                            <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[Container(505).ListItem(3).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>!IsEmpty(Container(505).ListItem(3).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>-62</posx>
+                            <posy>437</posy>
+                            <width>504</width>
+                            <height>36</height>
+                            <texture>views/posterview/shadow.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                            <texture diffuse="views/posterview/diffuse-square.png">$INFO[Container(505).ListItem(3).ActualIcon,views/posterview/,]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>IsEmpty(Container(505).ListItem(3).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Poster</description>
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                            <texture background="true" diffuse="views/posterview/diffuse-square.png" />
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <info>Container(505).ListItem(3).Thumb</info>
+                            <visible>!IsEmpty(Container(505).ListItem(3).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Overlay</description>
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <texture border="20">views/posterview/overlay.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <visible>!IsEmpty(Container(505).ListItemNoWrap(3).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" start="100" end="78" time="0" center="950,290" />
+                    </animation>
+                    <animation type="Windowopen" reversible="true">
+                        <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-760" end="0" delay="350" tween="cubic" easing="out" time="540" />
+                    </animation>
+                    <animation type="WindowClose" reversible="true">
+                        <effect type="slide" start="0" end="-760" tween="sine" easing="in" time="200" />
+                        <effect type="fade" delay="150" start="100" end="0" time="100" />
+                    </animation>
+                    <animation type="Visible" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-760" end="0" delay="650" tween="cubic" easing="out" time="540" />
+                    </animation>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="slide" start="0" end="-7600" tween="sine" easing="in" time="100" />
+                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                    </animation>
+                    <visible>Control.IsVisible(505) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>760</posx>
+                        <control type="image">
+                            <description>Shadow Back</description>
+                            <posx>-42</posx>
+                            <posy>0</posy>
+                            <width>464</width>
+                            <height>464</height>
+                            <texture border="50">views/posterview/shadow-back.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-32</posx>
+                            <posy>458</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                            <texture flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[Container(505).ListItem(2).ActualIcon,views/posterview/,]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>IsEmpty(Container(505).ListItem(2).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-32</posx>
+                            <posy>458</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                            <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[Container(505).ListItem(2).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>!IsEmpty(Container(505).ListItem(2).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>-62</posx>
+                            <posy>437</posy>
+                            <width>504</width>
+                            <height>36</height>
+                            <texture>views/posterview/shadow.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                            <texture diffuse="views/posterview/diffuse-square.png">$INFO[Container(505).ListItem(2).ActualIcon,views/posterview/,]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>IsEmpty(Container(505).ListItem(2).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Poster</description>
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                            <texture background="true" diffuse="views/posterview/diffuse-square.png" />
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <info>Container(505).ListItem(2).Thumb</info>
+                            <visible>!IsEmpty(Container(505).ListItem(2).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Overlay</description>
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <texture border="20">views/posterview/overlay.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <visible>!IsEmpty(Container(505).ListItemNoWrap(2).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" start="100" end="78" time="0" center="570,290" />
+                    </animation>
+                    <animation type="WindowOpen" reversible="true">
+                        <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-380" end="0" delay="350" tween="cubic" easing="out" time="450" />
+                    </animation>
+                    <animation type="WindowClose" reversible="true">
+                        <effect type="slide" start="0" end="-380" tween="sine" easing="in" time="200" />
+                        <effect type="fade" delay="150" start="100" end="0" time="100" />
+                    </animation>
+                    <animation type="Visible" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
+                        <effect type="slide" start="-380" end="0" delay="650" tween="cubic" easing="out" time="450" />
+                    </animation>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="slide" start="0" end="-380" tween="sine" easing="in" time="100" />
+                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                    </animation>
+                    <visible>Control.IsVisible(505) + !Window.IsActive(addoninformation)</visible>
+                    <control type="group">
+                        <posx>380</posx>
+                        <control type="image">
+                            <description>Shadow Back</description>
+                            <posx>-42</posx>
+                            <posy>0</posy>
+                            <width>464</width>
+                            <height>464</height>
+                            <texture border="50">views/posterview/shadow-back.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-32</posx>
+                            <posy>458</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                            <texture flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[Container(505).ListItem(1).ActualIcon,views/posterview/,]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>IsEmpty(Container(505).ListItem(1).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Reflection</description>
+                            <posx>-32</posx>
+                            <posy>458</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                            <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[Container(505).ListItem(1).Thumb]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>!IsEmpty(Container(505).ListItem(1).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>-62</posx>
+                            <posy>437</posy>
+                            <width>504</width>
+                            <height>36</height>
+                            <texture>views/posterview/shadow.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <control type="image">
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                            <texture diffuse="views/posterview/diffuse-square.png">$INFO[Container(505).ListItem(1).ActualIcon,views/posterview/,]</texture>
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <visible>IsEmpty(Container(505).ListItem(1).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Poster</description>
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                            <texture background="true" diffuse="views/posterview/diffuse-square.png" />
+                            <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                            <info>Container(505).ListItem(1).Thumb</info>
+                            <visible>!IsEmpty(Container(505).ListItem(1).Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <description>Overlay</description>
+                            <posx>-32</posx>
+                            <posy>10</posy>
+                            <width>444</width>
+                            <height>444</height>
+                            <texture border="20">views/posterview/overlay.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                        <visible>!IsEmpty(Container(505).ListItemNoWrap(1).Label)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <animation type="WindowOpen" reversible="true">
+                        <effect type="zoom" start="65" end="100" center="190,290" tween="sine" easing="out" time="350" /> 
+                        <effect type="fade" start="25" end="100" tween="sine" easing="in" time="250" />
+                    </animation>
+                    <animation type="WindowClose" reversible="true">
+                        <effect type="zoom" start="100" end="65" center="190,290" tween="sine" delay="200" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="inout" delay="200" time="300" />
+                    </animation>
+                    <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
+                        <effect type="zoom" start="175" end="100" delay="300" center="190,290" tween="sine" easing="out" time="350" /> 
+                        <effect type="fade" start="25" end="100" delay="300" tween="sine" easing="in" time="350" />
+                    </animation>
+                    <include>GuideNoAnimation</include>
+                    <animation type="Hidden" reversible="false">
+                        <effect type="zoom" start="100" end="175" center="190,290" tween="sine" delay="100" easing="out" time="200" /> 
+                        <effect type="fade" start="100" end="0" tween="sine" easing="out" delay="200" time="100" />
+                    </animation>
+                    <visible>Control.IsVisible(505) + !Window.IsActive(addoninformation)</visible>
+                    <control type="image">
+                        <description>Shadow Back</description>
+                        <posx>-42</posx>
+                        <posy>0</posy>
+                        <width>464</width>
+                        <height>464</height>
+                        <texture border="50">views/posterview/shadow-back.png</texture>
+                        <aspectratio>stretch</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Reflection</description>
+                        <posx>-32</posx>
+                        <posy>458</posy>
+                        <width>444</width>
+                        <height>444</height>
+                        <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                        <texture flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[Container(505).ListItem(0).ActualIcon,views/posterview/,]</texture>
+                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        <visible>IsEmpty(Container(505).ListItem(0).Thumb)</visible>
+                    </control>
+                    <control type="image">
+                        <description>Reflection</description>
+                        <posx>-32</posx>
+                        <posy>458</posy>
+                        <width>444</width>
+                        <height>444</height>
+                        <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                        <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[Container(505).ListItem(0).Thumb]</texture>
+                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        <visible>!IsEmpty(Container(505).ListItem(0).Thumb)</visible>
+                    </control>
+                    <control type="image">
+                        <description>Shadow Bottom</description>
+                        <posx>-62</posx>
+                        <posy>437</posy>
+                        <width>504</width>
+                        <height>36</height>
+                        <texture>views/posterview/shadow.png</texture>
+                        <aspectratio>stretch</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Shadow Focus</description>
+                        <posx>-135</posx>
+                        <posy>0</posy>
+                        <width>650</width>
+                        <height>464</height>
+                        <texture>views/posterview/shadow-focus-square.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>-32</posx>
+                        <posy>10</posy>
+                        <width>444</width>
+                        <height>444</height>
+                        <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                        <texture diffuse="views/posterview/diffuse-square.png">$INFO[Container(505).ListItem(0).ActualIcon,views/posterview/,]</texture>
+                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        <visible>IsEmpty(Container(505).ListItem(0).Thumb)</visible>
+                    </control>
+                    <control type="image">
+                        <description>Poster</description>
+                        <posx>-32</posx>
+                        <posy>10</posy>
+                        <width>444</width>
+                        <height>444</height>
+                        <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                        <texture background="true" diffuse="views/posterview/diffuse-square.png" />
+                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                        <info>Container(505).ListItem(0).Thumb</info>
+                        <visible>!IsEmpty(Container(505).ListItem(0).Thumb)</visible>
+                    </control>
+                    <control type="image">
+                        <description>Overlay</description>
+                        <posx>-32</posx>
+                        <posy>10</posy>
+                        <width>444</width>
+                        <height>444</height>
+                        <texture border="20">views/posterview/overlay.png</texture>
+                        <aspectratio>stretch</aspectratio>
+                    </control>
+                </control>
+            </control>
+            
+            <control type="group">      
+                <visible>Control.IsVisible(505) + !Window.IsActive(addoninformation)</visible>
+                <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                <animation effect="fade" start="0" end="100" time="0" delay="1310" reversible="false">Visible</animation>       
+                <control type="fixedlist" id="505">
+                    <posx>-244</posx>
+                    <posy>360</posy>
+                    <width>2320</width>
+                    <height>710</height>
+                    <pagecontrol>70</pagecontrol>
+                    <scrolltime tween="cubic" easing="out">500</scrolltime>
+                    <orientation>horizontal</orientation>
+                    <viewtype label="Classic Cover">CoverView</viewtype>
+                    <onleft>505</onleft>
+                    <onright>505</onright>
+                    <onup condition="!Skin.HasSetting(KioskMode)">9010</onup>
+                    <onup condition="Skin.HasSetting(KioskMode)">505</onup>
+                    <ondown>70</ondown>
+                    <focusposition>1</focusposition>
+                    <preloaditems>2</preloaditems>
+                    <animation type="WindowOpen" reversible="false">
+                        <effect type="fade" start="0" end="100" time="0" />
+                        <effect type="slide" start="0,-1500" end="0,0" delay="1010" time="0" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="0" />
+                    </animation>
+                    <itemlayout width="380">
+                        <control type="group">
+                            <animation effect="Conditional" condition="true">
+                                <effect type="zoom" end="78" time="0" center="190,290" />
+                            </animation>
+                            <control type="image">
+                                <description>Shadow Back</description>
+                                <posx>-42</posx>
+                                <posy>0</posy>
+                                <width>464</width>
+                                <height>464</height>
+                                <texture border="50">views/posterview/shadow-back.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                            </control>
+                            <control type="image">
+                                <description>Reflection</description>
+                                <posx>-32</posx>
+                                <posy>458</posy>
+                                <width>444</width>
+                                <height>444</height>
+                                <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                                <texture flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[ListItem.ActualIcon,views/posterview/,]</texture>
+                                <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                                <visible>IsEmpty(ListItem.Thumb)</visible>
+                            </control>
+                            <control type="image">
+                                <description>Reflection</description>
+                                <posx>-32</posx>
+                                <posy>458</posy>
+                                <width>444</width>
+                                <height>444</height>
+                                <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                                <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[ListItem.Thumb]</texture>
+                                <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                                <visible>!IsEmpty(ListItem.Thumb)</visible>
+                            </control>
+                            <control type="image">
+                                <description>Shadow Bottom</description>
+                                <posx>-62</posx>
+                                <posy>437</posy>
+                                <width>504</width>
+                                <height>36</height>
+                                <texture>views/posterview/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-32</posx>
+                                <posy>10</posy>
+                                <width>444</width>
+                                <height>444</height>
+                                <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                                <texture diffuse="views/posterview/diffuse-square.png">$INFO[ListItem.ActualIcon,views/posterview/,]</texture>
+                                <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                                <visible>IsEmpty(ListItem.Thumb)</visible>
+                            </control>
+                            <control type="image">
+                                <description>Poster</description>
+                                <posx>-32</posx>
+                                <posy>10</posy>
+                                <width>444</width>
+                                <height>444</height>
+                                <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                                <texture background="true" diffuse="views/posterview/diffuse-square.png">$INFO[ListItem.Thumb]</texture>
+                                <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                                <visible>!IsEmpty(ListItem.Thumb)</visible>
+                            </control>
+                            <control type="image">
+                                <description>Overlay</description>
+                                <posx>-32</posx>
+                                <posy>10</posy>
+                                <width>444</width>
+                                <height>444</height>
+                                <texture border="20">views/posterview/overlay.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="380">
+                        <control type="group">
+                            <animation type="Focus" condition="Container(505).OnNext | Container(505).OnPrevious">
+                                <effect type="zoom" start="78" end="100" time="350" tween="sine" easing="out" center="190,290" />
+                            </animation>
+                            <animation type="Unfocus" condition="Container(505).OnNext | Container(505).OnPrevious">
+                                <effect type="zoom" start="100" end="78" time="250" tween="sine" easing="out" center="190,290" />
+                            </animation>
+                            <control type="image">
+                                <description>Shadow Back</description>
+                                <posx>-42</posx>
+                                <posy>0</posy>
+                                <width>464</width>
+                                <height>464</height>
+                                <texture border="50">views/posterview/shadow-back.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                            </control>
+                            <control type="image">
+                                <description>Reflection</description>
+                                <posx>-32</posx>
+                                <posy>458</posy>
+                                <width>444</width>
+                                <height>444</height>
+                                <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                                <texture flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[ListItem.ActualIcon,views/posterview/,]</texture>
+                                <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                                <visible>IsEmpty(ListItem.Thumb)</visible>
+                            </control>
+                            <control type="image">
+                                <description>Reflection</description>
+                                <posx>-32</posx>
+                                <posy>458</posy>
+                                <width>444</width>
+                                <height>444</height>
+                                <bordertexture diffuse="views/posterview/diffuse-ref-square-classic.png">windows/common/darkgrey.png</bordertexture>
+                                <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[ListItem.Thumb]</texture>
+                                <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                                <visible>!IsEmpty(ListItem.Thumb)</visible>
+                            </control>
+                            <control type="image">
+                                <description>Shadow Bottom</description>
+                                <posx>-62</posx>
+                                <posy>437</posy>
+                                <width>504</width>
+                                <height>36</height>
+                                <texture>views/posterview/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <description>Shadow Focus</description>
+                                <posx>-135</posx>
+                                <posy>0</posy>
+                                <width>650</width>
+                                <height>464</height>
+                                <texture>views/posterview/shadow-focus-square.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-32</posx>
+                                <posy>10</posy>
+                                <width>444</width>
+                                <height>444</height>
+                                <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                                <texture diffuse="views/posterview/diffuse-square.png">$INFO[ListItem.ActualIcon,views/posterview/,]</texture>
+                                <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                                <visible>IsEmpty(ListItem.Thumb)</visible>
+                            </control>
+                            <control type="image">
+                                <description>Poster</description>
+                                <posx>-32</posx>
+                                <posy>10</posy>
+                                <width>444</width>
+                                <height>444</height>
+                                <bordertexture diffuse="views/posterview/diffuse-square.png">windows/common/darkgrey.png</bordertexture>
+                                <texture background="true" diffuse="views/posterview/diffuse-square.png">$INFO[ListItem.Thumb]</texture>
+                                <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                                <visible>!IsEmpty(ListItem.Thumb)</visible>
+                            </control>
+                            <control type="image">
+                                <description>Overlay</description>
+                                <posx>-32</posx>
+                                <posy>10</posy>
+                                <width>444</width>
+                                <height>444</height>
+                                <texture border="20">views/posterview/overlay.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+            <control type="group">
+                <animation type="WindowOpen" reversible="false">
+                    <effect type="fade" start="0" end="100" delay="450" time="300" tween="sine" easing="inout" />
+                </animation>
+                <animation type="WindowClose" reversible="false">
+                    <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+                </animation>
+                <animation type="Visible" reversible="true">
+                    <effect type="fade" start="0" end="100" delay="750" time="300" tween="sine" easing="inout" />
+                </animation>
+                <animation type="Hidden" reversible="true">
+                    <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+                </animation>
+                <visible>Control.IsVisible(505) + !Window.IsActive(addoninformation)</visible>
+                <control type="group">
+                    <control type="group">
+                        <animation type="Visible" reversible="false">
+                            <effect type="fade" start="0" end="100" time="150" delay="150" tween="sine" easing="in" />
+                        </animation>
+                        <visible>!Container(505).OnNext + !Container(505).OnPrevious</visible>
+                        <posx>110</posx>
+                        <posy>830</posy>
+                        <control type="group">
+                            <control type="label">
+                                <posx>12</posx>
+                                <posy>15</posy>
+                                <width>1730</width>
+                                <label>$INFO[Container(505).ListItem.Label]</label>
+                                <font>Font-Condensed-S45-B</font>
+                                <textcolor>aawhite</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>13</posx>
+                                <posy>65</posy>
+                                <width>1730</width>
+                                <label>$INFO[Container(505).ListItem.Label2]$INFO[Container(505).ListItem.PictureResolution, • ,]$INFO[Container(505).ListItem.PictureDateTime, • ,]</label>
+                                <font>Font-Condensed-S36</font>
+                                <textcolor>77white</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                    </control>
+                </control>
+                <!--Scrollbar-->
+                <control type="scrollbar" id="70">
+                    <description>Scrollbar</description>
+                    <posx>104</posx>
+                    <posy>135r</posy>
+                    <width>1712</width>
+                    <height>11</height>
+                    <orientation>horizontal</orientation>
+                    <texturesliderbar border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbar>
+                    <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbarfocus>
+                    <showonepage>false</showonepage>
+                    <onup>505</onup>
+                    <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
+                    <ondown condition="Skin.HasSetting(KioskMode)">505</ondown>
+                    <animation effect="fade" start="30" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
+                    <visible>Control.IsVisible(505)</visible>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>

@@ -1,0 +1,674 @@
+<includes>
+
+<!-- ====================== -->
+<!-- Landscape Poster (504) -->
+<!-- ====================== -->
+    
+    <include name="Viewtype-GameLandscapePoster">
+        <control type="group">
+            <include>FullscreenDimensions</include>
+            <include>OptionsShutdownAnimation</include>
+            <control type="group">
+                <visible>!Window.IsActive(1122) + Control.IsVisible(504)</visible>
+                <include>CommonViewAnimations</include>
+                <control type="fixedlist" id="504">
+                    <visible>stringcompare(Container.FolderName,Advanced Launcher)</visible>
+                    <posx>-248</posx>
+                    <posy>300</posy>
+                    <width>2298</width>
+                    <height>750</height>
+                    <pagecontrol>70</pagecontrol>
+                    <scrolltime tween="cubic" easing="out">500</scrolltime>
+                    <orientation>horizontal</orientation>
+                    <viewtype label="Landscape Poster">list</viewtype>
+                    <onleft>504</onleft>
+                    <onright>504</onright>
+                    <onup condition="!Skin.HasSetting(KioskMode)">XBMC.ActivateWindow(1122)</onup>
+                    <onup condition="Skin.HasSetting(KioskMode)">504</onup>
+                    <ondown>70</ondown>
+                    <focusposition>1</focusposition>
+                    <preloaditems>2</preloaditems>
+                    <itemlayout width="348">
+                        <control type="group">
+                            <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>585</posy>
+                                <height>50</height>
+                                <width>356</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>346</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>493</posy>
+                                <width>296</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>529</posy>
+                                <width>296</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Year]$INFO[ListItem.genre, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>336</width>
+                            <height>480</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultGames.png/poster.png">$INFO[ListItem.Art(thumb)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>236</posx>
+                            <posy>0</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <aspect>keepaspect</aspect>
+                            <texture>$VAR[ExtendedOverlay]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>479</posy>
+                            <width>336</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="348">
+                        <control type="group">
+                            <animation type="Focus" condition="Container(504).OnNext | Container(504).OnPrevious">
+                                <effect type="fade" start="50" end="100" time="300" tween="sine" easing="inout" />
+                            </animation>
+                            <animation type="Unfocus" condition="Container(504).OnNext | Container(504).OnPrevious">
+                                <effect type="fade" start="100" end="50" time="300" tween="sine" easing="inout" />
+                            </animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>585</posy>
+                                <height>50</height>
+                                <width>356</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="group">
+                                <animation type="Focus" condition="Container(504).OnNext | Container(504).OnPrevious">
+                                    <effect type="fade" start="60" end="100" time="300" tween="sine" easing="inout" />
+                                </animation>
+                                <animation type="Unfocus" condition="Container(504).OnNext | Container(504).OnPrevious">
+                                    <effect type="fade" start="100" end="60" time="300" tween="sine" easing="inout" />
+                                </animation>
+                                <control type="image">
+                                    <posx>-5</posx>
+                                    <posy>475</posy>
+                                    <width>346</width>
+                                    <height>110</height>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                </control>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>493</posy>
+                                <width>296</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>true</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>529</posy>
+                                <width>296</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Year]$INFO[ListItem.genre, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>336</width>
+                            <height>480</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultGames.png/poster.png">$INFO[ListItem.Art(thumb)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>236</posx>
+                            <posy>0</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <aspect>keepaspect</aspect>
+                            <texture>$VAR[ExtendedOverlay]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>479</posy>
+                            <width>336</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+            <control type="group">
+                <animation type="WindowOpen" reversible="false">
+                    <effect type="fade" start="0" end="100" delay="450" time="300" tween="sine" easing="inout" />
+                </animation>
+                <animation type="WindowClose" reversible="false">
+                    <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+                </animation>
+                <animation type="Visible" reversible="true">
+                    <effect type="fade" start="0" end="100" delay="750" time="300" tween="sine" easing="inout" />
+                </animation>
+                <animation type="Hidden" reversible="true">
+                    <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+                </animation>
+                <visible>!Window.IsActive(1122) + Control.IsVisible(504)</visible>
+                <!--Scrollbar-->
+                <control type="image">
+                    <description>Scrollbar background (visible on focus)</description>
+                    <posx>104</posx>
+                    <posy>135r</posy>
+                    <width>1712</width>
+                    <height>11</height>
+                    <texture border="6,0,6,0">views/other/scrollbar-h.png</texture>
+                    <visible>Control.IsVisible(504) + Control.HasFocus(70)</visible>
+                    <animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
+                    <animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
+                </control>
+                <control type="scrollbar" id="70">
+                    <description>Scrollbar</description>
+                    <posx>104</posx>
+                    <posy>135r</posy>
+                    <width>1712</width>
+                    <height>11</height>
+                    <orientation>horizontal</orientation>
+                    <texturesliderbar border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbar>
+                    <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbarfocus>
+                    <showonepage>false</showonepage>
+                    <onup>504</onup>
+                    <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
+                    <ondown condition="Skin.HasSetting(KioskMode)">504</ondown>
+                    <animation effect="fade" start="40" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
+                    <visible>Control.IsVisible(504)</visible>
+                </control>
+            </control>
+        </control>
+    </include>
+    
+<!-- ====================== -->
+<!-- Landscape Square (505) -->
+<!-- ====================== -->
+    
+    <include name="Viewtype-GameLandscapeSquare">
+        <control type="group">
+            <include>FullscreenDimensions</include>
+            <include>OptionsShutdownAnimation</include>
+            <control type="group">
+                <visible>!Window.IsActive(1122) + Control.IsVisible(505)</visible>
+                <include>CommonViewAnimations</include>
+                <control type="fixedlist" id="505">
+                    <visible>stringcompare(Container.FolderName,Advanced Launcher)</visible>
+                    <posx>-292</posx>
+                    <posy>400</posy>
+                    <width>2352</width>
+                    <height>550</height>
+                    <pagecontrol>70</pagecontrol>
+                    <scrolltime tween="cubic" easing="out">500</scrolltime>
+                    <orientation>horizontal</orientation>
+                    <viewtype label="Landscape Square">list</viewtype>
+                    <onleft>505</onleft>
+                    <onright>505</onright>
+                    <onup condition="!Skin.HasSetting(KioskMode)">XBMC.ActivateWindow(1122)</onup>
+                    <onup condition="Skin.HasSetting(KioskMode)">505</onup>
+                    <ondown>70</ondown>
+                    <focusposition>1</focusposition>
+                    <preloaditems>2</preloaditems>
+                    <itemlayout width="392">
+                        <control type="group">
+                            <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>485</posy>
+                                <height>50</height>
+                                <width>400</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>375</posy>
+                                <width>390</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>393</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>429</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Year]$INFO[ListItem.genre, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultGames.png/square.png">$INFO[ListItem.Art(thumb)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>280</posx>
+                            <posy>0</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <aspect>keepaspect</aspect>
+                            <texture>$VAR[ExtendedOverlay]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="392">
+                        <control type="group">
+                            <animation type="Focus" condition="Container(505).OnNext | Container(505).OnPrevious">
+                                <effect type="fade" start="50" end="100" time="300" tween="sine" easing="inout" />
+                            </animation>
+                            <animation type="Unfocus" condition="Container(505).OnNext | Container(505).OnPrevious">
+                                <effect type="fade" start="100" end="50" time="300" tween="sine" easing="inout" />
+                            </animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>485</posy>
+                                <height>50</height>
+                                <width>400</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="group">
+                                <animation type="Focus" condition="Container(505).OnNext | Container(505).OnPrevious">
+                                    <effect type="fade" start="60" end="100" time="300" tween="sine" easing="inout" />
+                                </animation>
+                                <animation type="Unfocus" condition="Container(505).OnNext | Container(505).OnPrevious">
+                                    <effect type="fade" start="100" end="60" time="300" tween="sine" easing="inout" />
+                                </animation>
+                                <control type="image">
+                                    <posx>-5</posx>
+                                    <posy>375</posy>
+                                    <width>390</width>
+                                    <height>110</height>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                </control>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>393</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>true</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>429</posy>
+                                <width>340</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Year]$INFO[ListItem.genre, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultGames.png/square.png">$INFO[ListItem.Art(thumb)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>280</posx>
+                            <posy>0</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <aspect>keepaspect</aspect>
+                            <texture>$VAR[ExtendedOverlay]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+            <control type="group">
+                <animation type="WindowOpen" reversible="false">
+                    <effect type="fade" start="0" end="100" delay="450" time="300" tween="sine" easing="inout" />
+                </animation>
+                <animation type="WindowClose" reversible="false">
+                    <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+                </animation>
+                <animation type="Visible" reversible="true">
+                    <effect type="fade" start="0" end="100" delay="750" time="300" tween="sine" easing="inout" />
+                </animation>
+                <animation type="Hidden" reversible="true">
+                    <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+                </animation>
+                <visible>!Window.IsActive(1122) + Control.IsVisible(505)</visible>
+                <!--Scrollbar-->
+                <control type="image">
+                    <description>Scrollbar background (visible on focus)</description>
+                    <posx>104</posx>
+                    <posy>135r</posy>
+                    <width>1712</width>
+                    <height>11</height>
+                    <texture border="6,0,6,0">views/other/scrollbar-h.png</texture>
+                    <visible>Control.IsVisible(505) + Control.HasFocus(70)</visible>
+                    <animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
+                    <animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
+                </control>
+                <control type="scrollbar" id="70">
+                    <description>Scrollbar</description>
+                    <posx>104</posx>
+                    <posy>135r</posy>
+                    <width>1712</width>
+                    <height>11</height>
+                    <orientation>horizontal</orientation>
+                    <texturesliderbar border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbar>
+                    <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbarfocus>
+                    <showonepage>false</showonepage>
+                    <onup>505</onup>
+                    <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
+                    <ondown condition="Skin.HasSetting(KioskMode)">505</ondown>
+                    <animation effect="fade" start="40" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
+                    <visible>Control.IsVisible(505)</visible>
+                </control>
+            </control>
+        </control>
+    </include>
+  
+<!-- ==================== -->
+<!-- Landscape Wide (506) -->
+<!-- ==================== -->
+    
+    <include name="Viewtype-GameLandscapeWide">
+        <control type="group">
+            <include>FullscreenDimensions</include>
+            <include>OptionsShutdownAnimation</include>
+            <control type="group">
+                <visible>!Window.IsActive(1122) + Control.IsVisible(506)</visible>
+                <include>CommonViewAnimations</include>
+                <control type="fixedlist" id="506">
+                    <visible>stringcompare(Container.FolderName,Advanced Launcher)</visible>
+                    <posx>-452</posx>
+                    <posy>400</posy>
+                    <width>2512</width>
+                    <height>550</height>
+                    <pagecontrol>70</pagecontrol>
+                    <scrolltime tween="cubic" easing="out">500</scrolltime>
+                    <orientation>horizontal</orientation>
+                    <viewtype label="Landscape Wide">list</viewtype>
+                    <onleft>506</onleft>
+                    <onright>506</onright>
+                    <onup condition="!Skin.HasSetting(KioskMode)">XBMC.ActivateWindow(1122)</onup>
+                    <onup condition="Skin.HasSetting(KioskMode)">506</onup>
+                    <ondown>70</ondown>
+                    <focusposition>1</focusposition>
+                    <preloaditems>2</preloaditems>
+                    <itemlayout width="552">
+                        <control type="group">
+                            <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>485</posy>
+                                <height>50</height>
+                                <width>560</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>375</posy>
+                                <width>550</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>393</posy>
+                                <width>500</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>429</posy>
+                                <width>500</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Year]$INFO[ListItem.genre, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>540</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultGames.png/landscape.png">$INFO[ListItem.Art(thumb)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>440</posx>
+                            <posy>0</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <aspect>keepaspect</aspect>
+                            <texture>$VAR[ExtendedOverlay]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>540</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="552">
+                        <control type="group">
+                            <animation type="Focus" condition="Container(506).OnNext | Container(506).OnPrevious">
+                                <effect type="fade" start="50" end="100" time="300" tween="sine" easing="inout" />
+                            </animation>
+                            <animation type="Unfocus" condition="Container(506).OnNext | Container(506).OnPrevious">
+                                <effect type="fade" start="100" end="50" time="300" tween="sine" easing="inout" />
+                            </animation>
+                            <control type="image">
+                                <posx>-10</posx>
+                                <posy>485</posy>
+                                <height>50</height>
+                                <width>560</width>
+                                <texture>dialogs/shutdown/shadow.png</texture>
+                            </control>
+                            <control type="group">
+                                <animation type="Focus" condition="Container(506).OnNext | Container(506).OnPrevious">
+                                    <effect type="fade" start="60" end="100" time="300" tween="sine" easing="inout" />
+                                </animation>
+                                <animation type="Unfocus" condition="Container(506).OnNext | Container(506).OnPrevious">
+                                    <effect type="fade" start="100" end="60" time="300" tween="sine" easing="inout" />
+                                </animation>
+                                <control type="image">
+                                    <posx>-5</posx>
+                                    <posy>375</posy>
+                                    <width>550</width>
+                                    <height>110</height>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                </control>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>393</posy>
+                                <width>500</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Label]</label>
+                                <font>Font-Condensed-S32-B</font>
+                                <textcolor>ddwhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>true</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>20</posx>
+                                <posy>429</posy>
+                                <width>500</width>
+                                <height>40</height>
+                                <label>$INFO[ListItem.Year]$INFO[ListItem.genre, • ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>aawhite</textcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>540</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultGames.png/landscape.png">$INFO[ListItem.Art(thumb)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>440</posx>
+                            <posy>0</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <aspect>keepaspect</aspect>
+                            <texture>$VAR[ExtendedOverlay]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>540</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+            <control type="group">
+                <animation type="WindowOpen" reversible="false">
+                    <effect type="fade" start="0" end="100" delay="450" time="300" tween="sine" easing="inout" />
+                </animation>
+                <animation type="WindowClose" reversible="false">
+                    <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+                </animation>
+                <animation type="Visible" reversible="true">
+                    <effect type="fade" start="0" end="100" delay="750" time="300" tween="sine" easing="inout" />
+                </animation>
+                <animation type="Hidden" reversible="true">
+                    <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+                </animation>
+                <visible>!Window.IsActive(1122) + Control.IsVisible(506)</visible>
+                <!--Scrollbar-->
+                <control type="image">
+                    <description>Scrollbar background (visible on focus)</description>
+                    <posx>104</posx>
+                    <posy>135r</posy>
+                    <width>1712</width>
+                    <height>11</height>
+                    <texture border="6,0,6,0">views/other/scrollbar-h.png</texture>
+                    <visible>Control.IsVisible(506) + Control.HasFocus(70)</visible>
+                    <animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
+                    <animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
+                </control>
+                <control type="scrollbar" id="70">
+                    <description>Scrollbar</description>
+                    <posx>104</posx>
+                    <posy>135r</posy>
+                    <width>1712</width>
+                    <height>11</height>
+                    <orientation>horizontal</orientation>
+                    <texturesliderbar border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbar>
+                    <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbarfocus>
+                    <showonepage>false</showonepage>
+                    <onup>506</onup>
+                    <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
+                    <ondown condition="Skin.HasSetting(KioskMode)">505</ondown>
+                    <animation effect="fade" start="40" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
+                    <visible>Control.IsVisible(506)</visible>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>

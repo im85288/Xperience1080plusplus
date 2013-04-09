@@ -1,0 +1,61 @@
+<window>
+    <defaultcontrol>525</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onload>
+    <onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onload>
+    <onload condition="Container(20).HasFocus(3) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onload>
+    <onload condition="Container(20).HasFocus(4) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onload>
+    <onload condition="Container(20).HasFocus(5) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onload>
+    <onload condition="!Skin.HasSetting(HideHomeProfileInfo)">AlarmClock(ProfileMove,Control.Move(30,1),00:10,silent,loop)</onload>
+    <onunload>CancelAlarm(HomeTileMove,true)</onunload>
+    <onunload>CancelAlarm(HomeTileMoveTwo,true)</onunload>
+    <onunload>CancelAlarm(HomeTileMoveThree,true)</onunload>
+    <onunload condition="!Skin.HasSetting(HideHomeProfileInfo)">CancelAlarm(ProfileMove,true)</onunload>
+    <controls>
+        <!-- Backgrounds -->
+        <include condition="stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))">CommonItemsHome</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),classic)">CommonItemsHomeClassic</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">CommonItemsHomeHorizontal</include>
+
+        <!-- Home screen -->
+        <include condition="stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))">HomeControlList</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))">HomeControlListLabels</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))">HomeItems</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))">HomeProfileInfo</include>
+        
+        <!-- Home classic screen -->
+        <include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeSubMenuMovies</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeSubMenuTVShows</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeSubMenuMusic</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeSubMenuLiveTV</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeSubMenuSettings</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeWraplist</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeWraplistAnimation</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeProfileInfoClassic</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),classic)">Recent-Added</include>
+
+        <!-- Home Horizontal screen -->
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeSubMenuOverlayHorizontal</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeSubMenuMoviesHorizontal</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeSubMenuTVShowsHorizontal</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeSubMenuMusicHorizontal</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeSubMenuLiveTVHorizontal</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeSubMenuWeatherHorizontal</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeSubMenuSettingsHorizontal</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeWraplistHorizontal</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeProfileInfoHorizontal</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeRecentTitleHorizontal</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">Recent-Added-Horizontal</include>
+        
+        <!-- Fade background -->
+        <include>FadeBackground</include>
+        
+        <!-- Bottom buttons -->
+        <include condition="stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))">shutdown-favs</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),classic)">shutdown-favs-classic</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal) + !Skin.HasSetting(HideShutdownButton)">shutdown-favs-horizontal</include>
+        
+        <!-- Common/profile info -->
+        <include>Common-Home-Info</include>
+    </controls>
+</window>

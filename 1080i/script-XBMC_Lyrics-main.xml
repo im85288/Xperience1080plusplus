@@ -1,0 +1,227 @@
+﻿<window>
+    <defaultcontrol always="false">1111</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <controls>
+        <control type="group">
+            <include>FullscreenDimensions</include>
+            <control type="image">
+                <include>FullscreenDimensions</include>
+                <texture>windows/common/black_content.png</texture>
+                <colordiffuse>bbffffff</colordiffuse>
+                <visible>Skin.HasSetting(OSDVisualisation.Enabled)</visible>
+            </control>
+            <include>NowPlayingFullscreen</include>
+            <control type="image">
+                <include>FullscreenDimensions</include>
+                <texture>dialogs/lyrics/bg.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image">
+                <description>Cover</description>
+                <posx>450</posx>
+                <posy>139</posy>
+                <width>80</width>
+                <height>80</height>
+                <texture background="true">$INFO[MusicPlayer.Cover]</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="label">
+                <description>Title</description>
+                <posx>545</posx>
+                <posy>142</posy>
+                <width>875</width>
+                <height>34</height>
+                <align>left</align>
+                <label>$INFO[MusicPlayer.Title]</label>
+                <font>Font-Condensed-S34-B</font>
+                <textcolor>eewhite</textcolor>
+                <shadowcolor>66000000</shadowcolor>
+                <scroll>false</scroll>
+            </control>
+            <control type="label">
+                <description>Artist</description>
+                <posx>545</posx>
+                <posy>181</posy>
+                <width>875</width>
+                <height>34</height>
+                <align>left</align>
+                <label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, • ,]$INFO[MusicPlayer.Year, • ,]</label>
+                <font>Font-Condensed-S32</font>
+                <textcolor>bbwhite</textcolor>
+                <shadowcolor>66000000</shadowcolor>
+            </control>
+            <control type="image">
+                <description>Lyrics icon</description>
+                <posx>1409</posx>
+                <posy>137</posy>
+                <width>85</width>
+                <height>85</height>
+                <texture>DefaultAddonLyrics.png</texture>
+            </control>
+            <!-- <control type="label">
+                <posx>450</posx>
+                <posy>891</posy>
+                <width>360</width>
+                <height>60</height>
+                <label>$INFO[Player.Time(mm:ss)]$INFO[Player.Duration(mm:ss), / ,]</label>
+                <textcolor>bbwhite</textcolor>
+                <font>Font-Condensed-S25-B</font>
+                <align>left</align>
+            </control>-->
+            
+            <!--CU Lyrics-->
+            <control type="textbox" id="100">
+                <description>Lyrics</description>
+                <posx>450</posx>
+                <posy>240</posy>
+                <height>630</height>
+                <width>1020</width>
+                <font>Font-Condensed-S34</font>
+                <align>center</align>
+                <onleft>101</onleft>
+                <onright>101</onright>
+                <pagecontrol>101</pagecontrol>
+                <textcolor>bbwhite</textcolor>
+                <autoscroll delay="6000" time="3000" repeat="6000">!Control.HasFocus(101)</autoscroll>
+            </control>
+            <control type="button" id="1111">
+                <onleft>101</onleft>
+                <onright>101</onright>
+                <ondown>101</ondown>
+                <onup>101</onup>
+                <visible allowhiddenfocus="true">false</visible>
+            </control>
+            <control type="spincontrol" id="101">
+                <posx>1399</posx>
+                <posy>891</posy>
+                <width>43</width>
+                <height>60</height>
+                <font>Font-Condensed-S25-B</font>
+                <textcolor>bbwhite</textcolor>
+                <focusedcolor>eewhite</focusedcolor>
+                <align>right</align>
+                <onleft>101</onleft>
+                <onright>101</onright>
+                <ondown>101</ondown>
+                <onup>1111</onup>
+                <subtype>page</subtype>
+                <showonepage>false</showonepage>
+                <visible>Control.IsVisible(100)</visible>
+            </control>
+            
+            <!--CU LRC Lyrics-->
+            <control type="list" id="110">
+                <posx>450</posx>
+                <posy>240</posy>
+                <height>630</height>
+                <width>1020</width>
+                <onleft>110</onleft>
+                <onright>122</onright>
+                <onup>110</onup>
+                <ondown>110</ondown>
+                <pagecontrol>122</pagecontrol>
+                <scrolltime>400</scrolltime>
+                <itemlayout height="45">
+                    <control type="label">
+                        <posx>510</posx>
+                        <posy>0</posy>
+                        <width>1020</width>
+                        <height>45</height>
+                        <font>Font-Condensed-S34</font>
+                        <align>center</align>
+                        <textcolor>eewhite</textcolor>
+                        <info>ListItem.Label</info>
+                        <animation type="Conditional" condition="true" reversible="false">
+                            <effect type="fade" end="40" time="0" />
+                        </animation>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="45">
+                    <control type="label">
+                        <posx>510</posx>
+                        <posy>0</posy>
+                        <width>1020</width>
+                        <height>45</height>
+                        <font>Font-Condensed-S34</font>
+                        <align>center</align>
+                        <textcolor>eewhite</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                        <visible>!Control.HasFocus(110)</visible>
+                        <animation type="Visible" reversible="false">
+                            <effect type="fade" end="40" time="0" />
+                            <effect type="zoom" start="110" end="100" time="200" tween="sine" easing="out" center="510,22" />
+                        </animation>
+                    </control>
+                    <control type="label">
+                        <posx>510</posx>
+                        <posy>0</posy>
+                        <width>1020</width>
+                        <height>45</height>
+                        <font>Font-Condensed-S34</font>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <textcolor>eewhite</textcolor>
+                        <label fallback="--">$INFO[ListItem.Label]</label>
+                        <visible>Control.HasFocus(110)</visible>
+                        <animation type="Focus" reversible="false">
+                            <effect type="fade" start="40" end="100" time="200" tween="sine" easing="in" />
+                            <effect type="zoom" start="100" end="110" time="200" tween="sine" easing="in" center="510,22" />
+                        </animation>
+                        <animation type="Unfocus" reversible="false">
+                            <effect type="fade" start="100" end="40" time="200" tween="sine" easing="out" />
+                            <effect type="zoom" start="110" end="100" time="200" tween="sine" easing="out" center="510,22" />
+                        </animation>
+                    </control>
+                </focusedlayout>
+            </control>  
+
+            <control type="scrollbar" id="122">
+                <description>Scrollbar</description>
+                <posx>1494</posx>
+                <posy>230</posy>
+                <width>6</width>
+                <height>658</height>
+                <onup>122</onup>
+                <ondown>122</ondown>                  
+                <onleft>110</onleft>
+                <onright>122</onright>
+                <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
+                <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+                <orientation>vertical</orientation>
+                <showonepage>false</showonepage>
+                <animation effect="fade" start="50" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(122)">Conditional</animation>
+                <visible>Control.IsVisible(110)</visible>
+            </control>
+            
+            <control type="label">
+                <posx>1385</posx>
+                <posy>891</posy>
+                <width>120</width>
+                <height>60</height>
+                <font>Font-Condensed-S25-B</font>
+                <textcolor>aawhite</textcolor>
+                <label>$INFO[Container(110).CurrentPage,$LOCALIZE[41819] ,]$INFO[Container(110).NumPages,/,]</label>
+                <scroll>false</scroll>
+                <align>left</align>
+                <visible>IntegerGreaterThan(Container(110).NumPages,1)</visible>
+            </control>
+
+            <!---->
+            <control type="label" id="2">
+                <visible>false</visible>
+            </control>
+            <control type="spincontrol" id="111">
+                <visible>false</visible>
+            </control>
+            <control type="list" id="120">
+                <visible>false</visible>
+            </control>
+            <control type="spincontrol" id="121">
+                <visible>false</visible>
+            </control>
+            <control type="label" id="200">
+                <visible>false</visible>
+            </control>
+        </control>
+    </controls>
+</window>

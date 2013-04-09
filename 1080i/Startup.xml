@@ -1,0 +1,13 @@
+<window>
+    <defaultcontrol always="true">10</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <controls>
+        <include>CommonSettingsItems</include>
+        <include>Common-Info-NoOptions</include>
+        <control type="button" id="10">
+            <onfocus condition="IsEmpty(Skin.String(GlobalBackdropSingle))">Skin.SetString(GlobalBackdropSingle,special://skin/extras/backgrounds/01.jpg)</onfocus>
+            <onfocus condition="Skin.HasSetting(NextAired.Update)">RunScript(script.tv.show.next.aired,silent=True)</onfocus>
+            <onfocus>ReplaceWindow(Home)</onfocus>
+        </control>
+    </controls>
+</window>

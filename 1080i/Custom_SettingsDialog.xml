@@ -1,0 +1,328 @@
+<window type="dialog" id="3001">
+    <defaultcontrol always="true">3</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <onunload condition="!IsEmpty(Window(skinsettings).property(Guide.Custom))">ClearProperty(Guide.Custom,skinsettings)</onunload>
+    <onunload condition="!IsEmpty(Window(Home).Property(ReloadSkin))">SetFocus(2000)</onunload>
+    <controls>
+        <control type="group">
+            <include>KeyboardAnimations</include>
+            <visible>!Window.IsVisible(3003)</visible>
+            
+            <control type="label">
+                <description>Heading</description>
+                <posx>473</posx>
+                <posy>218</posy>
+                <width>974</width>
+                <font>Font-Condensed-S34</font>
+                <label>$INFO[Window(skinsettings).property(Dialog)]</label>
+                <textcolor>ddwhite</textcolor>
+                <align>center</align>
+            </control>
+            
+            <control type="image">
+                <include>FullscreenDimensions</include>
+                <texture>dialogs/select/background.png</texture>
+            </control>
+            
+            <control type="image">
+                <include>FullscreenDimensions</include>
+                <texture>dialogs/select/separators-small.png</texture>
+            </control>
+            
+          <!-- home categories-->
+            <control type="grouplist" id="3">
+                <include>SettingsDialogGrouplistVars</include>
+                <visible>stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[41131])</visible>
+                <control type="radiobutton" id="2101">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeHome)</selected>
+                    <onclick>Skin.ToggleSetting(HomeHome)</onclick>
+                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
+                    <label>$LOCALIZE[41524]</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),metro)</visible>
+                </control>
+                <control type="radiobutton" id="2102">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeMovies)</selected>
+                    <onclick>Skin.ToggleSetting(HomeMovies)</onclick>
+                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
+                    <label>$LOCALIZE[342]</label>
+                </control>
+                <control type="radiobutton" id="2103">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeTVShows)</selected>
+                    <onclick>Skin.ToggleSetting(HomeTVShows)</onclick>
+                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
+                    <label>$LOCALIZE[20343]</label>
+                </control>
+                <control type="radiobutton" id="2104">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeMusic)</selected>
+                    <onclick>Skin.ToggleSetting(HomeMusic)</onclick>
+                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
+                    <label>$LOCALIZE[2]</label>
+                </control>
+                <control type="radiobutton" id="2105">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomePictures)</selected>
+                    <onclick>Skin.ToggleSetting(HomePictures)</onclick>
+                    <label>$LOCALIZE[1]</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+                </control>
+                <control type="radiobutton" id="2106">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeTrailers)</selected>
+                    <onclick>Skin.ToggleSetting(HomeTrailers)</onclick>
+                    <label>Trailers</label>
+                    <visible>[stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)] + System.HasAddon(plugin.video.the.trailers)</visible>
+                </control>
+                <control type="radiobutton" id="2107">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeMusicFiles)</selected>
+                    <onclick>Skin.ToggleSetting(HomeMusicFiles)</onclick>
+                    <label>$LOCALIZE[41447] [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+                </control>
+                <control type="radiobutton" id="2108">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeVideoFiles)</selected>
+                    <onclick>Skin.ToggleSetting(HomeVideoFiles)</onclick>
+                    <label>Video [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+                </control>
+                <control type="radiobutton" id="2112">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeGames)</selected>
+                    <onclick>Skin.ToggleSetting(HomeGames)</onclick>
+                    <label>$LOCALIZE[15016]</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+                </control>
+                <control type="radiobutton" id="2109">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomePrograms)</selected>
+                    <onclick>Skin.ToggleSetting(HomePrograms)</onclick>
+                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
+                    <label>$LOCALIZE[41504]</label>
+                </control>
+                <control type="radiobutton" id="2110">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeAddons)</selected>
+                    <onclick>Skin.ToggleSetting(HomeAddons)</onclick>
+                    <label>$LOCALIZE[24001]</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+                </control>
+                <control type="radiobutton" id="2111">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeWeather)</selected>
+                    <onclick>Skin.ToggleSetting(HomeWeather)</onclick>
+                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
+                    <label>$LOCALIZE[8]</label>
+                </control>
+            </control>
+            
+          <!-- custom home items colors-->
+            <control type="grouplist" id="3">
+                <include>SettingsDialogGrouplistVars</include>
+                <visible>stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[41166])</visible>
+                <control type="radiobutton" id="2201">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HomeMoviesTiles)</selected>
+                    <onclick>Skin.ToggleSetting(HomeMoviesTiles)</onclick>
+                    <label>$LOCALIZE[41162]</label>
+                    <enable>!Skin.HasSetting(HomeMovies)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2201)">Conditional</animation>
+                </control>
+                <control type="radiobutton" id="2202">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HomeTVShowsTiles)</selected>
+                    <onclick>Skin.ToggleSetting(HomeTVShowsTiles)</onclick>
+                    <!--<label>Set custom TV shows tiles magenta</label>-->
+					<label>$LOCALIZE[41163]</label>
+                    <enable>!Skin.HasSetting(HomeTVShows)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2202)">Conditional</animation>
+                </control>
+                <control type="radiobutton" id="2203">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HomeMusicTiles)</selected>
+                    <onclick>Skin.ToggleSetting(HomeMusicTiles)</onclick>
+                    <label>$LOCALIZE[41164]</label>
+                    <enable>!Skin.HasSetting(HomeMusic)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2203)">Conditional</animation>
+                </control>
+                <control type="radiobutton" id="2204">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HomeWeatherTiles)</selected>
+                    <onclick>Skin.ToggleSetting(HomeWeatherTiles)</onclick>
+                    <label>$LOCALIZE[41165]</label>
+                    <enable>!Skin.HasSetting(HomeWeather)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2204)">Conditional</animation>
+                </control>
+            </control>
+            
+          <!-- custom home items extras -->
+            <control type="grouplist" id="3">
+                <include>SettingsDialogGrouplistVars</include>
+                <visible>stringcompare(Window(skinsettings).property(Dialog),Home items extras)</visible>
+                <control type="radiobutton" id="2300">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HideHomeSubmenuArrow)</selected>
+                    <onclick>Skin.ToggleSetting(HideHomeSubmenuArrow)</onclick>
+                    <label>$LOCALIZE[41135]</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),metro)</visible>
+                </control>
+                <control type="radiobutton" id="2301">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HideHomeSpotlight)</selected>
+                    <onclick>Skin.ToggleSetting(HideHomeSpotlight)</onclick>
+                    <label>Show New movies instead of Spotlight</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),metro)</visible>
+                    <enable>!Skin.HasSetting(HomeHome)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2301)">Conditional</animation>
+                </control>
+                <control type="radiobutton" id="2302">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HideHomeOngoing)</selected>
+                    <onclick>Skin.ToggleSetting(HideHomeOngoing)</onclick>
+                    <label>Show New shows instead of Ongoing</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),metro)</visible>
+                    <enable>!Skin.HasSetting(HomeHome)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2302)">Conditional</animation>
+                </control>
+                <control type="radiobutton" id="2303">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HideHomeDate)</selected>
+                    <onclick>Skin.ToggleSetting(HideHomeDate)</onclick>
+                    <label>Disable date popup</label>
+                </control>
+                <control type="radiobutton" id="2304">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HideHomeDescription)</selected>
+                    <onclick>Skin.ToggleSetting(HideHomeDescription)</onclick>
+                    <label>Show menu description</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+                </control>
+            </control>
+            
+          <!-- custom guide -->
+            <control type="grouplist" id="3">
+                <include>SettingsDialogGrouplistVars</include>
+                <visible>!IsEmpty(Window(skinsettings).property(Guide.Custom))</visible>
+                <control type="button" id="2400">
+                    <visible>!Skin.HasSetting(CustomHomePanel1) + !Skin.HasSetting(CustomHomePanel2) + !Skin.HasSetting(CustomHomePanel3) + !Skin.HasSetting(CustomHomePanel4) + !Skin.HasSetting(CustomHomePanel5) + !Skin.HasSetting(CustomHomePanel6)</visible>
+                    <onfocus>SetFocus(10)</onfocus>
+                </control>
+                <control type="button" id="2401">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <onclick>Skin.SetString($INFO[Window(skinsettings).Property(Guide.Custom),Guide.Custom,.Path],$ESCINFO[Skin.String(CustomHomePanel1.Path)])</onclick>
+                    <onclick>Skin.SetString($INFO[Window(skinsettings).Property(Guide.Custom),Guide.Custom,.Label],$INFO[Skin.String(CustomHomePanel1.Label)])</onclick>
+                    <onclick>Skin.SetString($INFO[Window(skinsettings).Property(Guide.Custom),Guide.Custom,.Type],$INFO[Skin.String(CustomHomePanel1.Type)])</onclick>
+                    <onclick>Action(close)</onclick>
+                    <label>$INFO[Skin.String(CustomHomePanel1.Label)]</label>
+                    <visible>Skin.HasSetting(CustomHomePanel1)</visible>
+                </control>
+                <control type="button" id="2402">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <onclick>Skin.SetString($INFO[Window(skinsettings).Property(Guide.Custom),Guide.Custom,.Path],$ESCINFO[Skin.String(CustomHomePanel2.Path)])</onclick>
+                    <onclick>Skin.SetString($INFO[Window(skinsettings).Property(Guide.Custom),Guide.Custom,.Label],$INFO[Skin.String(CustomHomePanel2.Label)])</onclick>
+                    <onclick>Skin.SetString($INFO[Window(skinsettings).Property(Guide.Custom),Guide.Custom,.Type],$INFO[Skin.String(CustomHomePanel2.Type)])</onclick>
+                    <onclick>Action(close)</onclick>
+                    <label>$INFO[Skin.String(CustomHomePanel2.Label)]</label>
+                    <visible>Skin.HasSetting(CustomHomePanel2)</visible>
+                </control>
+                <control type="button" id="2403">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <onclick>Skin.SetString($INFO[Window(skinsettings).Property(Guide.Custom),Guide.Custom,.Path],$ESCINFO[Skin.String(CustomHomePanel3.Path)])</onclick>
+                    <onclick>Skin.SetString($INFO[Window(skinsettings).Property(Guide.Custom),Guide.Custom,.Label],$INFO[Skin.String(CustomHomePanel3.Label)])</onclick>
+                    <onclick>Skin.SetString($INFO[Window(skinsettings).Property(Guide.Custom),Guide.Custom,.Type],$INFO[Skin.String(CustomHomePanel3.Type)])</onclick>
+                    <onclick>Action(close)</onclick>
+                    <label>$INFO[Skin.String(CustomHomePanel3.Label)]</label>
+                    <visible>Skin.HasSetting(CustomHomePanel3)</visible>
+                </control>
+                <control type="button" id="2404">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <onclick>Skin.SetString($INFO[Window(skinsettings).Property(Guide.Custom),Guide.Custom,.Path],$ESCINFO[Skin.String(CustomHomePanel4.Path)])</onclick>
+                    <onclick>Skin.SetString($INFO[Window(skinsettings).Property(Guide.Custom),Guide.Custom,.Label],$INFO[Skin.String(CustomHomePanel4.Label)])</onclick>
+                    <onclick>Skin.SetString($INFO[Window(skinsettings).Property(Guide.Custom),Guide.Custom,.Type],$INFO[Skin.String(CustomHomePanel4.Type)])</onclick>
+                    <onclick>Action(close)</onclick>
+                    <label>$INFO[Skin.String(CustomHomePanel4.Label)]</label>
+                    <visible>Skin.HasSetting(CustomHomePanel4)</visible>
+                </control>
+            </control>
+            
+            <control type="scrollbar" id="61">
+                <posx>1269</posx>
+                <posy>303</posy>
+                <width>11</width>
+                <height>474</height>
+                <texturesliderbackground>-</texturesliderbackground>
+                <texturesliderbar border="0,6,0,6">dialogs/default/scrollbar.png</texturesliderbar>
+                <texturesliderbarfocus border="0,6,0,6">dialogs/default/scrollbar.png</texturesliderbarfocus>
+                <textureslidernib>-</textureslidernib>
+                <textureslidernibfocus>-</textureslidernibfocus>
+                <onleft>3</onleft>
+                <onright>5</onright>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+                <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(61)">Conditional</animation>
+            </control>
+            
+            <control type="group" id="10">
+                <posx>626</posx>
+                <posy>776</posy>
+                <control type="button" id="5">
+                    <description>Close</description>
+                    <texturefocus>buttons/cancel-fo.png</texturefocus>
+                    <texturenofocus>buttons/cancel-nf.png</texturenofocus>
+                    <include>DialogButtonDimensions</include>
+                    <onleft>6</onleft>
+                    <onright>6</onright>
+                    <onup>3</onup>
+                    <ondown>3</ondown>
+                    <label>$LOCALIZE[42002]</label>
+                    <onclick>PreviousMenu</onclick>
+                </control>
+                <control type="button" id="6">
+                    <posx>200</posx>
+                    <description>Edit</description>
+                    <texturefocus>buttons/options-fo.png</texturefocus>
+                    <texturenofocus>buttons/options-nf.png</texturenofocus>
+                    <include>DialogButtonDimensions</include>
+                    <onleft>5</onleft>
+                    <onright>5</onright>
+                    <onup>3</onup>
+                    <ondown>3</ondown>
+                    <label>$LOCALIZE[21435]</label>
+                    <onclick>SetProperty(CustomDialog,1,3003)</onclick>
+                    <onclick>SetProperty(Dialog,$LOCALIZE[41136])</onclick>
+                    <onclick>ActivateWindow(3003)</onclick>
+                    <visible>stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[41272]) | stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[41273]) | stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[41274]) | stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[41275])</visible>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

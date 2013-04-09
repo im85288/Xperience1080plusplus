@@ -1,0 +1,260 @@
+<window>
+    <defaultcontrol always="true">5</defaultcontrol>
+    <onunload condition="VideoPlayer.Content(LiveTV)">ClearProperty(ShowNext,seekbar)</onunload>
+    <onunload>ClearProperty(ExtendPlot,seekbar)</onunload>
+    <zorder>3</zorder>
+    <controls>
+        <control type="group">
+            <animation type="WindowOpen" condition="Player.Paused | Player.ShowInfo">
+                <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
+            </animation>
+            <animation type="WindowOpen" condition="!Player.Paused + !Player.ShowInfo">
+                <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" delay="300" />
+            </animation>
+            <animation type="WindowClose">
+                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="in"/>
+            </animation>
+            <animation type="Visible" reversible="false">
+                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" delay="150" />
+            </animation>
+            <animation type="Hidden" reversible="false">
+                <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+            </animation>
+            <animation effect="slide" start="0,0" end="0,205" time="300" tween="cubic" easing="inout" condition="Window.IsActive(videoosd) | [!Window.IsActive(videoosd) + [Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]]">Conditional</animation>
+            <visible>!Window.IsActive(videoosd) + ![!Window.IsActive(videoosd) + [Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]]</visible>
+            <control type="grouplist" id="5">
+                <posx>1617</posx>
+                <posy>723</posy>
+                <width>300</width>
+                <height>100</height>
+                <align>right</align>
+                <orientation>horizontal</orientation>
+                <itemgap>-40</itemgap>
+                <onup condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onup>
+                <ondown condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</ondown>
+                <usecontrolcoords>true</usecontrolcoords>
+                <control type="button" id="51">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <texturenofocus border="100,0,0,0">buttons/switch-nf.png</texturenofocus>
+                    <texturefocus border="100,0,0,0">buttons/switch-fo.png</texturefocus>
+                    <onclick condition="VideoPlayer.Content(LiveTV) + IsEmpty(Window(seekbar).Property(ShowNext))">SetProperty(ShowNext,1,seekbar)</onclick>
+                    <onclick condition="VideoPlayer.Content(LiveTV) + !IsEmpty(Window(seekbar).Property(ShowNext))">ClearProperty(ShowNext,seekbar)</onclick>
+                    <visible>VideoPlayer.Content(LiveTV)</visible>
+                </control>
+                <control type="togglebutton" id="52">
+                    <posx>4</posx>
+                    <posy>0</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <texturefocus border="0,0,100,0">buttons/up-fo.png</texturefocus>
+                    <texturenofocus border="0,0,100,0">buttons/up-nf.png</texturenofocus>
+                    <alttexturefocus border="0,0,100,0">buttons/down-fo.png</alttexturefocus>
+                    <alttexturenofocus border="0,0,100,0">buttons/down-nf.png</alttexturenofocus>
+                    <usealttexture>!IsEmpty(Window(seekbar).Property(ExtendPlot))</usealttexture>
+                    <onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onclick>
+                    <onclick condition="!IsEmpty(Window(seekbar).Property(ExtendPlot))">ClearProperty(ExtendPlot,seekbar)</onclick>
+                </control>
+                <control type="button" id="53">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <texturenofocus border="100,0,0,0">buttons/cancel-nf.png</texturenofocus>
+                    <texturefocus border="100,0,0,0">buttons/cancel-fo.png</texturefocus>
+                    <onclick>PreviousMenu</onclick>
+                </control>
+            </control>
+            
+			
+							
+			
+			
+			
+									
+				
+			
+								<control type="label">
+                                    
+                                    <width>400</width>
+                                    <height>44</height>
+                                    <label>$INFO[Player.Chapter,$LOCALIZE[21396] , / ]$INFO[Player.ChapterCount]</label>
+                                    <textcolor>aawhite</textcolor>
+                                    <font>Font-Condensed-S36</font>
+                                    <align>right</align>
+                                    <aligny>center</aligny>
+                                    <visible>IntegerGreaterThan(Player.ChapterCount,0)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                <include>visiblehidefadeinfo</include>
+                                </control>
+								
+								
+								<control type="group">
+                                    <visible>!IsEmpty(VideoPlayer.Rating)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                <include>visiblehidefadeinfo</include>
+                                    <posx>1706</posx>
+									<posy>865</posy>
+                                    <control type="label">
+                                        <posx>-83</posx>
+                                        <posy>-128</posy>
+                                        <width>80</width>
+                                        <height>80</height>
+                                        <label>$INFO[VideoPlayer.Rating]</label>
+                                        <font>Font-Condensed-S36</font>
+                                        <textcolor>aawhite</textcolor>
+                                        <align>right</align>
+                                        <scroll>false</scroll>
+                                    </control>
+                                    <control type="image">
+                                        <posx>-177</posx>
+                                        <posy>-116</posy>
+                                        <width>57</width>
+                                        <height>57</height>
+                                        <texture>dialogs/video-info/rating.png</texture>
+                                    </control>
+                                </control>
+								
+								
+							<control type="group">
+								<posx>1643</posx>
+								<posy>809</posy>
+								<align>right</align>
+								
+								<control type="image">
+									<posy>0</posy>
+									<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                					<include>visiblehidefadeinfo</include>
+                                    <width>97</width>
+                                    <height>56</height>
+                                	<colordiffuse>bbwhite</colordiffuse>
+                                	<texture>$INFO[VideoPlayer.VideoCodec,flags/video/,.png]</texture>
+                            	</control>
+								<control type="image">
+									<posy>56</posy>
+									<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                					<include>visiblehidefadeinfo</include>
+                                    <width>97</width>
+                                    <height>56</height>
+                                	<colordiffuse>bbwhite</colordiffuse>
+                                	<texture>$INFO[VideoPlayer.VideoResolution,flags/res/,.png]</texture>
+                            	</control>							
+								<control type="image">
+									<posy>112</posy>
+									<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                					<include>visiblehidefadeinfo</include>
+                                    <width>97</width>
+                                    <height>56</height>
+                                	<colordiffuse>bbwhite</colordiffuse>
+                                	<texture>$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]</texture>
+                            	</control>
+								<control type="image">
+									<posy>0</posy>
+									<posx>98</posx>
+									<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                					<include>visiblehidefadeinfo</include>
+                                    <width>97</width>
+                                    <height>56</height>
+                                	<colordiffuse>bbwhite</colordiffuse>
+                                	<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
+                            	</control>
+								<control type="image">
+									<posy>56</posy>
+									<posx>98</posx>
+									<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                					<include>visiblehidefadeinfo</include>
+                                    <width>97</width>
+                                    <height>56</height>
+                                	<colordiffuse>bbwhite</colordiffuse>
+                                	<texture>$INFO[VideoPlayer.AudioChannels,flags/channels/,.png]</texture>
+                            	</control>
+								<control type="image">
+									<posy>550</posy>
+									<visible>!IsEmpty(VideoPlayer.ListItem.Mpaa)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                					<include>visiblehidefadeinfo</include>
+                                    <width>140</width>
+                                    <height>100</height>
+                                	<colordiffuse>bbwhite</colordiffuse>
+                                	<texture>$INFO[ListItem.Mpaa,flags/mpaa/,.png]</texture>
+                            	</control>
+							</control>
+								
+			
+			<control type="textbox">
+                <posx>290</posx>
+                <posy>807</posy>
+                <width>1333</width>
+                <height>220</height>
+                <label>$VAR[OSDPlot]</label>
+                <textcolor>aawhite</textcolor>
+                <font>Font-Condensed-S32</font>
+                <align>justify</align>
+                <autoscroll delay="11500" time="5000" repeat="7500" />
+                <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                <include>visiblehidefadeinfo</include>
+            </control>
+			
+			
+			
+			
+			<!--<control type="label">
+                                    <posx>121</posx>
+                                    <posy>15</posy>
+                                    <width>1402</width>
+                                    <height>44</height>
+                                    <label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]</label>
+                                    <textcolor>aawhite</textcolor>
+                                    <font>Font-Condensed-S36</font>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                </control>-->
+			
+			
+			<!--<control type="label">
+                                    <posx>121</posx>
+                                    <posy>15</posy>
+                                    <width>1400</width>
+                                    <height>44</height>
+                                    <label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season, • $LOCALIZE[20373] ,]</label>
+                                    <textcolor>88FFFFFF</textcolor>
+                                    <font>Font-Condensed-S36</font>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                    <scroll>false</scroll>
+                            </control>-->
+			
+								<!--<control type="group">
+                                    <posx>-10</posx>
+                                    <posy>-12</posy>
+                                    <control type="image">
+                                        <width>140</width>
+                                        <height>100</height>
+                                        <colordiffuse>bbwhite</colordiffuse>
+                                        <texture>flags/defs/hd-osd.png</texture>
+                                        <visible>!IsEmpty(VideoPlayer.VideoResolution) + IntegerGreaterThan(VideoPlayer.VideoResolution,719)</visible>
+                                    </control>
+                                    <control type="image">
+                                        <width>140</width>
+                                        <height>100</height>
+                                        <colordiffuse>bbwhite</colordiffuse>
+                                        <texture>flags/defs/sd-osd.png</texture>
+                                        <visible>!IsEmpty(VideoPlayer.VideoResolution) + !IntegerGreaterThan(VideoPlayer.VideoResolution,719)</visible>
+                                    </control>
+                                </control>-->
+								
+							
+								
+								
+								
+								
+        </control>
+    </controls>
+</window>
