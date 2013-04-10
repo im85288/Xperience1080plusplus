@@ -26,11 +26,16 @@
 <!-- GuideButton -->        
         <color name="guidebutton">FF44aef3</color> <!-- Green -->       
 <!-- Other -->
+		<color name="smalllabelhome">77FFFFFF</color>
         <color name="77white">77FFFFFF</color>
         <color name="aawhite">AAFFFFFF</color>  
         <color name="bbwhite">BBFFFFFF</color>  
         <color name="ddwhite">DDFFFFFF</color>  
         <color name="eewhite">EEFFFFFF</color>
+		<color name="weather">EEFFFFFF</color> <!-- change to 66FFFFFF-->
+		<color name="eeweather">EEFFFFFF</color>
+		<color name="powershadow">22000000</color>
+		<color name="menushadow">77000000</color>
 <!-- Menus -->
         <color name="MenuBlue">FF55B2FA</color>
         <color name="MenuGrey">CC484848</color>

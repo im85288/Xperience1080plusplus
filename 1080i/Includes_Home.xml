@@ -47,7 +47,7 @@
                 <label>$LOCALIZE[41507]</label>
                 <font>Font-Condensed-S34-B</font>
                 <textcolor>eewhite</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                <!--<shadowcolor>powershadow</shadowcolor>-->
                 <include>Animation_ShutdownButton</include>
                 <include>homebuttonsanim2</include>
             </control>
@@ -97,7 +97,7 @@
                 <label>$LOCALIZE[1036]</label>
                 <font>Font-Condensed-S34-B</font>
                 <textcolor>eewhite</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                <!--<shadowcolor>powershadow</shadowcolor>-->
                 <include>Animation_FavButton</include>
                 <include>homebuttonsanim4</include>
                 <visible>!Window.IsVisible(favourites) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-globalsearch-contextmenu.xml) + !Window.IsVisible(virtualkeyboard) + IsEmpty(Window.Property(HomeSearch)) + !Window.IsVisible(playercontrols)</visible>
@@ -111,7 +111,7 @@
         <font>Font-Condensed-S49</font>
         <textcolor>bbwhite</textcolor>
         <focusedcolor>bbwhite</focusedcolor>
-        <shadowcolor>77000000</shadowcolor>
+        <!--<shadowcolor>menushadow</shadowcolor>-->
         <align>left</align>
         <aligny>top</aligny>
     </include>
@@ -1261,8 +1261,8 @@
                             <width>572</width>
                             <height>25</height>
                             <font>Font-Condensed-S20-B</font>
-                            <shadowcolor>11000000</shadowcolor>
-                            <textcolor>77white</textcolor>
+                            <!--		11000000</shadowcolor>-->
+                            <textcolor>smalllabelhome</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -1276,8 +1276,8 @@
                             <width>572</width>
                             <height>25</height>
                             <font>Font-Condensed-S20-B</font>
-                            <shadowcolor>11000000</shadowcolor>
-                            <textcolor>77white</textcolor>
+                            <!--<shadowcolor>11000000</shadowcolor>-->
+                            <textcolor>smalllabelhome</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -1619,8 +1619,8 @@
                             <width>382</width>
                             <height>25</height>
                             <font>Font-Condensed-S20-B</font>
-                            <shadowcolor>11000000</shadowcolor>
-                            <textcolor>77white</textcolor>
+                            <!--<shadowcolor>11000000</shadowcolor>-->
+                            <textcolor>smalllabelhome</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -1634,8 +1634,8 @@
                             <width>382</width>
                             <height>25</height>
                             <font>Font-Condensed-S20-B</font>
-                            <shadowcolor>11000000</shadowcolor>
-                            <textcolor>77white</textcolor>
+                            <!--<shadowcolor>11000000</shadowcolor>-->
+                            <textcolor>smalllabelhome</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -2175,8 +2175,8 @@
                             <width>382</width>
                             <height>25</height>
                             <font>Font-Condensed-S20-B</font>
-                            <shadowcolor>11000000</shadowcolor>
-                            <textcolor>77white</textcolor>
+                            <!--<shadowcolor>11000000</shadowcolor>-->
+                            <textcolor>smalllabelhome</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -2981,8 +2981,8 @@
                             <width>671</width>
                             <height>25</height>
                             <font>Font-Condensed-S20-B</font>
-                            <shadowcolor>11000000</shadowcolor>
-                            <textcolor>77white</textcolor>
+                            <!--<shadowcolor>11000000</shadowcolor>-->
+                            <textcolor>smalllabelhome</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -3761,8 +3761,8 @@
                             <width>477</width>
                             <height>25</height>
                             <font>Font-Condensed-S20-B</font>
-                            <shadowcolor>11000000</shadowcolor>
-                            <textcolor>77white</textcolor>
+                            <!--<shadowcolor>11000000</shadowcolor>-->
+                            <textcolor>smalllabelhome</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -3897,7 +3897,7 @@
                                     <font>Font-Condensed-S29-B</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>77white</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    <!--<shadowcolor>powershadow</shadowcolor>-->
                                     <scroll>false</scroll>
                                 </control>
                                 <control type="label">
@@ -3908,7 +3908,7 @@
                                     <label fallback="••••">$INFO[ListItem.Property(Year)]</label>
                                     <align>center</align>
                                     <textcolor>77white</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    <!--<shadowcolor>powershadow</shadowcolor>-->
                                     <scroll>false</scroll>
                                 </control>
                             </itemlayout>
@@ -3947,7 +3947,7 @@
                                         <font>Font-Condensed-S32</font>
                                         <label>[B]$INFO[ListItem.Label][/B]</label>
                                         <textcolor>eewhite</textcolor>
-                                        <shadowcolor>22000000</shadowcolor>
+                                        <!--<shadowcolor>powershadow</shadowcolor>-->
                                         <scroll>false</scroll>
                                     </control>
                                     <control type="label">
@@ -3958,7 +3958,7 @@
                                         <font>Font-Condensed-S29</font>
                                         <label>$INFO[ListItem.Label2]</label>
                                         <textcolor>eewhite</textcolor>
-                                        <shadowcolor>22000000</shadowcolor>
+                                        <!--<shadowcolor>powershadow</shadowcolor>-->
                                         <scroll>false</scroll>
                                     </control>
                                 </control>
@@ -4044,8 +4044,8 @@
                             <width>477</width>
                             <height>25</height>
                             <font>Font-Condensed-S20-B</font>
-                            <shadowcolor>11000000</shadowcolor>
-                            <textcolor>77white</textcolor>
+                            <!--<shadowcolor>11000000</shadowcolor>-->
+                            <textcolor>smalllabelhome</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -4308,8 +4308,8 @@
                         <width>477</width>
                         <height>25</height>
                         <font>Font-Condensed-S20-B</font>
-                        <shadowcolor>11000000</shadowcolor>
-                        <textcolor>77white</textcolor>
+                        <!--<shadowcolor>11000000</shadowcolor>-->
+                        <textcolor>smalllabelhome</textcolor>
                         <align>left</align>
                         <aligny>center</aligny>
                         <textoffsetx>5</textoffsetx>
@@ -5129,8 +5129,8 @@
                                 <width>477</width>
                                 <height>25</height>
                                 <font>Font-Condensed-S20-B</font>
-                                <shadowcolor>11000000</shadowcolor>
-                                <textcolor>77white</textcolor>
+                                <!--<shadowcolor>11000000</shadowcolor>-->
+                                <textcolor>smalllabelhome</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <textoffsetx>5</textoffsetx>
@@ -5216,8 +5216,8 @@
                                 <width>572</width>
                                 <height>25</height>
                                 <font>Font-Condensed-S20-B</font>
-                                <shadowcolor>11000000</shadowcolor>
-                                <textcolor>77white</textcolor>
+                                <!--<shadowcolor>11000000</shadowcolor>-->
+                                <textcolor>smalllabelhome</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <textoffsetx>5</textoffsetx>
@@ -5430,7 +5430,7 @@
                                 <font>Font-Condensed-S31-B</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
-                                <textcolor>eewhite</textcolor>
+                                <textcolor>eeweather</textcolor>
                                 <label>$INFO[Window(Weather).Property(Day1.Title)]</label>
                                 <scroll>false</scroll>
                             </control>
@@ -5444,7 +5444,7 @@
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <label>$INFO[Window(Weather).Property(Day1.Outlook)]</label>
-                                <textcolor>eewhite</textcolor>
+                                <textcolor>weather</textcolor>
                             </control>
                             <control type="label">
                                 <description>current time</description>
@@ -5456,7 +5456,7 @@
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <label>$INFO[Window(Weather).Property(Day1.LowTemp),, - ]$INFO[Window(Weather).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</label>
-                                <textcolor>eewhite</textcolor>
+                                <textcolor>weather</textcolor>
                             </control>
                         </control>
                         <control type="group">
@@ -5504,7 +5504,7 @@
                                 <font>Font-Condensed-S31-B</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
-                                <textcolor>eewhite</textcolor>
+                                <textcolor>eeweather</textcolor>
                                 <label>$INFO[Window(Weather).Property(Day2.Title)]</label>
                                 <scroll>false</scroll>
                             </control>
@@ -5518,7 +5518,7 @@
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <label>$INFO[Window(Weather).Property(Day2.Outlook)]</label>
-                                <textcolor>eewhite</textcolor>
+                                <textcolor>weather</textcolor>
                             </control>
                             <control type="label">
                                 <description>current time</description>
@@ -5530,7 +5530,7 @@
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <label>$INFO[Window(Weather).Property(Day2.LowTemp),, - ]$INFO[Window(Weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</label>
-                                <textcolor>eewhite</textcolor>
+                                <textcolor>weather</textcolor>
                             </control>
                         </control>
                         <control type="group">
@@ -5578,7 +5578,7 @@
                                 <font>Font-Condensed-S31-B</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
-                                <textcolor>eewhite</textcolor>
+                                <textcolor>eeweather</textcolor>
                                 <label>$INFO[Window(Weather).Property(Day3.Title)]</label>
                                 <scroll>false</scroll>
                             </control>
@@ -5592,7 +5592,7 @@
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <label>$INFO[Window(Weather).Property(Day3.Outlook)]</label>
-                                <textcolor>eewhite</textcolor>
+                                <textcolor>weather</textcolor>
                             </control>
                             <control type="label">
                                 <description>current time</description>
@@ -5604,7 +5604,7 @@
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <label>$INFO[Window(Weather).Property(Day3.LowTemp),, - ]$INFO[Window(Weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</label>
-                                <textcolor>eewhite</textcolor>
+                                <textcolor>weather</textcolor>
                             </control>
                         </control>
                     </control>
