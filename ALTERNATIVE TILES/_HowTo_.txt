@@ -27,7 +27,8 @@ Music:		tile-music.png --> if you change music section
 				   "colour-addedtile.png" has to be renamed to 
 				   "addedtile.png" and copied to same folder as "tile-music.png"
 Applications:	tile-apps.png
-Weather:	tile-weather.png
+Weather:	tile-weather.png + tile-weather2.png
+Settings:	tile-system.png
 
 
 Now have fun designing your individual Xperience1080+RAINBOW Skin 

@@ -605,7 +605,7 @@
                                 <posy>218</posy>
                                 <width>1259</width>
                                 <height>136</height>
-                                <texture border="7">windows/home/tile.png</texture>
+                                <texture border="7">windows/home/tile-search.png</texture>
                                 <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
                             </control>
                             <control type="image">
@@ -5409,7 +5409,7 @@
                                 <posy>-5</posy>
                                 <width>392</width>
                                 <height>197</height>
-                                <texture border="7">windows/home/tile-weather.png</texture>
+                                <texture border="7">windows/home/tile-weather2.png</texture>
                                 <visible>Skin.HasSetting(HomeWeatherTiles)</visible>
                             </control>
                             <control type="image">
@@ -5483,7 +5483,7 @@
                                 <posy>-5</posy>
                                 <width>392</width>
                                 <height>197</height>
-                                <texture border="7">windows/home/tile-weather.png</texture>
+                                <texture border="7">windows/home/tile-weather2.png</texture>
                                 <visible>Skin.HasSetting(HomeWeatherTiles)</visible>
                             </control>
                             <control type="image">
@@ -5557,7 +5557,7 @@
                                 <posy>-5</posy>
                                 <width>392</width>
                                 <height>197</height>
-                                <texture border="7">windows/home/tile-weather.png</texture>
+                                <texture border="7">windows/home/tile-weather2.png</texture>
                                 <visible>Skin.HasSetting(HomeWeatherTiles)</visible>
                             </control>
                             <control type="image">
@@ -5639,7 +5639,7 @@
                                     <posy>19</posy>
                                     <width>293</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/tile-weather.png</texture>
+                                    <texture border="7">windows/home/tile-weather.png</texture><!--square 1+2-->
                                 </control>
                                 <control type="image">
                                     <posx>24</posx>
@@ -5699,7 +5699,7 @@
                                         <posy>19</posy>
                                         <width>293</width>
                                         <height>293</height>
-                                        <texture border="7">windows/home/tile-weather.png</texture>
+                                        <texture border="7">windows/home/tile-weather.png</texture><!--tile 1+2 focus-->
                                     </control>
                                     <control type="image">
                                         <posx>24</posx>
@@ -5832,7 +5832,7 @@
                                     <posy>19</posy>
                                     <width>256</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-system.png</texture>
                                     <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
                                 </control>
                                 <control type="image">
@@ -5901,7 +5901,7 @@
                                         <posy>19</posy>
                                         <width>256</width>
                                         <height>293</height>
-                                        <texture border="7">windows/home/tile.png</texture>
+                                        <texture border="7">windows/home/tile-system.png</texture>
                                         <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
                                     </control>
                                     <control type="image">
