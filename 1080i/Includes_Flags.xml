@@ -129,80 +129,80 @@
                 <description>FSK-0 Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/DE/Rated 0.png</texture>
-                <visible>SubString(ListItem.MPAA,Germany:0) | SubString(ListItem.MPAA,o.A) | SubString(ListItem.MPAA,Rated 0)</visible>
+                <visible>SubString(ListItem.MPAA,Germany:FSK0) | SubString(ListItem.MPAA,o.A)</visible>
             </control>  
             <control type="image">
                 <description>FSK-6 Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/DE/Rated 6.png</texture>
-                <visible>SubString(ListItem.MPAA,Germany:6)| SubString(ListItem.MPAA,ab 6) | StringCompare(ListItem.MPAA,6) | SubString(ListItem.MPAA,Rated 6)</visible>
+                <visible>SubString(ListItem.MPAA,Germany:6)| SubString(ListItem.MPAA,ab 6) | StringCompare(ListItem.MPAA,FSK6)</visible>
             </control>  
             <control type="image">
                 <description>FSK-12 Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/DE/Rated 12.png</texture>
-                <visible>SubString(ListItem.MPAA,Germany:12) | SubString(ListItem.MPAA,ab 12) | StringCompare(ListItem.MPAA,12) | SubString(ListItem.MPAA,Rated 12)</visible>
+                <visible>SubString(ListItem.MPAA,Germany:12) | SubString(ListItem.MPAA,ab 12) | StringCompare(ListItem.MPAA,FSK12)</visible>
             </control>  
             <control type="image">
                 <description>FSK-16 Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/DE/Rated 16.png</texture>
-                <visible>SubString(ListItem.MPAA,Germany:16) | SubString(ListItem.MPAA,ab 16) | StringCompare(ListItem.MPAA,16) | SubString(ListItem.MPAA,Rated 16)</visible>
+                <visible>SubString(ListItem.MPAA,Germany:16) | SubString(ListItem.MPAA,ab 16) | StringCompare(ListItem.MPAA,FSK16)</visible>
             </control>  
             <control type="image">
                 <description>FSK-18 Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/DE/Rated 18.png</texture>
-                <visible>SubString(ListItem.MPAA,Germany:18) | SubString(ListItem.MPAA,ab 18) | StringCompare(ListItem.MPAA,18) | SubString(ListItem.MPAA,Rated 18)</visible>
+                <visible>SubString(ListItem.MPAA,Germany:18) | SubString(ListItem.MPAA,ab 18) | StringCompare(ListItem.MPAA,FSK18)</visible>
             </control>  
             <!-- UK ratings-->
             <control type="image">
                 <description>UK:U Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/UK/Rated U.png</texture>
-                <visible>SubString(ListItem.MPAA,UK:U) + !SubString(ListItem.MPAA,UK:UC)</visible>
+                <visible>SubString(ListItem.MPAA,GBU) + !SubString(ListItem.MPAA,GBUC) | SubString(ListItem.MPAA,UK:U) + !SubString(ListItem.MPAA,UK:UC)</visible>
             </control>  
             <control type="image">
                 <description>UK:UC Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/UK/Rated UC.png</texture>
-                <visible>SubString(ListItem.MPAA,UK:UC)</visible>
+                <visible>SubString(ListItem.MPAA,GBUC) | SubString(ListItem.MPAA,UK:UC)</visible>
             </control>  
             <control type="image">
                 <description>UK:PG Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/UK/Rated PG.png</texture>
-                <visible>SubString(ListItem.MPAA,UK:PG)</visible>
+                <visible>SubString(ListItem.MPAA,GBPG) | SubString(ListItem.MPAA,UK:PG)</visible>
             </control>  
             <control type="image">
                 <description>UK:12 Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/UK/Rated 12.png</texture>
-                <visible>SubString(ListItem.MPAA,UK:12) + !SubString(ListItem.mpaa,UK:12A)</visible>
+                <visible>SubString(ListItem.MPAA,GB12) + !SubString(ListItem.mpaa,GB12A) | SubString(ListItem.MPAA,UK:12) + !SubString(ListItem.mpaa,UK:12A)</visible>
             </control>  
             <control type="image">
                 <description>UK:12A Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/UK/Rated 12A.png</texture>
-                <visible>SubString(ListItem.MPAA,UK:12A)</visible>
+                <visible>SubString(ListItem.MPAA,GB12A) | SubString(ListItem.MPAA,UK:12A)</visible>
             </control>  
             <control type="image">
                 <description>UK:15 Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/UK/Rated 15.png</texture>
-                <visible>SubString(ListItem.MPAA,UK:15)</visible>
+                <visible>SubString(ListItem.MPAA,GB15) | SubString(ListItem.MPAA,UK:15)</visible>
             </control>  
             <control type="image">
                 <description>UK:18 Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/UK/Rated 18.png</texture>
-                <visible>SubString(ListItem.MPAA,UK:18) + !SubString(ListItem.MPAA,UK:R18)</visible>
+                <visible>SubString(ListItem.MPAA,GB18) + !SubString(ListItem.MPAA,GBR18) | SubString(ListItem.MPAA,UK:18) + !SubString(ListItem.MPAA,UK:R18)</visible>
             </control>  
             <control type="image">
                 <description>UK:r18 Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/UK/Rated R18.png</texture>
-                <visible>SubString(ListItem.MPAA,UK:R18)</visible>
+                <visible>SubString(ListItem.MPAA,GBR18) | SubString(ListItem.MPAA,UK:R18)</visible>
             </control>  
         </control>
         <control type="group">
