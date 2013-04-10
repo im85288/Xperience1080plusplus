@@ -20,6 +20,7 @@ To undo this just copy FILES from "02 Original BackUp Files" to "//media/windows
 
 NAME FOR EACH SECTION:
 
+Search:		tile-search.png
 Live-TV:	tile-livetv.png
 Home: 		tile-home.png
 TVShows:	tile-tvshows.png
