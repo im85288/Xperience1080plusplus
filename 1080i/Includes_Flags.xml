@@ -1,45 +1,10 @@
 <includes>
 
-    <variable name="MovieMPAAVar">
-        <value condition="StringCompare(Skin.String(MovieMPAALang),DE)">$VAR[MovieMPAAVar_DE]</value>
-        <value condition="StringCompare(Skin.String(MovieMPAALang),IT)">$VAR[MovieMPAAVar_IT]</value>
-        <value condition="StringCompare(Skin.String(MovieMPAALang),UK)">$VAR[MovieMPAAVar_UK]</value>
-        <value>$VAR[MovieMPAAVar_US]</value>
-    </variable>
-    
-    <variable name="MovieMPAAVar_DE">
-        <value condition="SubString(ListItem.MPAA,0) | SubString(Container(100).ListItem.Property(MPAA),0)">de/0</value>
-        <value condition="SubString(ListItem.MPAA,6) | SubString(Container(100).ListItem.Property(MPAA),6)">de/6</value>
-        <value condition="SubString(ListItem.MPAA,12) | SubString(Container(100).ListItem.Property(MPAA),12)">de/12</value>
-        <value condition="SubString(ListItem.MPAA,16) | SubString(Container(100).ListItem.Property(MPAA),16)">de/16</value>
-        <value condition="SubString(ListItem.MPAA,18) | SubString(Container(100).ListItem.Property(MPAA),18)">de/18</value>
-    </variable>
-    
-    <variable name="MovieMPAAVar_IT">
-        <value condition="SubString(ListItem.MPAA,T) | SubString(Container(100).ListItem.Property(MPAA),T)">it/t</value>
-        <value condition="SubString(ListItem.MPAA,14) | SubString(Container(100).ListItem.Property(MPAA),14)">it/vm14</value>
-        <value condition="SubString(ListItem.MPAA,18) | SubString(Container(100).ListItem.Property(MPAA),18)">it/vm18</value>
-    </variable>
-    
-    <variable name="MovieMPAAVar_UK">
-        <value condition="SubString(ListItem.MPAA,PG) | SubString(Container(100).ListItem.Property(MPAA),PG)">uk/pg</value>
-        <value condition="SubString(ListItem.MPAA,12A) | SubString(Container(100).ListItem.Property(MPAA),12A)">uk/12a</value>
-        <value condition="SubString(ListItem.MPAA,12) | SubString(Container(100).ListItem.Property(MPAA),12)">uk/12</value>
-        <value condition="SubString(ListItem.MPAA,15) | SubString(Container(100).ListItem.Property(MPAA),15)">uk/15</value>
-        <value condition="SubString(ListItem.MPAA,R18) | SubString(Container(100).ListItem.Property(MPAA),R18)">uk/r18</value>
-        <value condition="SubString(ListItem.MPAA,18) | SubString(Container(100).ListItem.Property(MPAA),18)">uk/18</value>
-        <value condition="SubString(ListItem.MPAA,UC) | SubString(Container(100).ListItem.Property(MPAA),UC)">uk/uc</value>
-        <value condition="SubString(ListItem.MPAA,U) | SubString(Container(100).ListItem.Property(MPAA),U)">uk/u</value>
-    </variable>
-    
-    <variable name="MovieMPAAVar_US">
-        <value condition="SubString(ListItem.MPAA,PG-13) | SubString(Container(100).ListItem.Property(MPAA),PG-13)">us/pg-13</value>
-        <value condition="SubString(ListItem.MPAA,PG) | SubString(ListItem.MPAA,Approved) | SubString(Container(100).ListItem.Property(MPAA),PG) | SubString(Container(100).ListItem.Property(MPAA),Approved)">us/pg</value>
-        <value condition="SubString(ListItem.MPAA,G) | SubString(Container(100).ListItem.Property(MPAA),G)">us/g</value>
-        <value condition="StringCompare(ListItem.MPAA,R) | SubString(ListItem.MPAA,Rated R) | SubString(ListItem.MPAA,USA:R) | StringCompare(Container(100).ListItem.Property(MPAA),R) | SubString(Container(100).ListItem.Property(MPAA),Rated R) | SubString(Container(100).ListItem.Property(MPAA),USA:R)">us/r</value>
-        <value condition="SubString(ListItem.MPAA,17) | SubString(Container(100).ListItem.Property(MPAA),17)">us/nc-17</value>
-        <value condition="SubString(ListItem.MPAA,Not Rated) | SubString(ListItem.MPAA,Unrated) | SubString(Container(100).ListItem.Property(MPAA),Not Rated) | SubString(Container(100).ListItem.Property(MPAA),Unrated)">us/nr</value>
-    </variable>
+<!-- ========== -->
+<!-- Dimensions -->
+<!-- ========== -->
+
+    <!-- Small -->
 
     <include name="AspectDimensionsSmall">
         <width>122</width>
@@ -98,14 +63,147 @@
             <include>visiblehidefadeflags</include>
             <visible>!IsEmpty(ListItem.AudioCodec)</visible>
         </control>
+        <include>RatingsFlags</include>
+    </include>
+    <include name="RatingsFlags">
         <control type="group">
             <width>121</width>
             <visible>Container.Content(movies) + !IsEmpty(ListItem.MPAA)</visible>
             <control type="image">
-                <description>Language independent rating</description>
+                <description>Not rated label</description>
                 <include>MPAADimensionsSmall</include>
-                <texture>$VAR[MovieMPAAVar,flags/mpaa/movie/,.png]</texture>
+                <texture>flags/mpaa/US/Rated Not Rated.png</texture>
+                <visible>substring(ListItem.MPAA,NR) | substring(ListItem.MPAA,Unrated) | substring(ListItem.MPAA,Not)</visible>
+            </control>  
+            <control type="image">
+                <description>G Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/US/Rated G.png</texture>
+                <visible>substring(ListItem.MPAA,Rated G) | substring(ListItem.MPAA,USA:G)</visible>
             </control>
+            <control type="image">
+                <description>PG Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/US/Rated PG.png</texture>
+                <visible>[substring(ListItem.MPAA,Rated PG) + !substring(ListItem.MPAA,13)] | substring(ListItem.MPAA,USA:PG)</visible>
+            </control>
+            <control type="image">
+                <description>PG-13 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/US/Rated PG-13.png</texture>
+                <visible>[substring(ListItem.MPAA,PG-13) | substring(ListItem.MPAA,USA:PG-13)] + [!substring(ListItem.MPAA,USA:R) + !substring(ListItem.MPAA,rated R)]</visible>
+            </control>
+            <control type="image">
+                <description>R Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/US/Rated R.png</texture>
+                <visible>substring(ListItem.MPAA,Rated R) | substring(ListItem.MPAA,USA:R)</visible>
+            </control>
+            <control type="image">
+                <description>NC-17 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/US/Rated NC-17.png</texture>
+                <visible>substring(ListItem.MPAA, NC-17) | substring(ListItem.MPAA,USA:NC-17)</visible>
+            </control>  
+            <!-- IT ratings-->
+            <control type="image">
+                <description>IT-T Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/IT/Rated T.png</texture>
+                <visible>StringCompare(ListItem.MPAA,T)</visible>
+            </control>  
+            <control type="image">
+                <description>IT-VM14 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/IT/Rated VM-14.png</texture>
+                <visible>StringCompare(ListItem.MPAA,VM14)</visible>
+            </control>  
+            <control type="image">
+                <description>IT-VM18 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/IT/Rated VM-18.png</texture>
+                <visible>StringCompare(ListItem.MPAA,VM18)</visible>
+            </control>  
+            <!-- DE ratings-->
+            <control type="image">
+                <description>FSK-0 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/DE/Rated 0.png</texture>
+                <visible>SubString(ListItem.MPAA,Germany:0) | SubString(ListItem.MPAA,o.A) | SubString(ListItem.MPAA,Rated 0)</visible>
+            </control>  
+            <control type="image">
+                <description>FSK-6 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/DE/Rated 6.png</texture>
+                <visible>SubString(ListItem.MPAA,Germany:6)| SubString(ListItem.MPAA,ab 6) | StringCompare(ListItem.MPAA,6) | SubString(ListItem.MPAA,Rated 6)</visible>
+            </control>  
+            <control type="image">
+                <description>FSK-12 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/DE/Rated 12.png</texture>
+                <visible>SubString(ListItem.MPAA,Germany:12) | SubString(ListItem.MPAA,ab 12) | StringCompare(ListItem.MPAA,12) | SubString(ListItem.MPAA,Rated 12)</visible>
+            </control>  
+            <control type="image">
+                <description>FSK-16 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/DE/Rated 16.png</texture>
+                <visible>SubString(ListItem.MPAA,Germany:16) | SubString(ListItem.MPAA,ab 16) | StringCompare(ListItem.MPAA,16) | SubString(ListItem.MPAA,Rated 16)</visible>
+            </control>  
+            <control type="image">
+                <description>FSK-18 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/DE/Rated 18.png</texture>
+                <visible>SubString(ListItem.MPAA,Germany:18) | SubString(ListItem.MPAA,ab 18) | StringCompare(ListItem.MPAA,18) | SubString(ListItem.MPAA,Rated 18)</visible>
+            </control>  
+            <!-- UK ratings-->
+            <control type="image">
+                <description>UK:U Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/UK/Rated U.png</texture>
+                <visible>SubString(ListItem.MPAA,UK:U) + !SubString(ListItem.MPAA,UK:UC)</visible>
+            </control>  
+            <control type="image">
+                <description>UK:UC Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/UK/Rated UC.png</texture>
+                <visible>SubString(ListItem.MPAA,UK:UC)</visible>
+            </control>  
+            <control type="image">
+                <description>UK:PG Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/UK/Rated PG.png</texture>
+                <visible>SubString(ListItem.MPAA,UK:PG)</visible>
+            </control>  
+            <control type="image">
+                <description>UK:12 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/UK/Rated 12.png</texture>
+                <visible>SubString(ListItem.MPAA,UK:12) + !SubString(ListItem.mpaa,UK:12A)</visible>
+            </control>  
+            <control type="image">
+                <description>UK:12A Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/UK/Rated 12A.png</texture>
+                <visible>SubString(ListItem.MPAA,UK:12A)</visible>
+            </control>  
+            <control type="image">
+                <description>UK:15 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/UK/Rated 15.png</texture>
+                <visible>SubString(ListItem.MPAA,UK:15)</visible>
+            </control>  
+            <control type="image">
+                <description>UK:18 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/UK/Rated 18.png</texture>
+                <visible>SubString(ListItem.MPAA,UK:18) + !SubString(ListItem.MPAA,UK:R18)</visible>
+            </control>  
+            <control type="image">
+                <description>UK:r18 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/UK/Rated R18.png</texture>
+                <visible>SubString(ListItem.MPAA,UK:R18)</visible>
+            </control>  
         </control>
         <control type="group">
             <width>121</width>
@@ -113,6 +211,10 @@
             <include>TVRatingFlagsSmall</include>
         </control>
     </include>
+
+<!-- =============== -->
+<!-- TV Studio flags -->
+<!-- =============== -->
 
     <include name="TVRatingFlagLayout">
         <width>150</width>
@@ -122,14 +224,72 @@
     <include name="TVRatingFlags">
         <control type="image">
             <include>TVRatingFlagLayout</include>
-            <texture>$INFO[ListItem.MPAA,flags/mpaa/tv/medium/,.png]</texture>
+            <texture>flags/ratings/tv-y.png</texture>
+            <visible>substring(listitem.mpaa,TV-Y) + ![substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)]</visible>
+        </control>
+        <control type="image">
+            <include>TVRatingFlagLayout</include>
+            <texture>flags/ratings/tv-y7.png</texture>
+            <visible>substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)</visible>
+        </control>
+        <control type="image">
+            <include>TVRatingFlagLayout</include>
+            <texture>flags/ratings/tv-g.png</texture>
+            <visible>substring(listitem.mpaa,TV-G)</visible>
+        </control>
+        <control type="image">
+            <include>TVRatingFlagLayout</include>
+            <texture>flags/ratings/tv-pg.png</texture>
+            <visible>substring(listitem.mpaa,TV-PG)</visible>
+        </control>
+        <control type="image">
+            <include>TVRatingFlagLayout</include>
+            <texture>flags/ratings/tv-14.png</texture>
+            <visible>substring(listitem.mpaa,TV-14)</visible>
+        </control>
+        <control type="image">
+            <include>TVRatingFlagLayout</include>
+            <texture>flags/ratings/tv-ma.png</texture>
+            <visible>substring(listitem.mpaa,TV-MA)</visible>
         </control>
     </include>
     
     <include name="TVRatingFlagsSmall">
         <control type="image">
+            <description>TV-Y Rating label</description>
+           <include>MPAADimensionsSmall</include>
+            <texture>flags/ratings/tv-y-s.png</texture>
+            <visible>substring(listitem.mpaa,TV-Y) + ![substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)]</visible>
+        </control>
+        <control type="image">
+            <description>TV-Y7 Rating label</description>
             <include>MPAADimensionsSmall</include>
-            <texture>$INFO[ListItem.MPAA,flags/mpaa/tv/small/,.png]</texture>
+            <texture>flags/ratings/tv-y7-s.png</texture>
+            <visible>substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)</visible>
+        </control>
+        <control type="image">
+            <description>TV-G Rating label</description>
+            <include>MPAADimensionsSmall</include>
+            <texture>flags/ratings/tv-g-s.png</texture>
+            <visible>substring(listitem.mpaa,TV-G)</visible>
+        </control>
+        <control type="image">
+            <description>TV-PG Rating label</description>
+            <include>MPAADimensionsSmall</include>
+            <texture>flags/ratings/tv-pg-s.png</texture>
+            <visible>substring(listitem.mpaa,TV-PG)</visible>
+        </control>
+        <control type="image">
+            <description>TV-14 Rating label</description>
+            <include>MPAADimensionsSmall</include>
+            <texture>flags/ratings/tv-14-s.png</texture>
+            <visible>substring(listitem.mpaa,TV-14)</visible>
+        </control>
+        <control type="image">
+            <description>TV-MA Rating label</description>
+            <include>MPAADimensionsSmall</include>
+            <texture>flags/ratings/tv-ma-s.png</texture>
+            <visible>substring(listitem.mpaa,TV-MA)</visible>
         </control>
     </include>
 </includes>
