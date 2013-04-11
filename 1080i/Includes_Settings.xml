@@ -265,7 +265,7 @@
     <include name="SettingsBackgroundDialogGlobal">
         <control type="image">
             <include>SettingsBackgroundDialogImageVars</include>
-            <texture background="true" fallback="special://skin/extras/backgrounds/09.jpg">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
+            <texture background="true" fallback="special://skin/extras/backgrounds/grey.png">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
             <visible>IsEmpty(Skin.String(GlobalBackdropMulti))</visible>
         </control>
         
@@ -287,7 +287,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars</include>
                 <selected>!IsEmpty(Skin.String(GlobalBackdropSingle))</selected>
                 <onclick>Skin.Reset(GlobalBackdropMulti)</onclick>
-                <onclick>Skin.SetString(GlobalBackdropSingle,special://skin/extras/backgrounds/01.jpg)</onclick>
+                <onclick>Skin.SetString(GlobalBackdropSingle,special://skin/extras/backgrounds/grey.png)</onclick>
                 <label>$LOCALIZE[41252]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
             </control>
@@ -321,7 +321,7 @@
     <include name="SettingsBackgroundDialogSettings">
         <control type="image">
             <include>SettingsBackgroundDialogImageVars</include>
-            <texture background="true" fallback="special://skin/extras/backgrounds/01.jpg">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
+            <texture background="true" fallback="special://skin/extras/backgrounds/grey.png">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
             <visible>IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomeSettingsSingleImage)) + IsEmpty(Skin.String(HomeSettingsMultiImage))</visible>
         </control>
         
@@ -357,7 +357,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars</include>
                 <selected>!IsEmpty(Skin.String(HomeSettingsSingleImage))</selected>
                 <onclick>Skin.Reset(HomeSettingsMultiImage)</onclick>
-                <onclick>Skin.SetString(HomeSettingsSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
+                <onclick>Skin.SetString(HomeSettingsSingleImage,special://skin/extras/backgrounds/grey.png)</onclick>
                 <label>$LOCALIZE[41252]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
             </control>
@@ -391,7 +391,7 @@
     <include name="SettingsBackgroundDialogMovies">
         <control type="image">
             <include>SettingsBackgroundDialogImageVars</include>
-            <texture background="true" fallback="special://skin/extras/backgrounds/01.jpg">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
+            <texture background="true" fallback="special://skin/extras/backgrounds/cyan.png">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
             <visible>IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomeMoviesSingleImage)) + IsEmpty(Skin.String(HomeMoviesMultiImage))</visible>
         </control>
         
@@ -427,7 +427,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars</include>
                 <selected>!IsEmpty(Skin.String(HomeMoviesSingleImage))</selected>
                 <onclick>Skin.Reset(HomeMoviesMultiImage)</onclick>
-                <onclick>Skin.SetString(HomeMoviesSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
+                <onclick>Skin.SetString(HomeMoviesSingleImage,special://skin/extras/backgrounds/cyan.png)</onclick>
                 <label>$LOCALIZE[41252]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
             </control>
@@ -461,7 +461,7 @@
     <include name="SettingsBackgroundDialogTVShows">
         <control type="image">
             <include>SettingsBackgroundDialogImageVars</include>
-            <texture background="true" fallback="special://skin/extras/backgrounds/01.jpg">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
+            <texture background="true" fallback="special://skin/extras/backgrounds/magenta.png">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
             <visible>IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomeTVShowsSingleImage)) + IsEmpty(Skin.String(HomeTVShowsMultiImage))</visible>
         </control>
         
@@ -497,7 +497,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars</include>
                 <selected>!IsEmpty(Skin.String(HomeTVShowsSingleImage))</selected>
                 <onclick>Skin.Reset(HomeTVShowsMultiImage)</onclick>
-                <onclick>Skin.SetString(HomeTVShowsSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
+                <onclick>Skin.SetString(HomeTVShowsSingleImage,special://skin/extras/backgrounds/magenta.png)</onclick>
                 <label>$LOCALIZE[41252]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
             </control>
@@ -531,7 +531,7 @@
     <include name="SettingsBackgroundDialogMusic">
         <control type="image">
             <include>SettingsBackgroundDialogImageVars</include>
-            <texture background="true" fallback="special://skin/extras/backgrounds/01.jpg">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
+            <texture background="true" fallback="special://skin/extras/backgrounds/yellow.png">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
             <visible>IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomeMusicSingleImage)) + IsEmpty(Skin.String(HomeMusicMultiImage))</visible>
         </control>
         
@@ -567,7 +567,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars</include>
                 <selected>!IsEmpty(Skin.String(HomeMusicSingleImage))</selected>
                 <onclick>Skin.Reset(HomeMusicMultiImage)</onclick>
-                <onclick>Skin.SetString(HomeMusicSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
+                <onclick>Skin.SetString(HomeMusicSingleImage,special://skin/extras/backgrounds/yellow.png)</onclick>
                 <label>$LOCALIZE[41252]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
             </control>
@@ -601,7 +601,7 @@
     <include name="SettingsBackgroundDialogPrograms">
         <control type="image">
             <include>SettingsBackgroundDialogImageVars</include>
-            <texture background="true" fallback="special://skin/extras/backgrounds/01.jpg">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
+            <texture background="true" fallback="special://skin/extras/backgrounds/grey.png">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
             <visible>IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomeProgramsSingleImage)) + IsEmpty(Skin.String(HomeProgramsMultiImage))</visible>
         </control>
         
@@ -637,7 +637,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars</include>
                 <selected>!IsEmpty(Skin.String(HomeProgramsSingleImage))</selected>
                 <onclick>Skin.Reset(HomeProgramsMultiImage)</onclick>
-                <onclick>Skin.SetString(HomeProgramsSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
+                <onclick>Skin.SetString(HomeProgramsSingleImage,special://skin/extras/backgrounds/grey.png)</onclick>
                 <label>$LOCALIZE[41252]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
             </control>
@@ -671,7 +671,7 @@
     <include name="SettingsBackgroundDialogPictures">
         <control type="image">
             <include>SettingsBackgroundDialogImageVars</include>
-            <texture background="true" fallback="special://skin/extras/backgrounds/01.jpg">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
+            <texture background="true" fallback="special://skin/extras/backgrounds/grey.png">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
             <visible>IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomePicturesSingleImage)) + IsEmpty(Skin.String(HomePicturesMultiImage))</visible>
         </control>
         
@@ -707,7 +707,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars</include>
                 <selected>!IsEmpty(Skin.String(HomePicturesSingleImage))</selected>
                 <onclick>Skin.Reset(HomePicturesMultiImage)</onclick>
-                <onclick>Skin.SetString(HomePicturesSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
+                <onclick>Skin.SetString(HomePicturesSingleImage,special://skin/extras/backgrounds/grey.png)</onclick>
                 <label>$LOCALIZE[41252]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
             </control>
@@ -741,7 +741,7 @@
     <include name="SettingsBackgroundDialogGames">
         <control type="image">
             <include>SettingsBackgroundDialogImageVars</include>
-            <texture background="true" fallback="special://skin/extras/backgrounds/01.jpg">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
+            <texture background="true" fallback="special://skin/extras/backgrounds/grey.png">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
             <visible>IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomeGamesSingleImage)) + IsEmpty(Skin.String(HomeGamesMultiImage))</visible>
         </control>
         
@@ -777,7 +777,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars</include>
                 <selected>!IsEmpty(Skin.String(HomeGamesSingleImage))</selected>
                 <onclick>Skin.Reset(HomeGamesMultiImage)</onclick>
-                <onclick>Skin.SetString(HomeGamesSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
+                <onclick>Skin.SetString(HomeGamesSingleImage,special://skin/extras/backgrounds/grey.png)</onclick>
                 <label>$LOCALIZE[41252]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
             </control>
@@ -811,7 +811,7 @@
     <include name="SettingsBackgroundDialogWeather">
         <control type="image">
             <include>SettingsBackgroundDialogImageVars</include>
-            <texture background="true" fallback="special://skin/extras/backgrounds/01.jpg">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
+            <texture background="true" fallback="special://skin/extras/backgrounds/limegreen.png">$INFO[Skin.String(GlobalBackdropSingle)]</texture>
             <visible>IsEmpty(Skin.String(GlobalBackdropMulti)) + IsEmpty(Skin.String(HomeWeatherSingleImage)) + IsEmpty(Skin.String(HomeWeatherMultiImage)) + !Skin.HasSetting(ShowWeatherFanartHome)</visible>
         </control>
         
@@ -853,7 +853,7 @@
                 <include>SettingsBackgroundDialogRadioButtonVars</include>
                 <selected>!IsEmpty(Skin.String(HomeWeatherSingleImage))</selected>
                 <onclick>Skin.Reset(HomeWeatherMultiImage)</onclick>
-                <onclick>Skin.SetString(HomeWeatherSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
+                <onclick>Skin.SetString(HomeWeatherSingleImage,special://skin/extras/backgrounds/limegreen.png)</onclick>
                 <label>$LOCALIZE[41252]</label>
                 <animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
             </control>

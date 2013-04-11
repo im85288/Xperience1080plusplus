@@ -139,7 +139,7 @@
                 <control type="radiobutton" id="2201">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
-                    <selected>Skin.HasSetting(HomeMoviesTiles)</selected>
+                    <selected>!Skin.HasSetting(HomeMoviesTiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeMoviesTiles)</onclick>
                     <label>$LOCALIZE[41162]</label>
                     <enable>!Skin.HasSetting(HomeMovies)</enable>
@@ -148,7 +148,7 @@
                 <control type="radiobutton" id="2202">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
-                    <selected>Skin.HasSetting(HomeTVShowsTiles)</selected>
+                    <selected>!Skin.HasSetting(HomeTVShowsTiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeTVShowsTiles)</onclick>
                     <!--<label>Set custom TV shows tiles magenta</label>-->
 					<label>$LOCALIZE[41163]</label>
@@ -158,7 +158,7 @@
                 <control type="radiobutton" id="2203">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
-                    <selected>Skin.HasSetting(HomeMusicTiles)</selected>
+                    <selected>!Skin.HasSetting(HomeMusicTiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeMusicTiles)</onclick>
                     <label>$LOCALIZE[41164]</label>
                     <enable>!Skin.HasSetting(HomeMusic)</enable>
@@ -167,7 +167,7 @@
                 <control type="radiobutton" id="2204">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
-                    <selected>Skin.HasSetting(HomeWeatherTiles)</selected>
+                    <selected>!Skin.HasSetting(HomeWeatherTiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeWeatherTiles)</onclick>
                     <label>$LOCALIZE[41165]</label>
                     <enable>!Skin.HasSetting(HomeWeather)</enable>
