@@ -26,7 +26,7 @@
                 <height>100</height>
                 <label>$LOCALIZE[24000]: $INFO[ListItem.Property(Addon.Name)]</label>
                 <font>Font-Condensed-S75</font>
-                <textcolor>aawhite</textcolor>
+                <textcolor>aawhite2</textcolor>
                 <align>left</align>
                 <scroll>false</scroll>
                 <visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog)</visible>
@@ -40,7 +40,7 @@
                 <height>100</height>
                 <label>$LOCALIZE[24000]: $INFO[ListItem.Property(Addon.Name)]</label>
                 <font>Font-Condensed-S75</font>
-                <textcolor>aawhite</textcolor>
+                <textcolor>aawhite2</textcolor>
                 <align>left</align>
                 <scroll>false</scroll>
                 <visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)</visible>
@@ -62,7 +62,7 @@
                     <width min="50" max="450">auto</width>
                     <label>$LOCALIZE[42131]</label>
                     <font>Font-Condensed-S45</font>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>eewhite2</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>
                     <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Window.IsActive(textviewer)">Conditional</animation>
@@ -75,7 +75,7 @@
                     <width min="50" max="450">auto</width>
                     <label>24036</label>
                     <font>Font-Condensed-S45</font>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>eewhite2</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>  
                     <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="!Window.IsActive(textviewer)">Conditional</animation>
@@ -251,7 +251,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>[B]$LOCALIZE[146][/B]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -259,7 +259,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label fallback="416">$INFO[ListItem.Property(Addon.Type)]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                     </control>
@@ -276,7 +276,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>[B]$LOCALIZE[21863]:[/B]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -286,7 +286,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label fallback="416">$INFO[ListItem.Property(Addon.Creator)]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                     </control>
@@ -301,7 +301,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>[B]$LOCALIZE[24051][/B]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -309,7 +309,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label fallback="416">$INFO[ListItem.Property(Addon.Version)]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                     </control>
@@ -324,7 +324,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>[B]$LOCALIZE[20037]:[/B]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -332,7 +332,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label fallback="416">$INFO[ListItem.Property(Addon.Summary)]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>no</scroll>
                         </control>
                     </control>
@@ -348,7 +348,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>[B]$LOCALIZE[21821][/B]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="textbox" id="400">
@@ -361,7 +361,7 @@
                             <include condition="!IsEmpty(ListItem.Property(Addon.Disclaimer)) + !IsEmpty(ListItem.Property(Addon.broken))">AddonDescHeight_3</include>
                             <font>Font-Condensed-S40</font>
                             <align>justify</align>
-                            <textcolor>bbwhite</textcolor>
+                            <textcolor>bbwhite2</textcolor>
                             <label fallback="">$INFO[ListItem.Property(Addon.Description)]</label>
                             <scroll>false</scroll>
                             <scrollout>false</scrollout>
@@ -375,7 +375,7 @@
                             <font>Font-Condensed-S40</font>
                             <align>left</align>
                             <label>$LOCALIZE[42132]</label>
-                            <textcolor>bbwhite</textcolor>
+                            <textcolor>bbwhite2</textcolor>
                             <scroll>false</scroll>
                             <visible>IsEmpty(ListItem.Property(Addon.Description))</visible>
                         </control>
@@ -402,7 +402,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>[B]$LOCALIZE[24052][/B]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -412,7 +412,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                     </control>
@@ -437,7 +437,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>[B]$LOCALIZE[24096][/B]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -447,7 +447,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Property(Addon.broken)]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                     </control>

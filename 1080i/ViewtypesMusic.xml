@@ -2278,7 +2278,7 @@
                         <width>1730</width>
                         <label>$VAR[CoverViewBottomInfo]</label>
                         <font>Font-Condensed-S45-B</font>
-                        <textcolor>aawhite</textcolor>
+                        <textcolor>aawhite2</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -2288,7 +2288,7 @@
                         <width>1730</width>
                         <label>$VAR[CoverViewBottomInfo2]</label>
                         <font>Font-Condensed-S36</font>
-                        <textcolor>77white</textcolor>
+                        <textcolor>77white2</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -2653,7 +2653,7 @@
                             <width>690</width>
                             <label>$INFO[ListItem.Label]</label>
                             <font>Font-Condensed-S34-B</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>![Container.Content(Artists) + IsEmpty(ListItem.Property(Artist_Genre))] + ![Container.Content(Artists) + IsEmpty(ListItem.Property(Artist_Genre))]</visible>
@@ -2664,7 +2664,7 @@
                             <width>690</width>
                             <label>$INFO[ListItem.Label]</label>
                             <font>Font-Condensed-S34-B</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>[Container.Content(Artists) + IsEmpty(ListItem.Property(Artist_Genre))] | [Container.Content(Artists) + IsEmpty(ListItem.Artist)]</visible>
@@ -2675,7 +2675,7 @@
                             <width>690</width>
                             <label>$INFO[ListItem.Property(Artist_Genre)]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>banner2</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>Container.Content(Artists)</visible>
@@ -2686,7 +2686,7 @@
                             <width>690</width>
                             <label>$INFO[ListItem.Artist]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>banner2</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>Container.Content(Albums)</visible>
@@ -2703,7 +2703,7 @@
                             <height>96</height>
                             <label>$INFO[ListItem.TrackNumber]</label>
                             <font>Font-Condensed-S80-B</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>banner2</textcolor>
                             <scroll>false</scroll>
                             <align>right</align>
                             <visible>!stringcompare(Container.FolderPath,musicdb://5/1/)</visible>
@@ -2715,7 +2715,7 @@
                             <height>96</height>
                             <label>$INFO[ListItem.PlayCount]</label>
                             <font>Font-Condensed-S80-B</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>banner2</textcolor>
                             <scroll>false</scroll>
                             <align>right</align>
                             <visible>stringcompare(Container.FolderPath,musicdb://5/1/)</visible>
@@ -2735,7 +2735,7 @@
                             <width>690</width>
                             <label>$INFO[ListItem.Title]</label>
                             <font>Font-Condensed-S34-B</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <animation effect="slide" end="34" time="0" condition="ListItem.IsPlaying">Conditional</animation>
@@ -2746,7 +2746,7 @@
                             <width>690</width>
                             <label>$INFO[ListItem.Artist]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>banner2</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                         </control>

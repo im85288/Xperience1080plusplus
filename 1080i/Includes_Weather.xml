@@ -792,8 +792,8 @@
                     <width>300</width>
                     <height>40</height>
                     <label>$LOCALIZE[41694]</label>
-                    <textcolor>eewhite</textcolor>
-                    <focusedcolor>eewhite</focusedcolor>
+                    <textcolor>eewhite2</textcolor>
+                    <focusedcolor>eewhite2</focusedcolor>
                     <font>Font-Condensed-S36</font>
                     <onright>201</onright>
                     <onleft>301</onleft>
@@ -987,8 +987,8 @@
                     <width>300</width>
                     <height>40</height>
                     <label>$LOCALIZE[41695]</label>
-                    <textcolor>eewhite</textcolor>
-                    <focusedcolor>eewhite</focusedcolor>
+                    <textcolor>eewhite2</textcolor>
+                    <focusedcolor>eewhite2</focusedcolor>
                     <font>Font-Condensed-S36</font>
                     <onleft>101</onleft>
                     <onright>301</onright>
@@ -2633,8 +2633,8 @@
                     <width>300</width>
                     <height>40</height>
                     <label>$LOCALIZE[41696]</label>
-                    <textcolor>eewhite</textcolor>
-                    <focusedcolor>eewhite</focusedcolor>
+                    <textcolor>eewhite2</textcolor>
+                    <focusedcolor>eewhite2</focusedcolor>
                     <font>Font-Condensed-S36</font>
                     <onleft>201</onleft>
                     <onright>101</onright>

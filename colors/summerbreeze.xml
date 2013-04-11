@@ -1,0 +1,61 @@
+<colors>
+<!-- All others -->
+        <color name="black">FF000000</color>
+        <color name="white">FFFFFFFF</color>
+        <color name="brightred">FFC80000</color>
+        <color name="grey">FFC0C2C2</color>
+        <color name="blue">FF7ACAFE</color>
+        <color name="red">FFCE4421</color>
+        <color name="midgrey">FF686868</color>      
+        <color name="bluegrey">ffC6C6C8</color>
+        <color name="darkgrey">FF2C2C2C</color>
+        <color name="darkgrey2">FF666769</color>
+<!-- Home Labels -->
+        <color name="homelabelbig">FFFFFFFF</color>
+        <color name="homelabelsmall">FF62BEFE</color>
+<!-- List, Guide view -->
+        <color name="greyblue">FF677173</color>
+        <color name="listwhite">FFFFFFFF</color>
+        <color name="guideblue">FF7ACAFE</color>
+<!-- List view -->
+        <color name="greyblue">FF677173</color>
+<!-- Context menus, shutdown menes -->
+        <color name="lightgrey">FFDDDDDD</color>
+        <color name="darkgrey">FF2C2C2C</color>
+
+<!-- GuideButton -->        
+        <color name="guidebutton">FF44aef3</color> <!-- Green -->       
+<!-- Other -->
+		<color name="ffmenugrey">FF484848</color>
+		<color name="focusonblue">DDFFFFFF</color>FF484848
+		<color name="smallinfohome">80000000</color>
+		<color name="nowplay">C0000000</color>
+		<color name="smalllabelhome">77000000</color>
+        <color name="77white">77FFFFFF</color>  <!-- gelb -->
+		<color name="77white2">77000000</color>
+        <color name="aawhite">AAFFFFFF</color>	<!--whitetext grün-->
+		<color name="aawhite2">AA000000</color>  <!--darktext neu-->
+        <color name="bbwhite2">BB000000</color>  <!--homenavlabel darktext magenta-->
+        <color name="bbwhite">BBFFFFFF</color>	<!--whitetext neu-->
+		<color name="ddwhite">DDFFFFFF</color>	<!-- overlay + difftext rot-->
+		<color name="ddwhite2">DD000000</color>	<!-- whitetext neu -->
+		<color name="ddwhite3">DDC80000</color> <!-- darktext neu-->
+		<color name="ccwhite">CCFFFFFF</color> 
+        <color name="eewhite">FFFFFFFF</color>  <!-- blau -->
+		<color name="eewhite2">EE000000</color>  <!-- blau Neu -->
+		<color name="weather">EEFFFFFF</color>	<!-- wether kleine schrift -->
+		<color name="eeweather">EEFFFFFF</color>
+		<color name="powershadow">00ffffff</color>
+		<color name="menushadow">00ffffff</color>
+		<color name="banner">C0000000</color>
+		<color name="banner2">80000000</color>
+<!-- Menus -->
+        <color name="MenuBlue">FF55B2FA</color>
+        <color name="MenuGrey">CC484848</color>
+        <color name="KeyboardGrey">99484848</color>
+        
+        <color name="SettingsBlue">FF55b4e7</color>
+        
+        <color name="DialogSelected">FF4ea1e7</color>
+        
+</colors>

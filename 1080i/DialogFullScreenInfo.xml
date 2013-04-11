@@ -175,16 +175,16 @@
                                 	<colordiffuse>bbwhite</colordiffuse>
                                 	<texture>$INFO[VideoPlayer.AudioChannels,flags/channels/,.png]</texture>
                             	</control>
-								<!--<control type="image">
+								<control type="image">
 									<posy>550</posy>
-									<visible>!IsEmpty(VideoPlayer.ListItem.Mpaa)</visible>
+									<visible>!IsEmpty(VideoPlayer.ListItem.MovieMPAAVar)</visible>
 									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
                 					<include>visiblehidefadeinfo</include>
                                     <width>140</width>
                                     <height>100</height>
                                 	<colordiffuse>bbwhite</colordiffuse>
                                 	<texture>$INFO[ListItem.Mpaa,flags/mpaa/,.png]</texture>
-                            	</control>-->
+                            	</control>
 							</control>
 							
 							<control type="label">

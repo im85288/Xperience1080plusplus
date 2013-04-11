@@ -26,16 +26,29 @@
 <!-- GuideButton -->        
         <color name="guidebutton">FF44aef3</color> <!-- Green -->       
 <!-- Other -->
+		<color name="ffmenugrey">FF484848</color>
+		<color name="focusonblue">DDFFFFFF</color>FF484848
+		<color name="smallinfohome">80FFFFFF</color>
+		<color name="nowplay">C0FFFFFF</color>
 		<color name="smalllabelhome">77FFFFFF</color>
-        <color name="77white">77FFFFFF</color>
-        <color name="aawhite">AAFFFFFF</color>  
-        <color name="bbwhite">BBFFFFFF</color>  
-        <color name="ddwhite">DDFFFFFF</color>  
-        <color name="eewhite">EEFFFFFF</color>
-		<color name="weather">EEFFFFFF</color> <!-- change to 66FFFFFF-->
+        <color name="77white">77FFFFFF</color>  <!-- gelb -->
+		<color name="77white2">77FFFFFF</color>
+        <color name="aawhite">AAFFFFFF</color>	<!--whitetext grün-->
+		<color name="aawhite2">AAFFFFFF</color>  <!--darktext neu-->
+        <color name="bbwhite2">BBFFFFFF</color>  <!--homenavlabel darktext magenta-->
+        <color name="bbwhite">BBFFFFFF</color>	<!--whitetext neu-->
+		<color name="ddwhite">DDFFFFFF</color>	<!-- overlay + difftext rot-->
+		<color name="ddwhite2">DDFFFFFF</color>	<!-- whitetext neu -->
+		<color name="ddwhite3">DDC80000</color> <!-- darktext neu-->
+		<color name="ccwhite">CCFFFFFF</color> 
+        <color name="eewhite">FFFFFFFF</color>  <!-- blau -->
+		<color name="eewhite2">EEFFFFFF</color>  <!-- blau Neu -->
+		<color name="weather">EEFFFFFF</color>	<!-- wether kleine schrift -->
 		<color name="eeweather">EEFFFFFF</color>
-		<color name="powershadow">22000000</color>
-		<color name="menushadow">77000000</color>
+		<color name="powershadow">00ffffff</color>
+		<color name="menushadow">00ffffff</color>
+		<color name="banner">C0FFFFFF</color>
+		<color name="banner2">80FFFFFF</color>
 <!-- Menus -->
         <color name="MenuBlue">FF55B2FA</color>
         <color name="MenuGrey">CC484848</color>

@@ -41,7 +41,7 @@
                     <height>22</height>
                     <font>Font-Condensed-S34</font>
                     <align>center</align>
-                    <textcolor>77FFFFFF</textcolor>
+                    <textcolor>77white2</textcolor>
                 </control>
                 <control type="label" id="310">
                     <description>Edit Text</description>
@@ -52,7 +52,7 @@
                     <align>center</align>
                     <onup>32</onup>
                     <ondown>49</ondown>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>eewhite2</textcolor>
                 </control>
             <!-- First Row -->
                 <control type="group" id="320">

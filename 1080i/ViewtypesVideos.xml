@@ -1970,8 +1970,8 @@
                             <height>330</height>
                             <info>Container(53).ListItem.Plot</info>
                             <align>justify</align>
-                            <textcolor>CCFFFFFF</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            <textcolor>ccwhite</textcolor>
+                            <shadowcolor>menushadow</shadowcolor>
                             <pagecontrol>71</pagecontrol>
                             <autoscroll delay="13000" time="3000" repeat="13000" />
                             <font>Font-Condensed-S34</font>
@@ -3088,7 +3088,7 @@
                             <posy>588</posy>
                             <width>380</width>
                             <height>570</height>
-                            <colordiffuse>77white</colordiffuse>
+                            <colordiffuse>77white2</colordiffuse>
                             <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster-1]</texture>
                             <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                         </control>
@@ -3151,7 +3151,7 @@
                             <posy>588</posy>
                             <width>380</width>
                             <height>570</height>
-                            <colordiffuse>77white</colordiffuse>
+                            <colordiffuse>77white2</colordiffuse>
                             <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster5]</texture>
                             <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                         </control>
@@ -3206,7 +3206,7 @@
                             <posy>588</posy>
                             <width>380</width>
                             <height>570</height>
-                            <colordiffuse>77white</colordiffuse>
+                            <colordiffuse>77white2</colordiffuse>
                             <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster4]</texture>
                             <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                         </control>
@@ -3269,7 +3269,7 @@
                             <posy>588</posy>
                             <width>380</width>
                             <height>570</height>
-                            <colordiffuse>77white</colordiffuse>
+                            <colordiffuse>77white2</colordiffuse>
                             <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster3]</texture>
                             <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                         </control>
@@ -3332,7 +3332,7 @@
                             <posy>588</posy>
                             <width>380</width>
                             <height>570</height>
-                            <colordiffuse>77white</colordiffuse>
+                            <colordiffuse>77white2</colordiffuse>
                             <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster2]</texture>
                             <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                         </control>
@@ -3395,7 +3395,7 @@
                             <posy>588</posy>
                             <width>380</width>
                             <height>570</height>
-                            <colordiffuse>77white</colordiffuse>
+                            <colordiffuse>77white2</colordiffuse>
                             <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster1]</texture>
                             <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                         </control>
@@ -3455,7 +3455,7 @@
                         <posy>588</posy>
                         <width>380</width>
                         <height>570</height>
-                        <colordiffuse>77white</colordiffuse>
+                        <colordiffuse>77white2</colordiffuse>
                         <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster0]</texture>
                         <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     </control>
@@ -3548,7 +3548,7 @@
                                 <posy>588</posy>
                                 <width>380</width>
                                 <height>570</height>
-                                <colordiffuse>77white</colordiffuse>
+                                <colordiffuse>77white2</colordiffuse>
                                 <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster]</texture>
                                 <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                             </control>
@@ -3594,7 +3594,7 @@
                                 <posy>588</posy>
                                 <width>380</width>
                                 <height>570</height>
-                                <colordiffuse>77white</colordiffuse>
+                                <colordiffuse>77white2</colordiffuse>
                                 <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref.png">$VAR[PosterViewPoster]</texture>
                                 <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                             </control>
@@ -3687,7 +3687,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(55).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <animation effect="slide" end="-73" time="0" condition="IsEmpty(Container(55).ListItem.VideoResolution)">Conditional</animation>
@@ -3706,7 +3706,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(55).ListItem.Rating,★ , • ]$INFO[Container(55).ListItem.Year,,]$INFO[Container(55).ListItem.Duration, • , $LOCALIZE[12391]]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>77white</textcolor>
+                                <textcolor>77white2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -3719,7 +3719,7 @@
                                 <width>1685</width>
                                 <label>$INFO[Container(55).ListItem.Label]$INFO[Container(55).ListItem.Year, (,)]</label>
                                 <font>Font-Condensed-S45-B</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <animation effect="slide" end="-116" time="0" condition="IsEmpty(ListItem.MPAA)">Conditional</animation>
@@ -3735,7 +3735,7 @@
                                 <width>1730</width>
                                 <label>$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[41311],]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>77white</textcolor>
+                                <textcolor>77white2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -4108,10 +4108,10 @@
                     <posy>874</posy>
                     <width>1680</width>
                     <height>56</height>
-                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                    <label>$INFO[ListItem.Label]</label>
                     <label2>$VAR[ThumbnailViewDetailInfo]</label2>
                     <font>Font-Condensed-S45</font>
-                    <textcolor>99FFFFFF</textcolor>
+                    <textcolor>99000000</textcolor>
                     <shadowcolor>22000000</shadowcolor>
                     <scroll>false</scroll>
                     <align>left</align>
@@ -4592,7 +4592,7 @@
                             <width>705</width>
                             <label>$INFO[ListItem.Label]</label>
                             <font>Font-Condensed-S34-B</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>banner</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) | [!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] | [Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))]</visible>
@@ -4603,7 +4603,7 @@
                             <width>705</width>
                             <label>$INFO[ListItem.Label]</label>
                             <font>Font-Condensed-S34-B</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>banner</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + ![!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] + ![Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))]</visible>
@@ -4614,7 +4614,7 @@
                             <width>705</width>
                             <label>$VAR[BannerListInfoGenreTotalSeasons]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>banner2</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                         </control>
@@ -4630,7 +4630,7 @@
                             <height>96</height>
                             <label>$INFO[ListItem.Episode]</label>
                             <font>Font-Condensed-S80-B</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>banner2</textcolor>
                             <scroll>false</scroll>
                             <align>right</align>
                         </control>
@@ -4648,7 +4648,7 @@
                             <width>690</width>
                             <label>$INFO[ListItem.Label]</label>
                             <font>Font-Condensed-S34-B</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>banner</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png)</visible>
@@ -4659,7 +4659,7 @@
                             <width>650</width>
                             <label>$INFO[ListItem.Title]</label>
                             <font>Font-Condensed-S34-B</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>banner</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png)</visible>
@@ -4670,7 +4670,7 @@
                             <width>690</width>
                             <label>$INFO[ListItem.date,$LOCALIZE[41805]: ,]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>banner2</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                         </control>

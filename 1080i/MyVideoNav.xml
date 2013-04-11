@@ -214,7 +214,7 @@
                            <width>300</width>
                            <height>57</height>
                            <label>Update art</label>
-                           <textcolor>DDFFFFFF</textcolor>
+                           <textcolor>focusonblue</textcolor>
                            <font>Font-Condensed-S34</font>
                            <align>left</align>
                            <scroll>true</scroll>
@@ -225,7 +225,7 @@
                            <width>300</width>
                            <height>57</height>
                            <label>Update extra fanart</label>
-                           <textcolor>DDFFFFFF</textcolor>
+                           <textcolor>focusonblue</textcolor>
                            <font>Font-Condensed-S34</font>
                            <align>left</align>
                            <scroll>true</scroll>
@@ -236,7 +236,7 @@
                            <width>300</width>
                            <height>57</height>
                            <label>Update all movies</label>
-                           <textcolor>DDFFFFFF</textcolor>
+                           <textcolor>focusonblue</textcolor>
                            <font>Font-Condensed-S34</font>
                            <align>left</align>
                            <scroll>true</scroll>
@@ -247,7 +247,7 @@
                            <width>300</width>
                            <height>57</height>
                            <label>Update all shows</label>
-                           <textcolor>DDFFFFFF</textcolor>
+                           <textcolor>focusonblue</textcolor>
                            <font>Font-Condensed-S34</font>
                            <align>left</align>
                            <scroll>true</scroll>
@@ -258,7 +258,7 @@
                            <width>300</width>
                            <height>57</height>
                            <label>Update art...</label>
-                           <textcolor>FF484848</textcolor>
+                           <textcolor>ffmenugrey</textcolor>
                            <font>Font-Condensed-S34</font>
                            <align>left</align>
                            <scroll>true</scroll>
@@ -300,8 +300,8 @@
                         <height>57</height>
                         <font>Font-Condensed-S34</font>
                         <align>left</align>
-                        <textcolor>FF484848</textcolor>
-                        <focusedcolor>DDFFFFFF</focusedcolor>
+                        <textcolor>ffmenugrey</textcolor>
+                        <focusedcolor>focusonblue</focusedcolor>
                         <textoffsetx>75</textoffsetx>
                         <scroll>false</scroll>  
                         <label>587</label>
@@ -807,7 +807,7 @@
                         <height>100</height>
                         <label>$LOCALIZE[42010]</label>
                         <font>Font-Condensed-S34-B</font>
-                        <textcolor>eewhite</textcolor>
+                        <textcolor>eewhite2</textcolor>
                         <shadowcolor>22000000</shadowcolor>
                     </control>
                 </control>
@@ -829,7 +829,7 @@
                         <height>100</height>
                         <label>$LOCALIZE[42021]</label>
                         <font>Font-Condensed-S34-B</font>
-                        <textcolor>eewhite</textcolor>
+                        <textcolor>eewhite2</textcolor>
                         <shadowcolor>22000000</shadowcolor>
                     </control>
                 </control>

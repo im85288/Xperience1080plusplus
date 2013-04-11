@@ -46,7 +46,7 @@
                     <posy>950</posy>
                     <width>100</width>
                     <height>100</height>
-                    <texture>weather/small/$INFO[Weather.FanartCode].png</texture>
+                    <texture>weather/small-home/$INFO[Weather.FanartCode].png</texture>
                     <visible>Weather.IsFetched + ![stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]</visible>
                     <include>visiblehidefadeinfo</include>
                 </control>
@@ -60,7 +60,7 @@
                         <height>100</height>
                         <label>$INFO[System.Time]</label>
                         <font>Font-Condensed-S34-B</font>
-                        <textcolor>eewhite</textcolor>
+                        <textcolor>eewhite2</textcolor>
                         <shadowcolor>22000000</shadowcolor>
                         <align>right</align>
                         <scroll>false</scroll>
@@ -74,7 +74,7 @@
                         <height>100</height>
                         <label>$INFO[System.Date]</label>
                         <font>Font-Condensed-S28</font>
-                        <textcolor>80FFFFFF</textcolor>
+                        <textcolor>smallinfohome</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
                         <visible>!Skin.HasSetting(HideHomeDate) + [Control.HasFocus(21) | Control.HasFocus(22)]</visible>
@@ -159,7 +159,7 @@
                 <width>180</width>
                 <height>100</height>
                 <label>$LOCALIZE[41600]</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>eewhite</textcolor>
                 <shadowcolor>22000000</shadowcolor>
                 <include>homebuttonsanim4</include>
@@ -188,7 +188,7 @@
                 <height>100</height>
                 <label>$LOCALIZE[41507]</label>
                 <font>Font-Condensed-S34-B</font>
-                <textcolor>eewhite</textcolor>
+                <textcolor>eewhite2</textcolor>
                 <shadowcolor>22000000</shadowcolor>
                 <include>homebuttonsanim2</include>
                 <visible>!Skin.HasSetting(HideShutdownButton)</visible>
@@ -229,8 +229,8 @@
                     <width>771</width>
                     <height>120</height>
                     <label>$VAR[NowPlayingTitle]</label>
-                    <font>Font-Condensed-S36-B</font>
-                    <textcolor>C0FFFFFF</textcolor>
+                    <font>Font-Condensed-S36</font>
+                    <textcolor>nowplay</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
                     <animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(934))">Conditional</animation>
@@ -243,7 +243,7 @@
                     <height>120</height>
                     <label>$VAR[NowPlayingSubTitle]</label>
                     <font>Font-Condensed-S28</font>
-                    <textcolor>80FFFFFF</textcolor>
+                    <textcolor>smallinfohome</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
                 </control>
@@ -346,7 +346,7 @@
                 <height>270</height>
                 <aspectratio align="center">stretch</aspectratio>
                 <texture>$INFO[Player.Art(thumb)]</texture>
-                <colordiffuse>DDFFFFFF</colordiffuse>
+                <colordiffuse>DD000000</colordiffuse>
             </control>
             <control type="image">
                 <posx>786</posx>

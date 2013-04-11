@@ -46,7 +46,7 @@
                 <height>100</height>
                 <label>$LOCALIZE[41507]</label>
                 <font>Font-Condensed-S34-B</font>
-                <textcolor>eewhite</textcolor>
+                <textcolor>eewhite2</textcolor>
                 <!--<shadowcolor>powershadow</shadowcolor>-->
                 <include>Animation_ShutdownButton</include>
                 <include>homebuttonsanim2</include>
@@ -96,7 +96,7 @@
                 <height>100</height>
                 <label>$LOCALIZE[1036]</label>
                 <font>Font-Condensed-S34-B</font>
-                <textcolor>eewhite</textcolor>
+                <textcolor>eewhite2</textcolor>
                 <!--<shadowcolor>powershadow</shadowcolor>-->
                 <include>Animation_FavButton</include>
                 <include>homebuttonsanim4</include>
@@ -109,8 +109,8 @@
         <width min="0" max="500">auto</width>
         <height>100</height>
         <font>Font-Condensed-S49</font>
-        <textcolor>bbwhite</textcolor>
-        <focusedcolor>bbwhite</focusedcolor>
+        <textcolor>bbwhite2</textcolor>
+        <focusedcolor>bbwhite2</focusedcolor>
         <!--<shadowcolor>menushadow</shadowcolor>-->
         <align>left</align>
         <aligny>top</aligny>
@@ -3733,7 +3733,7 @@
                                 <font>Font-Condensed-S31-B</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
-                                <textcolor>bbwhite</textcolor>
+                                <textcolor>bbwhite2</textcolor>
                                 <label>$LOCALIZE[41561]</label>
                                 <scroll>false</scroll>
                             </control>
@@ -3945,8 +3945,8 @@
                                         <height>70</height>
                                         <width>423</width>
                                         <font>Font-Condensed-S32</font>
-                                        <label>[B]$INFO[ListItem.Label][/B]</label>
-                                        <textcolor>eewhite</textcolor>
+                                        <label>$INFO[ListItem.Label]</label>
+                                        <textcolor>eewhite2</textcolor>
                                         <!--<shadowcolor>powershadow</shadowcolor>-->
                                         <scroll>false</scroll>
                                     </control>
@@ -3957,7 +3957,7 @@
                                         <width>423</width>
                                         <font>Font-Condensed-S29</font>
                                         <label>$INFO[ListItem.Label2]</label>
-                                        <textcolor>eewhite</textcolor>
+                                        <textcolor>eewhite2</textcolor>
                                         <!--<shadowcolor>powershadow</shadowcolor>-->
                                         <scroll>false</scroll>
                                     </control>
@@ -5243,7 +5243,7 @@
                                     <font>Font-Condensed-S33-B</font>
                                     <align>left</align>
                                     <aligny>center</aligny>
-                                    <textcolor>eewhite</textcolor>
+                                    <textcolor>eewhite2</textcolor>
                                     <label>$INFO[Window(Weather).Property(Location)]</label>
                                     <scroll>false</scroll>
                                 </control>
@@ -5257,7 +5257,7 @@
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <label>$LOCALIZE[33006]$INFO[Window(Weather).Property(Day0.LowTemp), (, - ]$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits,,)]</label>
-                                    <textcolor>eewhite</textcolor>
+                                    <textcolor>eewhite2</textcolor>
                                 </control>
                                 <control type="label">
                                     <description>Weather provider</description>
@@ -5299,7 +5299,7 @@
                                         <aligny>center</aligny>
                                         <label>[B]$INFO[ListItem.Label2][/B]</label>
                                         <font>Font-Condensed-S32</font>
-                                        <textcolor>bbwhite</textcolor>
+                                        <textcolor>bbwhite2</textcolor>
                                         <scroll>false</scroll>
                                     </control>
                                     <control type="image">
@@ -5333,7 +5333,7 @@
                                         <aligny>center</aligny>
                                         <label>[B]$INFO[ListItem.Label2][/B]</label>
                                         <font>Font-Condensed-S32</font>
-                                        <textcolor>bbwhite</textcolor>
+                                        <textcolor>bbwhite2</textcolor>
                                         <scroll>false</scroll>
                                     </control>
                                     <control type="image">

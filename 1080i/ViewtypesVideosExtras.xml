@@ -2598,7 +2598,7 @@
                             <width>394</width>
                             <height>581</height>
                             <texture>views/posterview/shadow-back.png</texture>
-                            <colordiffuse>77white</colordiffuse>
+                            <colordiffuse>77white2</colordiffuse>
                         </control>
                         <control type="image">
                             <description>Reflection</description>
@@ -2683,7 +2683,7 @@
                             <width>394</width>
                             <height>581</height>
                             <texture>views/posterview/shadow-back.png</texture>
-                            <colordiffuse>77white</colordiffuse>
+                            <colordiffuse>77white2</colordiffuse>
                         </control>
                         <control type="image">
                             <description>Reflection</description>
@@ -2768,7 +2768,7 @@
                             <width>394</width>
                             <height>581</height>
                             <texture>views/posterview/shadow-back.png</texture>
-                            <colordiffuse>77white</colordiffuse>
+                            <colordiffuse>77white2</colordiffuse>
                         </control>
                         <control type="image">
                             <description>Reflection</description>
@@ -2853,7 +2853,7 @@
                             <width>394</width>
                             <height>581</height>
                             <texture>views/posterview/shadow-back.png</texture>
-                            <colordiffuse>77white</colordiffuse>
+                            <colordiffuse>77white2</colordiffuse>
                         </control>
                         <control type="image">
                             <description>Reflection</description>
@@ -2938,7 +2938,7 @@
                             <width>394</width>
                             <height>581</height>
                             <texture>views/posterview/shadow-back.png</texture>
-                            <colordiffuse>77white</colordiffuse>
+                            <colordiffuse>77white2</colordiffuse>
                         </control>
                         <control type="image">
                             <description>Reflection</description>
@@ -3023,7 +3023,7 @@
                             <width>394</width>
                             <height>581</height>
                             <texture>views/posterview/shadow-back.png</texture>
-                            <colordiffuse>77white</colordiffuse>
+                            <colordiffuse>77white2</colordiffuse>
                         </control>
                         <control type="image">
                             <description>Reflection</description>
@@ -3104,7 +3104,7 @@
                         <width>394</width>
                         <height>581</height>
                         <texture>views/posterview/shadow-back.png</texture>
-                        <colordiffuse>77white</colordiffuse>
+                        <colordiffuse>77white2</colordiffuse>
                     </control>
                     <control type="image">
                         <description>Reflection</description>
@@ -3207,7 +3207,7 @@
                                 <width>394</width>
                                 <height>581</height>
                                 <texture>views/posterview/shadow-back.png</texture>
-                                <colordiffuse>77white</colordiffuse>
+                                <colordiffuse>77white2</colordiffuse>
                             </control>
                             <control type="image">
                                 <description>Reflection</description>
@@ -3276,7 +3276,7 @@
                                 <width>394</width>
                                 <height>581</height>
                                 <texture>views/posterview/shadow-back.png</texture>
-                                <colordiffuse>77white</colordiffuse>
+                                <colordiffuse>77white2</colordiffuse>
                             </control>
                             <control type="image">
                                 <description>Reflection</description>
@@ -3370,7 +3370,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(506).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <animation effect="slide" end="-73" time="0" condition="IsEmpty(Container(506).ListItem.VideoResolution)">Conditional</animation>
@@ -3396,7 +3396,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(506).ListItem.Year,,]$INFO[Container(506).ListItem.Studio, • ,]$INFO[Container(506).ListItem.Duration, • , $LOCALIZE[12391]]$INFO[Container(506).ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>77white</textcolor>
+                                <textcolor>77white2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -3409,7 +3409,7 @@
                                 <width>1685</width>
                                 <label>$INFO[Container(506).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <animation effect="slide" end="-116" time="0" condition="IsEmpty(ListItem.MPAA)">Conditional</animation>
@@ -3425,7 +3425,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(506).ListItem.Year,,]$INFO[Container(506).ListItem.Studio, • ,]$INFO[Container(506).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes),  (, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), • , Unwatched)]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>77white</textcolor>
+                                <textcolor>77white2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -3436,7 +3436,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(506).ListItem.Year,,]$INFO[Container(506).ListItem.Studio, • ,]$INFO[Container(506).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes),  (, $LOCALIZE[20360])]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>77white</textcolor>
+                                <textcolor>77white2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -3450,7 +3450,7 @@
                                 <width>1800</width>
                                 <label>$INFO[Container(506).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -3460,7 +3460,7 @@
                                 <width>1730</width>
                                 <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360] • ]$INFO[ListItem.Property(UnWatchedEpisodes),, Unwatched]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>77white</textcolor>
+                                <textcolor>77white2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -3471,7 +3471,7 @@
                                 <width>1730</width>
                                 <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>77white</textcolor>
+                                <textcolor>77white2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -4518,7 +4518,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(56).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <animation effect="slide" end="-73" time="0" condition="IsEmpty(Container(56).ListItem.VideoResolution)">Conditional</animation>
@@ -4544,7 +4544,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(56).ListItem.Year,,]$INFO[Container(56).ListItem.Studio, • ,]$INFO[Container(56).ListItem.Duration, • , $LOCALIZE[12391]]$INFO[Container(56).ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>77white</textcolor>
+                                <textcolor>77white2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -4557,7 +4557,7 @@
                                 <width>1685</width>
                                 <label>$INFO[Container(56).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <animation effect="slide" end="-116" time="0" condition="IsEmpty(ListItem.MPAA)">Conditional</animation>
@@ -4573,7 +4573,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(56).ListItem.Year,,]$INFO[Container(56).ListItem.Studio, • ,]$INFO[Container(56).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes),  (, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), • , Unwatched)]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>77white</textcolor>
+                                <textcolor>77white2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -4584,7 +4584,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(56).ListItem.Year,,]$INFO[Container(56).ListItem.Studio, • ,]$INFO[Container(56).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes),  (, $LOCALIZE[20360])]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>77white</textcolor>
+                                <textcolor>77white2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -4598,7 +4598,7 @@
                                 <width>1800</width>
                                 <label>$INFO[Container(56).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -4608,7 +4608,7 @@
                                 <width>1730</width>
                                 <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360] • ]$INFO[ListItem.Property(UnWatchedEpisodes),, Unwatched]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>77white</textcolor>
+                                <textcolor>77white2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -4619,7 +4619,7 @@
                                 <width>1730</width>
                                 <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>77white</textcolor>
+                                <textcolor>77white2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -4633,7 +4633,7 @@
                                 <width>1800</width>
                                 <label>$INFO[Container(56).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -4810,7 +4810,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(502).ListItem.Year,,]$INFO[Container(502).ListItem.Studio, • ,]$INFO[Container(502).ListItem.Duration, • , $LOCALIZE[12391]]$INFO[Container(502).ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -4823,7 +4823,7 @@
                                 <width>1685</width>
                                 <label>$INFO[Container(502).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
-                                <textcolor>eewhite</textcolor>
+                                <textcolor>eewhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <animation effect="slide" end="-116" time="0" condition="IsEmpty(ListItem.MPAA)">Conditional</animation>
@@ -4839,7 +4839,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(502).ListItem.Year,,]$INFO[Container(502).ListItem.Studio, • ,]$INFO[Container(502).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes),  (, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), • , Unwatched)]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -4850,7 +4850,7 @@
                                 <width>1730</width>
                                 <label>$INFO[Container(502).ListItem.Year,,]$INFO[Container(502).ListItem.Studio, • ,]$INFO[Container(502).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes),  (, $LOCALIZE[20360])]</label>
                                 <font>Font-Condensed-S36</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -4864,7 +4864,7 @@
                                 <width>1800</width>
                                 <label>$INFO[Container(502).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
