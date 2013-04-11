@@ -854,6 +854,14 @@
                     <label> • Download extra fanarts for TV Shows</label>
                     <visible>Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart) + System.HasAddon(script.artwork.downloader)</visible>
                 </control>
+				<control type="button" id="3006">
+                        <width>1210</width>
+                        <include>SettingsCategoryDefaultButtonVars</include>
+                        <label>MPAA Language</label>
+                        <label2 fallback="US">[COLOR=SettingsBlue]$VAR[MovieMPAALangLabel][/COLOR]</label2>
+                        <onclick>ActivateWindow(3007)</onclick>
+                    </control>
+
             </control>
 
             <!-- ============ --> 
