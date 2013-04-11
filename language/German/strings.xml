@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <strings>   
     <!-- Custom_Settings.xml -->
     <!-- From 41100 to 41299 -->
@@ -46,7 +46,13 @@
     <string id="41158">Serien-Kachel</string>
     <string id="41159">App-Kachel</string>
     <string id="41160">Icon animieren</string>
-    <string id="41161">Musik-Kachel</string>
+    <string id="41161">Custom-Startmenü-Kacheln Farbgebung</string>
+	<string id="41162">...Filme-Kacheln auf grau</string>
+	<string id="41163">...Serien-Kacheln auf grau</string>
+	<string id="41164">...Musik-Kacheln auf grau</string>
+	<string id="41165">...Wetter-Kacheln auf grau</string>
+	<string id="41166">Setze Kachelfarbe für...</string>
+	
 
     <!-- Ansichten -->
     <string id="41190">Ansichten</string>

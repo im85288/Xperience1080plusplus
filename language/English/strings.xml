@@ -47,10 +47,10 @@
     <string id="41159">App tile</string>
     <string id="41160">Animate icon</string>
 	<string id="41161">Manage custom home items colors</string>
-	<string id="41162">...Movies tiles to cyan</string>
-	<string id="41163">...TV shows tiles to magenta</string>
-	<string id="41164">...Music tiles to yellow</string>
-	<string id="41165">...Weather tiles to black</string>
+	<string id="41162">...Movies tiles to grey</string>
+	<string id="41163">...TV shows tiles to grey</string>
+	<string id="41164">...Music tiles to grey</string>
+	<string id="41165">...Weather tiles to grey</string>
 	<string id="41166">Set home items colors for...</string>
 
     <!-- Views -->
