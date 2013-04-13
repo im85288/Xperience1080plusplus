@@ -66,7 +66,7 @@
                 <height>100</height>
                 <label>$INFO[ListItem.Title]</label>
                 <font>Font-Condensed-S75</font>
-                <textcolor>aawhite</textcolor>
+                <textcolor>aawhite2</textcolor>
                 <align>left</align>
                 <scroll>false</scroll>
                 <visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog)</visible>
@@ -80,7 +80,7 @@
                 <height>100</height>
                 <label>$INFO[ListItem.Title]</label>
                 <font>Font-Condensed-S75</font>
-                <textcolor>aawhite</textcolor>
+                <textcolor>aawhite2</textcolor>
                 <align>left</align>
                 <scroll>false</scroll>
                 <visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)</visible>
@@ -110,7 +110,7 @@
                     <height>100</height>
                     <label>$INFO[ListItem.Rating]</label>
                     <font>Font-Condensed-S75</font>
-                    <textcolor>aawhite</textcolor>
+                    <textcolor>aawhite2</textcolor>
                     <align>right</align>
                     <scroll>false</scroll>
                 </control>
@@ -136,7 +136,7 @@
                     <height>60</height>
                     <label>◀</label>
                     <font>Font-Condensed-S72</font>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>eewhite2</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>
                     <include>visiblehidefadeinfo</include>
@@ -151,7 +151,7 @@
                     <height>60</height>
                     <label>$LOCALIZE[41319]</label>
                     <font>Font-Condensed-S45</font>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>eewhite2</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>
                     <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(71) | Control.HasFocus(150) | Control.HasFocus(1110)">Conditional</animation>
@@ -164,7 +164,7 @@
                     <height>60</height>
                     <label>$LOCALIZE[41380]</label>
                     <font>Font-Condensed-S45</font>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>eewhite2</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>
                     <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(150) | Control.HasFocus(9333) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110) | Control.HasFocus(70) | Control.HasFocus(51)">Conditional</animation>
@@ -178,7 +178,7 @@
                     <height>60</height>
                     <label>$LOCALIZE[41316]</label>
                     <font>Font-Condensed-S45</font>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>eewhite2</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>  
                     <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(71) | Control.HasFocus(9333) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110) | Control.HasFocus(70) | Control.HasFocus(71) | Control.HasFocus(51)">Conditional</animation>
@@ -192,7 +192,7 @@
                     <height>60</height>
                     <label>▶</label>
                     <font>Font-Condensed-S72</font>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>eewhite2</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>
                     <include>visiblehidefadeinfo</include>
@@ -521,7 +521,7 @@
                         <font>Font-Condensed-S45</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Title]</label>
-                        <textcolor>eewhite</textcolor>
+                        <textcolor>eewhite2</textcolor>
                         <scroll>true</scroll>
                         <visible>IsEmpty(ListItem.tagline)</visible>
                     </control>
@@ -532,7 +532,7 @@
                         <font>Font-Condensed-S45</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Tagline]</label>
-                        <textcolor>eewhite</textcolor>
+                        <textcolor>eewhite2</textcolor>
                         <scroll>true</scroll>
                         <visible>!IsEmpty(ListItem.tagline)</visible>
                     </control>
@@ -550,7 +550,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ,]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                     </control>
@@ -574,7 +574,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Genre]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                     </control>
@@ -598,7 +598,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Director]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                             <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="Control.HasFocus(71)">Conditional</animation>
                         </control>
@@ -610,7 +610,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Director,$LOCALIZE[41308],]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <scroll>false</scroll>
                             <onup>70</onup>
@@ -642,7 +642,7 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Writer]</label>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
                     </control>
@@ -678,7 +678,7 @@
                         <width>1045</width>
                         <height>270</height>
                         <label>$INFO[ListItem.Plot]</label>
-                        <textcolor>bbwhite</textcolor>
+                        <textcolor>bbwhite2</textcolor>
                         <align>justify</align>
                         <font>Font-Condensed-S40</font>
                         <pagecontrol>70</pagecontrol>
@@ -750,7 +750,7 @@
                             <height>60</height>
                             <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, $LOCALIZE[20347] ,]</label>
                             <font>Font-Condensed-S40</font>
-                            <textcolor>eewhite</textcolor>
+                            <textcolor>eewhite2</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <scroll>false</scroll>
@@ -766,7 +766,7 @@
                             <width>1180</width>
                             <height>60</height>
                             <label>$INFO[ListItem.label]$INFO[ListItem.Label2, $LOCALIZE[20347] ,]</label>
-                            <textcolor>eewhite</textcolor>
+                            <textcolor>eewhite2</textcolor>
                             <font>Font-Condensed-S40</font>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -841,7 +841,7 @@
                     <height>60</height>
                     <label>◀</label>
                     <font>Font-Condensed-S72</font>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>eewhite2</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>
                     <include>visiblehidefadeinfo</include>
@@ -855,7 +855,7 @@
                     <height>60</height>
                     <label>Cover</label>
                     <font>Font-Condensed-S45</font>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>eewhite2</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>
                 </control>
