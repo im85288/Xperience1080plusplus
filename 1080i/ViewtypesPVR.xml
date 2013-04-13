@@ -38,7 +38,6 @@
                         <font>Font-Condensed-S40</font>
                         <label>$INFO[Container(11).ListItem.Title]</label>
                         <textcolor>ddwhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="group">
@@ -53,7 +52,6 @@
                             <info>Container(11).ListItem.Plot</info>
                             <align>justify</align>
                             <textcolor>aawhite</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
                             <pagecontrol>71</pagecontrol>
                             <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
                             <font>Font-Condensed-S34</font>
@@ -68,7 +66,6 @@
                             <info>Container(11).ListItem.Plot</info>
                             <align>justify</align>
                             <textcolor>aawhite</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
                             <pagecontrol>71</pagecontrol>
                             <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
                             <font>Font-Condensed-S28</font>
@@ -107,7 +104,6 @@
 	                        <font>Font-Condensed-S30-B</font>
 	                        <label>$INFO[Container(11).ListItem.Genre]</label>
 	                        <textcolor>aawhite</textcolor>
-	                        <shadowcolor>22000000</shadowcolor>
 	                        <scroll>false</scroll>
 	                    </control>
 	                    <control type="label">
@@ -117,7 +113,6 @@
 	                        <font>Font-Condensed-S30</font>
 	                        <label>$INFO[Container(11).ListItem.NextTitle,$LOCALIZE[19031]: ,]$INFO[Container(11).ListItem.NextStartTime, (,)]</label>
 	                        <textcolor>aawhite</textcolor>
-	                        <shadowcolor>22000000</shadowcolor>
 	                        <scroll>false</scroll>
 	                    </control>
 	            	</control>
@@ -145,9 +140,8 @@
                 	<posy>180</posy>
                 	<width>200</width>
                 	<height>30</height>
-                	<font>Font-Condensed-S30-B</font>
-                	<textcolor>99FFFFFF</textcolor>
-                	<shadowcolor>55000000</shadowcolor>
+                	<font>Font-Condensed-S30</font>
+                	<textcolor>livetv</textcolor>
                 	<align>left</align>
                 	<aligny>center</aligny>
                 	<label>$VAR[TVNumItemsLabel]</label>
@@ -542,7 +536,6 @@
                         <font>Font-Condensed-S40</font>
                         <label>$INFO[Container(12).ListItem.Title]</label>
                         <textcolor>ddwhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="group">
@@ -557,7 +550,6 @@
                             <info>Container(12).ListItem.Plot</info>
                             <align>justify</align>
                             <textcolor>aawhite</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
                             <pagecontrol>71</pagecontrol>
                             <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
                             <font>Font-Condensed-S34</font>
@@ -572,7 +564,6 @@
                             <info>Container(12).ListItem.Plot</info>
                             <align>justify</align>
                             <textcolor>aawhite</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
                             <pagecontrol>71</pagecontrol>
                             <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
                             <font>Font-Condensed-S28</font>
@@ -611,7 +602,6 @@
                             <font>Font-Condensed-S30-B</font>
                             <label>$INFO[Container(12).ListItem.Genre]</label>
                             <textcolor>aawhite</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -621,7 +611,6 @@
                             <font>Font-Condensed-S30</font>
                             <label>$INFO[Container(12).ListItem.NextTitle,$LOCALIZE[19031]: ,]$INFO[Container(12).ListItem.NextStartTime, (,)]</label>
                             <textcolor>aawhite</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
                             <scroll>false</scroll>
                         </control>
                 	</control>
@@ -649,9 +638,8 @@
 	            	<posy>180</posy>
 	            	<width>200</width>
 	            	<height>30</height>
-	            	<font>Font-Condensed-S30-B</font>
-	            	<textcolor>99FFFFFF</textcolor>
-	            	<shadowcolor>55000000</shadowcolor>
+	            	<font>Font-Condensed-S30</font>
+	            	<textcolor>livetv</textcolor>
 	            	<align>left</align>
 	            	<aligny>center</aligny>
 	            	<label>$VAR[TVNumItemsLabel]</label>
@@ -1062,11 +1050,10 @@
 						<posy>1</posy>
 						<width>10</width>
 						<height>30</height>
-						<font>Font-Condensed-S30-B</font>
-						<textcolor>99FFFFFF</textcolor>
-						<focusedcolor>99FFFFFF</focusedcolor>
-						<selectedcolor>99FFFFFF</selectedcolor>
-						<shadowcolor>55000000</shadowcolor>
+						<font>Font-Condensed-S30</font>
+						<textcolor>livetv</textcolor>
+						<focusedcolor>livetv</focusedcolor>
+						<selectedcolor>livetv</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -1212,9 +1199,8 @@
 						<height>78</height>
 						<font>Font-Condensed-S34</font>
 						<aligny>center</aligny>
-						<textcolor>77white</textcolor>
-						<selectedcolor>77white</selectedcolor>
-						<shadowcolor>22000000</shadowcolor>
+						<textcolor>77white2</textcolor>
+						<selectedcolor>77white2</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>false</scroll>
@@ -1227,10 +1213,9 @@
 						<height>78</height>
 						<font>Font-Condensed-S34</font>
 						<aligny>center</aligny>
-						<textcolor>77white</textcolor>
+						<textcolor>77white2</textcolor>
 						<textoffsetx>11</textoffsetx>
-						<selectedcolor>77white</selectedcolor>
-						<shadowcolor>22000000</shadowcolor>
+						<selectedcolor>77white2</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>false</scroll>
@@ -1291,7 +1276,6 @@
 						<aligny>center</aligny>
 						<textcolor>eewhite</textcolor>
 						<selectedcolor>eewhite</selectedcolor>
-						<shadowcolor>22000000</shadowcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>false</scroll>
@@ -1307,7 +1291,6 @@
 						<textcolor>eewhite</textcolor>
 						<textoffsetx>11</textoffsetx>
 						<selectedcolor>eewhite</selectedcolor>
-						<shadowcolor>22000000</shadowcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>false</scroll>
@@ -1358,8 +1341,7 @@
     			    <width>1157</width>
     			    <height>86</height>
     			    <label>$INFO[ListItem.Label]</label>
-    			    <textcolor>ddwhite</textcolor>
-    			    <shadowcolor>55000000</shadowcolor>
+    			    <textcolor>ddwhite2</textcolor>
     			    <font>Font-Condensed-S38-B</font>
     			    <aligny>center</aligny>
     			</control>
@@ -1369,8 +1351,7 @@
     			    <width>1157</width>
     			    <height>86</height>
     			    <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Duration, (,)]</label>
-    			    <textcolor>99FFFFFF</textcolor>
-    			    <shadowcolor>55000000</shadowcolor>
+    			    <textcolor>livetv</textcolor>
     			    <font>Font-Condensed-S36</font>
     			    <aligny>center</aligny>
     			</control>
@@ -1382,8 +1363,7 @@
     				<height>90</height>
     				<font>Font-Condensed-S34</font>
     				<align>justify</align>
-    				<textcolor>aawhite</textcolor>
-    				<shadowcolor>55000000</shadowcolor>
+    				<textcolor>aawhite2</textcolor>
     				<pagecontrol>60</pagecontrol>
     				<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
     				<label fallback="161">$INFO[ListItem.Plot]</label>
@@ -1431,7 +1411,6 @@
 	                    <font>Font-Condensed-S40</font>
 	                    <label>$INFO[Container(15).ListItem.Title]</label>
 	                    <textcolor>ddwhite</textcolor>
-	                    <shadowcolor>22000000</shadowcolor>
 	                    <scroll>false</scroll>
 	                </control>
 	                <control type="group">
@@ -1446,7 +1425,6 @@
 	                        <info>Container(15).ListItem.Plot</info>
 	                        <align>justify</align>
 	                        <textcolor>aawhite</textcolor>
-	                        <shadowcolor>33000000</shadowcolor>
 	                        <pagecontrol>71</pagecontrol>
 	                        <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
 	                        <font>Font-Condensed-S32</font>
@@ -1461,7 +1439,6 @@
 	                        <info>Container(15).ListItem.Plot</info>
 	                        <align>justify</align>
 	                        <textcolor>aawhite</textcolor>
-	                        <shadowcolor>33000000</shadowcolor>
 	                        <pagecontrol>71</pagecontrol>
 	                        <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
 	                        <font>Font-Condensed-S28</font>
@@ -1485,7 +1462,6 @@
 	                    <font>Font-Condensed-S30-B</font>
 	                    <label>$INFO[Container(15).ListItem.Genre]</label>
 	                    <textcolor>aawhite</textcolor>
-	                    <shadowcolor>22000000</shadowcolor>
 	                    <scroll>false</scroll>
 	                </control>
 	            </control>
@@ -1835,7 +1811,6 @@
 	                    <font>Font-Condensed-S40</font>
 	                    <label>$INFO[Container(16).ListItem.Title]</label>
 	                    <textcolor>ddwhite</textcolor>
-	                    <shadowcolor>22000000</shadowcolor>
 	                    <scroll>false</scroll>
 	                </control>
 	                <control type="group">
@@ -1850,7 +1825,6 @@
 	                        <info>Container(16).ListItem.Plot</info>
 	                        <align>justify</align>
 	                        <textcolor>aawhite</textcolor>
-	                        <shadowcolor>33000000</shadowcolor>
 	                        <pagecontrol>71</pagecontrol>
 	                        <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
 	                        <font>Font-Condensed-S32</font>
@@ -1865,7 +1839,6 @@
 	                        <info>Container(16).ListItem.Plot</info>
 	                        <align>justify</align>
 	                        <textcolor>aawhite</textcolor>
-	                        <shadowcolor>33000000</shadowcolor>
 	                        <pagecontrol>71</pagecontrol>
 	                        <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
 	                        <font>Font-Condensed-S28</font>
@@ -1889,7 +1862,6 @@
 	                    <font>Font-Condensed-S30-B</font>
 	                    <label>$INFO[Container(16).ListItem.Genre]</label>
 	                    <textcolor>aawhite</textcolor>
-	                    <shadowcolor>22000000</shadowcolor>
 	                    <scroll>false</scroll>
 	                </control>
 	            </control>
@@ -2231,7 +2203,6 @@
 	                    <font>Font-Condensed-S40</font>
 	                    <label>$INFO[Container(13).ListItem.Title]</label>
 	                    <textcolor>ddwhite</textcolor>
-	                    <shadowcolor>22000000</shadowcolor>
 	                    <scroll>false</scroll>
 	                </control>
                     <control type="textbox">
@@ -2243,7 +2214,6 @@
                         <info>Container(13).ListItem.Plot</info>
                         <align>justify</align>
                         <textcolor>aawhite</textcolor>
-                        <shadowcolor>33000000</shadowcolor>
                         <pagecontrol>71</pagecontrol>
                         <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
                         <font>Font-Condensed-S28</font>
@@ -2264,7 +2234,6 @@
 	                    <font>Font-Condensed-S30-B</font>
 	                    <label>$INFO[Container(13).ListItem.Genre]</label>
 	                    <textcolor>aawhite</textcolor>
-	                    <shadowcolor>22000000</shadowcolor>
 	                    <scroll>false</scroll>
 	                </control>
 	            </control>

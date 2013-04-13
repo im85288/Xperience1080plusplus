@@ -743,18 +743,6 @@
                         <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(actors) | Container.Content(Sets) | Container.HasFolders</visible>
                     </control>
                     <control type="radiobutton" id="209">
-                        <description>Video Wall</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>Video Wall</label>
-                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
-                        <onclick>Container.SetViewMode(502)</onclick>
-                        <selected>Control.IsVisible(502)</selected>
-                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
-                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
-                        <radioposx>-19</radioposx>
-                        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | [!Container.Content(seasons) + Container.HasFolders]</visible>
-                    </control>
-                    <control type="radiobutton" id="210">
                         <description>Banner</description>
                         <include>optionsbuttonsdimensions</include>
                         <label>Banner</label>

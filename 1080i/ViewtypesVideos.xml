@@ -3748,7 +3748,7 @@
                                 <width>1800</width>
                                 <label>$INFO[Container(55).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
-                                <textcolor>aawhite</textcolor>
+                                <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -4432,7 +4432,8 @@
             <control type="group">
                 <visible>Control.IsVisible(501) + !Skin.HasSetting(ThumbnailHidePanel) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))</visible>
                 <include>ThumbnailAnimationsPoster</include>
-                <control type="image">
+                <animation effect="slide" end="36" time="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(ThumbnailVideoSmall)">Conditional</animation>
+				<control type="image">
                     <description>Poster</description>
                     <posx>1304</posx>
                     <posy>186</posy>

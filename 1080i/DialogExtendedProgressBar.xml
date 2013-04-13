@@ -37,8 +37,8 @@
                     <posy>0</posy>
                     <width>700</width>
                     <height>120</height>
-                    <font>Font-Condensed-S36-B</font>
-                    <textcolor>C0FFFFFF</textcolor>
+                    <font>Font-Condensed-S36</font>
+                    <textcolor>nowplay</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
                 </control>
@@ -49,7 +49,7 @@
                     <height>120</height>
                     <label>$INFO[Control.GetLabel(31)]$INFO[Control.GetLabel(32),: ,%]</label>
                     <font>Font-Condensed-S28</font>
-                    <textcolor>80FFFFFF</textcolor>
+                    <textcolor>smallinfohome</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
                 </control>

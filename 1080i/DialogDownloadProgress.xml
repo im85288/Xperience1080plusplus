@@ -24,7 +24,7 @@
                 <posy>0</posy>
                 <width>750</width>
                 <height>120</height>
-                <label>font=Font-Condensed-S36-B,textColor=C0FFFFFF,alignment=right+centery</label>
+                <label>font=Font-Condensed-S36,textColor=nowpla,alignment=right+centery</label>
                 <scroll>false</scroll>
             </control>
             <control type="label" id="2003">
@@ -33,7 +33,7 @@
                 <posy>33</posy>
                 <width>750</width>
                 <height>120</height>
-                <label>font=Font-Condensed-S28,textColor=80FFFFFF,alignment=right+centery</label>
+                <label>font=Font-Condensed-S28,textColor=smallinfohome,alignment=right+centery</label>
                 <scroll>false</scroll>
             </control>
             <control type="progress" id="2004">

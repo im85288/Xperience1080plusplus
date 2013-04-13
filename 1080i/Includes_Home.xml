@@ -122,7 +122,7 @@
         <width>600</width>
         <height>60</height>
         <font>Font-Condensed-S36</font>
-        <textcolor>C0FFFFFF</textcolor>
+        <textcolor>nowplay</textcolor>
         <scroll>false</scroll>
         <align>left</align>
         <animation type="Visible">
@@ -174,7 +174,7 @@
             </control>
             <control type="label">
                 <include>HomeProfileInfoLabel</include>
-                <label>[B]$INFO[System.ProfileName][/B]</label>
+                <label>$INFO[System.ProfileName]</label>
                 <visible>Container(30).HasFocus(1)</visible>
             </control>
             <control type="label">
@@ -2422,7 +2422,7 @@
                             <item id="1">
                                 <label>$INFO[System.DVDLabel]</label>
                                 <icon>windows/home/icons/dvd.png</icon>
-                                <onclick>PlayDVD()</onclick>
+                                <onclick>XBMC.PlayDVD()</onclick>
                                 <visible>System.HasMediaDVD</visible>
                             </item>
                         </content>
@@ -5243,7 +5243,7 @@
                                     <font>Font-Condensed-S33-B</font>
                                     <align>left</align>
                                     <aligny>center</aligny>
-                                    <textcolor>eewhite2</textcolor>
+                                    <textcolor>eewhite</textcolor>
                                     <label>$INFO[Window(Weather).Property(Location)]</label>
                                     <scroll>false</scroll>
                                 </control>
@@ -5257,7 +5257,7 @@
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <label>$LOCALIZE[33006]$INFO[Window(Weather).Property(Day0.LowTemp), (, - ]$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits,,)]</label>
-                                    <textcolor>eewhite2</textcolor>
+                                    <textcolor>eewhite</textcolor>
                                 </control>
                                 <control type="label">
                                     <description>Weather provider</description>
@@ -5299,7 +5299,7 @@
                                         <aligny>center</aligny>
                                         <label>[B]$INFO[ListItem.Label2][/B]</label>
                                         <font>Font-Condensed-S32</font>
-                                        <textcolor>bbwhite2</textcolor>
+                                        <textcolor>bbwhite</textcolor>
                                         <scroll>false</scroll>
                                     </control>
                                     <control type="image">
@@ -5333,7 +5333,7 @@
                                         <aligny>center</aligny>
                                         <label>[B]$INFO[ListItem.Label2][/B]</label>
                                         <font>Font-Condensed-S32</font>
-                                        <textcolor>bbwhite2</textcolor>
+                                        <textcolor>bbwhite</textcolor>
                                         <scroll>false</scroll>
                                     </control>
                                     <control type="image">

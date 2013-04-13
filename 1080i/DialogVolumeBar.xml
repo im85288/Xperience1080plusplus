@@ -21,13 +21,13 @@
             </animation>
             <visible>!Window.IsActive(fullscreenvideo) + !Window.IsActive(visualisation)</visible>
             <control type="group">
-                <!--<control type="image">
+                <control type="image">
                     <posx>-4</posx>
                     <posy>27</posy>
                     <width>100</width>
                     <height>100</height>
                     <texture>overlays/volume/volume-back.png</texture>
-                </control>-->
+                </control>
                 <control type="image">
                     <posx>-4</posx>
                     <posy>27</posy>
@@ -42,8 +42,8 @@
                     <width>750</width>
                     <height>100</height>
                     <label>$INFO[Player.Volume]</label>
-                    <font>Font-Condensed-S36-B</font>
-                    <textcolor>C0FFFFFF</textcolor>
+                    <font>Font-Condensed-S36</font>
+                    <textcolor>nowplay</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
                 </control>

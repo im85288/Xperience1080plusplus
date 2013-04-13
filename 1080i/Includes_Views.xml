@@ -7,7 +7,6 @@
     <include file="ViewtypesPrograms.xml" />
     <include file="ViewtypesAddons.xml" />
     <include file="ViewtypesPVR.xml" />
-    <include file="ViewtypesGames.xml" />
 
     <include name="VideoViews">
         <include>Viewtype-List</include>
@@ -22,7 +21,6 @@
         <include>Viewtype-ClassicPosterSmall</include>  <!--VideosExtras-->
         <include>Viewtype-Thumbnail</include>
         <include>Viewtype-ThumbnailVideo</include>
-        <include>Viewtype-WallVideo</include>           <!--VideosExtras-->
         <include>Viewtype-Banner</include>
         <include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
     </include>
@@ -55,9 +53,18 @@
     <include name="ProgramViews">
         <include>Viewtype-ProgramList</include>
         <include>Viewtype-AddonThumbnail</include>
-        <include>Viewtype-GameLandscapePoster</include>     <!--Games-->
-        <include>Viewtype-GameLandscapeSquare</include>     <!--Games-->
-        <include>Viewtype-GameLandscapeWide</include>       <!--Games-->
+        <!-- Advanced Launcher specific views -->
+        <include>Viewtype-ProgramInfoList</include>
+        <include>Viewtype-ProgramInfoListSquare</include>
+        <include>Viewtype-ProgramPanel</include>
+        <include>Viewtype-ProgramPanelSquare</include>
+        <include>Viewtype-ProgramLandscape</include>
+        <include>Viewtype-ProgramPoster</include>
+        <include>Viewtype-ProgramPosterSquare</include>
+        <include>Viewtype-ProgramThumbnail</include>
+        <include>Viewtype-ProgramThumbnailSquare</include>
+        <include>Viewtype-ProgramBanner</include>
+        <include>Viewtype-ProgramBannerSquare</include>
     </include>
     
     <include name="AddonViews">
@@ -73,6 +80,7 @@
         <include>Viewtype-MusicList</include>
         <include>Viewtype-MusicInfoList</include>
         <include>Viewtype-CoverList</include>
+        <include>Viewtype-CoverView</include>
     </include>
     
     <include name="PVRViews">

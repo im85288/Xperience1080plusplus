@@ -147,7 +147,7 @@
         <width min="0" max="400">auto</width>
         <height>120</height>
         <font>Font-Condensed-S28</font>
-        <textcolor>eewhite</textcolor>
+        <textcolor>eewhite2</textcolor>
         <scroll>false</scroll>
         <align>left</align>
     </include>
@@ -163,7 +163,7 @@
                 <height>120</height>
                 <label>$INFO[Container.NumItems,, $LOCALIZE[41822]]</label>
                 <font>Font-Condensed-S28</font>
-                <textcolor>80FFFFFF</textcolor>
+                <textcolor>smallinfohome</textcolor>
                 <scroll>false</scroll>
                 <align>left</align>
                 <visible>IntegerGreaterThan(Container.NumItems,0) + !IntegerGreaterThan(Container.NumItems,1)</visible>
@@ -173,7 +173,7 @@
                 <height>120</height>
                 <label>$INFO[Container.NumItems,, $LOCALIZE[41817]]</label>
                 <font>Font-Condensed-S28</font>
-                <textcolor>80FFFFFF</textcolor>
+                <textcolor>smallinfohome</textcolor>
                 <scroll>false</scroll>
                 <align>left</align>
                 <visible>!IntegerGreaterThan(Container.NumItems,0) | IntegerGreaterThan(Container.NumItems,1)</visible>
@@ -183,7 +183,7 @@
                 <height>120</height>
                 <label>$INFO[Container.CurrentPage, • $LOCALIZE[41819] ,]$INFO[Container.NumPages,/,]</label>
                 <font>Font-Condensed-S28</font>
-                <textcolor>80FFFFFF</textcolor>
+                <textcolor>smallinfohome</textcolor>
                 <scroll>false</scroll>
                 <align>left</align>
                 <visible>IntegerGreaterThan(Container.NumPages,1)</visible>
@@ -217,7 +217,7 @@
                 <width>85</width>
                 <height>85</height>
                 <align>center</align>
-                <font>Font-Condensed-S52-B</font>
+                <font>Font-Condensed-S52</font>
                 <label>$INFO[ListItem.SortLetter]</label>
                 <textcolor>C0000000</textcolor>
                 <shadowcolor>white</shadowcolor>
@@ -262,8 +262,8 @@
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$VAR[VideoHeaderLabel]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>C0FFFFFF</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>nowplay</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -271,8 +271,8 @@
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$INFO[Container.FolderName,: ,]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>aawhite</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>aawhite2</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                         <visible>!substring(Container.FolderPath,library,left) + !substring(Container.FolderPath,special,left) + !substring(Container.FolderPath,addons,left) + !substring(Container.FolderPath,sources,left) + !Container.Content(episodes) + !stringcompare(Container.FolderPath,videodb://4/)</visible>
@@ -281,8 +281,8 @@
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$INFO[Container.ListItem.TVShowTitle,: ,]$INFO[Container.ListItem.Season, • $LOCALIZE[41322] ,]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>aawhite</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>aawhite2</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                         <visible>Container.Content(episodes) + [Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)]</visible>
@@ -291,8 +291,8 @@
                         <width min="0" max="1000">auto</width>
                         <height>120</height>
                         <label>$INFO[Container.ListItem.TVShowTitle,: ,]$INFO[Container.ListItem.Season, • $LOCALIZE[41322] ,]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>aawhite</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>aawhite2</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                         <visible>Container.Content(episodes) + ![Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)]</visible>
@@ -323,8 +323,8 @@
                     <width min="0" max="5000">auto</width>
                     <height>120</height>
                     <label>$VAR[MusicHeaderLabel]</label>
-                    <font>Font-Condensed-S36-B</font>
-                    <textcolor>C0FFFFFF</textcolor>
+                    <font>Font-Condensed-S36</font>
+                    <textcolor>nowplay</textcolor>
                     <scroll>false</scroll>
                     <align>left</align>
                 </control>
@@ -332,8 +332,8 @@
                     <width min="0" max="500">auto</width>
                     <height>120</height>
                     <label>$INFO[Container.FolderName,: ,]</label>
-                    <font>Font-Condensed-S36-B</font>
-                    <textcolor>aawhite</textcolor>
+                    <font>Font-Condensed-S36</font>
+                    <textcolor>aawhite2</textcolor>
                     <scroll>false</scroll>
                     <align>left</align>
                     <visible>!stringcompare(Container.FolderPath,musicdb://1/) + !stringcompare(Container.FolderPath,musicdb://2/) + !stringcompare(Container.FolderPath,musicdb://3/) + !stringcompare(Container.FolderPath,musicdb://4/) + !stringcompare(Container.FolderPath,musicdb://5/) + !stringcompare(Container.FolderPath,musicdb://6/) + !stringcompare(Container.FolderPath,musicdb://7/) + !stringcompare(Container.FolderPath,musicdb://8/) + !stringcompare(Container.FolderPath,musicdb://9/) + !stringcompare(Container.FolderPath,musicdb://5/1/) + !stringcompare(Container.FolderPath,special://musicplaylists/) + !Container.Content(albums)</visible>
@@ -342,8 +342,8 @@
                     <width min="0" max="500">auto</width>
                     <height>120</height>
                     <label>$INFO[ListItem.Artist,: ,]</label>
-                    <font>Font-Condensed-S36-B</font>
-                    <textcolor>aawhite</textcolor>
+                    <font>Font-Condensed-S36</font>
+                    <textcolor>aawhite2</textcolor>
                     <scroll>false</scroll>
                     <align>left</align>
                     <visible>Container.Content(albums)</visible>
@@ -357,7 +357,7 @@
         <control type="group">
             <posx>75</posx>
             <posy>26</posy>
-            <visible>!Window.IsActive(addoninformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))</visible>
+            <visible>!Window.IsActive(addoninformation) + !Window.IsActive(1122) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))</visible>
             <include>BannerListInfoAnimation</include>
             <control type="group">
                 <control type="image">
@@ -374,9 +374,8 @@
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$LOCALIZE[41504]</label>
-                        <label>$INFO[ListItem.ActualIcon]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>C0FFFFFF</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>nowplay</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -384,8 +383,8 @@
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$INFO[Container.FolderName,: ,]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>aawhite</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>aawhite2</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                         <visible>!IsEmpty(Container.FolderPath)</visible>
@@ -417,8 +416,8 @@
                         <width min="0" max="5000">auto</width>
                         <height>120</height>
                         <label>$LOCALIZE[1]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>C0FFFFFF</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>nowplay</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -426,8 +425,8 @@
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$INFO[Container.FolderName,: ,]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>aawhite</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>aawhite2</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                         <visible>!IsEmpty(Container.FolderPath)</visible>
@@ -459,8 +458,8 @@
                         <width min="0" max="5000">auto</width>
                         <height>120</height>
                         <label>$VAR[AddonHeaderLabel]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>C0FFFFFF</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>nowplay</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -468,8 +467,8 @@
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$INFO[Container.FolderName,: ,]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>aawhite</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>aawhite2</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                         <visible>!IsEmpty(Container.FolderPath) + !stringcompare(Container.FolderPath,addons://disabled/) + !stringcompare(Container.FolderPath,addons://enabled/) + !stringcompare(Container.FolderPath,addons://repos/)</visible>
@@ -528,7 +527,7 @@
                         <width>85</width>
                         <height>85</height>
                         <align>center</align>
-                        <font>Font-Condensed-S52-B</font>
+                        <font>Font-Condensed-S52</font>
                         <label>$VAR[FileManagerSortLetterLabel]</label>
                         <textcolor>C0000000</textcolor>
                         <shadowcolor>white</shadowcolor>
@@ -540,8 +539,8 @@
                     <width>500</width>
                     <height>120</height>
                     <label>$LOCALIZE[7]</label>
-                    <font>Font-Condensed-S36-B</font>
-                    <textcolor>C0FFFFFF</textcolor>
+                    <font>Font-Condensed-S36</font>
+                    <textcolor>nowplay</textcolor>
                     <scroll>false</scroll>
                     <align>left</align>
                 </control>
@@ -569,8 +568,8 @@
                     <width>500</width>
                     <height>120</height>
                     <label>$LOCALIZE[10503]</label>
-                    <font>Font-Condensed-S36-B</font>
-                    <textcolor>C0FFFFFF</textcolor>
+                    <font>Font-Condensed-S36</font>
+                    <textcolor>nowplay</textcolor>
                     <scroll>false</scroll>
                     <align>left</align>
                 </control>
@@ -600,8 +599,8 @@
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$LOCALIZE[5]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>C0FFFFFF</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>nowplay</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -609,8 +608,8 @@
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>: $VAR[SettingsHeaderLabel]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>aawhite</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>aawhite2</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -623,7 +622,7 @@
                 <height>120</height>
                 <label>$VAR[SettingsHeaderSubLabel]</label>
                 <font>Font-Condensed-S28</font>
-                <textcolor>80FFFFFF</textcolor>
+                <textcolor>smallinfohome</textcolor>
                 <scroll>false</scroll>
                 <align>left</align>
                 <wrapmultiline>false</wrapmultiline>
@@ -652,8 +651,8 @@
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$LOCALIZE[19020]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>C0FFFFFF</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>nowplay</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -661,8 +660,8 @@
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$INFO[Control.GetLabel(29),: ,]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>B0FFFFFF</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>header</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -670,8 +669,8 @@
                         <width min="0" max="500">auto</width>
                         <height>120</height>
                         <label>$INFO[Control.GetLabel(30),: ,]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>A0FFFFFF</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>header2</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -692,7 +691,7 @@
                 </control>
                 <control type="label">
                     <description>Spacer</description>
-                    <textcolor>82FFFFFF</textcolor>
+                    <textcolor>header3</textcolor>
                     <include>PVRSubLabel</include>
                     <label> • </label>
                 </control>
@@ -705,7 +704,7 @@
                 </control>
                 <control type="label">
                     <description>Spacer</description>
-                    <textcolor>82FFFFFF</textcolor>
+                    <textcolor>header3</textcolor>
                     <include>PVRSubLabel</include>
                     <label> • </label>
                 </control>
@@ -718,7 +717,7 @@
                 </control>
                 <control type="label">
                     <description>Spacer</description>
-                    <textcolor>82FFFFFF</textcolor>
+                    <textcolor>header3</textcolor>
                     <include>PVRSubLabel</include>
                     <label> • </label>
                 </control>
@@ -731,7 +730,7 @@
                 </control>
                 <control type="label">
                     <description>Spacer</description>
-                    <textcolor>82FFFFFF</textcolor>
+                    <textcolor>header3</textcolor>
                     <include>PVRSubLabel</include>
                     <label> • </label>
                 </control>
@@ -744,7 +743,7 @@
                 </control>
                 <control type="label">
                     <description>Spacer</description>
-                    <textcolor>82FFFFFF</textcolor>
+                    <textcolor>header3</textcolor>
                     <include>PVRSubLabel</include>
                     <label> • </label>
                 </control>
@@ -781,8 +780,8 @@
                     <width>1630</width>
                     <height>120</height>
                     <label>$INFO[Window.Property(Location)]</label>
-                    <font>Font-Condensed-S36-B</font>
-                    <textcolor>C0FFFFFF</textcolor>
+                    <font>Font-Condensed-S36</font>
+                    <textcolor>nowplay</textcolor>
                     <scroll>false</scroll>
                     <align>left</align>
                 </control>
@@ -793,7 +792,7 @@
                     <height>120</height>
                     <label>$INFO[Window.Property(WeatherProvider)]</label>
                     <font>Font-Condensed-S28</font>
-                    <textcolor>80FFFFFF</textcolor>
+                    <textcolor>smallinfohome</textcolor>
                     <scroll>false</scroll>
                     <align>left</align>
                 </control>

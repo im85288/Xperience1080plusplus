@@ -27,7 +27,7 @@
         <color name="guidebutton">FF44aef3</color> <!-- Green -->       
 <!-- Other -->
 		<color name="ffmenugrey">FF484848</color>
-		<color name="focusonblue">DDFFFFFF</color>FF484848
+		<color name="focusonblue">DDFFFFFF</color>
 		<color name="smallinfohome">80000000</color>
 		<color name="nowplay">C0000000</color>
 		<color name="smalllabelhome">77000000</color>
@@ -49,6 +49,10 @@
 		<color name="menushadow">00ffffff</color>
 		<color name="banner">C0000000</color>
 		<color name="banner2">80000000</color>
+		<color name="header">B0000000</color>
+		<color name="header2">A0000000</color>
+		<color name="header3">82000000</color>
+		<color name="livetv">99000000</color>
 <!-- Menus -->
         <color name="MenuBlue">FF55B2FA</color>
         <color name="MenuGrey">CC484848</color>

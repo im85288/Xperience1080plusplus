@@ -738,7 +738,7 @@
                             <align>left</align>
                             <label>$INFO[ListItem.Title]</label>
                             <textcolor>eewhite2</textcolor>
-                            <scroll>false</scroll>
+                            <scroll>true</scroll>
                             <visible>IsEmpty(ListItem.tagline)</visible>
                         </control>
                         <control type="label">
@@ -1043,8 +1043,8 @@
                     <height>660</height>
                     <onleft>SetFocus(9335)</onleft>
                     <onright condition="!System.HasAddon(script.metadata.actors)">RunScript(special://skin/extras/scripts/setClearProperty.py,BounceRight)</onright>
-                    <onright condition="System.HasAddon(script.metadata.actors)">SetProperty(script.metadata.actors.push,1,home)</onright>
-                    <onright condition="System.HasAddon(script.metadata.actors)">RunScript(script.metadata.actors,$INFO[Container(50).ListItem.Label])</onright>
+                    <onright condition="System.HasAddon(script.metadata.actors) + IsEmpty(Window(Home).Property(script.metadata.actors.isactive))">SetProperty(script.metadata.actors.push,1,home)</onright>
+                    <onright condition="System.HasAddon(script.metadata.actors) + IsEmpty(Window(Home).Property(script.metadata.actors.isactive))">RunScript(script.metadata.actors,$INFO[Container(50).ListItem.Label])</onright>
                     <onup>50</onup>
                     <ondown>50</ondown>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>

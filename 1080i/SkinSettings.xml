@@ -229,6 +229,22 @@
                     <enable>!Skin.HasSetting(KioskMode)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(1006)">Conditional</animation>
                 </control>
+				<control type="radiobutton" id="1014">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(StartupPlaylist)</selected>
+                    <onclick>Skin.ToggleSetting(StartupPlaylist)</onclick>
+                    <label>$LOCALIZE[21398]</label>
+                </control>
+                <control type="button" id="1015">
+                    <width>1210</width>
+                    <label> • $LOCALIZE[559]:</label>
+                    <label2>[COLOR=SettingsBlue]$INFO[Skin.String(StartupPlaylist.Path)][/COLOR]</label2>
+                    <include>SettingsCategoryDefaultButtonVars</include>
+                    <onclick>Skin.SetFile(StartupPlaylist.Path,.m3u|.xsp,special://profile/playlists/music/)</onclick>
+                    <enable>Skin.HasSetting(StartupPlaylist)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(1014)">Conditional</animation>
+                </control>
                 <control type="group" id="1007">
                     <description>Fake spin control</description>
                     <width>1210</width>
