@@ -113,7 +113,7 @@
                                         <posy>-116</posy>
                                         <width>57</width>
                                         <height>57</height>
-                                        <texture>dialogs/video-info/rating.png</texture>
+                                        <texture>dialogs/video-info/ratingosd.png</texture>
                                     </control>
                                 </control>
 								
@@ -131,7 +131,7 @@
                                     <width>97</width>
                                     <height>56</height>
                                 	<colordiffuse>bbwhite</colordiffuse>
-                                	<texture>$INFO[VideoPlayer.VideoCodec,flags/video/,.png]</texture>
+                                	<texture>$INFO[VideoPlayer.VideoCodec,flagsosd/video/,.png]</texture>
                             	</control>
 								<control type="image">
 									<posy>56</posy>
@@ -141,7 +141,7 @@
                                     <width>97</width>
                                     <height>56</height>
                                 	<colordiffuse>bbwhite</colordiffuse>
-                                	<texture>$INFO[VideoPlayer.VideoResolution,flags/res/,.png]</texture>
+                                	<texture>$INFO[VideoPlayer.VideoResolution,flagsosd/res/,.png]</texture>
                             	</control>							
 								<control type="image">
 									<posy>112</posy>
@@ -151,7 +151,7 @@
                                     <width>97</width>
                                     <height>56</height>
                                 	<colordiffuse>bbwhite</colordiffuse>
-                                	<texture>$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]</texture>
+                                	<texture>$INFO[VideoPlayer.VideoAspect,flagsosd/aspectratio/,.png]</texture>
                             	</control>
 								<control type="image">
 									<posy>0</posy>
@@ -162,7 +162,7 @@
                                     <width>97</width>
                                     <height>56</height>
                                 	<colordiffuse>bbwhite</colordiffuse>
-                                	<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
+                                	<texture>$INFO[VideoPlayer.AudioCodec,flagsosd/audio/,.png]</texture>
                             	</control>
 								<control type="image">
 									<posy>56</posy>
@@ -173,17 +173,7 @@
                                     <width>97</width>
                                     <height>56</height>
                                 	<colordiffuse>bbwhite</colordiffuse>
-                                	<texture>$INFO[VideoPlayer.AudioChannels,flags/channels/,.png]</texture>
-                            	</control>
-								<control type="image">
-									<posy>550</posy>
-									<visible>!IsEmpty(VideoPlayer.ListItem.MovieMPAAVar)</visible>
-									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
-                					<include>visiblehidefadeinfo</include>
-                                    <width>140</width>
-                                    <height>100</height>
-                                	<colordiffuse>bbwhite</colordiffuse>
-                                	<texture>$INFO[ListItem.Mpaa,flags/mpaa/,.png]</texture>
+                                	<texture>$INFO[VideoPlayer.AudioChannels,flagsosd/channels/,.png]</texture>
                             	</control>
 							</control>
 							

@@ -509,8 +509,8 @@
                         <width>500</width>
                         <height>120</height>
                         <label>$INFO[Window(Home).Property(NextAired.NextTitle)]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>C0FFFFFF</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>nowplay</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
                     </control>
@@ -521,7 +521,7 @@
                         <height>120</height>
                         <label>$INFO[Window(Home).Property(NextAired.AirTime),, • ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
                         <font>Font-Condensed-S28</font>
-                        <textcolor>80FFFFFF</textcolor>
+                        <textcolor>smallinfohome</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
                     </control>
@@ -541,8 +541,8 @@
                         <width>500</width>
                         <height>120</height>
                         <label>$INFO[Window(Home).Property(NextAired.LatestTitle)]</label>
-                        <font>Font-Condensed-S36-B</font>
-                        <textcolor>C0FFFFFF</textcolor>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>nowplay</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
                     </control>
@@ -553,7 +553,7 @@
                         <height>120</height>
                         <label>$INFO[Window(Home).Property(NextAired.Status),, • ]$INFO[Window(Home).Property(NextAired.LatestDate)]</label>
                         <font>Font-Condensed-S28</font>
-                        <textcolor>80FFFFFF</textcolor>
+                        <textcolor>smallinfohome</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
                     </control>
