@@ -10,8 +10,8 @@
             <width>1920</width>
             <font>Font-Condensed-S28</font>
             <urlset>1</urlset>
-            <textcolor>77white</textcolor>
-            <titlecolor>77white</titlecolor>
+            <textcolor>77white2</textcolor>
+            <titlecolor>77white2</titlecolor>
             
             <headlinecolor>77white</headlinecolor>
             <animation effect="slide" end="0,1014" time="0" condition="Skin.HasSetting(GlobalRSS.Bottom)">Conditional</animation>
