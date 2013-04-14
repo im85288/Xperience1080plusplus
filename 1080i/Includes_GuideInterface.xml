@@ -1743,7 +1743,6 @@
             <urlset>1</urlset>
             <textcolor>rsstext</textcolor>
             <titlecolor>rsstitle</titlecolor>
-            
             <headlinecolor>ddwhite</headlinecolor>
         </control>
         <control type="image">
