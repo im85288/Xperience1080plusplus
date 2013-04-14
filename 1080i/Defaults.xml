@@ -30,7 +30,7 @@
         <height>30</height>
         <align>center</align>
         <aligny>center</aligny>
-        <font>Font-Condensed-S26-B</font>
+        <font>Font-Condensed-S26</font>
         <label>-</label>
         <textcolor>cusettings3</textcolor>
         <focusedcolor>white</focusedcolor>

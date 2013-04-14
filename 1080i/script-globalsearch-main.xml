@@ -38,7 +38,7 @@
                         <posy>0</posy>
                         <width>750</width>
                         <height>120</height>
-                        <font>Font-Condensed-S36-B</font>
+                        <font>Font-Condensed-S36</font>
                         <textcolor>C0FFFFFF</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
@@ -127,10 +127,10 @@
                         <width>85</width>
                         <height>85</height>
                         <align>center</align>
-                        <font>Font-Condensed-S52-B</font>
+                        <font>Font-Condensed-S52</font>
                         <label>$VAR[GlobalSearchMainSortLetter]</label>
                         <textcolor>C0000000</textcolor>
-                        <shadowcolor>white</shadowcolor>
+                        white
                     </control>
                 </control>
                 <control type="group">
@@ -150,7 +150,7 @@
                         <control type="label">
                             <width min="50" max="750">auto</width>
                             <height>120</height>
-                            <label>$LOCALIZE[283]: [B]$LOCALIZE[342][/B]</label>
+                            <label>$LOCALIZE[283]: $LOCALIZE[342]</label>
                             <font>Font-Condensed-S36</font>
                             <textcolor>C0FFFFFF</textcolor>
                             <scroll>false</scroll>
@@ -200,7 +200,7 @@
                         <control type="label">
                             <width min="50" max="750">auto</width>
                             <height>120</height>
-                            <label>$LOCALIZE[283]: [B]$LOCALIZE[20343][/B]</label>
+                            <label>$LOCALIZE[283]: $LOCALIZE[20343]</label>
                             <font>Font-Condensed-S36</font>
                             <textcolor>C0FFFFFF</textcolor>
                             <scroll>false</scroll>
@@ -250,7 +250,7 @@
                         <control type="label">
                             <width min="50" max="750">auto</width>
                             <height>120</height>
-                            <label>$LOCALIZE[283]: [B]$LOCALIZE[33054][/B]</label>
+                            <label>$LOCALIZE[283]: $LOCALIZE[33054]</label>
                             <font>Font-Condensed-S36</font>
                             <textcolor>C0FFFFFF</textcolor>
                             <scroll>false</scroll>
@@ -300,7 +300,7 @@
                         <control type="label">
                             <width min="50" max="750">auto</width>
                             <height>120</height>
-                            <label>$LOCALIZE[283]: [B]$LOCALIZE[20360][/B]</label>
+                            <label>$LOCALIZE[283]: $LOCALIZE[20360]</label>
                             <font>Font-Condensed-S36</font>
                             <textcolor>C0FFFFFF</textcolor>
                             <scroll>false</scroll>
@@ -350,7 +350,7 @@
                         <control type="label">
                             <width min="50" max="750">auto</width>
                             <height>120</height>
-                            <label>$LOCALIZE[283]: [B]$LOCALIZE[20389][/B]</label>
+                            <label>$LOCALIZE[283]: $LOCALIZE[20389]</label>
                             <font>Font-Condensed-S36</font>
                             <textcolor>C0FFFFFF</textcolor>
                             <scroll>false</scroll>
@@ -400,7 +400,7 @@
                         <control type="label">
                             <width min="50" max="750">auto</width>
                             <height>120</height>
-                            <label>$LOCALIZE[283]: [B]$LOCALIZE[133][/B]</label>
+                            <label>$LOCALIZE[283]: $LOCALIZE[133]</label>
                             <font>Font-Condensed-S36</font>
                             <textcolor>C0FFFFFF</textcolor>
                             <scroll>false</scroll>
@@ -450,7 +450,7 @@
                         <control type="label">
                             <width min="50" max="750">auto</width>
                             <height>120</height>
-                            <label>$LOCALIZE[283]: [B]$LOCALIZE[132][/B]</label>
+                            <label>$LOCALIZE[283]: $LOCALIZE[132]</label>
                             <font>Font-Condensed-S36</font>
                             <textcolor>C0FFFFFF</textcolor>
                             <scroll>false</scroll>
@@ -500,7 +500,7 @@
                         <control type="label">
                             <width min="50" max="750">auto</width>
                             <height>120</height>
-                            <label>$LOCALIZE[283]: [B]$LOCALIZE[134][/B]</label>
+                            <label>$LOCALIZE[283]: $LOCALIZE[134]</label>
                             <font>Font-Condensed-S36</font>
                             <textcolor>C0FFFFFF</textcolor>
                             <scroll>false</scroll>
@@ -594,10 +594,10 @@
                                     <posy>493</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -609,7 +609,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]$INFO[ListItem.Property(Rating), • ,]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -680,10 +680,10 @@
                                     <posy>493</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -695,7 +695,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]$INFO[ListItem.Property(Rating), • ,]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -802,10 +802,10 @@
                                     <posy>493</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -817,7 +817,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Studio), • ,]$INFO[ListItem.Property(Rating), • ,]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -888,10 +888,10 @@
                                     <posy>493</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -903,7 +903,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Studio), • ,]$INFO[ListItem.Property(Rating), • ,]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1010,10 +1010,10 @@
                                     <posy>493</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Property(TvShowTitle)]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -1025,7 +1025,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1082,10 +1082,10 @@
                                     <posy>493</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Property(TvShowTitle)]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -1097,7 +1097,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1188,10 +1188,10 @@
                                     <posy>283</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Property(Episode),,. ]$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -1203,7 +1203,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(TvShowTitle)]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1215,7 +1215,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Season),$LOCALIZE[20373] ,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]$INFO[ListItem.Property(Rating), • ,]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1286,10 +1286,10 @@
                                     <posy>283</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Property(Episode),,. ]$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -1301,7 +1301,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(TvShowTitle)]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1313,7 +1313,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Season),$LOCALIZE[20373] ,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]$INFO[ListItem.Property(Rating), • ,]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1420,10 +1420,10 @@
                                     <posy>283</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -1435,7 +1435,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Year),,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1506,10 +1506,10 @@
                                     <posy>283</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -1521,7 +1521,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Year),,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1628,10 +1628,10 @@
                                     <posy>393</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -1643,7 +1643,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Artist_Genre)]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1698,10 +1698,10 @@
                                     <posy>393</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -1713,7 +1713,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Artist_Genre)]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1804,10 +1804,10 @@
                                     <posy>393</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -1819,7 +1819,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Genre)]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1874,10 +1874,10 @@
                                     <posy>393</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -1889,7 +1889,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Genre)]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -1980,10 +1980,10 @@
                                     <posy>393</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -1995,7 +1995,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Album)]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -2007,7 +2007,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Artist)]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -2019,7 +2019,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -2074,10 +2074,10 @@
                                     <posy>393</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>ddwhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>no</scroll>
                                 </control>
@@ -2089,7 +2089,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Album)]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -2101,7 +2101,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Artist)]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
@@ -2113,7 +2113,7 @@
                                     <font>Font-Condensed-S27</font>
                                     <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
                                     <textcolor>99FFFFFF</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>

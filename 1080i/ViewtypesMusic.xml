@@ -69,7 +69,7 @@
                         <posy>0</posy>
                         <width>1160</width>
                         <height>62</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>left</align>
                         <label>$VAR[MusicListLabel]</label>
                         <textcolor>aawhite</textcolor>
@@ -83,7 +83,7 @@
                         <posy>0</posy>
                         <width>1160</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>left</align>
                         <label>$VAR[MusicListLabel]</label>
                         <textcolor>aawhite</textcolor>
@@ -111,7 +111,7 @@
                         <posy>0</posy>
                         <width>1270</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>right</align>
                         <label>$INFO[ListItem.Label2]</label>
                         <textcolor>99FFFFFF</textcolor>
@@ -150,7 +150,7 @@
                         <posy>0</posy>
                         <width>1280</width>
                         <height>62</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>aawhite</textcolor>
@@ -163,7 +163,7 @@
                         <posy>0</posy>
                         <width>1280</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>aawhite</textcolor>
@@ -208,7 +208,7 @@
                         <posy>0</posy>
                         <width>1160</width>
                         <height>62</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>aawhite</textcolor>
@@ -221,7 +221,7 @@
                         <posy>0</posy>
                         <width>1160</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>aawhite</textcolor>
@@ -247,7 +247,7 @@
                         <posy>0</posy>
                         <width>1160</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>right</align>
                         <label>$INFO[ListItem.Year]</label>
                         <textcolor>99FFFFFF</textcolor>
@@ -267,7 +267,7 @@
                         <posy>0</posy>
                         <width>100</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>right</align>
                         <label fallback="•••">$INFO[ListItem.Rating,,.0]</label>
                         <textcolor>99FFFFFF</textcolor>
@@ -298,7 +298,7 @@
                         <posy>0</posy>
                         <width>1160</width>
                         <height>62</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>left</align>
                         <label>$VAR[MusicListSongLabel]</label>
                         <textcolor>aawhite</textcolor>
@@ -312,7 +312,7 @@
                         <posy>0</posy>
                         <width>1160</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>left</align>
                         <label>$VAR[MusicListSongLabel]</label>
                         <textcolor>aawhite</textcolor>
@@ -350,7 +350,7 @@
                             <width>64</width>
                             <height>42</height>
                             <label>$INFO[ListItem.PlayCount]</label>
-                            <font>Font-Condensed-S30-B</font>
+                            <font>Font-Condensed-S30</font>
                             <textcolor>99FFFFFF</textcolor>
                             <selectedcolor>99FFFFFF</selectedcolor>
                             <scroll>no</scroll>
@@ -362,7 +362,7 @@
                         <posy>0</posy>
                         <width>1160</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>right</align>
                         <label>$INFO[ListItem.Duration]</label>
                         <textcolor>99FFFFFF</textcolor>
@@ -382,7 +382,7 @@
                         <posy>0</posy>
                         <width>100</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>right</align>
                         <label fallback="•••">$INFO[ListItem.Rating,,.0]</label>
                         <textcolor>99FFFFFF</textcolor>
@@ -452,7 +452,7 @@
                             <posy>0</posy>
                             <width>1160</width>
                             <height>62</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$VAR[MusicListLabel]</label>
                             <textcolor>eewhite</textcolor>
@@ -466,7 +466,7 @@
                             <posy>0</posy>
                             <width>1160</width>
                             <height>100</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$VAR[MusicListLabel]</label>
                             <textcolor>eewhite</textcolor>
@@ -494,7 +494,7 @@
                             <posy>0</posy>
                             <width>1270</width>
                             <height>100</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>right</align>
                             <label>$INFO[ListItem.Label2]</label>
                             <textcolor>D4FFFFFF</textcolor>
@@ -541,7 +541,7 @@
                             <posy>0</posy>
                             <width>1280</width>
                             <height>62</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$VAR[MusicListLabel]</label>
                             <textcolor>eewhite</textcolor>
@@ -554,7 +554,7 @@
                             <posy>0</posy>
                             <width>1280</width>
                             <height>100</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$VAR[MusicListLabel]</label>
                             <textcolor>eewhite</textcolor>
@@ -615,7 +615,7 @@
                             <posy>0</posy>
                             <width>1160</width>
                             <height>62</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
@@ -628,7 +628,7 @@
                             <posy>0</posy>
                             <width>1160</width>
                             <height>100</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
@@ -654,7 +654,7 @@
                             <posy>0</posy>
                             <width>1160</width>
                             <height>100</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>right</align>
                             <label>$INFO[ListItem.Year]</label>
                             <textcolor>D4FFFFFF</textcolor>
@@ -675,7 +675,7 @@
                             <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>right</align>
                             <label fallback="•••">$INFO[ListItem.Rating,,.0]</label>
                             <textcolor>D4FFFFFF</textcolor>
@@ -733,7 +733,7 @@
                                 <posy>0</posy>
                                 <width>1160</width>
                                 <height>62</height>
-                                <font>Font-Condensed-S34-B</font>
+                                <font>Font-Condensed-S34</font>
                                 <align>left</align>
                                 <label>$VAR[MusicListSongLabel]</label>
                                 <textcolor>eewhite</textcolor>
@@ -747,7 +747,7 @@
                                 <posy>0</posy>
                                 <width>1160</width>
                                 <height>100</height>
-                                <font>Font-Condensed-S34-B</font>
+                                <font>Font-Condensed-S34</font>
                                 <align>left</align>
                                 <label>$VAR[MusicListSongLabel]</label>
                                 <textcolor>eewhite</textcolor>
@@ -785,7 +785,7 @@
                                     <width>64</width>
                                     <height>42</height>
                                     <label>$INFO[ListItem.PlayCount]</label>
-                                    <font>Font-Condensed-S30-B</font>
+                                    <font>Font-Condensed-S30</font>
                                     <textcolor>D4FFFFFF</textcolor>
                                     <scroll>no</scroll>
                                     <align>center</align>
@@ -796,7 +796,7 @@
                                 <posy>0</posy>
                                 <width>1160</width>
                                 <height>100</height>
-                                <font>Font-Condensed-S34-B</font>
+                                <font>Font-Condensed-S34</font>
                                 <align>right</align>
                                 <label>$INFO[ListItem.Duration]</label>
                                 <textcolor>D4FFFFFF</textcolor>
@@ -818,7 +818,7 @@
                             <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>right</align>
                             <label fallback="•••">$INFO[ListItem.Rating,,.0]</label>
                             <textcolor>D4FFFFFF</textcolor>
@@ -962,7 +962,7 @@
                             <font>Font-Condensed-S60</font>
                             <label>$VAR[MusicInfoListDescriptionHeader]</label>
                             <textcolor>aawhite</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                         </control>
                         <control type="textbox">
@@ -974,7 +974,7 @@
                             <label>$VAR[MusicInfoListDescription]</label>
                             <align>justify</align>
                             <textcolor>CCFFFFFF</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <pagecontrol>71</pagecontrol>
                             <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
                             <font>Font-Condensed-S34</font>
@@ -994,7 +994,7 @@
                         <font>Font-Condensed-S45</font>
                         <label>$VAR[MusicInfoListInfo]</label>
                         <textcolor>bbwhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                         <animation effect="slide" end="0,-40" time="0" condition="Container.Content(songs)">Conditional</animation>
                     </control>
@@ -1005,7 +1005,7 @@
                         <font>Font-Condensed-S30</font>
                         <label>$INFO[ListItem.Album]</label>
                         <textcolor>aawhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                         <visible>Container.Content(songs)</visible>
                     </control>
@@ -1016,7 +1016,7 @@
                         <font>Font-Condensed-S30</font>
                         <label>$VAR[MusicInfoListSubInfo]</label>
                         <textcolor>aawhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                     </control>
                 </control>
@@ -1078,10 +1078,10 @@
                             <posy>0</posy>
                             <height>60</height>
                             <width>590</width>
-                            <font>Font-Condensed-S29-B</font>
+                            <font>Font-Condensed-S29</font>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>77white</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                         </control>
                     </itemlayout>
@@ -1098,10 +1098,10 @@
                             <posy>0</posy>
                             <height>60</height>
                             <width>510</width>
-                            <font>Font-Condensed-S29-B</font>
+                            <font>Font-Condensed-S29</font>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>77white</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -1112,7 +1112,7 @@
                             <label fallback="••••">$INFO[ListItem.Year]</label>
                             <align>center</align>
                             <textcolor>77white</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -1122,7 +1122,7 @@
                             <font>Font-Condensed-S31</font>
                             <label fallback="    •••">$INFO[ListItem.Rating,    ,.0]</label>
                             <textcolor>77white</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                             <align>right</align>
                         </control>
@@ -1159,11 +1159,11 @@
                                 <posy>0</posy>
                                 <height>60</height>
                                 <width>590</width>
-                                <font>Font-Condensed-S29-B</font>
+                                <font>Font-Condensed-S29</font>
                                 <label>$VAR[MusicInfoListSongLabel]</label>
                                 <textcolor>77white</textcolor>
                                 <selectedcolor>77white</selectedcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                             </control>
                             <control type="label">
@@ -1174,7 +1174,7 @@
                                 <label fallback="">$INFO[ListItem.Duration]</label>
                                 <textcolor>77white</textcolor>
                                 <selectedcolor>77white</selectedcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>right</align>
                             </control>
@@ -1186,7 +1186,7 @@
                                 <label fallback="    •••">$INFO[ListItem.Rating,    ,.0]</label>
                                 <textcolor>77white</textcolor>
                                 <selectedcolor>77white</selectedcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>right</align>
                             </control>
@@ -1228,10 +1228,10 @@
                                 <posy>0</posy>
                                 <height>60</height>
                                 <width>590</width>
-                                <font>Font-Condensed-S29-B</font>
+                                <font>Font-Condensed-S29</font>
                                 <label>$INFO[ListItem.Label]</label>
                                 <textcolor>eewhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                             </control>
                         </control>
@@ -1264,10 +1264,10 @@
                                 <posy>0</posy>
                                 <height>60</height>
                                 <width>510</width>
-                                <font>Font-Condensed-S29-B</font>
+                                <font>Font-Condensed-S29</font>
                                 <label>$INFO[ListItem.Label]</label>
                                 <textcolor>eewhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                             </control>
                             <control type="label">
@@ -1278,7 +1278,7 @@
                                 <label fallback="••••">$INFO[ListItem.Year]</label>
                                 <align>center</align>
                                 <textcolor>eewhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                             </control>
                             <control type="label">
@@ -1288,7 +1288,7 @@
                                 <font>Font-Condensed-S31</font>
                                 <label fallback="    •••">$INFO[ListItem.Rating,    ,.0]</label>
                                 <textcolor>eewhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>right</align>
                             </control>
@@ -1342,10 +1342,10 @@
                                     <posy>0</posy>
                                     <height>60</height>
                                     <width>590</width>
-                                    <font>Font-Condensed-S29-B</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$VAR[MusicInfoListSongLabel]</label>
                                     <textcolor>eewhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>true</scroll>
                                 </control>
                                 <control type="label">
@@ -1355,7 +1355,7 @@
                                     <font>Font-Condensed-S31</font>
                                     <label fallback="">$INFO[ListItem.Duration]</label>
                                     <textcolor>eewhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>right</align>
                                 </control>
@@ -1366,7 +1366,7 @@
                                     <font>Font-Condensed-S31</font>
                                     <label fallback="    •••">$INFO[ListItem.Rating,    ,.0]</label>
                                     <textcolor>eewhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>right</align>
                                 </control>
@@ -1628,7 +1628,7 @@
                             <font>Font-Condensed-S60</font>
                             <label>$VAR[MusicInfoListDescriptionHeader]</label>
                             <textcolor>aawhite</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                         </control>
                         <control type="textbox">
@@ -1640,7 +1640,7 @@
                             <label>$VAR[MusicInfoListDescription]</label>
                             <align>justify</align>
                             <textcolor>CCFFFFFF</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <pagecontrol>71</pagecontrol>
                             <autoscroll delay="13000" time="3000" repeat="13000" />
                             <font>Font-Condensed-S34</font>
@@ -1660,7 +1660,7 @@
                         <font>Font-Condensed-S45</font>
                         <label>$VAR[MusicPanelInfo]</label>
                         <textcolor>bbwhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                     </control>
                     <control type="label">
@@ -1670,7 +1670,7 @@
                         <font>Font-Condensed-S30</font>
                         <label>$VAR[MusicPanelSubInfo]</label>
                         <textcolor>aawhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                     </control>
                 </control>
@@ -2277,7 +2277,7 @@
                         <posy>15</posy>
                         <width>1730</width>
                         <label>$VAR[CoverViewBottomInfo]</label>
-                        <font>Font-Condensed-S45-B</font>
+                        <font>Font-Condensed-S45</font>
                         <textcolor>aawhite2</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
@@ -2536,10 +2536,10 @@
                         <posy>0</posy>
                         <width>426</width>
                         <height>74</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>bbwhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                     </control>
                     <control type="group">
@@ -2553,7 +2553,7 @@
                             <font>Font-Condensed-S30</font>
                             <label>$VAR[MusicThumbnailInfo]</label>
                             <textcolor>99FFFFFF</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -2565,7 +2565,7 @@
                             <font>Font-Condensed-S30</font>
                             <label>$VAR[MusicPanelSubInfo]</label>
                             <textcolor>99FFFFFF</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                         </control>
                         <control type="image">
@@ -2652,7 +2652,7 @@
                             <posy>13</posy>
                             <width>690</width>
                             <label>$INFO[ListItem.Label]</label>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -2663,7 +2663,7 @@
                             <posy>31</posy>
                             <width>690</width>
                             <label>$INFO[ListItem.Label]</label>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -2702,7 +2702,7 @@
                             <width>210</width>
                             <height>96</height>
                             <label>$INFO[ListItem.TrackNumber]</label>
-                            <font>Font-Condensed-S80-B</font>
+                            <font>Font-Condensed-S80</font>
                             <textcolor>banner2</textcolor>
                             <scroll>false</scroll>
                             <align>right</align>
@@ -2714,7 +2714,7 @@
                             <width>210</width>
                             <height>96</height>
                             <label>$INFO[ListItem.PlayCount]</label>
-                            <font>Font-Condensed-S80-B</font>
+                            <font>Font-Condensed-S80</font>
                             <textcolor>banner2</textcolor>
                             <scroll>false</scroll>
                             <align>right</align>
@@ -2734,7 +2734,7 @@
                             <posy>13</posy>
                             <width>690</width>
                             <label>$INFO[ListItem.Title]</label>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -2787,7 +2787,7 @@
                                 <posy>0</posy>
                                 <width>690</width>
                                 <label>$INFO[ListItem.Artist]</label>
-                                <font>Font-Condensed-S34-B</font>
+                                <font>Font-Condensed-S34</font>
                                 <textcolor>FF333333</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
@@ -2796,7 +2796,7 @@
                                 <posx>0</posx>
                                 <posy>45</posy>
                                 <width>690</width>
-                                <label>$INFO[ListItem.Property(Artist_Genre),[B]$LOCALIZE[515]: [/B]]</label>
+                                <label>$INFO[ListItem.Property(Artist_Genre),$LOCALIZE[515]: ]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>FF484848</textcolor>
                                 <scroll>false</scroll>
@@ -2806,7 +2806,7 @@
                                 <posx>0</posx>
                                 <posy>80</posy>
                                 <width>690</width>
-                                <label>$INFO[ListItem.Property(Artist_YearsActive),[B]$LOCALIZE[21898]: [/B]]</label>
+                                <label>$INFO[ListItem.Property(Artist_YearsActive),$LOCALIZE[21898]: ]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>FF484848</textcolor>
                                 <scroll>false</scroll>
@@ -2878,7 +2878,7 @@
                                 <posy>42</posy>
                                 <width>690</width>
                                 <label>$INFO[ListItem.Album]</label>
-                                <font>Font-Condensed-S34-B</font>
+                                <font>Font-Condensed-S34</font>
                                 <textcolor>FF333333</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
@@ -2974,7 +2974,7 @@
                                 <posy>50</posy>
                                 <width>690</width>
                                 <label>$INFO[ListItem.Title]</label>
-                                <font>Font-Condensed-S34-B</font>
+                                <font>Font-Condensed-S34</font>
                                 <textcolor>FF333333</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
@@ -2993,7 +2993,7 @@
                                 <posx>0</posx>
                                 <posy>145</posy>
                                 <width>690</width>
-                                <label>$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]]</label>
+                                <label>$INFO[ListItem.Genre,$LOCALIZE[515]: ]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>FF484848</textcolor>
                                 <scroll>false</scroll>
@@ -3003,7 +3003,7 @@
                                 <posx>0</posx>
                                 <posy>185</posy>
                                 <width>690</width>
-                                <label>$INFO[ListItem.Duration,[B]$LOCALIZE[180]: [/B]]</label>
+                                <label>$INFO[ListItem.Duration,$LOCALIZE[180]: ]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>FF484848</textcolor>
                                 <scroll>false</scroll>

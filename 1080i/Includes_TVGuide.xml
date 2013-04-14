@@ -294,7 +294,7 @@
         <font>Font-Condensed-S36</font>
         <textcolor>eewhite</textcolor>
         <disabledcolor>55FFFFFF</disabledcolor>
-        <shadowcolor>22000000</shadowcolor>
+        
         <textoffsetx>30</textoffsetx>
         <texturefocus border="90,3,90,3">views/list/other/separator.png</texturefocus>
         <texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
@@ -331,9 +331,9 @@
                 <posy>287</posy>
                 <width>440</width>
                 <label>$INFO[ListItem.Property(NextNumber),, ]$INFO[ListItem.Property(NextTitle)]</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>ddwhite</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                
                 <scroll>false</scroll>
                 <align>left</align>
             </control>
@@ -344,7 +344,7 @@
                 <label>$INFO[ListItem.Label]$INFO[ListItem.Property(Premiered), (,)]</label>
                 <font>Font-Condensed-S32</font>
                 <textcolor>aawhite</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                
                 <scroll>false</scroll>
                 <align>left</align>
             </control>
@@ -362,7 +362,7 @@
                 <label>$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), $LOCALIZE[42162] ,]</label>
                 <font>Font-Condensed-S40</font>
                 <textcolor>eewhite</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                
                 <scroll>false</scroll>
                 <align>left</align>
             </control>
@@ -426,9 +426,9 @@
                 <posy>287</posy>
                 <width>440</width>
                 <label>$INFO[ListItem.Property(NextNumber),, ]$INFO[ListItem.Property(NextTitle)]</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>ddwhite</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                
                 <scroll>false</scroll>
                 <align>left</align>
             </control>
@@ -439,7 +439,7 @@
                 <label>$INFO[ListItem.Label]$INFO[ListItem.Property(Premiered), (,)]</label>
                 <font>Font-Condensed-S32</font>
                 <textcolor>aawhite</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                
                 <scroll>false</scroll>
                 <align>left</align>
             </control>
@@ -457,7 +457,7 @@
                 <label>$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), $LOCALIZE[42162] ,]</label>
                 <font>Font-Condensed-S40</font>
                 <textcolor>eewhite</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                
                 <scroll>false</scroll>
                 <align>left</align>
             </control>

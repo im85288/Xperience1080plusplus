@@ -136,11 +136,11 @@
                     <height>60</height>
                     <width>590</width>
                     <align>left</align>
-                    <font>Font-Condensed-S29-B</font>
+                    <font>Font-Condensed-S29</font>
                     <label>$LOCALIZE[556]</label>
                     <label2>$INFO[ListItem.Title]</label2>
                     <textcolor>77white</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                     <scroll>false</scroll>
                 </control>
                 <control type="button">
@@ -149,11 +149,11 @@
                     <height>60</height>
                     <width>590</width>
                     <align>left</align>
-                    <font>Font-Condensed-S29-B</font>
+                    <font>Font-Condensed-S29</font>
                     <label>$LOCALIZE[180]</label>
                     <label2>$INFO[ListItem.Duration]</label2>
                     <textcolor>77white</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                     <scroll>false</scroll>
                 </control>
                 <control type="button">
@@ -162,11 +162,11 @@
                     <height>60</height>
                     <width>590</width>
                     <align>left</align>
-                    <font>Font-Condensed-S29-B</font>
+                    <font>Font-Condensed-S29</font>
                     <label>$LOCALIZE[562]</label>
                     <label2>$INFO[ListItem.Year]</label2>
                     <textcolor>77white</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                     <scroll>false</scroll>
                 </control>
                 <control type="image">
@@ -186,10 +186,10 @@
                     <posy>181</posy>
                     <height>60</height>
                     <width>250</width>
-                    <font>Font-Condensed-S29-B</font>
+                    <font>Font-Condensed-S29</font>
                     <label>$LOCALIZE[563]</label>
                     <textcolor>eewhite</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                     <scroll>false</scroll>
                     <animation effect="fade" start="100" end="50" time="0" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
                 </control>
@@ -236,10 +236,10 @@
                         <width>590</width>
                         <height>60</height>
                         <align>left</align>
-                        <font>Font-Condensed-S29-B</font>
+                        <font>Font-Condensed-S29</font>
                         <textcolor>77white</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <label>$LOCALIZE[10523]</label>
                         <onleft>DecreaseRating</onleft>
                         <onright>IncreaseRating</onright>
@@ -253,7 +253,7 @@
                         <width>590</width>
                         <height>60</height>
                         <align>left</align>
-                        <font>Font-Condensed-S29-B</font>
+                        <font>Font-Condensed-S29</font>
                         <textcolor>77white</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <label>$LOCALIZE[13405]</label>
@@ -269,7 +269,7 @@
                         <width>590</width>
                         <height>60</height>
                         <align>left</align>
-                        <font>Font-Condensed-S29-B</font>
+                        <font>Font-Condensed-S29</font>
                         <textcolor>77white</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <label>$LOCALIZE[42000]</label>
@@ -285,7 +285,7 @@
                         <width>590</width>
                         <height>60</height>
                         <align>left</align>
-                        <font>Font-Condensed-S29-B</font>
+                        <font>Font-Condensed-S29</font>
                         <textcolor>77white</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <label>$LOCALIZE[42001]</label>
@@ -445,7 +445,7 @@
                         <posy>50</posy>
                         <width>690</width>
                         <label>$INFO[ListItem.Title]</label>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <textcolor>FF333333</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
@@ -464,7 +464,7 @@
                         <posx>0</posx>
                         <posy>145</posy>
                         <width>690</width>
-                        <label>$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]]</label>
+                        <label>$INFO[ListItem.Genre,$LOCALIZE[515]: ]</label>
                         <font>Font-Condensed-S28</font>
                         <textcolor>FF484848</textcolor>
                         <scroll>false</scroll>
@@ -474,7 +474,7 @@
                         <posx>0</posx>
                         <posy>185</posy>
                         <width>690</width>
-                        <label>$INFO[ListItem.Duration,[B]$LOCALIZE[180]: [/B]]</label>
+                        <label>$INFO[ListItem.Duration,$LOCALIZE[180]: ]</label>
                         <font>Font-Condensed-S28</font>
                         <textcolor>FF484848</textcolor>
                         <scroll>false</scroll>
@@ -884,7 +884,7 @@
                     <label>$LOCALIZE[556]</label>
                     <label2>$INFO[ListItem.Title]</label2>
                     <textcolor>77white</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                     <scroll>false</scroll>
                 </control>
                 <control type="button">
@@ -897,7 +897,7 @@
                     <label>$LOCALIZE[557]</label>
                     <label2>$INFO[ListItem.Artist]</label2>
                     <textcolor>77white</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                     <scroll>false</scroll>
                 </control>
                 <control type="button">
@@ -910,7 +910,7 @@
                     <label>$LOCALIZE[558]</label>
                     <label2>$INFO[ListItem.Album]</label2>
                     <textcolor>77white</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                     <scroll>false</scroll>
                 </control>
                 <control type="button">
@@ -923,7 +923,7 @@
                     <label>$LOCALIZE[180]</label>
                     <label2>$INFO[ListItem.Duration]</label2>
                     <textcolor>77white</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                     <scroll>false</scroll>
                 </control>
                 <control type="button">
@@ -936,7 +936,7 @@
                     <label>$LOCALIZE[515]</label>
                     <label2>$INFO[ListItem.Genre]</label2>
                     <textcolor>77white</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                     <scroll>false</scroll>
                 </control>
                 <control type="image">
@@ -959,7 +959,7 @@
                     <font>Font-Condensed-S30</font>
                     <label>$LOCALIZE[563]</label>
                     <textcolor>eewhite</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                     <scroll>false</scroll>
                     <animation effect="fade" start="100" end="50" time="0" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
                 </control>
@@ -1009,7 +1009,7 @@
                         <font>Font-Condensed-S30</font>
                         <textcolor>77white</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <label>$LOCALIZE[10523]</label>
                         <onleft>DecreaseRating</onleft>
                         <onright>IncreaseRating</onright>

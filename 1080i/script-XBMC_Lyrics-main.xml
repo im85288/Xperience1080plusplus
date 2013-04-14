@@ -33,9 +33,9 @@
                 <height>34</height>
                 <align>left</align>
                 <label>$INFO[MusicPlayer.Title]</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>eewhite</textcolor>
-                <shadowcolor>66000000</shadowcolor>
+                66000000
                 <scroll>false</scroll>
             </control>
             <control type="label">
@@ -48,7 +48,7 @@
                 <label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, • ,]$INFO[MusicPlayer.Year, • ,]</label>
                 <font>Font-Condensed-S32</font>
                 <textcolor>bbwhite</textcolor>
-                <shadowcolor>66000000</shadowcolor>
+                66000000
             </control>
             <control type="image">
                 <description>Lyrics icon</description>
@@ -65,7 +65,7 @@
                 <height>60</height>
                 <label>$INFO[Player.Time(mm:ss)]$INFO[Player.Duration(mm:ss), / ,]</label>
                 <textcolor>bbwhite</textcolor>
-                <font>Font-Condensed-S25-B</font>
+                <font>Font-Condensed-S25</font>
                 <align>left</align>
             </control>-->
             
@@ -96,7 +96,7 @@
                 <posy>891</posy>
                 <width>43</width>
                 <height>60</height>
-                <font>Font-Condensed-S25-B</font>
+                <font>Font-Condensed-S25</font>
                 <textcolor>bbwhite</textcolor>
                 <focusedcolor>eewhite</focusedcolor>
                 <align>right</align>
@@ -198,7 +198,7 @@
                 <posy>891</posy>
                 <width>120</width>
                 <height>60</height>
-                <font>Font-Condensed-S25-B</font>
+                <font>Font-Condensed-S25</font>
                 <textcolor>aawhite</textcolor>
                 <label>$INFO[Container(110).CurrentPage,$LOCALIZE[41819] ,]$INFO[Container(110).NumPages,/,]</label>
                 <scroll>false</scroll>

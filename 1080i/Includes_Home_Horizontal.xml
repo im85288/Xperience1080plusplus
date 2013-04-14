@@ -29,9 +29,9 @@
                 <width>180</width>
                 <height>100</height>
                 <label>$LOCALIZE[41507]</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>eewhite</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                
                 <include>Animation_ShutdownButton</include>
                 <include>homebuttonsanim2</include>
             </control>
@@ -63,9 +63,9 @@
                 <width>180</width>
                 <height>100</height>
                 <label>$LOCALIZE[1036]</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>eewhite</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                
                 <include>Animation_FavButton</include>
                 <include>homebuttonsanim4</include>
                 <visible>!Window.IsVisible(favourites) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-globalsearch-contextmenu.xml) + !Window.IsVisible(virtualkeyboard) + IsEmpty(Window.Property(HomeSearch)) + !Window.IsVisible(playercontrols)</visible>
@@ -114,7 +114,7 @@
             </control>
             <control type="label">
                 <include>HomeProfileInfoLabelHorizontal</include>
-                <label>[B]$INFO[System.ProfileName][/B]</label>
+                <label>$INFO[System.ProfileName]</label>
                 <visible>Container(30).HasFocus(1) + !Control.HasFocus(82)</visible>
             </control>
             <control type="label">
@@ -340,13 +340,13 @@
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
                     </control>
                     <control type="label">
-                        <font>Font-Condensed-S38-B</font>
+                        <font>Font-Condensed-S38</font>
                         <posx>90</posx>
                         <posy>0</posy>
                         <width>260</width>
                         <height>110</height>
                         <textcolor>BCFFFFFF</textcolor>
-                        <shadowcolor>33000000</shadowcolor>
+                        33000000
                         <info>ListItem.Label</info>
                         <aligny>center</aligny>
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
@@ -372,13 +372,13 @@
                         <animation effect="fade" start="100" end="45" time="250" tween="sine" easing="inout" reversible="true" condition="Control.HasFocus(23)">Conditional</animation>
                     </control>
                     <control type="label">
-                        <font>Font-Condensed-S38-B</font>
+                        <font>Font-Condensed-S38</font>
                         <posx>90</posx>
                         <posy>0</posy>
                         <width>260</width>
                         <height>110</height>
                         <textcolor>BCFFFFFF</textcolor>
-                        <shadowcolor>99000000</shadowcolor>
+                        99000000
                         <info>ListItem.Label</info>
                         <aligny>center</aligny>
                         <animation type="Focus" condition="Container(20).OnNext | Container(20).OnPrevious">

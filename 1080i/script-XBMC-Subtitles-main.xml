@@ -31,9 +31,9 @@
                         <height>38</height>
                         <align>center</align>
                         <label>XBMC Subtitles ($INFO[Container(150).ListItem.Label])</label>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <textcolor>bbwhite</textcolor>
-                        <shadowcolor>66000000</shadowcolor>
+                        66000000
                     </control>
                     <control type="image" id="110">
                         <description>Service Logo</description>
@@ -113,7 +113,7 @@
                                 <posy>0</posy>
                                 <width>810</width>
                                 <height>76</height>
-                                <font>Font-Condensed-S30-B</font>
+                                <font>Font-Condensed-S30</font>
                                 <textcolor>99FFFFFF</textcolor>
                                 <info>ListItem.Label2</info>
                                 <align>left</align>
@@ -126,7 +126,7 @@
                                 <posy>0</posy>
                                 <width>730</width>
                                 <height>76</height>
-                                <font>Font-Condensed-S30-B</font>
+                                <font>Font-Condensed-S30</font>
                                 <textcolor>99FFFFFF</textcolor>
                                 <info>ListItem.Label2</info>
                                 <align>left</align>
@@ -139,7 +139,7 @@
                                 <posy>0</posy>
                                 <width>771</width>
                                 <height>76</height>
-                                <font>Font-Condensed-S30-B</font>
+                                <font>Font-Condensed-S30</font>
                                 <textcolor>99FFFFFF</textcolor>
                                 <info>ListItem.Label2</info>
                                 <align>left</align>
@@ -152,7 +152,7 @@
                                 <posy>0</posy>
                                 <width>695</width>
                                 <height>76</height>
-                                <font>Font-Condensed-S30-B</font>
+                                <font>Font-Condensed-S30</font>
                                 <textcolor>99FFFFFF</textcolor>
                                 <info>ListItem.Label2</info>
                                 <align>left</align>
@@ -175,7 +175,7 @@
                                     <posy>0</posy>
                                     <width>100</width>
                                     <height>76</height>
-                                    <font>Font-Condensed-S30-B</font>
+                                    <font>Font-Condensed-S30</font>
                                     <textcolor>99FFFFFF</textcolor>
                                     <label>$INFO[ListItem.ActualIcon,,.0]</label>
                                     <align>right</align>
@@ -198,7 +198,7 @@
                                     <posy>0</posy>
                                     <width>100</width>
                                     <height>76</height>
-                                    <font>Font-Condensed-S30-B</font>
+                                    <font>Font-Condensed-S30</font>
                                     <textcolor>99FFFFFF</textcolor>
                                     <label>$INFO[ListItem.ActualIcon]</label>
                                     <align>right</align>
@@ -249,7 +249,7 @@
                                     <posy>0</posy>
                                     <width>810</width>
                                     <height>76</height>
-                                    <font>Font-Condensed-S30-B</font>
+                                    <font>Font-Condensed-S30</font>
                                     <textcolor>eewhite</textcolor>
                                     <info>ListItem.Label2</info>
                                     <align>left</align>
@@ -261,7 +261,7 @@
                                     <posy>0</posy>
                                     <width>730</width>
                                     <height>76</height>
-                                    <font>Font-Condensed-S30-B</font>
+                                    <font>Font-Condensed-S30</font>
                                     <textcolor>eewhite</textcolor>
                                     <info>ListItem.Label2</info>
                                     <align>left</align>
@@ -274,7 +274,7 @@
                                     <posy>0</posy>
                                     <width>771</width>
                                     <height>76</height>
-                                    <font>Font-Condensed-S30-B</font>
+                                    <font>Font-Condensed-S30</font>
                                     <textcolor>eewhite</textcolor>
                                     <info>ListItem.Label2</info>
                                     <align>left</align>
@@ -287,7 +287,7 @@
                                     <posy>0</posy>
                                     <width>695</width>
                                     <height>76</height>
-                                    <font>Font-Condensed-S30-B</font>
+                                    <font>Font-Condensed-S30</font>
                                     <textcolor>eewhite</textcolor>
                                     <info>ListItem.Label2</info>
                                     <align>left</align>
@@ -310,7 +310,7 @@
                                         <posy>0</posy>
                                         <width>100</width>
                                         <height>76</height>
-                                        <font>Font-Condensed-S30-B</font>
+                                        <font>Font-Condensed-S30</font>
                                         <textcolor>eewhite</textcolor>
                                         <label>$INFO[ListItem.ActualIcon,,.0]</label>
                                         <align>right</align>
@@ -333,7 +333,7 @@
                                         <posy>0</posy>
                                         <width>100</width>
                                         <height>76</height>
-                                        <font>Font-Condensed-S30-B</font>
+                                        <font>Font-Condensed-S30</font>
                                         <textcolor>eewhite</textcolor>
                                         <label>$INFO[ListItem.ActualIcon]</label>
                                         <align>right</align>
@@ -393,7 +393,7 @@
                         <width>918</width>
                         <height>100</height>
                         <description>notification</description>
-                        <font>Font-Condensed-S30-B</font>
+                        <font>Font-Condensed-S30</font>
                         <textcolor>aawhite</textcolor>
                         <label>$INFO[Control.GetLabel(100)]</label>
                         <aligny>center</aligny>
@@ -408,7 +408,7 @@
                         <width>815</width>
                         <height>100</height>
                         <description>notification</description>
-                        <font>Font-Condensed-S30-B</font>
+                        <font>Font-Condensed-S30</font>
                         <textcolor>aawhite</textcolor>
                         <label>$INFO[Control.GetLabel(100)]</label>
                         <aligny>center</aligny>
@@ -461,8 +461,8 @@
                         <posy>751</posy>
                         <width>125</width>
                         <height>100</height>
-                        <font>Font-Condensed-S30-B</font>
-                        <label>[B]$INFO[Container(120).CurrentPage]/$INFO[Container(120).NumPages][/B]</label>
+                        <font>Font-Condensed-S30</font>
+                        <label>$INFO[Container(120).CurrentPage]/$INFO[Container(120).NumPages]</label>
                         <textcolor>33FFFFFF</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
@@ -504,9 +504,9 @@
                     <height>34</height>
                     <align>center</align>
                     <label>$LOCALIZE[SCRIPT760]</label>
-                    <font>Font-Condensed-S34-B</font>
+                    <font>Font-Condensed-S34</font>
                     <textcolor>bbwhite</textcolor>
-                    <shadowcolor>66000000</shadowcolor>
+                    66000000
                 </control>
                 <control type="list" id="150">
                     <posx>771</posx>
@@ -524,7 +524,7 @@
                             <posy>0</posy>
                             <width>318</width>
                             <height>76</height>
-                            <font>Font-Condensed-S30-B</font>
+                            <font>Font-Condensed-S30</font>
                             <textcolor>96FFFFFF</textcolor>
                             <info>ListItem.Label</info>
                             <align>left</align>
@@ -537,7 +537,7 @@
                             <posy>0</posy>
                             <width>318</width>
                             <height>76</height>
-                            <font>Font-Condensed-S25-B</font>
+                            <font>Font-Condensed-S25</font>
                             <textcolor>96FFFFFF</textcolor>
                             <info>ListItem.Label</info>
                             <align>left</align>
@@ -560,7 +560,7 @@
                             <posy>0</posy>
                             <width>318</width>
                             <height>76</height>
-                            <font>Font-Condensed-S30-B</font>
+                            <font>Font-Condensed-S30</font>
                             <textcolor>white</textcolor>
                             <info>ListItem.Label</info>
                             <align>left</align>
@@ -573,7 +573,7 @@
                             <posy>0</posy>
                             <width>318</width>
                             <height>76</height>
-                            <font>Font-Condensed-S25-B</font>
+                            <font>Font-Condensed-S25</font>
                             <textcolor>white</textcolor>
                             <info>ListItem.Label</info>
                             <align>left</align>

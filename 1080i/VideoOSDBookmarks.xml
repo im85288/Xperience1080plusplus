@@ -17,9 +17,9 @@
                 <height>34</height>
                 <align>center</align>
                 <label>$LOCALIZE[298] ($INFO[Container(11).NumItems])</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>bbwhite</textcolor>
-                <shadowcolor>66000000</shadowcolor>
+                66000000
                 <scroll>false</scroll>
             </control>
             <control type="grouplist" id="1">
@@ -54,7 +54,7 @@
                 <posy>751</posy>
                 <width>150</width>
                 <height>96</height>
-                <font>Font-Condensed-S30-B</font>
+                <font>Font-Condensed-S30</font>
                 <label>$INFO[Container(11).ListItem.Label]</label>
                 <textcolor>aawhite</textcolor>
                 <scroll>false</scroll>

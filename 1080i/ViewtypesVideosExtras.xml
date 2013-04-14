@@ -116,7 +116,7 @@
                         <height>50</height>
                         <font>Font-Condensed-S30</font>
                         <textcolor>77white</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <label>$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[Container(51).ListItem.Premiered, • $LOCALIZE[41321],]</label>
                         <scroll>false</scroll>
                         <include>visiblehidefadeinfo</include>
@@ -130,7 +130,7 @@
                         <info>Container(51).ListItem.Plot</info>
                         <align>justify</align>
                         <textcolor>aaFFFFFF</textcolor>
-                        <shadowcolor>33000000</shadowcolor>
+                        33000000
                         <pagecontrol>71</pagecontrol>
                         <font>Font-Condensed-S34</font>
                         <visible>!IsEmpty(Container(51).ListItem.Plot)</visible>
@@ -144,7 +144,7 @@
                         <height>50</height>
                         <font>Font-Condensed-S34</font>
                         <textcolor>aaFFFFFF</textcolor>
-                        <shadowcolor>33000000</shadowcolor>
+                        33000000
                         <label>No plot available</label>
                         <scroll>false</scroll>
                         <visible>IsEmpty(Container(51).ListItem.Plot)</visible>
@@ -212,10 +212,10 @@
                             <posy>0</posy>
                             <height>60</height>
                             <width>520</width>
-                            <font>Font-Condensed-S29-B</font>
+                            <font>Font-Condensed-S29</font>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>77white</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -225,7 +225,7 @@
                             <font>Font-Condensed-S31</font>
                             <label fallback="               •••">$INFO[ListItem.Rating,               ,]</label>
                             <textcolor>77white</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                             <align>right</align>
                         </control>
@@ -278,10 +278,10 @@
                                 <posy>0</posy>
                                 <height>60</height>
                                 <width>520</width>
-                                <font>Font-Condensed-S29-B</font>
+                                <font>Font-Condensed-S29</font>
                                 <label>$INFO[ListItem.Label]</label>
                                 <textcolor>eewhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                             </control>
                             <control type="label">
                                 <posx>690</posx>
@@ -290,7 +290,7 @@
                                 <font>Font-Condensed-S31</font>
                                 <label fallback="               •••">$INFO[ListItem.Rating,               ,]</label>
                                 <textcolor>eewhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>right</align>
                             </control>
@@ -418,9 +418,9 @@
                                 <width>280</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem(-1).Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -432,7 +432,7 @@
                                 <label>$INFO[ListItem(-1).Year]$INFO[ListItem(-1).Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem(-1).Duration, • , $LOCALIZE[12391]]$INFO[ListItem(-1).Rating, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!Container.Content(Seasons)</visible>
@@ -447,7 +447,7 @@
                                     <label>$INFO[ListItem(-1).Property(UnWatchedEpisodes),,/]$INFO[ListItem(-1).Property(TotalEpisodes),, Unwatched]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem(-1).Property(TotalEpisodes)) + !StringCompare(ListItem(-1).Property(UnWatchedEpisodes),0)</visible>
@@ -460,7 +460,7 @@
                                     <label>$INFO[ListItem(-1).Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem(-1).Property(TotalEpisodes)) + StringCompare(ListItem(-1).Property(UnWatchedEpisodes),0)</visible>
@@ -538,9 +538,9 @@
                                 <width>280</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem(5).Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -552,7 +552,7 @@
                                 <label>$INFO[ListItem(5).Year]$INFO[ListItem(5).Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem(5).Duration, • , $LOCALIZE[12391]]$INFO[ListItem(5).Rating, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!Container.Content(Seasons)</visible>
@@ -567,7 +567,7 @@
                                     <label>$INFO[ListItem(5).Property(UnWatchedEpisodes),,/]$INFO[ListItem(5).Property(TotalEpisodes),, Unwatched]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem(5).Property(TotalEpisodes)) + !StringCompare(ListItem(5).Property(UnWatchedEpisodes),0)</visible>
@@ -580,7 +580,7 @@
                                     <label>$INFO[ListItem(5).Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem(5).Property(TotalEpisodes)) + StringCompare(ListItem(5).Property(UnWatchedEpisodes),0)</visible>
@@ -658,9 +658,9 @@
                                 <width>280</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem(4).Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -672,7 +672,7 @@
                                 <label>$INFO[ListItem(5).Year]$INFO[ListItem(4).Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem(4).Duration, • , $LOCALIZE[12391]]$INFO[ListItem(4).Rating, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!Container.Content(Seasons)</visible>
@@ -687,7 +687,7 @@
                                     <label>$INFO[ListItem(4).Property(UnWatchedEpisodes),,/]$INFO[ListItem(4).Property(TotalEpisodes),, Unwatched]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem(4).Property(TotalEpisodes)) + !StringCompare(ListItem(4).Property(UnWatchedEpisodes),0)</visible>
@@ -700,7 +700,7 @@
                                     <label>$INFO[ListItem(4).Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem(4).Property(TotalEpisodes)) + StringCompare(ListItem(4).Property(UnWatchedEpisodes),0)</visible>
@@ -778,9 +778,9 @@
                                 <width>280</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem(3).Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -792,7 +792,7 @@
                                 <label>$INFO[ListItem(3).Year]$INFO[ListItem(3).Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem(3).Duration, • , $LOCALIZE[12391]]$INFO[ListItem(3).Rating, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!Container.Content(Seasons)</visible>
@@ -807,7 +807,7 @@
                                     <label>$INFO[ListItem(3).Property(UnWatchedEpisodes),,/]$INFO[ListItem(3).Property(TotalEpisodes),, Unwatched]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem(3).Property(TotalEpisodes)) + !StringCompare(ListItem(3).Property(UnWatchedEpisodes),0)</visible>
@@ -820,7 +820,7 @@
                                     <label>$INFO[ListItem(3).Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem(3).Property(TotalEpisodes)) + StringCompare(ListItem(3).Property(UnWatchedEpisodes),0)</visible>
@@ -898,9 +898,9 @@
                                 <width>280</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem(2).Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -912,7 +912,7 @@
                                 <label>$INFO[ListItem(2).Year]$INFO[ListItem(2).Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem(2).Duration, • , $LOCALIZE[12391]]$INFO[ListItem(2).Rating, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!Container.Content(Seasons)</visible>
@@ -927,7 +927,7 @@
                                     <label>$INFO[ListItem(2).Property(UnWatchedEpisodes),,/]$INFO[ListItem(2).Property(TotalEpisodes),, Unwatched]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem(2).Property(TotalEpisodes)) + !StringCompare(ListItem(2).Property(UnWatchedEpisodes),0)</visible>
@@ -940,7 +940,7 @@
                                     <label>$INFO[ListItem(2).Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem(2).Property(TotalEpisodes)) + StringCompare(ListItem(2).Property(UnWatchedEpisodes),0)</visible>
@@ -1018,9 +1018,9 @@
                                 <width>280</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem(1).Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -1032,7 +1032,7 @@
                                 <label>$INFO[ListItem(1).Year]$INFO[ListItem(1).Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem(1).Duration, • , $LOCALIZE[12391]]$INFO[ListItem(1).Rating, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!Container.Content(Seasons)</visible>
@@ -1047,7 +1047,7 @@
                                     <label>$INFO[ListItem(1).Property(UnWatchedEpisodes),,/]$INFO[ListItem(1).Property(TotalEpisodes),, Unwatched]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem(1).Property(TotalEpisodes)) + !StringCompare(ListItem(1).Property(UnWatchedEpisodes),0)</visible>
@@ -1060,7 +1060,7 @@
                                     <label>$INFO[ListItem(1).Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem(1).Property(TotalEpisodes)) + StringCompare(ListItem(1).Property(UnWatchedEpisodes),0)</visible>
@@ -1133,9 +1133,9 @@
                         <width>280</width>
                         <height>40</height>
                         <label>$INFO[ListItem(0).Label]</label>
-                        <font>Font-Condensed-S32-B</font>
+                        <font>Font-Condensed-S32</font>
                         <textcolor>ddwhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>true</scroll>
                         <align>left</align>
                     </control>
@@ -1147,7 +1147,7 @@
                         <label>$INFO[ListItem(0).Year]$INFO[ListItem(0).Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem(0).Duration, • , $LOCALIZE[12391]]$INFO[ListItem(0).Rating, • ,]</label>
                         <font>Font-Condensed-S28</font>
                         <textcolor>aawhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                         <align>left</align>
                         <visible>!Container.Content(Seasons)</visible>
@@ -1162,7 +1162,7 @@
                             <label>$INFO[ListItem(0).Property(UnWatchedEpisodes),,/]$INFO[ListItem(0).Property(TotalEpisodes),, Unwatched]</label>
                             <font>Font-Condensed-S28</font>
                             <textcolor>aawhite</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>!IsEmpty(ListItem(0).Property(TotalEpisodes)) + !StringCompare(ListItem(0).Property(UnWatchedEpisodes),0)</visible>
@@ -1175,7 +1175,7 @@
                             <label>$INFO[ListItem(0).Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
                             <font>Font-Condensed-S28</font>
                             <textcolor>aawhite</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>!IsEmpty(ListItem(0).Property(TotalEpisodes)) + StringCompare(ListItem(0).Property(UnWatchedEpisodes),0)</visible>
@@ -1260,9 +1260,9 @@
                                 <width>280</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -1274,7 +1274,7 @@
                                 <label>$INFO[ListItem.Year]$INFO[ListItem.Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!Container.Content(Seasons)</visible>
@@ -1289,7 +1289,7 @@
                                     <label>$INFO[ListItem.Property(UnWatchedEpisodes),,/]$INFO[ListItem.Property(TotalEpisodes),, Unwatched]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -1302,7 +1302,7 @@
                                     <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -1370,9 +1370,9 @@
                                 <width>280</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>true</scroll>
                                 <align>left</align>
                             </control>
@@ -1384,7 +1384,7 @@
                                 <label>$INFO[ListItem.Year]$INFO[ListItem.Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                                 <visible>!Container.Content(Seasons)</visible>
@@ -1399,7 +1399,7 @@
                                     <label>$INFO[ListItem.Property(UnWatchedEpisodes),,/]$INFO[ListItem.Property(TotalEpisodes),, Unwatched]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -1412,7 +1412,7 @@
                                     <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                     <align>left</align>
                                     <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
@@ -1577,9 +1577,9 @@
                                 <posy>288</posy>
                                 <width>440</width>
                                 <label>$INFO[Container(505).ListItem(-1).Label]</label>
-                                <font>Font-Condensed-S34-B</font>
+                                <font>Font-Condensed-S34</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -1590,7 +1590,7 @@
                                 <label>$INFO[Container(505).ListItem(-1).Year]$INFO[Container(505).ListItem(-1).Duration, • , $LOCALIZE[12391]]$INFO[Container(505).ListItem(-1).Rating, • ,]</label>
                                 <font>Font-Condensed-S32</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -1603,7 +1603,7 @@
                                 <info>Container(505).ListItem(-1).Plot</info>
                                 <align>justify</align>
                                 <textcolor>99FFFFFF</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <autoscroll>false</autoscroll>
                                 <font>Font-Condensed-S28</font>
                                 <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
@@ -1719,9 +1719,9 @@
                                 <posy>288</posy>
                                 <width>440</width>
                                 <label>$INFO[Container(505).ListItem(3).Label]</label>
-                                <font>Font-Condensed-S34-B</font>
+                                <font>Font-Condensed-S34</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -1732,7 +1732,7 @@
                                 <label>$INFO[Container(505).ListItem(3).Year]$INFO[Container(505).ListItem(3).Duration, • , $LOCALIZE[12391]]$INFO[Container(505).ListItem(3).Rating, • ,]</label>
                                 <font>Font-Condensed-S32</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -1745,7 +1745,7 @@
                                 <info>Container(505).ListItem(3).Plot</info>
                                 <align>justify</align>
                                 <textcolor>99FFFFFF</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <autoscroll>false</autoscroll>
                                 <font>Font-Condensed-S28</font>
                                 <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
@@ -1861,9 +1861,9 @@
                                 <posy>288</posy>
                                 <width>440</width>
                                 <label>$INFO[Container(505).ListItem(2).Label]</label>
-                                <font>Font-Condensed-S34-B</font>
+                                <font>Font-Condensed-S34</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -1874,7 +1874,7 @@
                                 <label>$INFO[Container(505).ListItem(2).Year]$INFO[Container(505).ListItem(2).Duration, • , $LOCALIZE[12391]]$INFO[Container(505).ListItem(2).Rating, • ,]</label>
                                 <font>Font-Condensed-S32</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -1887,7 +1887,7 @@
                                 <info>Container(505).ListItem(2).Plot</info>
                                 <align>justify</align>
                                 <textcolor>99FFFFFF</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <autoscroll>false</autoscroll>
                                 <font>Font-Condensed-S28</font>
                                 <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
@@ -2003,9 +2003,9 @@
                                 <posy>288</posy>
                                 <width>440</width>
                                 <label>$INFO[Container(505).ListItem(1).Label]</label>
-                                <font>Font-Condensed-S34-B</font>
+                                <font>Font-Condensed-S34</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -2016,7 +2016,7 @@
                                 <label>$INFO[Container(505).ListItem(1).Year]$INFO[Container(505).ListItem(1).Duration, • , $LOCALIZE[12391]]$INFO[Container(505).ListItem(1).Rating, • ,]</label>
                                 <font>Font-Condensed-S32</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -2029,7 +2029,7 @@
                                 <info>Container(505).ListItem(1).Plot</info>
                                 <align>justify</align>
                                 <textcolor>99FFFFFF</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <autoscroll>false</autoscroll>
                                 <font>Font-Condensed-S28</font>
                                 <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
@@ -2139,9 +2139,9 @@
                         <posy>288</posy>
                         <width>440</width>
                         <label>$INFO[Container(505).ListItem(0).Label]</label>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <textcolor>ddwhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -2152,7 +2152,7 @@
                         <label>$INFO[Container(505).ListItem(0).Year]$INFO[Container(505).ListItem(0).Duration, • , $LOCALIZE[12391]]$INFO[Container(505).ListItem(0).Rating, • ,]</label>
                         <font>Font-Condensed-S32</font>
                         <textcolor>aawhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -2165,7 +2165,7 @@
                         <info>Container(505).ListItem(0).Plot</info>
                         <align>justify</align>
                         <textcolor>99FFFFFF</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <autoscroll>false</autoscroll>
                         <font>Font-Condensed-S28</font>
                         <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
@@ -2289,9 +2289,9 @@
                                 <posy>288</posy>
                                 <width>440</width>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S34-B</font>
+                                <font>Font-Condensed-S34</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -2302,7 +2302,7 @@
                                 <label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S32</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -2315,7 +2315,7 @@
                                 <info>ListItem.Plot</info>
                                 <align>justify</align>
                                 <textcolor>99FFFFFF</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <autoscroll>false</autoscroll>
                                 <font>Font-Condensed-S28</font>
                                 <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
@@ -2420,9 +2420,9 @@
                                 <posy>288</posy>
                                 <width>440</width>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S34-B</font>
+                                <font>Font-Condensed-S34</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>true</scroll>
                                 <align>left</align>
                             </control>
@@ -2433,7 +2433,7 @@
                                 <label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S32</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -2446,7 +2446,7 @@
                                 <info>ListItem.Plot</info>
                                 <align>justify</align>
                                 <textcolor>99FFFFFF</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <autoscroll delay="13000" time="3000" repeat="13000" />
                                 <font>Font-Condensed-S28</font>
                                 <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
@@ -3369,7 +3369,7 @@
                                 <posy>15</posy>
                                 <width>1730</width>
                                 <label>$INFO[Container(506).ListItem.Label]</label>
-                                <font>Font-Condensed-S45-B</font>
+                                <font>Font-Condensed-S45</font>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
@@ -3408,7 +3408,7 @@
                                 <posy>15</posy>
                                 <width>1685</width>
                                 <label>$INFO[Container(506).ListItem.Label]</label>
-                                <font>Font-Condensed-S45-B</font>
+                                <font>Font-Condensed-S45</font>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
@@ -3449,7 +3449,7 @@
                                 <posy>15</posy>
                                 <width>1800</width>
                                 <label>$INFO[Container(506).ListItem.Label]</label>
-                                <font>Font-Condensed-S45-B</font>
+                                <font>Font-Condensed-S45</font>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
@@ -3484,7 +3484,7 @@
                                 <posy>15</posy>
                                 <width>1800</width>
                                 <label>$INFO[Container(506).ListItem.Label]</label>
-                                <font>Font-Condensed-S45-B</font>
+                                <font>Font-Condensed-S45</font>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
@@ -4517,7 +4517,7 @@
                                 <posy>15</posy>
                                 <width>1730</width>
                                 <label>$INFO[Container(56).ListItem.Label]</label>
-                                <font>Font-Condensed-S45-B</font>
+                                <font>Font-Condensed-S45</font>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
@@ -4556,7 +4556,7 @@
                                 <posy>15</posy>
                                 <width>1685</width>
                                 <label>$INFO[Container(56).ListItem.Label]</label>
-                                <font>Font-Condensed-S45-B</font>
+                                <font>Font-Condensed-S45</font>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
@@ -4597,7 +4597,7 @@
                                 <posy>15</posy>
                                 <width>1800</width>
                                 <label>$INFO[Container(56).ListItem.Label]</label>
-                                <font>Font-Condensed-S45-B</font>
+                                <font>Font-Condensed-S45</font>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
@@ -4632,7 +4632,7 @@
                                 <posy>15</posy>
                                 <width>1800</width>
                                 <label>$INFO[Container(56).ListItem.Label]</label>
-                                <font>Font-Condensed-S45-B</font>
+                                <font>Font-Condensed-S45</font>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>

@@ -189,9 +189,9 @@
                     <width>300</width>
                     <height>100</height>
                     <label>$LOCALIZE[41600]</label>
-                    <font>Font-Condensed-S34-B</font>
+                    <font>Font-Condensed-S34</font>
                     <textcolor>eewhite</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                 </control>
             </control>
 
@@ -211,9 +211,9 @@
                     <width>300</width>
                     <height>100</height>
                     <label>$LOCALIZE[42021]</label>
-                    <font>Font-Condensed-S34-B</font>
+                    <font>Font-Condensed-S34</font>
                     <textcolor>eewhite</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                 </control>
             </control>
         </control>

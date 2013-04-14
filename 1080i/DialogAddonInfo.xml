@@ -156,7 +156,7 @@
                             <textcolor>99FFFFFF</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>44FFFFFF</disabledcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                             <texturefocus border="150,3,150,3">windows/settings/images/right-focus.png</texturefocus>
                         </control>
@@ -173,7 +173,7 @@
                             <textcolor>99FFFFFF</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>44FFFFFF</disabledcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                             <texturefocus border="150,3,150,3">windows/settings/images/right-focus.png</texturefocus>
                         </control>
@@ -189,7 +189,7 @@
                             <textcolor>99FFFFFF</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>44FFFFFF</disabledcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                             <texturefocus border="150,3,150,3">windows/settings/images/right-focus.png</texturefocus>
                         </control>
@@ -205,7 +205,7 @@
                             <textcolor>99FFFFFF</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>44FFFFFF</disabledcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
                             <texturefocus border="150,3,150,3">windows/settings/images/right-focus.png</texturefocus>
                         </control>
@@ -222,7 +222,7 @@
                             <textcolor>99FFFFFF</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>44FFFFFF</disabledcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <texturefocus border="150,1,150,1">views/other/focus.png</texturefocus>
                         </control>
                         <control type="button" id="20">
@@ -250,7 +250,7 @@
                             <width min="140" max="200">auto</width>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
-                            <label>[B]$LOCALIZE[146][/B]</label>
+                            <label>$LOCALIZE[146]</label>
                             <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
@@ -275,7 +275,7 @@
                             <width min="140" max="200">auto</width>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
-                            <label>[B]$LOCALIZE[21863]:[/B]</label>
+                            <label>$LOCALIZE[21863]:</label>
                             <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
@@ -300,7 +300,7 @@
                             <width min="140" max="200">auto</width>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
-                            <label>[B]$LOCALIZE[24051][/B]</label>
+                            <label>$LOCALIZE[24051]</label>
                             <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
@@ -323,7 +323,7 @@
                             <width min="140" max="200">auto</width>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
-                            <label>[B]$LOCALIZE[20037]:[/B]</label>
+                            <label>$LOCALIZE[20037]:</label>
                             <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
@@ -347,7 +347,7 @@
                             <width>1240</width>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
-                            <label>[B]$LOCALIZE[21821][/B]</label>
+                            <label>$LOCALIZE[21821]</label>
                             <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
@@ -401,7 +401,7 @@
                             <width>1150</width>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
-                            <label>[B]$LOCALIZE[24052][/B]</label>
+                            <label>$LOCALIZE[24052]</label>
                             <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>
@@ -436,7 +436,7 @@
                             <width>1150</width>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
-                            <label>[B]$LOCALIZE[24096][/B]</label>
+                            <label>$LOCALIZE[24096]</label>
                             <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>

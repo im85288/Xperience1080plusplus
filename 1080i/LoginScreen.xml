@@ -33,7 +33,7 @@
                 <width>250</width>
                 <height>120</height>
                 <label>$LOCALIZE[41405]</label>
-                <font>Font-Condensed-S36-B</font>
+                <font>Font-Condensed-S36</font>
                 <textcolor>C0FFFFFF</textcolor>
                 <scroll>false</scroll>
                 <align>left</align>
@@ -72,7 +72,7 @@
                         <width>490</width>
                         <height>40</height>
                         <label>$INFO[ListItem.Label]</label>
-                        <font>Font-Condensed-S36-B</font>
+                        <font>Font-Condensed-S36</font>
                         <align>left</align>
                         <aligny>center</aligny>
                         <textcolor>77white</textcolor>
@@ -112,7 +112,7 @@
                             <width>490</width>
                             <height>40</height>
                             <textcolor>eewhite</textcolor>
-                            <label>[B]$INFO[ListItem.Label][/B]</label>
+                            <label>$INFO[ListItem.Label]</label>
                             <font>Font-Condensed-S36</font>
                             <align>left</align>
                             <aligny>center</aligny>

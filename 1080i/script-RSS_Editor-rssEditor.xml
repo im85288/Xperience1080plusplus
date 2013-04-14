@@ -33,7 +33,7 @@
                         <align>left</align>
                         <textoffsetx>20</textoffsetx>
                         <textcolor>FF585858</textcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <font>Font-Condensed-S30</font>
                     </control>
                     <control type="list" id="10">
@@ -151,7 +151,7 @@
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>FF585858</disabledcolor>
-                            <shadowcolor>20FFFFFF</shadowcolor>
+                            20FFFFFF
                             <align>left</align>
                             <font>Font-Condensed-S32</font>
                             <textoffsetx>60</textoffsetx>
@@ -173,7 +173,7 @@
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>FF585858</disabledcolor>
-                            <shadowcolor>20FFFFFF</shadowcolor>
+                            20FFFFFF
                             <align>left</align>
                             <font>Font-Condensed-S32</font>
                             <textoffsetx>60</textoffsetx>
@@ -194,7 +194,7 @@
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>FF585858</disabledcolor>
-                            <shadowcolor>20FFFFFF</shadowcolor>
+                            20FFFFFF
                             <align>left</align>
                             <font>Font-Condensed-S31</font>
                             <textoffsetx>60</textoffsetx>

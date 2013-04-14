@@ -199,9 +199,9 @@
                                     <posy>0</posy>
                                     <width min="0" max="400">auto</width>
                                     <height>100</height>
-                                    <label>[B]$INFO[VideoPlayer.ChannelNumber][/B]</label>
+                                    <label>$INFO[VideoPlayer.ChannelNumber]</label>
                                     <textcolor>77FFFFFF</textcolor>
-                                    <font>Font-Condensed-S60-B</font>
+                                    <font>Font-Condensed-S60</font>
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
@@ -431,7 +431,7 @@
                                 <height>56</height>
                                 <label>$INFO[VideoPlayer.Title]</label>
                                 <textcolor>bbwhite</textcolor>
-                                <font>Font-Condensed-S50-B</font>
+                                <font>Font-Condensed-S50</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <scroll>false</scroll>

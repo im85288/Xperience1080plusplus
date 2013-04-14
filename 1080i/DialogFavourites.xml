@@ -56,10 +56,10 @@
                     <width>85</width>
                     <height>85</height>
                     <align>center</align>
-                    <font>Font-Condensed-S52-B</font>
+                    <font>Font-Condensed-S52</font>
                     <label>$INFO[Container(450).ListItem.SortLetter]</label>
                     <textcolor>C0000000</textcolor>
-                    <shadowcolor>white</shadowcolor>
+                    white
                 </control>
             </control>
             <control type="grouplist">
@@ -70,7 +70,7 @@
                     <width min="50" max="250">auto</width>
                     <height>120</height>
                     <label>$LOCALIZE[1036]</label>
-                    <font>Font-Condensed-S36-B</font>
+                    <font>Font-Condensed-S36</font>
                     <textcolor>C0FFFFFF</textcolor>
                     <scroll>false</scroll>
                     <align>left</align>
@@ -159,7 +159,7 @@
                             <font>Font-Condensed-S29</font>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>aawhite</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <aligny>center</aligny>
                             <scroll>no</scroll>
                         </control>
@@ -218,7 +218,7 @@
                                 <font>Font-Condensed-S29</font>
                                 <label>$INFO[ListItem.Label]</label>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <aligny>center</aligny>
                                 <visible>!Window.IsActive(contextmenu)</visible>
                                 <animation effect="fade" time="300" start="0" end="90" tween="sine" easing="out">Visible</animation>

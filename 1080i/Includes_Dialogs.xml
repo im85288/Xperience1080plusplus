@@ -86,7 +86,7 @@
                     <font>Font-Condensed-S32</font>
                     <label>$LOCALIZE[42130]</label>
                     <textcolor>FF585858</textcolor>
-                    <shadowcolor>20FFFFFF</shadowcolor>
+                    20FFFFFF
                     <visible>!ControlGroup(8005).HasFocus</visible>
                 </control>
                 <control type="label">
@@ -148,7 +148,7 @@
                     <font>Font-Condensed-S32</font>
                     <focusedcolor>FF585858</focusedcolor>
                     <disabledcolor>33000000</disabledcolor>
-                    <shadowcolor>20FFFFFF</shadowcolor>
+                    20FFFFFF
                 </control>
                 <control type="grouplist" id="2">
                     <description>control area</description>
@@ -175,7 +175,7 @@
                 <textcolor>FF585858</textcolor>
                 <focusedcolor>eewhite</focusedcolor>
                 <disabledcolor>77585858</disabledcolor>
-                <shadowcolor>20FFFFFF</shadowcolor>
+                20FFFFFF
                 <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
                 <texturenofocus>dialogs/default/separator.png</texturenofocus>
             </control>
@@ -190,7 +190,7 @@
                 <textcolor>FF585858</textcolor>
                 <focusedcolor>eewhite</focusedcolor>
                 <disabledcolor>77585858</disabledcolor>
-                <shadowcolor>20FFFFFF</shadowcolor>
+                20FFFFFF
                 <textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
                 <textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
                 <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
@@ -208,7 +208,7 @@
                 <textcolor>FF585858</textcolor>
                 <focusedcolor>eewhite</focusedcolor>
                 <disabledcolor>77585858</disabledcolor>
-                <shadowcolor>20FFFFFF</shadowcolor>
+                20FFFFFF
                 <textoffsetx>20</textoffsetx>
                 <spinposx>5</spinposx>
             </control>
@@ -218,11 +218,11 @@
                 <height>60</height>
                 <align>left</align>
                 <aligny>top</aligny>
-                <font>Font-Condensed-S30-B</font>
+                <font>Font-Condensed-S30</font>
                 <textoffsetx>20</textoffsetx>
                 <textoffsety>14</textoffsety>
                 <textcolor>AA585858</textcolor>
-                <shadowcolor>20FFFFFF</shadowcolor>
+                20FFFFFF
             </control>
             
             <control type="sliderex" id="8">
@@ -240,7 +240,7 @@
                 <textcolor>FF585858</textcolor>
                 <focusedcolor>eewhite</focusedcolor>
                 <disabledcolor>77585858</disabledcolor>
-                <shadowcolor>20FFFFFF</shadowcolor>
+                20FFFFFF
                 <textoffsetx>20</textoffsetx>
                 <pulseonselect>false</pulseonselect>
             </control>
@@ -340,9 +340,9 @@
                 <height>34</height>
                 <align>left</align>
                 <label>-</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>bbwhite</textcolor>
-                <shadowcolor>66000000</shadowcolor>
+                66000000
             </control>
             
             <control type="group" id="8003">
@@ -438,7 +438,7 @@
                 <textcolor>96FFFFFF</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <disabledcolor>40FFFFFF</disabledcolor>
-                <font>Font-Condensed-S30-B</font>
+                <font>Font-Condensed-S30</font>
                 <textoffsetx>35</textoffsetx>
             </control>
             <control type="radiobutton" id="4">
@@ -452,7 +452,7 @@
                 <textcolor>96FFFFFF</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <disabledcolor>40FFFFFF</disabledcolor>
-                <font>Font-Condensed-S30-B</font>
+                <font>Font-Condensed-S30</font>
                 <textoffsetx>35</textoffsetx>
             </control>
             <control type="spincontrolex" id="5">
@@ -466,7 +466,7 @@
                 <textcolor>96FFFFFF</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <disabledcolor>40FFFFFF</disabledcolor>
-                <font>Font-Condensed-S30-B</font>
+                <font>Font-Condensed-S30</font>
                 <textoffsetx>35</textoffsetx>
             </control>
             <control type="image" id="6">
@@ -478,7 +478,7 @@
                 <description>Default Label</description>
                 <height>77</height>
                 <align>left</align>
-                <font>Font-Condensed-S30-B</font>
+                <font>Font-Condensed-S30</font>
                 <textoffsetx>35</textoffsetx>
                 <textcolor>bbwhite</textcolor>
             </control>
@@ -492,7 +492,7 @@
                 <textcolor>96FFFFFF</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <disabledcolor>40FFFFFF</disabledcolor>
-                <font>Font-Condensed-S30-B</font>
+                <font>Font-Condensed-S30</font>
                 <textoffsetx>35</textoffsetx>
                 <sliderwidth>300</sliderwidth>
                 <sliderheight>30</sliderheight>
@@ -1085,7 +1085,7 @@
                     <description>Info</description>
                     <posx>722</posx>
                     <width>350</width>
-                    <font>Font-Condensed-S26-B</font>
+                    <font>Font-Condensed-S26</font>
                     <align>right</align>
                     <include>DialogButtonDimensions</include>
                     <label>$INFO[Container(3).NumItems] • $INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages]</label>
@@ -1095,7 +1095,7 @@
                     <description>Info</description>
                     <posx>722</posx>
                     <width>350</width>
-                    <font>Font-Condensed-S26-B</font>
+                    <font>Font-Condensed-S26</font>
                     <align>right</align>
                     <include>DialogButtonDimensions</include>
                     <label>$INFO[Container(6).NumItems] • $INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages]</label>
@@ -1130,9 +1130,9 @@
                 <height>34</height>
                 <align>center</align>
                 <label>-</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>bbwhite</textcolor>
-                <shadowcolor>66000000</shadowcolor>
+                66000000
             </control>
             
             <control type="group">
@@ -1152,7 +1152,7 @@
                     <posy>684</posy>
                     <width>430</width>
                     <height>76</height>
-                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                    <label>$INFO[ListItem.Label]</label>
                     <label2>$INFO[Container(6).ListItem.Property(Addon.Creator)]</label2>
                     <font>Font-Condensed-S28</font>
                     <align>left</align>
@@ -1183,7 +1183,7 @@
                         <width>600</width>
                         <height>76</height>
                         <info>ListItem.Label</info>
-                        <font>Font-Condensed-S30-B</font>
+                        <font>Font-Condensed-S30</font>
                         <align>left</align>
                         <aligny>center</aligny>
                         <textcolor>96FFFFFF</textcolor>
@@ -1214,7 +1214,7 @@
                             <width>600</width>
                             <height>76</height>
                             <info>ListItem.Label</info>
-                            <font>Font-Condensed-S30-B</font>
+                            <font>Font-Condensed-S30</font>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textcolor>96FFFFFF</textcolor>
@@ -1249,7 +1249,7 @@
                             <width>600</width>
                             <height>76</height>
                             <info>ListItem.Label</info>
-                            <font>Font-Condensed-S30-B</font>
+                            <font>Font-Condensed-S30</font>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textcolor>white</textcolor>
@@ -1297,7 +1297,7 @@
                         <width>520</width>
                         <height>76</height>
                         <info>ListItem.Label</info>
-                        <font>Font-Condensed-S30-B</font>
+                        <font>Font-Condensed-S30</font>
                         <align>left</align>
                         <aligny>center</aligny>
                         <selectedcolor>DialogSelected</selectedcolor>
@@ -1329,7 +1329,7 @@
                             <width>520</width>
                             <height>76</height>
                             <info>ListItem.Label</info>
-                            <font>Font-Condensed-S30-B</font>
+                            <font>Font-Condensed-S30</font>
                             <align>left</align>
                             <aligny>center</aligny>
                             <selectedcolor>DialogSelected</selectedcolor>
@@ -1365,7 +1365,7 @@
                             <width>520</width>
                             <height>76</height>
                             <info>ListItem.Label</info>
-                            <font>Font-Condensed-S30-B</font>
+                            <font>Font-Condensed-S30</font>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textcolor>eewhite</textcolor>
@@ -1465,7 +1465,7 @@
                         <description>Info</description>
                         <posx>0</posx>
                         <width>350</width>
-                        <font>Font-Condensed-S26-B</font>
+                        <font>Font-Condensed-S26</font>
                         <align>right</align>
                         <textcolor>bbwhite</textcolor>
                         <include>DialogButtonDimensions</include>
@@ -1476,7 +1476,7 @@
                         <description>Info</description>
                         <posx>0</posx>
                         <width>350</width>
-                        <font>Font-Condensed-S26-B</font>
+                        <font>Font-Condensed-S26</font>
                         <align>right</align>
                         <textcolor>bbwhite</textcolor>
                         <include>DialogButtonDimensions</include>
@@ -1689,7 +1689,7 @@
                 	<font>Font-Condensed-S32</font>
                 	<textcolor>FF585858</textcolor>
                 	<disabledcolor>FF585858</disabledcolor>
-                	<shadowcolor>20FFFFFF</shadowcolor>
+                	20FFFFFF
                 	<texturenofocus>dialogs/default/separator.png</texturenofocus>
                 	<label>$LOCALIZE[142]</label>
                 	<label2>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ] ($INFO[ListItem.StartDate])</label2>
@@ -1707,7 +1707,7 @@
                 	<font>Font-Condensed-S32</font>
                 	<textcolor>FF585858</textcolor>
                 	<disabledcolor>FF585858</disabledcolor>
-                	<shadowcolor>20FFFFFF</shadowcolor>
+                	20FFFFFF
                 	<texturenofocus>dialogs/default/separator.png</texturenofocus>
                 	<label>$LOCALIZE[180]</label>
                 	<label2>$INFO[ListItem.Duration]</label2>
@@ -1725,7 +1725,7 @@
                 	<font>Font-Condensed-S32</font>
                 	<textcolor>FF585858</textcolor>
                 	<disabledcolor>FF585858</disabledcolor>
-                	<shadowcolor>20FFFFFF</shadowcolor>
+                	20FFFFFF
                 	<texturenofocus>dialogs/default/separator.png</texturenofocus>
                 	<label>$LOCALIZE[19148]</label>
                 	<label2>$INFO[ListItem.ChannelName]</label2>
@@ -1743,7 +1743,7 @@
                 	<font>Font-Condensed-S32</font>
                 	<textcolor>FF585858</textcolor>
                 	<disabledcolor>FF585858</disabledcolor>
-                	<shadowcolor>20FFFFFF</shadowcolor>
+                	20FFFFFF
                 	<label>$LOCALIZE[135]</label>
                 	<label2 fallback="161">$INFO[ListItem.Genre]</label2>
                 	<enable>false</enable>
@@ -1765,7 +1765,7 @@
             	<font>Font-Condensed-S34</font>
             	<align>justify</align>
             	<textcolor>FF585858</textcolor>
-            	<shadowcolor>20FFFFFF</shadowcolor>
+            	20FFFFFF
             	<pagecontrol>60</pagecontrol>
             	<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
             	<label fallback="161">$INFO[ListItem.Plot]</label>
@@ -1874,9 +1874,9 @@
                 <align>center</align>
                 <textoffsetx>30</textoffsetx>
                 <label>$INFO[ListItem.Title]</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>bbwhite</textcolor>
-                <shadowcolor>66000000</shadowcolor>
+                66000000
             </control>
             <control type="group">
                 <posx>100</posx>
@@ -1894,7 +1894,7 @@
                 	<textcolor>99FFFFFF</textcolor>
                 	<disabledcolor>99FFFFFF</disabledcolor>
                 	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
-                	<label>[B]$LOCALIZE[142][/B]</label>
+                	<label>$LOCALIZE[142]</label>
                 	<label2>[COLOR=AAFFFFFF]$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate])[/COLOR]</label2>
                 	<enable>false</enable>
                 </control>
@@ -1911,7 +1911,7 @@
                 	<textcolor>99FFFFFF</textcolor>
                 	<disabledcolor>99FFFFFF</disabledcolor>
                 	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
-                	<label>[B]$LOCALIZE[180]:[/B]</label>
+                	<label>$LOCALIZE[180]:</label>
                 	<label2>[COLOR=AAFFFFFF]$INFO[ListItem.Duration][/COLOR]</label2>
                 	<enable>false</enable>
                 </control>
@@ -1928,7 +1928,7 @@
                 	<textcolor>99FFFFFF</textcolor>
                 	<disabledcolor>99FFFFFF</disabledcolor>
                 	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
-                	<label>[B]$LOCALIZE[19148]:[/B]</label>
+                	<label>$LOCALIZE[19148]:</label>
                 	<label2>[COLOR=AAFFFFFF]$INFO[ListItem.ChannelName][/COLOR]</label2>
                 	<enable>false</enable>
                 </control>
@@ -1945,7 +1945,7 @@
                 	<textcolor>99FFFFFF</textcolor>
                 	<disabledcolor>99FFFFFF</disabledcolor>
                 	<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
-                	<label>[B]$LOCALIZE[135]:[/B]</label>
+                	<label>$LOCALIZE[135]:</label>
                 	<label2 fallback="161">[COLOR=AAFFFFFF]$INFO[ListItem.Genre][/COLOR]</label2>
                 	<enable>false</enable>
                 </control>

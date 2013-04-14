@@ -113,9 +113,9 @@
                     <width>300</width>
                     <height>100</height>
                     <label>$LOCALIZE[41600]</label>
-                    <font>Font-Condensed-S34-B</font>
+                    <font>Font-Condensed-S34</font>
                     <textcolor>eewhite</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
+                    
                 </control>
             </control>
         </control>
@@ -227,7 +227,7 @@
             <textcolor>99FFFFFF</textcolor>
             <focusedcolor>eewhite</focusedcolor>
             <disabledcolor>44FFFFFF</disabledcolor>
-            <shadowcolor>33000000</shadowcolor>
+            33000000
             <texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
             <texturefocus border="150,3,150,3">windows/settings/images/right-focus.png</texturefocus>
         </control>

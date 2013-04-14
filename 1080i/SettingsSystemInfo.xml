@@ -55,7 +55,7 @@
                 <height>91</height>
                 <width>400</width>
                 <align>left</align>
-                <font>Font-Condensed-S37-B</font>
+                <font>Font-Condensed-S37</font>
                 <label>$LOCALIZE[42130]</label>
                 <textcolor>white</textcolor>
                 <animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="200" condition="ControlGroup(5).HasFocus">Conditional</animation>
@@ -113,7 +113,7 @@
                     <textcolor>white</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <disabledcolor>77FFFFFF</disabledcolor>
-                    <font>Font-Condensed-S37-B</font>
+                    <font>Font-Condensed-S37</font>
                     <textwidth>400</textwidth>
                     <textoffsetx>0</textoffsetx>
                     <animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="200" condition="ControlGroup(5).HasFocus" reversible="false">Conditional</animation>
@@ -129,7 +129,7 @@
                     <textcolor>white</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <disabledcolor>77FFFFFF</disabledcolor>
-                    <font>Font-Condensed-S37-B</font>
+                    <font>Font-Condensed-S37</font>
                     <textwidth>400</textwidth>
                     <textoffsetx>0</textoffsetx>
                     <animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="200" condition="ControlGroup(5).HasFocus" reversible="false">Conditional</animation>
@@ -145,7 +145,7 @@
                     <textcolor>white</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <disabledcolor>77FFFFFF</disabledcolor>
-                    <font>Font-Condensed-S37-B</font>
+                    <font>Font-Condensed-S37</font>
                     <textwidth>400</textwidth>
                     <textoffsetx>0</textoffsetx>
                     <animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="200" condition="ControlGroup(5).HasFocus" reversible="false">Conditional</animation>
@@ -161,7 +161,7 @@
                     <textcolor>white</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <disabledcolor>77FFFFFF</disabledcolor>
-                    <font>Font-Condensed-S37-B</font>
+                    <font>Font-Condensed-S37</font>
                     <textwidth>400</textwidth>
                     <textoffsetx>0</textoffsetx>
                     <animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="200" condition="ControlGroup(5).HasFocus" reversible="false">Conditional</animation>
@@ -177,7 +177,7 @@
                     <textcolor>white</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <disabledcolor>77FFFFFF</disabledcolor>
-                    <font>Font-Condensed-S37-B</font>
+                    <font>Font-Condensed-S37</font>
                     <textwidth>400</textwidth>
                     <textoffsetx>0</textoffsetx>
                     <animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="200" condition="ControlGroup(5).HasFocus" reversible="false">Conditional</animation>

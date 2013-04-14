@@ -56,7 +56,7 @@
                 <height>91</height>
                 <width>400</width>
                 <align>left</align>
-                <font>Font-Condensed-S37-B</font>
+                <font>Font-Condensed-S37</font>
                 <label>$LOCALIZE[42130]</label>
                 <textcolor>white</textcolor>
                 <animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="200" condition="ControlGroup(5).HasFocus | Control.HasFocus(40)">Conditional</animation>
@@ -135,7 +135,7 @@
                 <textcolor>96FFFFFF</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <disabledcolor>40FFFFFF</disabledcolor>
-                <font>Font-Condensed-S30-B</font>
+                <font>Font-Condensed-S30</font>
                 <textoffsetx>35</textoffsetx>
             </control>
             <control type="radiobutton" id="8">
@@ -149,7 +149,7 @@
                 <textcolor>96FFFFFF</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <disabledcolor>40FFFFFF</disabledcolor>
-                <font>Font-Condensed-S30-B</font>
+                <font>Font-Condensed-S30</font>
                 <textoffsetx>35</textoffsetx>
             </control>
             <control type="spincontrolex" id="9">
@@ -163,7 +163,7 @@
                 <textcolor>96FFFFFF</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <disabledcolor>40FFFFFF</disabledcolor>
-                <font>Font-Condensed-S30-B</font>
+                <font>Font-Condensed-S30</font>
                 <textoffsetx>35</textoffsetx>
             </control>
             <control type="label" id="2">

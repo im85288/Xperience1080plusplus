@@ -37,9 +37,9 @@
                 <height>34</height>
                 <align>center</align>
                 <label>-</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>bbwhite</textcolor>
-                <shadowcolor>66000000</shadowcolor>
+                66000000
             </control>
             <control type="label" id="4">
                 <description>No presets label</description>
@@ -50,9 +50,9 @@
                 <align>center</align>
                 <aligny>center</aligny>
                 <label>13389</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>77white</textcolor>
-                <shadowcolor>66000000</shadowcolor>
+                66000000
             </control>
             <control type="group">
                 <control type="list" id="2">
@@ -74,7 +74,7 @@
                             <posy>0</posy>
                             <width>1010</width>
                             <height>76</height>
-                            <font>Font-Condensed-S30-B</font>
+                            <font>Font-Condensed-S30</font>
                             <textcolor>96FFFFFF</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -91,7 +91,7 @@
                                 <posy>0</posy>
                                 <width>1010</width>
                                 <height>76</height>
-                                <font>Font-Condensed-S30-B</font>
+                                <font>Font-Condensed-S30</font>
                                 <textcolor>96FFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -114,7 +114,7 @@
                                 <posy>0</posy>
                                 <width>1010</width>
                                 <height>76</height>
-                                <font>Font-Condensed-S30-B</font>
+                                <font>Font-Condensed-S30</font>
                                 <textcolor>white</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>

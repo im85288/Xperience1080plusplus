@@ -41,7 +41,7 @@
         <aligny>center</aligny>
         <font>Font-Condensed-S59</font>
         <textcolor>eewhite</textcolor>
-        <shadowcolor>33000000</shadowcolor>
+        33000000
         <label>$INFO[ListItem.label,,]</label>
         <animation type="Conditional" condition="true" reversible="false">
             <effect type="fade" end="40" time="0" />
@@ -71,7 +71,7 @@
         <aligny>center</aligny>
         <font>Font-Condensed-S59</font>
         <textcolor>eewhite</textcolor>
-        <shadowcolor>33000000</shadowcolor>
+        33000000
         <label>$INFO[ListItem.label, ,]</label>
         <animation type="Focus" condition="Container(23).OnNext | Container(23).OnPrevious" reversible="false">
             <effect type="fade" start="40" end="100" time="200" tween="sine" easing="in" />

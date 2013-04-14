@@ -862,7 +862,7 @@
                     <width>250</width>
                     <height>75</height>
                     <font>Font-Condensed-S72</font>
-                    <label>[B]$INFO[Window.Property(Current.Temperature)]$INFO[System.TemperatureUnits][/B]</label>
+                    <label>$INFO[Window.Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
                     <textcolor>eewhite</textcolor>
                 </control>
                 <control type="label">
@@ -1059,7 +1059,7 @@
                             <width>300</width>
                             <height>76</height>
                             <font>Font-Condensed-S38</font>
-                            <label>[B]$INFO[Window.Property(Daily.1.LongDay)][/B]</label>
+                            <label>$INFO[Window.Property(Daily.1.LongDay)]</label>
                             <label2>$INFO[Window.Property(Daily.1.ShortDate)]</label2>
                             <textcolor>ddwhite</textcolor>
                             <enabled>false</enabled>
@@ -1089,7 +1089,7 @@
                             <posy>300</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.1.LowTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -1109,7 +1109,7 @@
                             <posy>354</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.1.HighTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -1215,7 +1215,7 @@
                             <width>300</width>
                             <height>76</height>
                             <font>Font-Condensed-S38</font>
-                            <label>[B]$INFO[Window.Property(Daily.2.LongDay)][/B]</label>
+                            <label>$INFO[Window.Property(Daily.2.LongDay)]</label>
                             <label2>$INFO[Window.Property(Daily.2.ShortDate)]</label2>
                             <textcolor>ddwhite</textcolor>
                             <enabled>false</enabled>
@@ -1245,7 +1245,7 @@
                             <posy>300</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.2.LowTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -1265,7 +1265,7 @@
                             <posy>354</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.2.HighTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -1371,7 +1371,7 @@
                             <width>300</width>
                             <height>76</height>
                             <font>Font-Condensed-S38</font>
-                            <label>[B]$INFO[Window.Property(Daily.3.LongDay)][/B]</label>
+                            <label>$INFO[Window.Property(Daily.3.LongDay)]</label>
                             <label2>$INFO[Window.Property(Daily.3.ShortDate)]</label2>
                             <textcolor>ddwhite</textcolor>
                             <enabled>false</enabled>
@@ -1401,7 +1401,7 @@
                             <posy>300</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.3.LowTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -1421,7 +1421,7 @@
                             <posy>354</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.3.HighTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -1528,7 +1528,7 @@
                             <width>300</width>
                             <height>76</height>
                             <font>Font-Condensed-S38</font>
-                            <label>[B]$INFO[Window.Property(Daily.4.LongDay)][/B]</label>
+                            <label>$INFO[Window.Property(Daily.4.LongDay)]</label>
                             <label2>$INFO[Window.Property(Daily.4.ShortDate)]</label2>
                             <textcolor>ddwhite</textcolor>
                             <enabled>false</enabled>
@@ -1558,7 +1558,7 @@
                             <posy>300</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.4.LowTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -1578,7 +1578,7 @@
                             <posy>354</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.4.HighTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -1685,7 +1685,7 @@
                             <width>300</width>
                             <height>76</height>
                             <font>Font-Condensed-S38</font>
-                            <label>[B]$INFO[Window.Property(Daily.5.LongDay)][/B]</label>
+                            <label>$INFO[Window.Property(Daily.5.LongDay)]</label>
                             <label2>$INFO[Window.Property(Daily.5.ShortDate)]</label2>
                             <textcolor>ddwhite</textcolor>
                             <enabled>false</enabled>
@@ -1715,7 +1715,7 @@
                             <posy>300</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.5.LowTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -1735,7 +1735,7 @@
                             <posy>354</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.5.HighTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -1842,7 +1842,7 @@
                             <width>300</width>
                             <height>76</height>
                             <font>Font-Condensed-S38</font>
-                            <label>[B]$INFO[Window.Property(Daily.6.LongDay)][/B]</label>
+                            <label>$INFO[Window.Property(Daily.6.LongDay)]</label>
                             <label2>$INFO[Window.Property(Daily.6.ShortDate)]</label2>
                             <textcolor>ddwhite</textcolor>
                             <enabled>false</enabled>
@@ -1872,7 +1872,7 @@
                             <posy>300</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.6.LowTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -1892,7 +1892,7 @@
                             <posy>354</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.6.HighTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -1999,7 +1999,7 @@
                             <width>300</width>
                             <height>76</height>
                             <font>Font-Condensed-S38</font>
-                            <label>[B]$INFO[Window.Property(Daily.7.LongDay)][/B]</label>
+                            <label>$INFO[Window.Property(Daily.7.LongDay)]</label>
                             <label2>$INFO[Window.Property(Daily.7.ShortDate)]</label2>
                             <textcolor>ddwhite</textcolor>
                             <enabled>false</enabled>
@@ -2029,7 +2029,7 @@
                             <posy>300</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.7.LowTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -2049,7 +2049,7 @@
                             <posy>354</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.7.HighTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -2156,7 +2156,7 @@
                             <width>300</width>
                             <height>76</height>
                             <font>Font-Condensed-S38</font>
-                            <label>[B]$INFO[Window.Property(Daily.8.LongDay)][/B]</label>
+                            <label>$INFO[Window.Property(Daily.8.LongDay)]</label>
                             <label2>$INFO[Window.Property(Daily.8.ShortDate)]</label2>
                             <textcolor>ddwhite</textcolor>
                             <enabled>false</enabled>
@@ -2186,7 +2186,7 @@
                             <posy>300</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.8.LowTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -2206,7 +2206,7 @@
                             <posy>354</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.8.HighTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -2313,7 +2313,7 @@
                             <width>300</width>
                             <height>76</height>
                             <font>Font-Condensed-S38</font>
-                            <label>[B]$INFO[Window.Property(Daily.9.LongDay)][/B]</label>
+                            <label>$INFO[Window.Property(Daily.9.LongDay)]</label>
                             <label2>$INFO[Window.Property(Daily.9.ShortDate)]</label2>
                             <textcolor>ddwhite</textcolor>
                             <enabled>false</enabled>
@@ -2343,7 +2343,7 @@
                             <posy>300</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.9.LowTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -2363,7 +2363,7 @@
                             <posy>354</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.9.HighTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -2470,7 +2470,7 @@
                             <width>300</width>
                             <height>76</height>
                             <font>Font-Condensed-S38</font>
-                            <label>[B]$INFO[Window.Property(Daily.10.LongDay)][/B]</label>
+                            <label>$INFO[Window.Property(Daily.10.LongDay)]</label>
                             <label2>$INFO[Window.Property(Daily.10.ShortDate)]</label2>
                             <textcolor>ddwhite</textcolor>
                             <enabled>false</enabled>
@@ -2500,7 +2500,7 @@
                             <posy>300</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.10.LowTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -2520,7 +2520,7 @@
                             <posy>354</posy>
                             <width>110</width>
                             <height>48</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[Window.Property(Daily.10.HighTemperature)]</label>
                             <textcolor>eewhite</textcolor>
                             <aligny>center</aligny>
@@ -2688,7 +2688,7 @@
                             <height>32</height>
                             <font>Font-Condensed-S32</font>
                             <align>left</align>
-                            <label>[B]$INFO[ListItem.Label][/B]</label>
+                            <label>$INFO[ListItem.Label]</label>
                             <textcolor>aawhite</textcolor>
                             <selectedcolor>aawhite</selectedcolor>
                             <scroll>false</scroll>
@@ -2741,7 +2741,7 @@
                             <posy>0</posy>
                             <width>110</width>
                             <height>95</height>
-                            <font>Font-Condensed-S42-B</font>
+                            <font>Font-Condensed-S42</font>
                             <label>$INFO[ListItem.Property(temp)]</label>
                             <textcolor>aawhite</textcolor>
                             <align>right</align>
@@ -2785,7 +2785,7 @@
                                 <height>32</height>
                                 <font>Font-Condensed-S32</font>
                                 <align>left</align>
-                                <label>[B]$INFO[ListItem.Label][/B]</label>
+                                <label>$INFO[ListItem.Label]</label>
                                 <textcolor>eewhite</textcolor>
                                 <selectedcolor>eewhite</selectedcolor>
                                 <scroll>false</scroll>
@@ -2838,7 +2838,7 @@
                                 <posy>0</posy>
                                 <width>110</width>
                                 <height>95</height>
-                                <font>Font-Condensed-S42-B</font>
+                                <font>Font-Condensed-S42</font>
                                 <label>$INFO[ListItem.Property(temp)]</label>
                                 <textcolor>eewhite</textcolor>
                                 <align>right</align>

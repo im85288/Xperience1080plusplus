@@ -59,9 +59,9 @@
                         <width>180</width>
                         <height>100</height>
                         <label>$INFO[System.Time]</label>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <textcolor>eewhite2</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <align>right</align>
                         <scroll>false</scroll>
                         <animation effect="slide" end="0,-16" time="150" tween="sine" easing="inout" condition="!Skin.HasSetting(HideHomeDate) + [Control.HasFocus(21) | Control.HasFocus(22)]">Conditional</animation>
@@ -161,7 +161,7 @@
                 <label>$LOCALIZE[41600]</label>
                 <font>Font-Condensed-S34</font>
                 <textcolor>eewhite2</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                
                 <include>homebuttonsanim4</include>
                 <visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo)</visible>
             </control>
@@ -187,9 +187,9 @@
                 <width>180</width>
                 <height>100</height>
                 <label>$LOCALIZE[41507]</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>eewhite2</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                
                 <include>homebuttonsanim2</include>
                 <visible>!Skin.HasSetting(HideShutdownButton)</visible>
             </control>

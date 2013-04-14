@@ -40,7 +40,7 @@
                     <height>34</height>
                     <font>Font-Condensed-S30</font>
                     <textcolor>FF585858</textcolor>
-                    <shadowcolor>20FFFFFF</shadowcolor>
+                    20FFFFFF
                     <align>left</align>
                 </control>
                 <control type="label" id="2">
@@ -50,7 +50,7 @@
                     <height>32</height>
                     <font>Font-Condensed-S30</font>
                     <textcolor>FF585858</textcolor>
-                    <shadowcolor>20FFFFFF</shadowcolor>
+                    20FFFFFF
                     <align>left</align>
                 </control>
                 <control type="label" id="3">
@@ -60,7 +60,7 @@
                     <height>32</height>
                     <font>Font-Condensed-S30</font>
                     <textcolor>FF585858</textcolor>
-                    <shadowcolor>20FFFFFF</shadowcolor>
+                    20FFFFFF
                     <align>left</align>
                 </control>
                 <control type="progress">

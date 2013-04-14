@@ -56,7 +56,7 @@
                         <posy>0</posy>
                         <width>1280</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>aawhite</textcolor>
@@ -69,7 +69,7 @@
                         <posy>0</posy>
                         <width>1360</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>aawhite</textcolor>
@@ -82,7 +82,7 @@
                         <posy>0</posy>
                         <width>1270</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>right</align>
                         <label>$INFO[ListItem.Label2]</label>
                         <textcolor>99FFFFFF</textcolor>
@@ -135,7 +135,7 @@
                             <posy>0</posy>
                             <width>1280</width>
                             <height>100</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
@@ -147,7 +147,7 @@
                             <posy>0</posy>
                             <width>1360</width>
                             <height>100</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
@@ -159,7 +159,7 @@
                             <posy>0</posy>
                             <width>1270</width>
                             <height>100</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>right</align>
                             <label>$INFO[ListItem.Label2]</label>
                             <textcolor>D4FFFFFF</textcolor>
@@ -421,7 +421,7 @@
                         <font>Font-Condensed-S45</font>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>bbwhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                     </control>
                     <control type="label">
@@ -432,7 +432,7 @@
                         <font>Font-Condensed-S30</font>
                         <label>$INFO[ListItem.Property(Addon.Summary)]</label>
                         <textcolor>bbwhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                     </control>
                     <control type="button">
@@ -443,9 +443,9 @@
                         <align>left</align>
                         <font>Font-Condensed-S30</font>
                         <label>$LOCALIZE[146]</label>
-                        <label2>[B]$INFO[ListItem.Property(Addon.Type)][/B]</label2>
+                        <label2>$INFO[ListItem.Property(Addon.Type)]</label2>
                         <textcolor>99FFFFFF</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                     </control>
                     <control type="button">
@@ -456,9 +456,9 @@
                         <align>left</align>
                         <font>Font-Condensed-S30</font>
                         <label>$LOCALIZE[21863]:</label>
-                        <label2>[B]$INFO[ListItem.Property(Addon.Creator)][/B]</label2>
+                        <label2>$INFO[ListItem.Property(Addon.Creator)]</label2>
                         <textcolor>99FFFFFF</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                     </control>
                     <control type="button">
@@ -469,9 +469,9 @@
                         <align>left</align>
                         <font>Font-Condensed-S30</font>
                         <label>$LOCALIZE[24051]</label>
-                        <label2>[B]$INFO[ListItem.Property(Addon.Version)][/B]</label2>
+                        <label2>$INFO[ListItem.Property(Addon.Version)]</label2>
                         <textcolor>99FFFFFF</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                     </control>
                 </control>

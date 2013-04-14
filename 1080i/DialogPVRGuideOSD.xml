@@ -26,9 +26,9 @@
 	                <align>center</align>
 	                <textoffsetx>30</textoffsetx>
 	                <label>$LOCALIZE[19222]$INFO[VideoPlayer.ChannelName, • ,]$INFO[Container(11).ListItem.StartDate, • ,]</label>
-	                <font>Font-Condensed-S34-B</font>
+	                <font>Font-Condensed-S34</font>
 	                <textcolor>bbwhite</textcolor>
-	                <shadowcolor>66000000</shadowcolor>
+	                66000000
 	            </control>
 	            <control type="list" id="11">
 	                <posx>100</posx>
@@ -68,7 +68,7 @@
 	                        <posy>0</posy>
 	                        <width>620</width>
 	                        <height>76</height>
-	                        <font>Font-Condensed-S34-B</font>
+	                        <font>Font-Condensed-S34</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.Label]</label>
 	                        <textcolor>77white</textcolor>
@@ -82,7 +82,7 @@
 	                        <posy>0</posy>
 	                        <width>567</width>
 	                        <height>76</height>
-	                        <font>Font-Condensed-S34-B</font>
+	                        <font>Font-Condensed-S34</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.Label]</label>
 	                        <textcolor>77white</textcolor>
@@ -164,7 +164,7 @@
 	                            <posy>0</posy>
 	                            <width>620</width>
 	                            <height>76</height>
-	                            <font>Font-Condensed-S34-B</font>
+	                            <font>Font-Condensed-S34</font>
 	                            <align>right</align>
 	                            <label>$INFO[ListItem.Label]</label>
 	                            <textcolor>D4FFFFFF</textcolor>
@@ -178,7 +178,7 @@
 	                            <posy>0</posy>
 	                            <width>567</width>
 	                            <height>76</height>
-	                            <font>Font-Condensed-S34-B</font>
+	                            <font>Font-Condensed-S34</font>
 	                            <align>right</align>
 	                            <label>$INFO[ListItem.Label]</label>
 	                            <textcolor>D4FFFFFF</textcolor>

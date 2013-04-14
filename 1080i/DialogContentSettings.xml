@@ -44,7 +44,7 @@
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>77585858</disabledcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <textoffsetx>20</textoffsetx>
                         <spinposx>5</spinposx>
                         <onup>8002</onup>
@@ -249,7 +249,7 @@
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>77585858</disabledcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                     </control>
                     <control type="radiobutton" id="8">
                         <description>radioButton</description>
@@ -260,7 +260,7 @@
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>77585858</disabledcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
                         <textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
                         <texturefocus>dialogs/default/highlight.png</texturefocus>

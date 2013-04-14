@@ -37,7 +37,7 @@
                     <textcolor>FF585858</textcolor>
                     <focusedcolor>eewhite</focusedcolor>
                     <disabledcolor>77585858</disabledcolor>
-                    <shadowcolor>20FFFFFF</shadowcolor>
+                    20FFFFFF
                     <textoffsetx>20</textoffsetx>
                     <spinposx>5</spinposx>
                     <onup>8000</onup>
@@ -57,7 +57,7 @@
                         <textoffsetx>20</textoffsetx>
                         <label>$LOCALIZE[21433]</label>
                         <textcolor>FF585858</textcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <font>Font-Condensed-S30</font>
                     </control>
                     <control type="edit" id="12">
@@ -72,7 +72,7 @@
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>FF585858</disabledcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <font>Font-Condensed-S32</font>
                         <pulseonselect>false</pulseonselect>
                         <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
@@ -110,7 +110,7 @@
                         <textoffsetx>20</textoffsetx>
                         <label>$LOCALIZE[21434]</label>
                         <textcolor>FF585858</textcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <font>Font-Condensed-S30</font>
                     </control>
                     <control type="list" id="10">
@@ -233,7 +233,7 @@
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>FF585858</disabledcolor>
-                            <shadowcolor>20FFFFFF</shadowcolor>
+                            20FFFFFF
                             <align>left</align>
                             <font>Font-Condensed-S32</font>
                             <textoffsetx>60</textoffsetx>
@@ -254,7 +254,7 @@
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>FF585858</disabledcolor>
-                            <shadowcolor>20FFFFFF</shadowcolor>
+                            20FFFFFF
                             <align>left</align>
                             <font>Font-Condensed-S32</font>
                             <textoffsetx>60</textoffsetx>
@@ -275,7 +275,7 @@
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>FF585858</disabledcolor>
-                            <shadowcolor>20FFFFFF</shadowcolor>
+                            20FFFFFF
                             <align>left</align>
                             <font>Font-Condensed-S32</font>
                             <textoffsetx>60</textoffsetx>
@@ -301,7 +301,7 @@
                         <textoffsetx>20</textoffsetx>
                         <label>$LOCALIZE[41716]</label>
                         <textcolor>FF585858</textcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <font>Font-Condensed-S30</font>
                     </control>
                     <control type="spincontrolex" id="16">
@@ -317,7 +317,7 @@
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>FF585858</disabledcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <textoffsetx>20</textoffsetx>
                         <spinposx>5</spinposx>
                         <onup>8001</onup>
@@ -339,7 +339,7 @@
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>FF585858</disabledcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <textoffsetx>20</textoffsetx>
                         <spinposx>5</spinposx>
                         <onup>16</onup>
@@ -363,7 +363,7 @@
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>FF585858</disabledcolor>
-                            <shadowcolor>20FFFFFF</shadowcolor>
+                            20FFFFFF
                             <textoffsetx>20</textoffsetx>
                             <spinposx>5</spinposx>
                             <onup>17</onup>
@@ -384,7 +384,7 @@
                             <textcolor>FF585858</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <disabledcolor>FF585858</disabledcolor>
-                            <shadowcolor>20FFFFFF</shadowcolor>
+                            20FFFFFF
                             <align>left</align>
                             <font>Font-Condensed-S32</font>
                             <textoffsetx>60</textoffsetx>

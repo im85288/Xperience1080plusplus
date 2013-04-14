@@ -236,7 +236,7 @@
                     <onleft>14</onleft>
                     <onright>7</onright>
                     <textcolor>96FFFFFF</textcolor>
-                    <font>Font-Condensed-S30-B</font>
+                    <font>Font-Condensed-S30</font>
                     <textoffsetx>35</textoffsetx>
                     <selected>Skin.HasSetting(MusicVisClassic.Enabled)</selected>
                     <onclick>Skin.ToggleSetting(MusicVisClassic.Enabled)</onclick>

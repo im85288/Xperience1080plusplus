@@ -59,7 +59,7 @@
                 <textcolor>FF585858</textcolor>
                 <focusedcolor>eewhite</focusedcolor>
                 <disabledcolor>77585858</disabledcolor>
-                <shadowcolor>20FFFFFF</shadowcolor>
+                20FFFFFF
                 <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
                 <texturenofocus>dialogs/default/separator.png</texturenofocus>
             </control>
@@ -73,7 +73,7 @@
                 <textcolor>FF585858</textcolor>
                 <focusedcolor>eewhite</focusedcolor>
                 <disabledcolor>77585858</disabledcolor>
-                <shadowcolor>20FFFFFF</shadowcolor>
+                20FFFFFF
                 <textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
                 <textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
                 <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
@@ -90,7 +90,7 @@
                 <textcolor>FF585858</textcolor>
                 <focusedcolor>eewhite</focusedcolor>
                 <disabledcolor>77585858</disabledcolor>
-                <shadowcolor>20FFFFFF</shadowcolor>
+                20FFFFFF
                 <textoffsetx>20</textoffsetx>
                 <spinposx>5</spinposx>
             </control>
@@ -109,7 +109,7 @@
                 <textcolor>FF585858</textcolor>
                 <focusedcolor>eewhite</focusedcolor>
                 <disabledcolor>77585858</disabledcolor>
-                <shadowcolor>20FFFFFF</shadowcolor>
+                20FFFFFF
                 <textoffsetx>20</textoffsetx>
                 <pulseonselect>false</pulseonselect>
             </control>
@@ -118,11 +118,11 @@
                 <height>60</height>
                 <align>left</align>
                 <aligny>top</aligny>
-                <font>Font-Condensed-S30-B</font>
+                <font>Font-Condensed-S30</font>
                 <textoffsetx>20</textoffsetx>
                 <textoffsety>14</textoffsety>
                 <textcolor>AA585858</textcolor>
-                <shadowcolor>20FFFFFF</shadowcolor>
+                20FFFFFF
             </control>
             
             <control type="image" id="11">
@@ -139,7 +139,7 @@
                 <textcolor>FF585858</textcolor>
                 <focusedcolor>eewhite</focusedcolor>
                 <disabledcolor>FF585858</disabledcolor>
-                <shadowcolor>20FFFFFF</shadowcolor>
+                20FFFFFF
                 <font>Font-Condensed-S32</font>
                 <pulseonselect>false</pulseonselect>
                 <texturefocus border="2">dialogs/default/highlight.png</texturefocus>

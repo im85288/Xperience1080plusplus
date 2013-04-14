@@ -286,7 +286,7 @@
                 </control>
                 <control type="label">
                     <textcolor>CCFFFFFF</textcolor>
-                    <font>Font-Condensed-S45-B</font>
+                    <font>Font-Condensed-S45</font>
                     <align>right</align>
                     <posx>138r</posx>
                     <posy>175</posy>
@@ -331,7 +331,7 @@
                         <width>460</width>
                         <height>437</height>
                         <textcolor>CCFFFFFF</textcolor>
-                        <font>Font-Condensed-S45-B</font>
+                        <font>Font-Condensed-S45</font>
                         <align>right</align>
                         <label>$INFO[Window(Weather).Property(Current.Condition)] ($INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits])</label>
                     </control>
@@ -440,8 +440,8 @@
                     <height>25</height>
                     <align>right</align>
                     <aligny>center</aligny>
-                    <font>Font-Condensed-S20-B</font>
-                    <shadowcolor>11000000</shadowcolor>
+                    <font>Font-Condensed-S20</font>
+                   
                     <textcolor>77white</textcolor>
                     <textoffsetx>5</textoffsetx>
                     <label>[UPPERCASE]$LOCALIZE[41552][/UPPERCASE]</label>
@@ -454,8 +454,8 @@
                     <height>25</height>
                     <align>right</align>
                     <aligny>center</aligny>
-                    <font>Font-Condensed-S20-B</font>
-                    <shadowcolor>11000000</shadowcolor>
+                    <font>Font-Condensed-S20</font>
+                   
                     <textcolor>77white</textcolor>
                     <textoffsetx>5</textoffsetx>
                     <label>[UPPERCASE]$LOCALIZE[41553][/UPPERCASE]</label>
@@ -468,8 +468,8 @@
                     <height>25</height>
                     <align>right</align>
                     <aligny>center</aligny>
-                    <font>Font-Condensed-S20-B</font>
-                    <shadowcolor>11000000</shadowcolor>
+                    <font>Font-Condensed-S20</font>
+                   
                     <textcolor>77white</textcolor>
                     <textoffsetx>5</textoffsetx>
                     <label>[UPPERCASE]$LOCALIZE[41554][/UPPERCASE]</label>
@@ -482,8 +482,8 @@
                     <height>25</height>
                     <align>right</align>
                     <aligny>center</aligny>
-                    <font>Font-Condensed-S20-B</font>
-                    <shadowcolor>11000000</shadowcolor>
+                    <font>Font-Condensed-S20</font>
+                   
                     <textcolor>77white</textcolor>
                     <textoffsetx>5</textoffsetx>
                     <label>[UPPERCASE]$INFO[Window(Weather).Property(WeatherProvider),$LOCALIZE[21870]: ,][/UPPERCASE]</label>

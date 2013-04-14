@@ -64,7 +64,7 @@
     			<height>80</height>
     			<label>$LOCALIZE[19005]</label>
     			<textcolor>ddwhite</textcolor>
-    			<font>Font-Condensed-S40-B</font>
+    			<font>Font-Condensed-S40</font>
     			<scroll>false</scroll>
     		</control>
     		<control type="label">

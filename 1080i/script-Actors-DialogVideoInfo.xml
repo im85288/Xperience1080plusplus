@@ -392,7 +392,7 @@
                             <font>Font-Condensed-S40</font>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                         </control>
                     </itemlayout>
@@ -423,7 +423,7 @@
                             <font>Font-Condensed-S40</font>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout" reversible="false" condition="Container(9333).OnNext | Container(9333).OnPrevious">Focus</animation>
                             <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(9333)">Conditional</animation>
                         </control>

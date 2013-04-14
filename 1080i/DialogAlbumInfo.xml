@@ -236,7 +236,7 @@
                             <font>Font-Condensed-S40</font>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                         </control>
                     </itemlayout>
@@ -267,7 +267,7 @@
                             <font>Font-Condensed-S40</font>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout" reversible="false" condition="Container(9333).OnNext | Container(9333).OnPrevious">Focus</animation>
                             <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(9333)">Conditional</animation>
                         </control>
@@ -320,7 +320,7 @@
                                 <width>190</width>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$LOCALIZE[557]:[/B]</label>
+                                <label>$LOCALIZE[557]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -346,7 +346,7 @@
                                 <width>190</width>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$LOCALIZE[21893]:[/B]</label>
+                                <label>$LOCALIZE[21893]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -374,7 +374,7 @@
                                 <width>190</width>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$LOCALIZE[21894]:[/B]</label>
+                                <label>$LOCALIZE[21894]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -399,7 +399,7 @@
                                 <width>190</width>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$LOCALIZE[515]:[/B]</label>
+                                <label>$LOCALIZE[515]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -422,7 +422,7 @@
                                 <width>190</width>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$LOCALIZE[176]:[/B]</label>
+                                <label>$LOCALIZE[176]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -446,7 +446,7 @@
                                 <width>1240</width>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$LOCALIZE[21887][/B]</label>
+                                <label>$LOCALIZE[21887]</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -487,7 +487,7 @@
                                 <width>190</width>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$LOCALIZE[558]:[/B]</label>
+                                <label>$LOCALIZE[558]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -512,7 +512,7 @@
                                 <width>190</width>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$LOCALIZE[557]:[/B]</label>
+                                <label>$LOCALIZE[557]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -537,7 +537,7 @@
                                 <width>190</width>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$LOCALIZE[562]:[/B]</label>
+                                <label>$LOCALIZE[562]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -560,7 +560,7 @@
                                 <width>190</width>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$LOCALIZE[515]:[/B]</label>
+                                <label>$LOCALIZE[515]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -584,7 +584,7 @@
                                 <width>1240</width>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$LOCALIZE[183][/B]</label>
+                                <label>$LOCALIZE[183]</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>

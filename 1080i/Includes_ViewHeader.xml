@@ -220,7 +220,7 @@
                 <font>Font-Condensed-S52</font>
                 <label>$INFO[ListItem.SortLetter]</label>
                 <textcolor>C0000000</textcolor>
-                <shadowcolor>white</shadowcolor>
+                white
             </control>
         </control>
     </include>
@@ -530,7 +530,7 @@
                         <font>Font-Condensed-S52</font>
                         <label>$VAR[FileManagerSortLetterLabel]</label>
                         <textcolor>C0000000</textcolor>
-                        <shadowcolor>white</shadowcolor>
+                        white
                     </control>
                 </control>
                 <control type="label">

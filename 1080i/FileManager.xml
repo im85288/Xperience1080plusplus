@@ -157,7 +157,7 @@
                                 <aligny>center</aligny>
                                 <textcolor>77white</textcolor>
                                 <selectedcolor>77white</selectedcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                             </control>
                             <control type="label">
@@ -171,7 +171,7 @@
                                 <aligny>center</aligny>
                                 <textcolor>77white</textcolor>
                                 <selectedcolor>77white</selectedcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                             </control>
                         </itemlayout>
@@ -231,7 +231,7 @@
                                     <aligny>center</aligny>
                                     <textcolor>eewhite</textcolor>
                                     <selectedcolor>eewhite</selectedcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                 </control>
                                 <control type="label">
@@ -245,7 +245,7 @@
                                     <aligny>center</aligny>
                                     <textcolor>eewhite</textcolor>
                                     <selectedcolor>eewhite</selectedcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                 </control>
                             </control>
@@ -430,7 +430,7 @@
                                 <aligny>center</aligny>
                                 <textcolor>77white</textcolor>
                                 <selectedcolor>77white</selectedcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                             </control>
                             <control type="label">
@@ -444,7 +444,7 @@
                                 <aligny>center</aligny>
                                 <textcolor>77white</textcolor>
                                 <selectedcolor>77white</selectedcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                             </control>
                         </itemlayout>
@@ -504,7 +504,7 @@
                                     <aligny>center</aligny>
                                     <textcolor>eewhite</textcolor>
                                     <selectedcolor>eewhite</selectedcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                 </control>
                                 <control type="label">
@@ -518,7 +518,7 @@
                                     <aligny>center</aligny>
                                     <textcolor>eewhite</textcolor>
                                     <selectedcolor>eewhite</selectedcolor>
-                                    <shadowcolor>22000000</shadowcolor>
+                                    
                                     <scroll>false</scroll>
                                 </control>
                             </control>

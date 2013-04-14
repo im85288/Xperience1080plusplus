@@ -25,9 +25,9 @@
                 <height>34</height>
                 <align>center</align>
                 <label>-</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>bbwhite</textcolor>
-                <shadowcolor>66000000</shadowcolor>
+                66000000
             </control>
             <control type="group">
                 <control type="grouplist" id="5">
@@ -69,7 +69,7 @@
                     <textcolor>96FFFFFF</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <disabledcolor>40FFFFFF</disabledcolor>
-                    <font>Font-Condensed-S30-B</font>
+                    <font>Font-Condensed-S30</font>
                     <textoffsetx>35</textoffsetx>
                 </control>
                 <control type="radiobutton" id="8">
@@ -83,7 +83,7 @@
                     <textcolor>96FFFFFF</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <disabledcolor>40FFFFFF</disabledcolor>
-                    <font>Font-Condensed-S30-B</font>
+                    <font>Font-Condensed-S30</font>
                     <textoffsetx>35</textoffsetx>
                 </control>
                 <control type="spincontrolex" id="9">
@@ -97,7 +97,7 @@
                     <textcolor>96FFFFFF</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <disabledcolor>40FFFFFF</disabledcolor>
-                    <font>Font-Condensed-S30-B</font>
+                    <font>Font-Condensed-S30</font>
                     <textoffsetx>35</textoffsetx>
                 </control>
                 <control type="sliderex" id="10">
@@ -110,7 +110,7 @@
                     <textcolor>96FFFFFF</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <disabledcolor>40FFFFFF</disabledcolor>
-                    <font>Font-Condensed-S30-B</font>
+                    <font>Font-Condensed-S30</font>
                     <textoffsetx>35</textoffsetx>
                     <sliderwidth>300</sliderwidth>
                     <sliderheight>30</sliderheight>

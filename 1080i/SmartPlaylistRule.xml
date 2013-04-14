@@ -41,7 +41,7 @@
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>77585858</disabledcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <textoffsetx>20</textoffsetx>
                         <spinposx>5</spinposx>
                         <onup>8000</onup>
@@ -63,7 +63,7 @@
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>77585858</disabledcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <textoffsetx>20</textoffsetx>
                         <spinposx>5</spinposx>
                         <onup>8000</onup>
@@ -86,7 +86,7 @@
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>FF585858</disabledcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <font>Font-Condensed-S32</font>
                         <pulseonselect>false</pulseonselect>
                         <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
@@ -122,7 +122,7 @@
                         <textcolor>FF585858</textcolor>
                         <focusedcolor>eewhite</focusedcolor>
                         <disabledcolor>FF585858</disabledcolor>
-                        <shadowcolor>20FFFFFF</shadowcolor>
+                        20FFFFFF
                         <align>left</align>
                         <font>Font-Condensed-S32</font>
                         <textoffsetx>60</textoffsetx>

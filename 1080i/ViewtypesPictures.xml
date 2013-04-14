@@ -54,7 +54,7 @@
                         <posy>0</posy>
                         <width>1280</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>aawhite</textcolor>
@@ -68,7 +68,7 @@
                         <posy>0</posy>
                         <width>1280</width>
                         <height>62</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>left</align>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>aawhite</textcolor>
@@ -96,7 +96,7 @@
                         <posy>0</posy>
                         <width>1270</width>
                         <height>100</height>
-                        <font>Font-Condensed-S34-B</font>
+                        <font>Font-Condensed-S34</font>
                         <align>right</align>
                         <label>$INFO[ListItem.Label2]</label>
                         <textcolor>99FFFFFF</textcolor>
@@ -166,7 +166,7 @@
                             <posy>0</posy>
                             <width>1280</width>
                             <height>100</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
@@ -179,7 +179,7 @@
                             <posy>0</posy>
                             <width>1280</width>
                             <height>62</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
@@ -206,7 +206,7 @@
                             <posy>0</posy>
                             <width>1270</width>
                             <height>100</height>
-                            <font>Font-Condensed-S34-B</font>
+                            <font>Font-Condensed-S34</font>
                             <align>right</align>
                             <label>$INFO[ListItem.Label2]</label>
                             <textcolor>D4FFFFFF</textcolor>
@@ -366,10 +366,10 @@
                             <posy>1</posy>
                             <height>60</height>
                             <width>670</width>
-                            <font>Font-Condensed-S29-B</font>
+                            <font>Font-Condensed-S29</font>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>77white</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -379,7 +379,7 @@
                             <font>Font-Condensed-S31</font>
                             <label>$INFO[ListItem.Label2]</label>
                             <textcolor>77white</textcolor>
-                            <shadowcolor>22000000</shadowcolor>
+                            
                             <scroll>false</scroll>
                             <align>right</align>
                         </control>
@@ -412,10 +412,10 @@
                                 <posy>1</posy>
                                 <height>60</height>
                                 <width>670</width>
-                                <font>Font-Condensed-S29-B</font>
+                                <font>Font-Condensed-S29</font>
                                 <label>$INFO[ListItem.Label]</label>
                                 <textcolor>eewhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                             </control>
                             <control type="label">
                                 <posx>690</posx>
@@ -424,7 +424,7 @@
                                 <font>Font-Condensed-S31</font>
                                 <label>$INFO[ListItem.Label2]</label>
                                 <textcolor>eewhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>right</align>
                             </control>
@@ -517,9 +517,9 @@
                                 <width>340</width>
                                 <height>40</height>
                                 <label>$INFO[Container(54).ListItem(-1).Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -531,7 +531,7 @@
                                 <label>$INFO[Container(54).ListItem(-1).Label2]$INFO[Container(54).ListItem(-1).PictureResolution, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -599,9 +599,9 @@
                                 <width>340</width>
                                 <height>40</height>
                                 <label>$INFO[Container(54).ListItem(4).Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -613,7 +613,7 @@
                                 <label>$INFO[Container(54).ListItem(4).Label2]$INFO[Container(54).ListItem(4).PictureResolution, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -681,9 +681,9 @@
                                 <width>340</width>
                                 <height>40</height>
                                 <label>$INFO[Container(54).ListItem(3).Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -695,7 +695,7 @@
                                 <label>$INFO[Container(54).ListItem(3).Label2]$INFO[ListItem(3).PictureResolution, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -763,9 +763,9 @@
                                 <width>340</width>
                                 <height>40</height>
                                 <label>$INFO[Container(54).ListItem(2).Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -777,7 +777,7 @@
                                 <label>$INFO[Container(54).ListItem(2).Label2]$INFO[Container(54).ListItem(2).PictureResolution, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -845,9 +845,9 @@
                                 <width>340</width>
                                 <height>40</height>
                                 <label>$INFO[Container(54).ListItem(1).Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -859,7 +859,7 @@
                                 <label>$INFO[Container(54).ListItem(1).Label2]$INFO[Container(54).ListItem(1).PictureResolution, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -922,9 +922,9 @@
                         <width>340</width>
                         <height>40</height>
                         <label>$INFO[Container(54).ListItem(0).Label]</label>
-                        <font>Font-Condensed-S32-B</font>
+                        <font>Font-Condensed-S32</font>
                         <textcolor>ddwhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>true</scroll>
                         <align>left</align>
                     </control>
@@ -936,7 +936,7 @@
                         <label>$INFO[Container(54).ListItem(0).Label2]$INFO[Container(54).ListItem(0).PictureResolution, • ,]</label>
                         <font>Font-Condensed-S28</font>
                         <textcolor>aawhite</textcolor>
-                        <shadowcolor>22000000</shadowcolor>
+                        
                         <scroll>false</scroll>
                         <align>left</align>
                     </control>
@@ -1010,9 +1010,9 @@
                                 <width>340</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -1024,7 +1024,7 @@
                                 <label>$INFO[ListItem.Label2]$INFO[ListItem.PictureResolution, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -1082,9 +1082,9 @@
                                 <width>340</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>true</scroll>
                                 <align>left</align>
                             </control>
@@ -1096,7 +1096,7 @@
                                 <label>$INFO[ListItem.Label2]$INFO[ListItem.PictureResolution, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
-                                <shadowcolor>22000000</shadowcolor>
+                                
                                 <scroll>false</scroll>
                                 <align>left</align>
                             </control>
@@ -1748,7 +1748,7 @@
                         <posy>15</posy>
                         <width>1730</width>
                         <label>$INFO[Container(55).ListItem.Label]</label>
-                        <font>Font-Condensed-S45-B</font>
+                        <font>Font-Condensed-S45</font>
                         <textcolor>aawhite</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
@@ -2612,7 +2612,7 @@
                                 <posy>15</posy>
                                 <width>1730</width>
                                 <label>$INFO[Container(505).ListItem.Label]</label>
-                                <font>Font-Condensed-S45-B</font>
+                                <font>Font-Condensed-S45</font>
                                 <textcolor>aawhite</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>

@@ -223,7 +223,7 @@
                             <font>Font-Condensed-S40</font>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                         </control>
                     </itemlayout>
@@ -254,7 +254,7 @@
                             <font>Font-Condensed-S40</font>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
-                            <shadowcolor>33000000</shadowcolor>
+                            33000000
                             <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout" reversible="false" condition="Container(9000).OnNext | Container(9000).OnPrevious">Focus</animation>
                             <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(9000)">Conditional</animation>
                         </control>
@@ -306,7 +306,7 @@
                                 <height>50</height>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$ADDON[script.metadata.actors 32012]:[/B]</label>
+                                <label>$ADDON[script.metadata.actors 32012]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -333,7 +333,7 @@
                                 <height>50</height>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$ADDON[script.metadata.actors 32013]:[/B]</label>
+                                <label>$ADDON[script.metadata.actors 32013]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -360,7 +360,7 @@
                                 <height>50</height>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$ADDON[script.metadata.actors 32014]:[/B]</label>
+                                <label>$ADDON[script.metadata.actors 32014]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -387,7 +387,7 @@
                                 <height>50</height>
                                 <font>Font-Condensed-S34</font>
                                 <align>left</align>
-                                <label>[B]$ADDON[script.metadata.actors 32016]:[/B]</label>
+                                <label>$ADDON[script.metadata.actors 32016]:</label>
                                 <textcolor>aawhite2</textcolor>
                                 <scroll>false</scroll>
                             </control>
@@ -415,7 +415,7 @@
                             <width>1240</width>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
-                            <label>[B]$LOCALIZE[21887][/B]</label>
+                            <label>$LOCALIZE[21887]</label>
                             <textcolor>aawhite2</textcolor>
                             <scroll>false</scroll>
                         </control>

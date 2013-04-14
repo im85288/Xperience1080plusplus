@@ -50,7 +50,7 @@
 	            	    <textoffsetx>20</textoffsetx>
 	            	    <label>$LOCALIZE[42180]</label>
 	            	    <textcolor>FF585858</textcolor>
-	            	    <shadowcolor>20FFFFFF</shadowcolor>
+	            	    20FFFFFF
 	            	    <font>Font-Condensed-S30</font>
 	            	</control>
 	            	<control type="image">
@@ -186,7 +186,7 @@
 	            	    <align>left</align>
 	            	    <textoffsetx>20</textoffsetx>
 	            	    <textcolor>FF585858</textcolor>
-	            	    <shadowcolor>20FFFFFF</shadowcolor>
+	            	    20FFFFFF
 	            	    <font>Font-Condensed-S30</font>
 	            	</control>
 	            	<control type="image">
@@ -338,7 +338,7 @@
 	            	    <align>left</align>
 	            	    <textoffsetx>20</textoffsetx>
 	            	    <textcolor>FF585858</textcolor>
-	            	    <shadowcolor>20FFFFFF</shadowcolor>
+	            	    20FFFFFF
 	            	    <font>Font-Condensed-S30</font>
 	            	</control>
 	            	<control type="image">

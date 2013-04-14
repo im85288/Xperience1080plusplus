@@ -72,7 +72,7 @@
         <align>left</align>
         <aligny>center</aligny>
         <textcolor>96FFFFFF</textcolor>
-        <font>Font-Condensed-S30-B</font>
+        <font>Font-Condensed-S30</font>
         <textoffsetx>35</textoffsetx>
         <scroll>false</scroll>
         <texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
@@ -86,7 +86,7 @@
         <textcolor>white</textcolor>
         <focusedcolor>white</focusedcolor>
         <disabledcolor>77FFFFFF</disabledcolor>
-        <font>Font-Condensed-S37-B</font>
+        <font>Font-Condensed-S37</font>
         <textwidth>400</textwidth>
         <textoffsetx>0</textoffsetx>
         <animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="200" condition="!ControlGroup(4001).HasFocus" reversible="false">Conditional</animation>
@@ -102,7 +102,7 @@
         <textcolor>96FFFFFF</textcolor>
         <focusedcolor>white</focusedcolor>
         <disabledcolor>96FFFFFF</disabledcolor>
-        <font>Font-Condensed-S30-B</font>
+        <font>Font-Condensed-S30</font>
         <textoffsetx>35</textoffsetx>
     </include>
     
@@ -116,7 +116,7 @@
         <textcolor>96FFFFFF</textcolor>
         <focusedcolor>white</focusedcolor>
         <disabledcolor>96FFFFFF</disabledcolor>
-        <font>Font-Condensed-S30-B</font>
+        <font>Font-Condensed-S30</font>
         <textoffsetx>35</textoffsetx>
     </include>
     
@@ -144,7 +144,7 @@
         <textcolor>FF585858</textcolor>
         <focusedcolor>eewhite</focusedcolor>
         <disabledcolor>77585858</disabledcolor>
-        <shadowcolor>20FFFFFF</shadowcolor>
+        20FFFFFF
         <textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
         <textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
         <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
@@ -174,7 +174,7 @@
         <textcolor>FF585858</textcolor>
         <focusedcolor>eewhite</focusedcolor>
         <disabledcolor>FF585858</disabledcolor>
-        <shadowcolor>20FFFFFF</shadowcolor>
+        20FFFFFF
         <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
     </include>
     
@@ -188,7 +188,7 @@
         <textcolor>FF585858</textcolor>
         <focusedcolor>eewhite</focusedcolor>
         <disabledcolor>77585858</disabledcolor>
-        <shadowcolor>20FFFFFF</shadowcolor>
+        20FFFFFF
         <textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
         <textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
         <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
@@ -210,7 +210,7 @@
         <textcolor>FF585858</textcolor>
         <focusedcolor>eewhite</focusedcolor>
         <disabledcolor>77585858</disabledcolor>
-        <shadowcolor>20FFFFFF</shadowcolor>
+        20FFFFFF
         <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
     </include>
     
@@ -225,7 +225,7 @@
         <textcolor>FF585858</textcolor>
         <focusedcolor>eewhite</focusedcolor>
         <disabledcolor>FF585858</disabledcolor>
-        <shadowcolor>20FFFFFF</shadowcolor>
+        20FFFFFF
         <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
         <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
         <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
@@ -1586,7 +1586,7 @@
                         <description>Info</description>
                         <posx>880</posx>
                         <width>500</width>
-                        <font>Font-Condensed-S26-B</font>
+                        <font>Font-Condensed-S26</font>
                         <align>right</align>
                         <include>DialogButtonDimensions</include>
                         <label>$LOCALIZE[41143]</label>
@@ -4274,7 +4274,7 @@
                             <align>left</align>
                             <font>Font-Condensed-S30</font>
                             <textcolor>FF585858</textcolor>
-                            <shadowcolor>20FFFFFF</shadowcolor>
+                            20FFFFFF
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                         <control type="image">
@@ -4315,7 +4315,7 @@
                             <align>left</align>
                             <font>Font-Condensed-S30</font>
                             <textcolor>eewhite</textcolor>
-                            <shadowcolor>20FFFFFF</shadowcolor>
+                            20FFFFFF
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                         <control type="image">
@@ -4647,7 +4647,7 @@
                         <description>Info</description>
                         <posx>880</posx>
                         <width>500</width>
-                        <font>Font-Condensed-S26-B</font>
+                        <font>Font-Condensed-S26</font>
                         <align>right</align>
                         <include>DialogButtonDimensions</include>
                         <label>$LOCALIZE[41154]</label>
@@ -4732,7 +4732,7 @@
                         <description>Info</description>
                         <posx>610</posx>
                         <width>500</width>
-                        <font>Font-Condensed-S26-B</font>
+                        <font>Font-Condensed-S26</font>
                         <align>right</align>
                         <include>DialogButtonDimensions</include>
                         <label>$LOCALIZE[41154]</label>

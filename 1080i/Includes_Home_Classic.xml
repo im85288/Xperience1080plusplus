@@ -29,9 +29,9 @@
                 <width>180</width>
                 <height>100</height>
                 <label>$LOCALIZE[41507]</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>eewhite</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                
                 <include>Animation_ShutdownButton</include>
                 <include>homebuttonsanim2</include>
             </control>
@@ -63,9 +63,9 @@
                 <width>180</width>
                 <height>100</height>
                 <label>$LOCALIZE[1036]</label>
-                <font>Font-Condensed-S34-B</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>eewhite</textcolor>
-                <shadowcolor>22000000</shadowcolor>
+                
                 <include>Animation_FavButton</include>
                 <include>homebuttonsanim4</include>
                 <visible>!Window.IsVisible(favourites) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-globalsearch-contextmenu.xml) + !Window.IsVisible(virtualkeyboard) + IsEmpty(Window.Property(HomeSearch)) + !Window.IsVisible(playercontrols)</visible>
@@ -129,7 +129,7 @@
             </control>
             <control type="label">
                 <include>HomeProfileInfoLabelClassic</include>
-                <label>[B]$INFO[System.ProfileName][/B]</label>
+                <label>$INFO[System.ProfileName]</label>
                 <visible>Container(30).HasFocus(1)</visible>
             </control>
             <control type="label">
@@ -225,14 +225,14 @@
                     </control>
                     <control type="label">
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
-                        <font>Font-Condensed-S49-B</font>
+                        <font>Font-Condensed-S49</font>
                         <align>right</align>
                         <posx>642</posx>
                         <posy>380</posy>
                         <width>500</width>
                         <height>50</height>
                         <textcolor>BCFFFFFF</textcolor>
-                        <shadowcolor>FF000000</shadowcolor>
+                        FF000000
                         <include>Animation_RecentlyFade</include>
                         <label>$INFO[Container(20).ListItemNoWrap(-1).Label]</label>
                     </control>
@@ -272,14 +272,14 @@
                     </control>
                     <control type="label">
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
-                        <font>Font-Condensed-S49-B</font>
+                        <font>Font-Condensed-S49</font>
                         <align>right</align>
                         <posx>642</posx>
                         <posy>380</posy>
                         <width>500</width>
                         <height>50</height>
                         <textcolor>BCFFFFFF</textcolor>
-                        <shadowcolor>FF000000</shadowcolor>
+                        FF000000
                         <include>Animation_RecentlyFade</include>
                         <label>$INFO[Container(20).ListItemNoWrap(3).Label]</label>
                     </control>
@@ -319,14 +319,14 @@
                     </control>
                     <control type="label">
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
-                        <font>Font-Condensed-S49-B</font>
+                        <font>Font-Condensed-S49</font>
                         <align>right</align>
                         <posx>642</posx>
                         <posy>380</posy>
                         <width>500</width>
                         <height>50</height>
                         <textcolor>BCFFFFFF</textcolor>
-                        <shadowcolor>FF000000</shadowcolor>
+                        FF000000
                         <include>Animation_RecentlyFade</include>
                         <label>$INFO[Container(20).ListItemNoWrap(2).Label]</label>
                     </control>
@@ -366,14 +366,14 @@
                     </control>
                     <control type="label">
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
-                        <font>Font-Condensed-S49-B</font>
+                        <font>Font-Condensed-S49</font>
                         <align>right</align>
                         <posx>642</posx>
                         <posy>380</posy>
                         <width>500</width>
                         <height>50</height>
                         <textcolor>BCFFFFFF</textcolor>
-                        <shadowcolor>FF000000</shadowcolor>
+                        FF000000
                         <include>Animation_RecentlyFade</include>
                         <label>$INFO[Container(20).ListItemNoWrap(1).Label]</label>
                     </control>
@@ -407,14 +407,14 @@
                     <texture background="true">$INFO[Container(20).ListItem(0).ActualIcon]</texture>
                 </control>
                 <control type="label">
-                    <font>Font-Condensed-S49-B</font>
+                    <font>Font-Condensed-S49</font>
                     <align>right</align>
                     <posx>642</posx>
                     <posy>380</posy>
                     <width>500</width>
                     <height>50</height>
                     <textcolor>BCFFFFFF</textcolor>
-                    <shadowcolor>99000000</shadowcolor>
+                    99000000
                     <include>Animation_RecentlyFade</include>
                     <label>$INFO[Container(20).ListItem(0).Label]</label>
                 </control>
@@ -488,14 +488,14 @@
                     </control>
                     <control type="label">
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
-                        <font>Font-Condensed-S49-B</font>
+                        <font>Font-Condensed-S49</font>
                         <align>right</align>
                         <posx>-120r</posx>
                         <posy>380</posy>
                         <width>500</width>
                         <height>50</height>
                         <textcolor>BCFFFFFF</textcolor>
-                        <shadowcolor>FF000000</shadowcolor>
+                        FF000000
                         <info>ListItem.Label</info>
                     </control>
                 </control>
@@ -550,14 +550,14 @@
                         <visible>!Control.HasFocus(82)</visible>
                     </control>
                     <control type="label">
-                        <font>Font-Condensed-S49-B</font>
+                        <font>Font-Condensed-S49</font>
                         <align>right</align>
                         <posx>-120r</posx>
                         <posy>380</posy>
                         <width>500</width>
                         <height>50</height>
                         <textcolor>BCFFFFFF</textcolor>
-                        <shadowcolor>99000000</shadowcolor>
+                        99000000
                         <include>Animation_RecentlyFade</include>
                         <info>ListItem.Label</info>
                         <animation type="Focus" condition="Container(20).OnNext | Container(20).OnPrevious">
