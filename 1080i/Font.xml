@@ -268,7 +268,7 @@
             <size>100</size>
         </font>
 		<font>
-            <name>Font-Condensed-S120-B</name>
+            <name>Font-Condensed-S120</name>
             <filename>OpenSansCond.ttf</filename>
             <size>240</size>
             <style>bold</style>
@@ -563,6 +563,11 @@
             <filename>Arial.ttf</filename>
             <size>52</size>
             <style>bold</style>
+        </font>
+		<font>
+            <name>Font-Condensed-S52</name>
+            <filename>Arial.ttf</filename>
+            <size>52</size>
         </font>
         <font>
             <name>Font-Condensed-S60</name>

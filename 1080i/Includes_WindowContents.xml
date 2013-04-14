@@ -475,7 +475,7 @@
                 <posy>34</posy>
                 <width>132</width>
                 <height>132</height>
-                <font>Font-Condensed-S80</font>
+                <font>Font-Condensed-S80-B</font>
                 <align>center</align>
                 <textcolor>MenuGrey</textcolor>
                 <textshadow>white</textshadow>
