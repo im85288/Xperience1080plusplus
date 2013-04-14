@@ -13,7 +13,7 @@
             <textcolor>77white2</textcolor>
             <titlecolor>77white2</titlecolor>
             
-            <headlinecolor>77white</headlinecolor>
+            <headlinecolor>77white2</headlinecolor>
             <animation effect="slide" end="0,1014" time="0" condition="Skin.HasSetting(GlobalRSS.Bottom)">Conditional</animation>
             <visible>!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(screencalibration) + !Window.IsVisible(screensaver) + !Window.IsVisible(slideshow)</visible>
         </control>
