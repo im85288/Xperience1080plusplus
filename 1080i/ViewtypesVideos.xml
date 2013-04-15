@@ -191,7 +191,7 @@
                         <posy>0</posy>
                         <width>140</width>
                         <height>100</height>
-                        <texture>$VAR[ListHDSDFlag]</texture>
+                        <texture>$VAR[ListHDSDFlag2]</texture>
                         <colordiffuse>7FFFFFFF</colordiffuse>
                         <visible>!IsEmpty(ListItem.VideoResolution)</visible>
                     </control>
@@ -202,7 +202,7 @@
                         <width>140</width>
                         <height>100</height>
                         <aspect>keepaspect</aspect>
-                        <texture>flags/other/set-default.png</texture>
+                        <texture>flagsosd/other/set-default.png</texture>
                         <visible>substring(ListItem.Path,videodb://1/7,left)</visible>
                         <colordiffuse>7FFFFFFF</colordiffuse>
                     </control>
@@ -437,7 +437,7 @@
                         <posy>0</posy>
                         <width>140</width>
                         <height>100</height>
-                        <texture>$VAR[ListHDSDFlag]</texture>
+                        <texture>$VAR[ListHDSDFlag2]</texture>
                         <colordiffuse>7FFFFFFF</colordiffuse>
                         <visible>!IsEmpty(ListItem.VideoResolution)</visible>
                     </control>
@@ -644,7 +644,7 @@
                             <posy>0</posy>
                             <width>140</width>
                             <height>100</height>
-                            <texture>$VAR[ListHDSDFlag]</texture>
+                            <texture>$VAR[ListHDSDFlag2]</texture>
                             <colordiffuse>D4FFFFFF</colordiffuse>
                             <visible>!IsEmpty(ListItem.VideoResolution)</visible>
                         </control>
@@ -655,7 +655,7 @@
                             <width>140</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
-                            <texture>flags/other/set-default.png</texture>
+                            <texture>flagsosd/other/set-default.png</texture>
                             <visible>substring(ListItem.Path,videodb://1/7,left)</visible>
                             <colordiffuse>D4FFFFFF</colordiffuse>
                         </control>
@@ -934,7 +934,7 @@
                             <posy>0</posy>
                             <width>140</width>
                             <height>100</height>
-                            <texture>$VAR[ListHDSDFlag]</texture>
+                            <texture>$VAR[ListHDSDFlag2]</texture>
                             <colordiffuse>D4FFFFFF</colordiffuse>
                             <visible>!IsEmpty(ListItem.VideoResolution)</visible>
                         </control>

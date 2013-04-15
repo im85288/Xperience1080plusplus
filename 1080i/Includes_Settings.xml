@@ -909,7 +909,7 @@
                     <width>974</width>
                     <font>Font-Condensed-S34</font>
                     <label>$INFO[Window(skinsettings).property(Dialog)]</label>
-                    <textcolor>ddwhite</textcolor>
+                    <textcolor>ddwhite2</textcolor>
                     <align>center</align>
                 </control>
                 
@@ -4246,7 +4246,7 @@
                     <width>974</width>
                     <font>Font-Condensed-S34</font>
                     <label>$INFO[Window(skinsettings).property(Dialog)]</label>
-                    <textcolor>ddwhite</textcolor>
+                    <textcolor>ddwhite2</textcolor>
                     <align>center</align>
                 </control>
                 
@@ -4683,7 +4683,7 @@
                     <width>974</width>
                     <font>Font-Condensed-S34</font>
                     <label>$INFO[Window(skinsettings).property(Dialog)]</label>
-                    <textcolor>ddwhite</textcolor>
+                    <textcolor>ddwhite2</textcolor>
                     <align>center</align>
                 </control>
                 

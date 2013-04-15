@@ -32,7 +32,7 @@
                 <posy>281</posy>
                 <width>974</width>
                 <font>Font-Condensed-S34</font>
-                <textcolor>ddwhite</textcolor>
+                <textcolor>ddwhite2</textcolor>
                 <align>center</align>
                 <label>$INFO[Control.GetLabel(1000)]</label>
                 <visible>IsEmpty(Control.GetLabel(2))</visible>
