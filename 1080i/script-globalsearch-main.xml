@@ -39,7 +39,7 @@
                         <width>750</width>
                         <height>120</height>
                         <font>Font-Condensed-S36</font>
-                        <textcolor>C0FFFFFF</textcolor>
+                        <textcolor>nowplay</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
                     </control>
@@ -50,7 +50,7 @@
                         <width>750</width>
                         <height>120</height>
                         <font>Font-Condensed-S28</font>
-                        <textcolor>80FFFFFF</textcolor>
+                        <textcolor>smallinfohome</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
                     </control>
@@ -152,7 +152,7 @@
                             <height>120</height>
                             <label>$LOCALIZE[283]: $LOCALIZE[342]</label>
                             <font>Font-Condensed-S36</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                         </control>
@@ -166,7 +166,7 @@
                             <height>120</height>
                             <label>$INFO[Container(111).NumItems] $LOCALIZE[20338]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>!IntegerGreaterThan(Container(111).NumItems,1)</visible>
@@ -176,7 +176,7 @@
                             <height>120</height>
                             <label>$INFO[Container(111).NumItems] $LOCALIZE[342]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>IntegerGreaterThan(Container(111).NumItems,1)</visible>
@@ -202,7 +202,7 @@
                             <height>120</height>
                             <label>$LOCALIZE[283]: $LOCALIZE[20343]</label>
                             <font>Font-Condensed-S36</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                         </control>
@@ -216,7 +216,7 @@
                             <height>120</height>
                             <label>$INFO[Container(121).NumItems] $LOCALIZE[20364]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>!IntegerGreaterThan(Container(121).NumItems,1)</visible>
@@ -226,7 +226,7 @@
                             <height>120</height>
                             <label>$INFO[Container(121).NumItems] $LOCALIZE[20343]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>IntegerGreaterThan(Container(121).NumItems,1)</visible>
@@ -252,7 +252,7 @@
                             <height>120</height>
                             <label>$LOCALIZE[283]: $LOCALIZE[33054]</label>
                             <font>Font-Condensed-S36</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                         </control>
@@ -266,7 +266,7 @@
                             <height>120</height>
                             <label>$INFO[Container(131).NumItems] $LOCALIZE[20373]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>!IntegerGreaterThan(Container(131).NumItems,1)</visible>
@@ -276,7 +276,7 @@
                             <height>120</height>
                             <label>$INFO[Container(131).NumItems] $LOCALIZE[33054]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>IntegerGreaterThan(Container(131).NumItems,1)</visible>
@@ -302,7 +302,7 @@
                             <height>120</height>
                             <label>$LOCALIZE[283]: $LOCALIZE[20360]</label>
                             <font>Font-Condensed-S36</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                         </control>
@@ -316,7 +316,7 @@
                             <height>120</height>
                             <label>$INFO[Container(141).NumItems] $LOCALIZE[20359]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>!IntegerGreaterThan(Container(141).NumItems,1)</visible>
@@ -326,7 +326,7 @@
                             <height>120</height>
                             <label>$INFO[Container(141).NumItems] $LOCALIZE[20360]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>IntegerGreaterThan(Container(141).NumItems,1)</visible>
@@ -352,7 +352,7 @@
                             <height>120</height>
                             <label>$LOCALIZE[283]: $LOCALIZE[20389]</label>
                             <font>Font-Condensed-S36</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                         </control>
@@ -366,7 +366,7 @@
                             <height>120</height>
                             <label>$INFO[Container(151).NumItems] $LOCALIZE[20391]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>!IntegerGreaterThan(Container(151).NumItems,1)</visible>
@@ -376,7 +376,7 @@
                             <height>120</height>
                             <label>$INFO[Container(151).NumItems] $LOCALIZE[20389]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>IntegerGreaterThan(Container(151).NumItems,1)</visible>
@@ -402,7 +402,7 @@
                             <height>120</height>
                             <label>$LOCALIZE[283]: $LOCALIZE[133]</label>
                             <font>Font-Condensed-S36</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                         </control>
@@ -416,7 +416,7 @@
                             <height>120</height>
                             <label>$INFO[Container(161).NumItems] $LOCALIZE[557]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>!IntegerGreaterThan(Container(161).NumItems,1)</visible>
@@ -426,7 +426,7 @@
                             <height>120</height>
                             <label>$INFO[Container(161).NumItems] $LOCALIZE[133]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>IntegerGreaterThan(Container(161).NumItems,1)</visible>
@@ -452,7 +452,7 @@
                             <height>120</height>
                             <label>$LOCALIZE[283]: $LOCALIZE[132]</label>
                             <font>Font-Condensed-S36</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                         </control>
@@ -466,7 +466,7 @@
                             <height>120</height>
                             <label>$INFO[Container(171).NumItems] $LOCALIZE[558]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>!IntegerGreaterThan(Container(171).NumItems,1)</visible>
@@ -476,7 +476,7 @@
                             <height>120</height>
                             <label>$INFO[Container(171).NumItems] $LOCALIZE[132]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>IntegerGreaterThan(Container(171).NumItems,1)</visible>
@@ -502,7 +502,7 @@
                             <height>120</height>
                             <label>$LOCALIZE[283]: $LOCALIZE[134]</label>
                             <font>Font-Condensed-S36</font>
-                            <textcolor>C0FFFFFF</textcolor>
+                            <textcolor>nowplay</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                         </control>
@@ -516,7 +516,7 @@
                             <height>120</height>
                             <label>$INFO[Container(181).NumItems] $LOCALIZE[179]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>!IntegerGreaterThan(Container(181).NumItems,1)</visible>
@@ -526,7 +526,7 @@
                             <height>120</height>
                             <label>$INFO[Container(181).NumItems] $LOCALIZE[134]</label>
                             <font>Font-Condensed-S28</font>
-                            <textcolor>80FFFFFF</textcolor>
+                            <textcolor>smallinfohome</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
                             <visible>IntegerGreaterThan(Container(181).NumItems,1)</visible>

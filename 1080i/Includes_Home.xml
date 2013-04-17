@@ -3946,7 +3946,7 @@
                                         <width>423</width>
                                         <font>Font-Condensed-S32</font>
                                         <label>$INFO[ListItem.Label]</label>
-                                        <textcolor>eewhite2</textcolor>
+                                        <textcolor>eewhite</textcolor>
                                         <!--powershadow-->
                                         <scroll>false</scroll>
                                     </control>
@@ -3957,7 +3957,7 @@
                                         <width>423</width>
                                         <font>Font-Condensed-S29</font>
                                         <label>$INFO[ListItem.Label2]</label>
-                                        <textcolor>eewhite2</textcolor>
+                                        <textcolor>eewhite</textcolor>
                                         <!--powershadow-->
                                         <scroll>false</scroll>
                                     </control>

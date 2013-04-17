@@ -27,7 +27,7 @@
                     <textoffsetx>30</textoffsetx>
                     <label>$VAR[PVRChannelsOSDTitleLabel]</label>
                     <font>Font-Condensed-S34</font>
-                    <textcolor>bbwhite</textcolor>
+                    <textcolor>bbwhite2</textcolor>
                     66000000
                 </control>
                 <control type="list" id="11">

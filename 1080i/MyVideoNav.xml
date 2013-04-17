@@ -795,7 +795,7 @@
                         <height>100</height>
                         <label>$LOCALIZE[42010]</label>
                         <font>Font-Condensed-S34</font>
-                        <textcolor>eewhite2</textcolor>
+                        <textcolor>eewhite</textcolor>
                         
                     </control>
                 </control>
@@ -817,7 +817,7 @@
                         <height>100</height>
                         <label>$LOCALIZE[42021]</label>
                         <font>Font-Condensed-S34</font>
-                        <textcolor>eewhite2</textcolor>
+                        <textcolor>eewhite</textcolor>
                         
                     </control>
                 </control>

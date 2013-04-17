@@ -28,24 +28,54 @@
                     <height>100</height>
                     <texture>overlays/volume/volume-back.png</texture>
                 </control>
-                <control type="image">
-                    <posx>-4</posx>
-                    <posy>27</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <texture>$INFO[Player.Volume,overlays/volume/progress/,.png]</texture>
+					<control type="group">
+                    <visible>!Player.Passthrough</visible>
+                    <control type="progress" id="20">
+                        <visible>false</visible>
+                        <info>Player.Volume</info>
+                    </control>
+                    <control type="image">
+                        <posx>-4</posx>
+                        <posy>27</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>$INFO[Control.GetLabel(20),overlays/volume/progress/p,.png]</texture>
+                    </control>
+                    <control type="label">
+                        <description>Volume label</description>
+                        <posx>0</posx>
+                        <posy>27</posy>
+                        <width>750</width>
+                        <height>100</height>
+                        <label>$INFO[Player.Volume]</label>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>banner</textcolor>
+                        <scroll>false</scroll>
+                        <align>right</align>
+                    </control>
                 </control>
-                <control type="label">
-                    <description>Line 1</description>
-                    <posx>0</posx>
-                    <posy>27</posy>
-                    <width>750</width>
-                    <height>100</height>
-                    <label>$INFO[Player.Volume]</label>
-                    <font>Font-Condensed-S36</font>
-                    <textcolor>nowplay</textcolor>
-                    <scroll>false</scroll>
-                    <align>right</align>
+                 <control type="group">
+                    <visible>Player.Passthrough</visible>
+                    <control type="label">
+                        <description>Passthrough label</description>
+                        <posx>0</posx>
+                        <posy>27</posy>
+                        <width>750</width>
+                        <height>100</height>
+                        <label>$LOCALIZE[29802]</label>
+                        <font>Font-Condensed-S36</font>
+                        <textcolor>banner</textcolor>
+                        <scroll>false</scroll>
+                        <align>right</align>
+                    </control>
+                    <control type="image">
+                        <posx>-4</posx>
+                        <posy>27</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>dialogs/search/loading.png</texture>
+                        <animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="Window.IsVisible(volumebar) + Player.Passthrough">Conditional</animation>
+                    </control>
                 </control>
             </control>
         </control>
@@ -62,6 +92,52 @@
                 <texture>overlays/volume/back-vf.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>-->
+			<control type="group">
+                <visible>!Player.Passthrough</visible>
+                <!--<control type="image">
+                    <posx>1570</posx>
+                    <posy>0</posy>
+                    <width>305</width>
+                    <height>194</height>
+                    <texture>overlays/volume/back-vf.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>-->
+                <control type="label">
+                    <description>Volume label</description>
+                    <posx>1829</posx>
+                    <posy>22</posy>
+                   <width>150</width>
+                    <height>34</height>
+                    <label>$INFO[Player.Volume]</label>
+                    <font>Font-Condensed-S34</font>
+                    <textcolor>aawhite</textcolor>
+                    <align>right</align>
+                    <scroll>No</scroll>
+                </control>
+            </control>
+            <control type="group">
+                <visible>Player.Passthrough</visible>
+                <!--<control type="image">
+                    <posx>1320</posx>
+                    <posy>0</posy>
+                    <width>555</width>
+                    <height>194</height>
+                    <texture border="150,90,150,90">overlays/volume/back-vf.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>-->
+                <control type="label">
+                    <description>Volume label</description>
+                    <posx>1829</posx>
+                    <posy>22</posy>
+                    <width>345</width>
+                    <height>34</height>
+                    <label>$LOCALIZE[29802]</label>
+                    <font>Font-Condensed-S34</font>
+                    <textcolor>aawhite</textcolor>
+                    <align>right</align>
+                    <scroll>No</scroll>
+                </control>
+			</control>
             <control type="image">
                 <description>Volume image</description>
                 <posx>1817</posx>
@@ -69,18 +145,6 @@
                 <width>100</width>
                 <height>100</height>
                 <texture>overlays/volume/volume-vf.png</texture>
-            </control>
-            <control type="label">
-                <description>Volume label</description>
-                <posx>1829</posx>
-                    <posy>22</posy>
-                <width>150</width>
-                <height>34</height>
-                <label>$INFO[Player.Volume]</label>
-                <font>Font-Condensed-S34</font>
-                <textcolor>aawhite</textcolor>
-                <align>right</align>
-                <scroll>No</scroll>
             </control>
         </control>
     </controls>

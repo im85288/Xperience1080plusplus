@@ -25,7 +25,7 @@
     	        <width>1214</width>
     	        <label>$LOCALIZE[19142]</label>
     	        <font>Font-Condensed-S34</font>
-    	        <textcolor>ddwhite</textcolor>
+    	        <textcolor>ddwhite2</textcolor>
     	        <align>center</align>
     	    </control>
     	    <control type="group">

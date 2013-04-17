@@ -27,7 +27,7 @@
     	        <width>1214</width>
     	        <label>$LOCALIZE[19199] • $LOCALIZE[19023]</label>
     	        <font>Font-Condensed-S34</font>
-    	        <textcolor>ddwhite</textcolor>
+    	        <textcolor>ddwhite2</textcolor>
     	        <align>center</align>
     	    </control>
     	    <control type="group" id="8000">
@@ -489,7 +489,6 @@
             	    	    <textoffsetx>20</textoffsetx>
             	    	    <label>$LOCALIZE[42185]</label>
             	    	    <textcolor>FF585858</textcolor>
-            	    	    20FFFFFF
             	    	    <font>Font-Condensed-S30</font>
             	    	</control>
             	    	<control type="image">

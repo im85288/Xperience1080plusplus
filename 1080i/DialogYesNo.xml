@@ -72,7 +72,7 @@
                     <height>22</height>
                     <font>Font-Condensed-S34</font>
                     <align>center</align>
-                    <textcolor>77FFFFFF</textcolor>
+                    <textcolor>77white2</textcolor>
                     <animation effect="slide" end="0,25" time="0" condition="IsEmpty(Control.GetLabel(2))">Conditional</animation>
                     <animation effect="slide" end="0,25" time="0" condition="IsEmpty(Control.GetLabel(3))">Conditional</animation>
                     <animation effect="slide" end="0,25" time="0" condition="IsEmpty(Control.GetLabel(4))">Conditional</animation>
@@ -85,7 +85,7 @@
                     <font>Font-Condensed-S45</font>
                     <align>center</align>
                     <label>-</label>
-                    <textcolor>white</textcolor>
+                    <textcolor>bbwhite2</textcolor>
                     <animation effect="slide" end="0,25" time="0" condition="IsEmpty(Control.GetLabel(3))">Conditional</animation>
                     <animation effect="slide" end="0,25" time="0" condition="IsEmpty(Control.GetLabel(4))">Conditional</animation>
                 </control>
@@ -97,7 +97,7 @@
                     <font>Font-Condensed-S45</font>
                     <align>center</align>
                     <label>-</label>
-                    <textcolor>white</textcolor>
+                    <textcolor>bbwhite2</textcolor>
                     <animation effect="slide" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(2))">Conditional</animation>
                     <animation effect="slide" end="0,25" time="0" condition="IsEmpty(Control.GetLabel(4))">Conditional</animation>
                 </control>
@@ -109,7 +109,7 @@
                     <font>Font-Condensed-S45</font>
                     <align>center</align>
                     <label>-</label>
-                    <textcolor>white</textcolor>
+                    <textcolor>bbwhite2</textcolor>
                     <animation effect="slide" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(2))">Conditional</animation>
                     <animation effect="slide" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(3))">Conditional</animation>
                 </control>

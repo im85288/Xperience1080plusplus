@@ -24,7 +24,7 @@
                 <posy>0</posy>
                 <width>750</width>
                 <height>120</height>
-                <label>font=Font-Condensed-S36,textColor=nowpla,alignment=right+centery</label>
+                <label>font=Font-Condensed-S36,textColor=nowplay,alignment=right+centery</label>
                 <scroll>false</scroll>
             </control>
             <control type="label" id="2003">
