@@ -108,7 +108,7 @@
     <include name="HomeLabel">
         <width min="0" max="500">auto</width>
         <height>100</height>
-        <font>Font-Condensed-S36</font>
+        <font>Font-Condensed-S40</font>
         <textcolor>bbwhite2</textcolor>
         <focusedcolor>bbwhite2</focusedcolor>
         <!--menushadow-->
@@ -265,8 +265,8 @@
                 <description>Search</description>
                 <posx>0</posx>
                 <posy>12</posy>
-                <width>30</width>
-                <height>30</height>
+                <width>32</width>
+                <height>32</height>
                 <texture>windows/home/search.png</texture>
                 <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
                 <visible>System.HasAddon(script.globalsearch)</visible>
@@ -386,8 +386,8 @@
                 <description>Settings</description>
                 <posx>0</posx>
                 <posy>12</posy>
-                <width>30</width>
-                <height>30</height>
+                <width>32</width>
+                <height>32</height>
                 <texture>windows/home/settings.png</texture>
                 <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8)">Conditional</animation>
             </control>
