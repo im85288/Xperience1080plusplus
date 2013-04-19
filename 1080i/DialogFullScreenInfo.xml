@@ -123,7 +123,7 @@
 								<posy>809</posy>
 								<align>right</align>
 								
-								<control type="image">
+								<!--<control type="image">
 									<posy>0</posy>
 									<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
 									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
@@ -174,7 +174,40 @@
                                     <height>56</height>
                                 	<colordiffuse>bbwhite</colordiffuse>
                                 	<texture>$INFO[VideoPlayer.AudioChannels,flagsosd/channels/,.png]</texture>
-                            	</control>
+                            	</control>-->
+								
+								<control type="grouplist">
+								 	<include>visiblehidefadeinfo</include>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+									<width>1200</width>
+									<height>600</height>
+									<align>left</align>
+									<itemgap>0</itemgap>
+									<orientation>vertical</orientation>
+									<visible>!VideoPlayer.Content(tvshows)</visible>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+									<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+									<include>InfoFlagsOSD</include>
+								</control>
+								<control type="grouplist">
+								 	<include>visiblehidefadeinfo</include>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+									<posx>138</posx>
+									<width>1200</width>
+									<height>600</height>
+									<align>left</align>
+									<itemgap>0</itemgap>
+									<orientation>vertical</orientation>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+									<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+									<include>InfoFlagsOSD2</include>
+								</control>
+								
+								
+								
+								
 							</control>
 							
 							<control type="label">
