@@ -30,56 +30,48 @@
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[744]</label>
                 <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
             </control>
             <control type="label">
                 <description>Genres</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[135]</label>
                 <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
             </control>
             <control type="label">
                 <description>Artists</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[133]</label>
                 <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
             </control>
             <control type="label">
                 <description>Albums</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[132]</label>
                 <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
             </control>
             <control type="label">
                 <description>Songs</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[134]</label>
                 <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
             </control>
             <control type="label">
                 <description>Years</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[652]</label>
                 <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
             </control>
             <control type="label">
                 <description>Top 100</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[271]</label>
                 <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(7)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(7)">Conditional</animation>
             </control>
             <control type="label">
                 <description>Playlists</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[136]</label>
                 <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(8)">Conditional</animation>
             </control>
             <control type="image">
                 <posx>0</posx>
@@ -88,7 +80,6 @@
                 <height>38</height>
                 <texture>windows/home/update-library.png</texture>
                 <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
-                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="16,50" condition="!Container(3).HasFocus(9)">Conditional</animation>
                 <animation effect="rotate" center="16,34" start="360" end="0" time="1000" loop="true" condition="Library.IsScanningMusic">Conditional</animation>
             </control>
         </control>
