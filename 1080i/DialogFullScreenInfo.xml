@@ -191,9 +191,10 @@
 									<include>InfoFlagsOSD</include>
 								</control>
 								<control type="grouplist">
-								 	<include>visiblehidefadeinfo</include>
+								 	<colordiffuse>ff000000</colordiffuse>
+									<include>visiblehidefadeinfo</include>
 									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
-									<posx>138</posx>
+									<posx>135</posx>
 									<width>1200</width>
 									<height>600</height>
 									<align>left</align>

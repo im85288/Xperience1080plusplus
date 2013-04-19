@@ -90,20 +90,20 @@
         <height>56</height>
     </include>
     <include name="ResDimensionsSmall">
-        <width>124</width>
+        <width>122</width>
         <height>56</height>
     </include>
     <include name="aCodecDimensionsSmall">
-        <width>97</width>
+        <width>122</width>
         <height>56</height>
     </include>
     <include name="vCodecDimensionsSmall">
-        <width>121</width>
+        <width>122</width>
         <height>56</height>
     </include>
     
     <include name="MPAADimensionsSmall">
-        <width>121</width>
+        <width>122</width>
         <height>56</height>
     </include>
     
@@ -217,7 +217,7 @@
         <control type="group">
             <width>121</width>
             <visible>[VideoPlayer.Content(tvshows) | VideoPlayer.Content(seasons) | VideoPlayer.Content(episodes)] + !IsEmpty(VideoPlayer.MPAA)</visible>
-            <include>TVRatingFlagsSmall</include>
+            <include>TVRatingFlagsSmallOSD</include>
         </control>
     </include>
 	
@@ -234,11 +234,24 @@
             <texture>$INFO[ListItem.MPAA,flags/mpaa/tv/medium/,.png]</texture>
         </control>
     </include>
+	
+	<include name="TVRatingFlagsOSD">
+        <control type="image">
+            <include>TVRatingFlagLayout</include>
+            <texture>$INFO[VideoPlayer.MPAA,flagsosd/mpaa/tv/medium/,.png]</texture>
+        </control>
+    </include>
     
     <include name="TVRatingFlagsSmall">
         <control type="image">
             <include>MPAADimensionsSmall</include>
             <texture>$INFO[ListItem.MPAA,flags/mpaa/tv/small/,.png]</texture>
+        </control>
+    </include>
+	<include name="TVRatingFlagsSmallOSD">
+        <control type="image">
+            <include>MPAADimensionsSmall</include>
+            <texture>$INFO[VideoPlayer.MPAA,flagsosd/mpaa/tv/small/,.png]</texture>
         </control>
     </include>
 </includes>
