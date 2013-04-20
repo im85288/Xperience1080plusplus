@@ -100,7 +100,7 @@
                 <posy>0</posy>
                 <width>702</width>
                 <height>194</height>
-                <texture>overlays/notification/back-vf.png</texture>
+                <texture>overlays/notification/back-vf..png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="label">
