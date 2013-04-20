@@ -100,6 +100,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
+				<visible>Skin.HasSetting(OSDClearlogo)</visible>
 			</control>
 			
 			<control type="group">

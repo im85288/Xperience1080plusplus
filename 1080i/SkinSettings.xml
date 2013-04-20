@@ -8,6 +8,7 @@
     <onload condition="IsEmpty(Skin.String(BackdropMultiTime))">Skin.SetString(BackdropMultiTime,15sec)</onload>
     <onload condition="IsEmpty(Skin.String(OSDTVShowsImage))">Skin.SetString(OSDTVShowsImage,poster)</onload>
     <onload condition="IsEmpty(Skin.String(HomeScreen))">Skin.SetString(HomeScreen,metro)</onload>
+	<onload condition="IsEmpty(Skin.String(OSDClearlogo))">Skin.SetString(OSDClearlogo,clearlogo)</onload>
     <controls>
         <include>CommonSettingsItems</include>
         <include>SettingsHeader</include>
@@ -877,6 +878,13 @@
                         <label2 fallback="US">[COLOR=SettingsBlue]$VAR[MovieMPAALangLabel][/COLOR]</label2>
                         <onclick>ActivateWindow(3007)</onclick>
                     </control>
+					<control type="radiobutton" id="8007">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(OSDClearlogo)</selected>
+                    <onclick>Skin.ToggleSetting(OSDClearlogo)</onclick>
+                    <label>Activate OSD Clearlogo</label>
+                </control>
 
             </control>
 
@@ -949,7 +957,6 @@
                     <onclick>Skin.ToggleSetting(OSDDefaultSubtitleButton.Enabled)</onclick>
                     <enable>!IsEmpty(Skin.String(SubtitleScript_Path))</enable>
                     <label>$LOCALIZE[41242]</label>
-                </control>
                 <control type="group" id="8007">
                     <description>Fake spin control</description>
                     <width>1210</width>
@@ -962,15 +969,9 @@
                         <texture border="90,3,90,3">views/list/other/separator.png</texture>
                         <visible>!ControlGroup(8007).HasFocus</visible>
                     </control>
-                    <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1210</width>
-                        <height>77</height>
-                        <texture border="150,3,150,3">windows/settings/images/right-focus.png</texture>
-                        <aspectratio>stretch</aspectratio>
-                        <visible>ControlGroup(8007).HasFocus</visible>
-                    </control>
+				</control>
+				
+                    
                    <!--<control type="button" id="80071">
                         <posx>1104</posx>
                         <posy>8</posy>
@@ -1031,6 +1032,7 @@
                         <label2>$INFO[Skin.String(OSDTVShowsImage)]</label2>
                         <visible>ControlGroup(8007).HasFocus</visible>
                     </control>-->
+					
                 </control>
             </control>
             
