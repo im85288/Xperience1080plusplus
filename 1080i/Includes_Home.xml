@@ -270,6 +270,10 @@
                 <texture>windows/home/search.png</texture>
                 <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
                 <visible>System.HasAddon(script.globalsearch)</visible>
+				<animation type="Focus" reversible="true" condition="!Container(20).HasFocus(1)">
+					<effect type="zoom" end="115" time="75" tween="sine" easing="out" center="auto" />
+					<effect type="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" />
+				</animation>
             </control>
             <control type="label">
                 <description>Live TV</description>
@@ -279,16 +283,16 @@
                 <visible>System.GetBool(pvrmanager.enabled)</visible>
             </control>
             <control type="group">
-                <posx>0</posx>
-                <posy>0</posy>
+                <posx>15</posx>
+                <posy>-3</posy>
                 <width>-50</width>
                 <height>100</height>
                 <visible>!Skin.HasSetting(HomeHome) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
-                    <posx>-25</posx>
+                    <posx>20</posx>
                     <posy>12</posy>
-                    <width>19</width>
-                    <height>38</height>
+                    <width>16</width>
+                    <height>33</height>
                     <texture>windows/home/submenu-arrow.png</texture>
                     <include>visiblehidefadeinfo</include>
                     <animation effect="fade"  start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(525) + Container(20).HasFocus(2)]">Conditional</animation>
@@ -302,16 +306,16 @@
                 <visible>!Skin.HasSetting(HomeHome)</visible>
             </control>
             <control type="group">
-                <posx>0</posx>
-                <posy>0</posy>
+                <posx>15</posx>
+                <posy>-3</posy>
                 <width>-50</width>
                 <height>100</height>
                 <visible>!Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
-                    <posx>-25</posx>
+                    <posx>20</posx>
                     <posy>12</posy>
-                    <width>19</width>
-                    <height>38</height>
+                    <width>16</width>
+                    <height>33</height>
                     <texture>windows/home/submenu-arrow.png</texture>
                     <include>visiblehidefadeinfo</include>
                     <animation effect="fade"  start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(225) + Container(20).HasFocus(3)]">Conditional</animation>
@@ -325,16 +329,16 @@
                 <visible>!Skin.HasSetting(HomeMovies)</visible>
             </control>
             <control type="group">
-                <posx>0</posx>
-                <posy>0</posy>
+                <posx>15</posx>
+                <posy>-3</posy>
                 <width>-50</width>
                 <height>100</height>
                 <visible>!Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
-                    <posx>-25</posx>
+                    <posx>20</posx>
                     <posy>12</posy>
-                    <width>19</width>
-                    <height>38</height>
+                    <width>16</width>
+                    <height>33</height>
                     <texture>windows/home/submenu-arrow.png</texture>
                     <animation effect="fade"  start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(325) + Container(20).HasFocus(4)]">Conditional</animation>
                 </control>
@@ -347,16 +351,16 @@
                 <visible>!Skin.HasSetting(HomeTVShows)</visible>
             </control>
             <control type="group">
-                <posx>0</posx>
-                <posy>0</posy>
+                <posx>15</posx>
+                <posy>-3</posy>
                 <width>-50</width>
                 <height>100</height>
                 <visible>!Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
-                    <posx>-25</posx>
+                    <posx>20</posx>
                     <posy>12</posy>
-                    <width>19</width>
-                    <height>38</height>
+                    <width>16</width>
+                    <height>33</height>
                     <texture>windows/home/submenu-arrow.png</texture>
                     <animation effect="fade"  start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(425) + Container(20).HasFocus(5)]">Conditional</animation>
                 </control>
