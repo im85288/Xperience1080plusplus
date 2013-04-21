@@ -8,7 +8,6 @@
     <onload condition="IsEmpty(Skin.String(BackdropMultiTime))">Skin.SetString(BackdropMultiTime,15sec)</onload>
     <onload condition="IsEmpty(Skin.String(OSDTVShowsImage))">Skin.SetString(OSDTVShowsImage,poster)</onload>
     <onload condition="IsEmpty(Skin.String(HomeScreen))">Skin.SetString(HomeScreen,metro)</onload>
-	<onload condition="IsEmpty(Skin.String(OSDClearlogo))">Skin.SetString(OSDClearlogo,clearlogo)</onload>
     <controls>
         <include>CommonSettingsItems</include>
         <include>SettingsHeader</include>
@@ -878,14 +877,20 @@
                         <label2 fallback="US">[COLOR=SettingsBlue]$VAR[MovieMPAALangLabel][/COLOR]</label2>
                         <onclick>ActivateWindow(3007)</onclick>
                     </control>
-					<control type="radiobutton" id="8007">
+					<control type="radiobutton" id="3007">
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
                     <selected>Skin.HasSetting(OSDClearlogo)</selected>
                     <onclick>Skin.ToggleSetting(OSDClearlogo)</onclick>
                     <label>Activate OSD Clearlogo</label>
                 </control>
-
+				<control type="radiobutton" id="3008">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(BWatched)</selected>
+                    <onclick>Skin.ToggleSetting(BWatched)</onclick>
+                    <label>Use Blacks Watched Indicators</label>
+                </control>
             </control>
 
             <!-- ============ --> 
