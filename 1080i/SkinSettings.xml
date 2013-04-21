@@ -186,7 +186,7 @@
                     <selected>Skin.HasSetting(BackgroundOpacity)</selected>
                     <onclick condition="!Skin.HasSetting(BackgroundOpacity)">Skin.Reset(HomeBackgroundOpacity)</onclick>
                     <onclick>Skin.ToggleSetting(BackgroundOpacity)</onclick>
-                    <label>Use dark background</label>
+                    <label>Use more transparent Background</label>
                 </control>
                 <control type="radiobutton" id="1004">
                     <width>1210</width>
