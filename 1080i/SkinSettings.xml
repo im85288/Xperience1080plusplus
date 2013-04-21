@@ -891,6 +891,14 @@
                     <onclick>Skin.ToggleSetting(BWatched)</onclick>
                     <label>Use Blacks Watched Indicators</label>
                 </control>
+				<control type="radiobutton" id="3009">
+                        <width>1210</width>
+                        <include>SettingsCategoryRadioButtonVars</include>
+                        <selected>Skin.HasSetting(MovieInformation.PlayTrailer)</selected>
+                        <onclick>Skin.ToggleSetting(MovieInformation.PlayTrailer)</onclick>
+                        <label>$LOCALIZE[41202]</label>
+                    </control>
+
             </control>
 
             <!-- ============ --> 
