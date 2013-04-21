@@ -1,7 +1,8 @@
 <window id="3003">
     <defaultcontrol always="true">51</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <onunload>ClearProperty(fanart_image,home)</onunload>
+	<onload condition="Skin.HasSetting(MovieInformation.PlayTrailer)">AlarmClock(PlayTrailer,PlayMedia($INFO[ListItem.Trailer],false,1),00:01,silent)</onload>
+	<onunload>ClearProperty(fanart_image,home)</onunload>
     <controls>
     
         <control type="button" id="51">
