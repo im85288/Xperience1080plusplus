@@ -3,14 +3,14 @@
 	<zorder>3</zorder>
 	<controls>
 	    <control type="group">
-	        <include>NowPlayingFullscreen</include>
+	        <include>NowPlayingFullscreen2</include>
 	        <include>FullscreenDimensions</include>
 	        <animation effect="slide" end="0,42" time="0" condition="!Window.IsActive(videoosd)">Conditional</animation>
 	        <control type="image">
-	            <posx>-320</posx>
-	            <posy>-171</posy>
+                <posx>-420</posx>
+                <posy>-149</posy>
 	            <width>1520</width>
-	            <height>1339</height>
+	            <height>1377</height>
 	            <texture border="610,340,610,340">osd/fullscreen/osdsettings.png</texture>
 	            <aspectratio>stretch</aspectratio>
 	        </control>
@@ -19,8 +19,8 @@
 	            <include>visiblehidefadeinfo</include>
 	            <control type="label">
 	                <description>Header</description>
-	                <posx>100</posx>
-	                <posy>73</posy>
+                    <posx>0</posx>
+                    <posy>95</posy>
 	                <width>680</width>
 	                <height>38</height>
 	                <align>center</align>
@@ -31,8 +31,8 @@
 	                66000000
 	            </control>
 	            <control type="list" id="11">
-	                <posx>100</posx>
-	                <posy>124</posy>
+                    <posy>152</posy>
+                    <width>680</width>
 	                <width>680</width>
 	                <height>761</height>
 	                <onleft>60</onleft>
@@ -138,7 +138,7 @@
 	                        <posy>0</posy>
 	                        <width>680</width>
 	                        <height>75</height>
-	                        <texture border="150,1,150,1">views/other/focus.png</texture>
+	                        <texture border="150,1,150,1">views/other/yellow-focus.png</texture>
 	                        <aspectratio>stretch</aspectratio>
 	                        <visible>Control.HasFocus(11)</visible>
 	                        <include>visiblehidefadeinfo</include>
@@ -238,8 +238,8 @@
 	            </control>
 	            <control type="scrollbar" id="60">
 	                <description>Scrollbar</description>
-	                <posx>759</posx>
-	                <posy>134</posy>
+                    <posx>656</posx>
+                    <posy>178</posy>
 	                <width>11</width>
 	                <height>741</height>
 	                <onleft>11</onleft>
@@ -251,8 +251,8 @@
 	                <animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(61)">Conditional</animation>
 	            </control>
 	            <control type="label">
-	                <posx>750</posx>
-	                <posy>861</posy>
+                    <posx>645</posx>
+                    <posy>905</posy>
 	                <width>800</width>
 	                <height>100</height>
 	                <font>Font-Condensed-S30</font>

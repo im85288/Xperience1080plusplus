@@ -140,6 +140,7 @@
                         <texturenofocus>buttons/spinctrl/arrow-light-up-nf.png</texturenofocus>
                         <onclick>RunScript(special://skin/extras/scripts/groupListMove.py,Up,9,8005)</onclick>
                     </control>
+					
                 </control>
                 <control type="button" id="13">
                     <width>620</width>
@@ -1867,20 +1868,20 @@
             <animation effect="slide" end="0,42" time="0" condition="!Window.IsActive(videoosd)">Conditional</animation>
             <control type="label">
                 <description>Header</description>
-                <posx>100</posx>
-                <posy>73</posy>
+                    <posx>0</posx>
+                    <posy>95</posy>
                 <width>680</width>
                 <height>38</height>
                 <align>center</align>
                 <textoffsetx>30</textoffsetx>
                 <label>$INFO[ListItem.Title]</label>
                 <font>Font-Condensed-S34</font>
-                <textcolor>bbwhite2</textcolor>
+                <textcolor>bbwhite</textcolor>
                 66000000
             </control>
             <control type="group">
-                <posx>100</posx>
-                <posy>124</posy>
+                <posx>0</posx>
+                <posy>159</posy>
                 <control type="button">
                 	<description>Time</description>
                 	<posx>0</posx>
@@ -1952,8 +1953,8 @@
             </control>
             <control type="textbox" id="400">
             	<description>Plot value</description>
-            	<posx>130</posx>
-            	<posy>422</posy>
+            	<posx>30</posx>
+            	<posy>457</posy>
             	<width>620</width>
             	<height>415</height>
             	<font>Font-Condensed-S34</font>
@@ -1965,8 +1966,8 @@
             </control>
             <control type="scrollbar" id="60">
                 <description>Scrollbar</description>
-                <posx>759</posx>
-                <posy>422</posy>
+                <posx>159</posx>
+                <posy>457</posy>
                 <width>11</width>
                 <height>415</height>
                 <onleft>8000</onleft>
@@ -1980,8 +1981,8 @@
                 <animation effect="fade" start="30" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">Conditional</animation>
             </control>
             <control type="group" id="8000">
-                <posx>100</posx>
-                <posy>840</posy>
+                <posx>0</posx>
+                <posy>905</posy>
                 <defaultcontrol>5</defaultcontrol>
                 <control type="button" id="7">
                     <description>Select</description>
