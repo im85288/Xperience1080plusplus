@@ -173,6 +173,15 @@
                     <enable>!Skin.HasSetting(HomeWeather)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2204)">Conditional</animation>
                 </control>
+                <control type="radiobutton" id="2205">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeAppsTiles)</selected>
+                    <onclick>Skin.ToggleSetting(HomeAppsTiles)</onclick>
+                    <label>...App-Tiles to grey</label>
+                    <enable>!Skin.HasSetting(HomePrograms)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2205)">Conditional</animation>
+                </control>
             </control>
             
           <!-- custom home items extras -->
