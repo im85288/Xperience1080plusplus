@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <strings>   
     <!-- Custom_Settings.xml -->
     <!-- From 41100 to 41299 -->
@@ -187,7 +187,7 @@
     <!-- From 41500 to 41599 -->
     <string id="41504">Apps</string>
     <string id="41507">Energie</string>
-    <string id="41524">Startseite</string>
+    <string id="41524">Start</string>
     <string id="41525">durchsuche XBMC nach</string>
     <string id="41550">Im Rampenlicht</string>
     <string id="41551">Laufende Serien</string>
