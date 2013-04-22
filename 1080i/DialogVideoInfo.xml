@@ -3,7 +3,7 @@
     <onload condition="System.HasAddon(script.videolanguage)">RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID])</onload>
     <onload>SetProperty(fanart_image,$INFO[ListItem.Art(fanart)],home)</onload>
     <onunload>ClearProperty(fanart_image,home)</onunload>
-    <onload condition="Skin.HasSetting(MovieInformation.PlayTrailer)">AlarmClock(PlayTrailer,PlayMedia($INFO[ListItem.Trailer],false,1),00:01,silent)</onload>
+    <onload condition="Skin.HasSetting(MovieInformation.PlayTrailer) + !IntegerGreaterThan(ListItem.PlayCount,0)">AlarmClock(PlayTrailer,PlayMedia($INFO[ListItem.Trailer],false,1),00:01,silent)</onload>
 	<onload condition="Skin.HasSetting(ExtraFanart.Enabled)">SetProperty(extrafanart,.)</onload>
     <onload condition="Skin.HasSetting(ExtraFanart.Enabled)">SetProperty(extrafanartshows,.)</onload>
     <onload condition="Skin.HasSetting(ExtraFanart.Enabled)">SetProperty(extrafanartepisodes,.)</onload>
