@@ -596,22 +596,6 @@
                         <height>150</height>
                         <texture>windows/home/item-shadow.png</texture>
                     </control>
-                    <control type="image">
-                        <posx>-21</posx>
-                        <posy>202</posy>
-                        <width>1291</width>
-                        <height>168</height>
-                        <texture border="40">windows/home/tile-fo.png</texture>
-                        <animation type="Visible">
-                            <effect type="zoom" start="98" end="100" time="200" tween="sine" easing="inout" center="auto" />
-                            <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                        </animation>
-                        <animation type="Hidden">
-                            <effect type="zoom" start="100" end="98" time="200" tween="sine" easing="inout" center="auto" />
-                            <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                        </animation>
-                        <visible>Control.HasFocus(101)</visible>
-                    </control>
                     <control type="group">
                         <control type="group">
                             <animation type="Conditional" condition="!ControlGroup(150).HasFocus">
@@ -678,6 +662,20 @@
                                     <textcolor>aawhite</textcolor>
                                 </control>
                             </control>
+                    <control type="image">
+                        <posx>-21</posx>
+                        <posy>202</posy>
+                        <width>1291</width>
+                        <height>168</height>
+                        <texture border="40">windows/home/tile-fo.png</texture>
+                        <animation type="Visible">
+                            <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                        </animation>
+                        <animation type="Hidden">
+                            <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                        </animation>
+                        <visible>Control.HasFocus(101)</visible>
+                    </control>
                         </control>
                         <control type="button" id="101">
                             <onleft>RunScript(special://skin/extras/scripts/setClearProperty.py,BounceLeft)</onleft>
@@ -839,21 +837,6 @@
                         </itemlayout>
                         <focusedlayout width="289" height="289">
                             <control type="group">
-                                <control type="image">
-                                    <posx>3</posx>
-                                    <posy>3</posy>
-                                    <width>325</width>
-                                    <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
-                                    <animation type="Focus">
-                                        <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                                    </animation>
-                                    <animation type="Unfocus">
-                                        <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                                    </animation>
-                                </control>
                                 <control type="group">
                                     <animation type="Focus">
                                         <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -908,6 +891,19 @@
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
                                     </control>
+                                <control type="image">
+                                    <posx>3</posx>
+                                    <posy>3</posy>
+                                    <width>325</width>
+                                    <height>325</height>
+                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                </control>
                                 </control>
                             </control>
                         </focusedlayout>
@@ -1803,21 +1799,6 @@
                         </itemlayout>
                         <focusedlayout width="289" height="289">
                             <control type="group">
-                                <control type="image">
-                                    <posx>3</posx>
-                                    <posy>3</posy>
-                                    <width>325</width>
-                                    <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
-                                    <animation type="Focus">
-                                        <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                                    </animation>
-                                    <animation type="Unfocus">
-                                        <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                                    </animation>
-                                </control>
                                 <control type="group">
                                     <animation type="Focus">
                                         <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -1872,6 +1853,19 @@
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
                                     </control>
+                                <control type="image">
+                                    <posx>3</posx>
+                                    <posy>3</posy>
+                                    <width>325</width>
+                                    <height>325</height>
+                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                </control>
                                 </control>
                             </control>
                         </focusedlayout>
@@ -2346,21 +2340,6 @@
                         </itemlayout>
                         <focusedlayout width="289" height="289">
                             <control type="group">
-                                <control type="image">
-                                    <posx>3</posx>
-                                    <posy>3</posy>
-                                    <width>325</width>
-                                    <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
-                                    <animation type="Focus">
-                                        <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                                    </animation>
-                                    <animation type="Unfocus">
-                                        <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                                    </animation>
-                                </control>
                                 <control type="group">
                                     <animation type="Focus">
                                         <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -2419,6 +2398,19 @@
                                         <textoffsetx>20</textoffsetx>
                                         <visible>!IsEmpty(ListItem.Label2)</visible>
                                     </control>
+                                <control type="image">
+                                    <posx>3</posx>
+                                    <posy>3</posy>
+                                    <width>325</width>
+                                    <height>325</height>
+                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                </control>
                                 </control>
                             </control>
                         </focusedlayout>
@@ -2535,21 +2527,6 @@
                         </itemlayout>
                         <focusedlayout width="289" height="289">
                             <control type="group">
-                                <control type="image">
-                                    <posx>3</posx>
-                                    <posy>3</posy>
-                                    <width>325</width>
-                                    <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
-                                    <animation type="Focus">
-                                        <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                                    </animation>
-                                    <animation type="Unfocus">
-                                        <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                                    </animation>
-                                </control>
                                 <control type="group">
                                     <animation type="Focus">
                                         <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -2629,6 +2606,19 @@
                                             <textoffsetx>20</textoffsetx>
                                         </control>
                                     </control>
+                                <control type="image">
+                                    <posx>3</posx>
+                                    <posy>3</posy>
+                                    <width>325</width>
+                                    <height>325</height>
+                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                </control>
                                 </control>
                             </control>
                         </focusedlayout>
@@ -3154,21 +3144,6 @@
                         </itemlayout>
                         <focusedlayout width="289" height="289">
                             <control type="group">
-                                <control type="image">
-                                    <posx>3</posx>
-                                    <posy>3</posy>
-                                    <width>325</width>
-                                    <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
-                                    <animation type="Focus">
-                                        <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                                    </animation>
-                                    <animation type="Unfocus">
-                                        <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                                    </animation>
-                                </control>
                                 <control type="group">
                                     <animation type="Focus">
                                         <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -3227,6 +3202,19 @@
                                         <textoffsetx>20</textoffsetx>
                                         <visible>!IsEmpty(ListItem.Label2)</visible>
                                     </control>
+                                <control type="image">
+                                    <posx>3</posx>
+                                    <posy>3</posy>
+                                    <width>325</width>
+                                    <height>325</height>
+                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                </control>
                                 </control>
                             </control>
                         </focusedlayout>
@@ -3342,21 +3330,6 @@
                         </itemlayout>
                         <focusedlayout width="289" height="289">
                             <control type="group">
-                                <control type="image">
-                                    <posx>3</posx>
-                                    <posy>3</posy>
-                                    <width>325</width>
-                                    <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
-                                    <animation type="Focus">
-                                        <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                                    </animation>
-                                    <animation type="Unfocus">
-                                        <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                                    </animation>
-                                </control>
                                 <control type="group">
                                     <animation type="Focus">
                                         <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -3435,6 +3408,19 @@
                                             <aligny>center</aligny>
                                             <textoffsetx>20</textoffsetx>
                                         </control>
+                                <control type="image">
+                                    <posx>3</posx>
+                                    <posy>3</posy>
+                                    <width>325</width>
+                                    <height>325</height>
+                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                </control>
                                     </control>
                                 </control>
                             </control>
@@ -4158,21 +4144,6 @@
                         </itemlayout>
                         <focusedlayout width="289" height="289">
                             <control type="group">
-                                <control type="image">
-                                    <posx>3</posx>
-                                    <posy>3</posy>
-                                    <width>325</width>
-                                    <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
-                                    <animation type="Focus">
-                                        <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                                    </animation>
-                                    <animation type="Unfocus">
-                                        <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                                    </animation>
-                                </control>
                                 <control type="group">
                                     <animation type="Focus">
                                         <effect type="fade" start="100" end="100" time="200" tween="sine" easing="in" />
@@ -4247,6 +4218,19 @@
                                             <visible>!IsEmpty(ListItem.Label2)</visible>
                                         </control>
                                     </control>
+                                <control type="image">
+                                    <posx>3</posx>
+                                    <posy>3</posy>
+                                    <width>325</width>
+                                    <height>325</height>
+                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                </control>
                                 </control>
                             </control>
                         </focusedlayout>
@@ -4440,21 +4424,6 @@
                         <focusedlayout width="289" height="289">
                             <control type="group">
 							
-                                <control type="image">
-                                    <posx>3</posx>
-                                    <posy>3</posy>
-                                    <width>325</width>
-                                    <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
-                                    <animation type="Focus">
-                                        <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                                    </animation>
-                                    <animation type="Unfocus">
-                                        <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                                    </animation>
-                                </control>
                                 <control type="group">
                                     <animation type="Focus">
                                         <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -4500,7 +4469,6 @@
                                         <visible>!IsEmpty(ListItem.Property(noaddon))</visible>
                                     </control>
                                 </control>
-								
                                 <control type="group">
                                     <animation type="Focus">
                                         <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -4557,6 +4525,19 @@
                                             <textoffsetx>20</textoffsetx>
                                         </control>
                                     </control>
+                                </control>
+                                <control type="image">
+                                    <posx>3</posx>
+                                    <posy>3</posy>
+                                    <width>325</width>
+                                    <height>325</height>
+                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
                                 </control>
                             </control>
                         </focusedlayout>
@@ -4776,21 +4757,6 @@
                         <focusedlayout width="289" height="289">
                             <control type="group">
                             
-                                <control type="image">
-                                    <posx>3</posx>
-                                    <posy>3</posy>
-                                    <width>325</width>
-                                    <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
-                                    <animation type="Focus">
-                                        <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                                    </animation>
-                                    <animation type="Unfocus">
-                                        <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                                    </animation>
-                                </control>
 
                                 <control type="group">
                                     <animation type="Focus">
@@ -4862,6 +4828,19 @@
                                             <textoffsetx>20</textoffsetx>
                                         </control>
                                     </control>
+                                <control type="image">
+                                    <posx>3</posx>
+                                    <posy>3</posy>
+                                    <width>325</width>
+                                    <height>325</height>
+                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                </control>
                                 </control>
 
                             </control>
@@ -5689,21 +5668,6 @@
                         </itemlayout>
                         <focusedlayout width="289" height="289">
                             <control type="group">
-                                <control type="image">
-                                    <posx>3</posx>
-                                    <posy>3</posy>
-                                    <width>325</width>
-                                    <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
-                                    <animation type="Focus">
-                                        <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                                    </animation>
-                                    <animation type="Unfocus">
-                                        <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                                    </animation>
-                                </control>
                                 <control type="group">
                                     <animation type="Focus">
                                         <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -5749,6 +5713,19 @@
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
                                     </control>
+                                <control type="image">
+                                    <posx>3</posx>
+                                    <posy>3</posy>
+                                    <width>325</width>
+                                    <height>325</height>
+                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                </control>
                                 </control>
                             </control>
                         </focusedlayout>
@@ -5891,21 +5868,6 @@
                         </itemlayout>
                         <focusedlayout width="252" height="289">
                             <control type="group">
-                                <control type="image">
-                                    <posx>3</posx>
-                                    <posy>3</posy>
-                                    <width>288</width>
-                                    <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
-                                    <animation type="Focus">
-                                        <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                                    </animation>
-                                    <animation type="Unfocus">
-                                        <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
-                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                                    </animation>
-                                </control>
                                 <control type="group">
                                     <animation type="Focus">
                                         <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -5960,6 +5922,19 @@
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
                                     </control>
+                                <control type="image">
+                                    <posx>3</posx>
+                                    <posy>3</posy>
+                                    <width>288</width>
+                                    <height>325</height>
+                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                </control>
                                 </control>
                             </control>
                         </focusedlayout>
