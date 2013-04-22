@@ -6,7 +6,6 @@
     <onload condition="IsEmpty(Skin.String(music.name))">Skin.SetString(music.name,$LOCALIZE[14022])</onload>
     <onload condition="IsEmpty(Skin.String(rss.setting))">Skin.SetString(rss.setting,$LOCALIZE[1223])</onload>
     <onload condition="IsEmpty(Skin.String(BackdropMultiTime))">Skin.SetString(BackdropMultiTime,15sec)</onload>
-    <onload condition="IsEmpty(Skin.String(OSDTVShowsImage))">Skin.SetString(OSDTVShowsImage,poster)</onload>
     <onload condition="IsEmpty(Skin.String(HomeScreen))">Skin.SetString(HomeScreen,metro)</onload>
     <controls>
         <include>CommonSettingsItems</include>
@@ -870,20 +869,6 @@
                     <label> • Download extra fanarts for TV Shows</label>
                     <visible>Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart) + System.HasAddon(script.artwork.downloader)</visible>
                 </control>
-				<control type="button" id="3006">
-                        <width>1210</width>
-                        <include>SettingsCategoryDefaultButtonVars</include>
-                        <label>MPAA Language</label>
-                        <label2 fallback="US">[COLOR=SettingsBlue]$VAR[MovieMPAALangLabel][/COLOR]</label2>
-                        <onclick>ActivateWindow(3007)</onclick>
-                    </control>
-					<control type="radiobutton" id="3007">
-                    <width>1210</width>
-                    <include>SettingsCategoryRadioButtonVars</include>
-                    <selected>Skin.HasSetting(OSDClearlogo)</selected>
-                    <onclick>Skin.ToggleSetting(OSDClearlogo)</onclick>
-                    <label>Activate OSD Clearlogo</label>
-                </control>
 				<control type="radiobutton" id="3008">
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
@@ -898,7 +883,13 @@
                         <onclick>Skin.ToggleSetting(MovieInformation.PlayTrailer)</onclick>
                         <label>$LOCALIZE[41202]</label>
                     </control>
-
+				<control type="button" id="3006">
+                        <width>1210</width>
+                        <include>SettingsCategoryDefaultButtonVars</include>
+                        <label>MPAA Language</label>
+                        <label2 fallback="US">[COLOR=SettingsBlue]$VAR[MovieMPAALangLabel][/COLOR]</label2>
+                        <onclick>ActivateWindow(3007)</onclick>
+                    </control>
             </control>
 
             <!-- ============ --> 
@@ -956,6 +947,13 @@
                     <visible>Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
                     <label> • $LOCALIZE[41105]</label>
                 </control>
+				<control type="radiobutton" id="8009">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(OSDClearlogo)</selected>
+                    <onclick>Skin.ToggleSetting(OSDClearlogo)</onclick>
+                    <label>Activate OSD Clearlogo</label>
+                </control>
                 <control type="radiobutton" id="8005">
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
@@ -970,82 +968,6 @@
                     <onclick>Skin.ToggleSetting(OSDDefaultSubtitleButton.Enabled)</onclick>
                     <enable>!IsEmpty(Skin.String(SubtitleScript_Path))</enable>
                     <label>$LOCALIZE[41242]</label>
-                <control type="group" id="8007">
-                    <description>Fake spin control</description>
-                    <width>1210</width>
-                    <height>77</height>
-                    <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1210</width>
-                        <height>77</height>
-                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
-                        <visible>!ControlGroup(8007).HasFocus</visible>
-                    </control>
-				</control>
-				
-                    
-                   <!--<control type="button" id="80071">
-                        <posx>1104</posx>
-                        <posy>8</posy>
-                        <width>43</width>
-                        <height>60</height>
-                        <onleft>80072</onleft>
-                        <onright>80072</onright>
-                        <onup>8006</onup>
-                        <ondown>1001</ondown>
-                        <texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
-                        <texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>
-                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),poster)">Skin.SetString(OSDTVShowsImage,clearart)</onclick>
-                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),clearlogo)">Skin.SetString(OSDTVShowsImage,poster)</onclick>
-                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),clearart)">Skin.SetString(OSDTVShowsImage,clearlogo)</onclick>
-                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),poster)">Skin.SetString(OSDTVShowsImage,clearart)</onclick>
-                    </control>
-                    <control type="button" id="80072">
-                        <posx>1147</posx>
-                        <posy>8</posy>
-                        <width>43</width>
-                        <height>60</height>
-                        <onleft>80071</onleft>
-                        <onright>80071</onright>
-                        <onup>8006</onup>
-                        <ondown>1001</ondown>
-                        <texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
-                        <texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
-                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),clearlogo)">Skin.SetString(OSDTVShowsImage,clearart)</onclick>
-                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),poster)">Skin.SetString(OSDTVShowsImage,clearlogo)</onclick>
-                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),clearart)">Skin.SetString(OSDTVShowsImage,poster)</onclick>
-                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),clearlogo)">Skin.SetString(OSDTVShowsImage,clearart)</onclick>
-                    </control>
-                    <control type="button">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1120</width>
-                        <height>77</height>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <textoffsetx>35</textoffsetx>
-                        <font>Font-Condensed-S30</font>
-                        <textcolor>96FFFFFF</textcolor>
-                        <label>OSD image for TV Shows (video osd)</label>
-                        <label2>$INFO[Skin.String(OSDTVShowsImage)]</label2>
-                        <visible>!ControlGroup(8007).HasFocus</visible>
-                    </control>
-                    <control type="button">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1120</width>
-                        <height>77</height>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <textoffsetx>35</textoffsetx>
-                        <font>Font-Condensed-S30</font>
-                        <textcolor>white</textcolor>
-                        <label>OSD image for TV Shows (video osd)</label>
-                        <label2>$INFO[Skin.String(OSDTVShowsImage)]</label2>
-                        <visible>ControlGroup(8007).HasFocus</visible>
-                    </control>-->
-					
                 </control>
             </control>
             
