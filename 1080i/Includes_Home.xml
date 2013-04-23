@@ -282,7 +282,7 @@
             <width>1720</width>
             <height>70</height>
             <orientation>horizontal</orientation>
-            <itemgap>80</itemgap>
+            <itemgap>70</itemgap>
             <align>center</align>
             <usecontrolcoords>true</usecontrolcoords>
             <visible>!Window.IsActive(favourites) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))]</visible>
@@ -310,13 +310,13 @@
 				<visible>System.GetBool(pvrmanager.enabled)</visible>
             </control>
             <control type="group">
-                <posx>15</posx>
+                <posx>-25</posx>
                 <posy>-3</posy>
                 <width>-50</width>
                 <height>100</height>
                 <visible>!Skin.HasSetting(HomeHome) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
-                    <posx>10</posx>
+                    <posx>0</posx>
                     <posy>12</posy>
                     <width>16</width>
                     <height>33</height>
@@ -335,13 +335,13 @@
                 <visible>!Skin.HasSetting(HomeHome)</visible>
             </control>
             <control type="group">
-                <posx>15</posx>
+                <posx>-25</posx>
                 <posy>-3</posy>
                 <width>-50</width>
                 <height>100</height>
                 <visible>!Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
-                    <posx>10</posx>
+                    <posx>0</posx>
                     <posy>12</posy>
                     <width>16</width>
                     <height>33</height>
@@ -360,13 +360,13 @@
                 <visible>!Skin.HasSetting(HomeMovies)</visible>
             </control>
             <control type="group">
-                <posx>15</posx>
+                <posx>-25</posx>
                 <posy>-3</posy>
                 <width>-50</width>
                 <height>100</height>
                 <visible>!Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
-                    <posx>10</posx>
+                    <posx>0</posx>
                     <posy>12</posy>
                     <width>16</width>
                     <height>33</height>
@@ -384,13 +384,13 @@
                 <visible>!Skin.HasSetting(HomeTVShows)</visible>
             </control>
             <control type="group">
-                <posx>15</posx>
+                <posx>-25</posx>
                 <posy>-3</posy>
                 <width>-50</width>
                 <height>100</height>
                 <visible>!Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
-                    <posx>10</posx>
+                    <posx>0</posx>
                     <posy>12</posy>
                     <width>16</width>
                     <height>33</height>
