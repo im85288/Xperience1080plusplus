@@ -109,8 +109,8 @@
         <width min="0" max="500">auto</width>
         <height>100</height>
         <font>Font-Condensed-S40</font>
-        <textcolor>bbwhite2</textcolor>
-        <focusedcolor>bbwhite2</focusedcolor>
+        <textcolor>eewhite2</textcolor>
+        <focusedcolor>eewhite2</focusedcolor>
         <!--menushadow-->
         <align>left</align>
         <aligny>top</aligny>
@@ -135,11 +135,36 @@
         </animation>
     </include>
  
+    <include name="HomeDotIndicatorsmall">
+        <posy>0</posy>
+        <width>16</width>
+        <height>16</height>
+        <texture>windows/home/dot-small.png</texture>
+    </include>
+
     <include name="HomeDotIndicator">
         <posy>0</posy>
         <width>16</width>
         <height>16</height>
         <texture>windows/home/dot.png</texture>
+    </include>
+    <include name="HomeDotIndicatorMovies">
+        <posy>0</posy>
+        <width>16</width>
+        <height>16</height>
+        <texture>windows/home/dot-movies.png</texture>
+    </include>
+    <include name="HomeDotIndicatorTVShows">
+        <posy>0</posy>
+        <width>16</width>
+        <height>16</height>
+        <texture>windows/home/dot-tvshows.png</texture>
+    </include>
+    <include name="HomeDotIndicatorMusic">
+        <posy>0</posy>
+        <width>16</width>
+        <height>16</height>
+        <texture>windows/home/dot-music.png</texture>
     </include>
      
     <variable name="HomePictureImageSingle">
@@ -268,8 +293,7 @@
                 <width>32</width>
                 <height>32</height>
 				<texture>windows/home/search.png</texture>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
-				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(101)">Conditional</animation>
+                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(125)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(125)" reversible="false">Conditional</animation>
 				<visible>System.HasAddon(script.globalsearch)</visible>
@@ -279,8 +303,7 @@
                 <description>Live TV</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[41220]</label>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(9)">Conditional</animation>
-				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(901)">Conditional</animation>
+                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(9)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(925)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(925)" reversible="false">Conditional</animation>
                 
@@ -306,8 +329,7 @@
                 <description>Home</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[41524]</label>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
-				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(501) | Control.HasFocus(5021) | Control.HasFocus(5031)">Conditional</animation>
+                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(525)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(525)" reversible="false">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeHome)</visible>
@@ -332,8 +354,7 @@
                 <description>Movies</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[342]</label>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(3)">Conditional</animation>
-				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(201) | Control.HasFocus(2021) | Control.HasFocus(203)">Conditional</animation>
+                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(225)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(225)" reversible="false">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeMovies)</visible>
@@ -357,8 +378,7 @@
                 <description>TV Shows</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[20343]</label>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(4)">Conditional</animation>
-				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(301) | Control.HasFocus(3021) | Control.HasFocus(303)">Conditional</animation>
+                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(4)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(325)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(325)" reversible="false">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeTVShows)</visible>
@@ -382,8 +402,7 @@
                 <description>Music</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[2]</label>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(5)">Conditional</animation>
-				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(401) | Control.HasFocus(4021) | Control.HasFocus(403)">Conditional</animation>
+                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(5)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(425)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(425)" reversible="false">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeMusic)</visible>
@@ -392,8 +411,7 @@
                 <description>Applications</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[41504]</label>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(6)">Conditional</animation>
-				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(601)">Conditional</animation>
+                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(6)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(625)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(625)" reversible="false">Conditional</animation>
                <visible>!Skin.HasSetting(HomePrograms)</visible>
@@ -402,8 +420,7 @@
                 <description>Weather</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[8]</label>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(7)">Conditional</animation>
-				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(701)">Conditional</animation>
+                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(7)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(725)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(725)" reversible="false">Conditional</animation>
 				<visible>!Skin.HasSetting(HomeWeather)</visible>
@@ -415,8 +432,7 @@
                 <width>32</width>
                 <height>32</height>
                 <texture>windows/home/settings.png</texture>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8)">Conditional</animation>
-				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(801)">Conditional</animation>
+                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(825)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(825)" reversible="false">Conditional</animation>
 
@@ -1299,7 +1315,7 @@
                             <height>25</height>
                             <font>Font-Condensed-S20</font>
                             <!--		11000000-->
-                            <textcolor>smalllabelhome</textcolor>
+                            <textcolor>eewhite2</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -1314,13 +1330,79 @@
                             <height>25</height>
                             <font>Font-Condensed-S20</font>
                             <!--11000000-->
-                            <textcolor>smalllabelhome</textcolor>
+                            <textcolor>eewhite2</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[41450][/UPPERCASE]</label>
                             <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(502).HasFocus">Conditional</animation>
                             <visible>Skin.HasSetting(HideHomeSpotlight)</visible>
+                        </control>
+						<control type="grouplist">
+                            <posx>471</posx>
+                            <posy>580</posy>
+                            <align>right</align>
+                            <width>96</width>
+                            <height>16</height>
+                            <orientation>horizontal</orientation>
+                            <itemgap>0</itemgap>
+                            <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(502).HasFocus">Conditional</animation>
+                            <visible>!IsEmpty(Window.Property(RandomMovie.1.File)) + !IsEmpty(Window.Property(RandomEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
+                            <control type="image">
+                                <decription>Dot #1</decription>
+                                <include>HomeDotIndicatorsmall</include>
+                                <animation type="Conditional" condition="!Container(5022).HasFocus(1)">
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentMovie.1.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #2</decription>
+                                <include>HomeDotIndicatorsmall</include>
+                                <animation type="Conditional" condition="!Container(5022).HasFocus(2)">
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentMovie.2.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #3</decription>
+                                <include>HomeDotIndicatorsmall</include>
+                                <animation type="Conditional" condition="!Container(5022).HasFocus(3)">
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentMovie.3.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #4</decription>
+                                <include>HomeDotIndicatorsmall</include>
+                                <animation type="Conditional" condition="!Container(5022).HasFocus(4)">
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentMovie.4.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #5</decription>
+                                <include>HomeDotIndicatorsmall</include>
+                                <animation type="Conditional" condition="!Container(5022).HasFocus(5)">
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentMovie.5.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #6</decription>
+                                <include>HomeDotIndicatorsmall</include>
+                                <animation type="Conditional" condition="!Container(5022).HasFocus(6)">
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentMovie.6.File))</visible>
+                            </control>
                         </control>
                         <control type="grouplist">
                             <posx>471</posx>
@@ -1337,7 +1419,7 @@
                                 <decription>Dot #1</decription>
                                 <include>HomeDotIndicator</include>
                                 <animation type="Conditional" condition="!Container(5022).HasFocus(1)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentMovie.1.File))</visible>
@@ -1346,7 +1428,7 @@
                                 <decription>Dot #2</decription>
                                 <include>HomeDotIndicator</include>
                                 <animation type="Conditional" condition="!Container(5022).HasFocus(2)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentMovie.2.File))</visible>
@@ -1355,7 +1437,7 @@
                                 <decription>Dot #3</decription>
                                 <include>HomeDotIndicator</include>
                                 <animation type="Conditional" condition="!Container(5022).HasFocus(3)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentMovie.3.File))</visible>
@@ -1364,7 +1446,7 @@
                                 <decription>Dot #4</decription>
                                 <include>HomeDotIndicator</include>
                                 <animation type="Conditional" condition="!Container(5022).HasFocus(4)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentMovie.4.File))</visible>
@@ -1373,7 +1455,7 @@
                                 <decription>Dot #5</decription>
                                 <include>HomeDotIndicator</include>
                                 <animation type="Conditional" condition="!Container(5022).HasFocus(5)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentMovie.5.File))</visible>
@@ -1382,7 +1464,7 @@
                                 <decription>Dot #6</decription>
                                 <include>HomeDotIndicator</include>
                                 <animation type="Conditional" condition="!Container(5022).HasFocus(6)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentMovie.6.File))</visible>
@@ -1657,7 +1739,7 @@
                             <height>25</height>
                             <font>Font-Condensed-S20</font>
                             <!--11000000-->
-                            <textcolor>smalllabelhome</textcolor>
+                            <textcolor>eewhite2</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -1672,7 +1754,7 @@
                             <height>25</height>
                             <font>Font-Condensed-S20</font>
                             <!--11000000-->
-                            <textcolor>smalllabelhome</textcolor>
+                            <textcolor>eewhite2</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -1693,9 +1775,75 @@
                             <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(503).HasFocus">Conditional</animation>
                             <control type="image">
                                 <decription>Dot #1</decription>
+                                <include>HomeDotIndicatorsmall</include>
+                                <animation type="Conditional" condition="!Container(5032).HasFocus(1)">
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #2</decription>
+                                <include>HomeDotIndicatorsmall</include>
+                                <animation type="Conditional" condition="!Container(5032).HasFocus(2)">
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="0" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentEpisode.2.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #3</decription>
+                                <include>HomeDotIndicatorsmall</include>
+                                <animation type="Conditional" condition="!Container(5032).HasFocus(3)">
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="0" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentEpisode.3.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #4</decription>
+                                <include>HomeDotIndicatorsmall</include>
+                                <animation type="Conditional" condition="!Container(5032).HasFocus(4)">
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="0" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentEpisode.4.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #5</decription>
+                                <include>HomeDotIndicatorsmall</include>
+                                <animation type="Conditional" condition="!Container(5032).HasFocus(5)">
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="0" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentEpisode.5.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #6</decription>
+                                <include>HomeDotIndicatorsmall</include>
+                                <animation type="Conditional" condition="!Container(5032).HasFocus(6)">
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="0" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentEpisode.6.File))</visible>
+                            </control>
+                        </control>
+                        <control type="grouplist">
+                            <posx>275</posx>
+                            <posy>580</posy>
+                            <align>right</align>
+                            <width>96</width>
+                            <height>16</height>
+                            <orientation>horizontal</orientation>
+                            <itemgap>0</itemgap>
+                            <visible>!IsEmpty(Window.Property(RecommendedEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
+                            <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(503).HasFocus">Conditional</animation>
+                            <control type="image">
+                                <decription>Dot #1</decription>
                                 <include>HomeDotIndicator</include>
                                 <animation type="Conditional" condition="!Container(5032).HasFocus(1)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
@@ -1704,7 +1852,7 @@
                                 <decription>Dot #2</decription>
                                 <include>HomeDotIndicator</include>
                                 <animation type="Conditional" condition="!Container(5032).HasFocus(2)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentEpisode.2.File))</visible>
@@ -1713,7 +1861,7 @@
                                 <decription>Dot #3</decription>
                                 <include>HomeDotIndicator</include>
                                 <animation type="Conditional" condition="!Container(5032).HasFocus(3)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentEpisode.3.File))</visible>
@@ -1722,7 +1870,7 @@
                                 <decription>Dot #4</decription>
                                 <include>HomeDotIndicator</include>
                                 <animation type="Conditional" condition="!Container(5032).HasFocus(4)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentEpisode.4.File))</visible>
@@ -1731,7 +1879,7 @@
                                 <decription>Dot #5</decription>
                                 <include>HomeDotIndicator</include>
                                 <animation type="Conditional" condition="!Container(5032).HasFocus(5)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentEpisode.5.File))</visible>
@@ -1740,12 +1888,12 @@
                                 <decription>Dot #6</decription>
                                 <include>HomeDotIndicator</include>
                                 <animation type="Conditional" condition="!Container(5032).HasFocus(6)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentEpisode.6.File))</visible>
                             </control>
-                        </control>
+                        </control>			
                         <control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
@@ -2227,7 +2375,7 @@
                             <height>25</height>
                             <font>Font-Condensed-S20</font>
                             <!--11000000-->
-                            <textcolor>smalllabelhome</textcolor>
+                            <textcolor>eewhite2</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -2247,54 +2395,120 @@
                             <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(202).HasFocus">Conditional</animation>
                             <control type="image">
                                 <decription>Dot #1</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(2022).HasFocus(1)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentMovie.1.File))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #2</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(2022).HasFocus(2)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentMovie.2.File))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #3</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(2022).HasFocus(3)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentMovie.3.File))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #4</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(2022).HasFocus(4)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentMovie.4.File))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #5</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(2022).HasFocus(5)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentMovie.5.File))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #6</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(2022).HasFocus(6)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="back" easing="out" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentMovie.6.File))</visible>
+                            </control>
+                        </control>
+                        <control type="grouplist">
+                            <posx>281</posx>
+                            <posy>580</posy>
+                            <align>right</align>
+                            <width>96</width>
+                            <height>16</height>
+                            <orientation>horizontal</orientation>
+                            <itemgap>0</itemgap>
+                            <visible>!IsEmpty(Window.Property(RecentMovie.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
+                            <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(202).HasFocus">Conditional</animation>
+                            <control type="image">
+                                <decription>Dot #1</decription>
+                                <include>HomeDotIndicatorMovies</include>
+                                <animation type="Conditional" condition="!Container(2022).HasFocus(1)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentMovie.1.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #2</decription>
+                                <include>HomeDotIndicatorMovies</include>
+                                <animation type="Conditional" condition="!Container(2022).HasFocus(2)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentMovie.2.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #3</decription>
+                                <include>HomeDotIndicatorMovies</include>
+                                <animation type="Conditional" condition="!Container(2022).HasFocus(3)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentMovie.3.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #4</decription>
+                                <include>HomeDotIndicatorMovies</include>
+                                <animation type="Conditional" condition="!Container(2022).HasFocus(4)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentMovie.4.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #5</decription>
+                                <include>HomeDotIndicatorMovies</include>
+                                <animation type="Conditional" condition="!Container(2022).HasFocus(5)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentMovie.5.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #6</decription>
+                                <include>HomeDotIndicatorMovies</include>
+                                <animation type="Conditional" condition="!Container(2022).HasFocus(6)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="back" easing="out" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentMovie.6.File))</visible>
@@ -3029,7 +3243,7 @@
                             <height>25</height>
                             <font>Font-Condensed-S20</font>
                             <!--11000000-->
-                            <textcolor>smalllabelhome</textcolor>
+                            <textcolor>eewhite2</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -3049,54 +3263,120 @@
                             <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(302).HasFocus">Conditional</animation>
                             <control type="image">
                                 <decription>Dot #1</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(3022).HasFocus(1)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #2</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(3022).HasFocus(2)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentEpisode.2.File))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #3</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(3022).HasFocus(3)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentEpisode.3.File))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #4</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(3022).HasFocus(4)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentEpisode.4.File))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #5</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(3022).HasFocus(5)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentEpisode.5.File))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #6</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(3022).HasFocus(6)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentEpisode.6.File))</visible>
+                            </control>
+                        </control>
+                        <control type="grouplist">
+                            <posx>570</posx>
+                            <posy>580</posy>
+                            <align>right</align>
+                            <width>96</width>
+                            <height>16</height>
+                            <orientation>horizontal</orientation>
+                            <itemgap>0</itemgap>
+                            <visible>!IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
+                            <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(302).HasFocus">Conditional</animation>
+                            <control type="image">
+                                <decription>Dot #1</decription>
+                                <include>HomeDotIndicatorTVShows</include>
+                                <animation type="Conditional" condition="!Container(3022).HasFocus(1)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #2</decription>
+                                <include>HomeDotIndicatorTVShows</include>
+                                <animation type="Conditional" condition="!Container(3022).HasFocus(2)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentEpisode.2.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #3</decription>
+                                <include>HomeDotIndicatorTVShows</include>
+                                <animation type="Conditional" condition="!Container(3022).HasFocus(3)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentEpisode.3.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #4</decription>
+                                <include>HomeDotIndicatorTVShows</include>
+                                <animation type="Conditional" condition="!Container(3022).HasFocus(4)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentEpisode.4.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #5</decription>
+                                <include>HomeDotIndicatorTVShows</include>
+                                <animation type="Conditional" condition="!Container(3022).HasFocus(5)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RecentEpisode.5.File))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #6</decription>
+                                <include>HomeDotIndicatorTVShows</include>
+                                <animation type="Conditional" condition="!Container(3022).HasFocus(6)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RecentEpisode.6.File))</visible>
@@ -3805,7 +4085,7 @@
                             <height>25</height>
                             <font>Font-Condensed-S20</font>
                             <!--11000000-->
-                            <textcolor>smalllabelhome</textcolor>
+                            <textcolor>eewhite2</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -3825,54 +4105,120 @@
                             <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(402).HasFocus">Conditional</animation>
                             <control type="image">
                                 <decription>Dot #1</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(4022).HasFocus(1)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #2</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(4022).HasFocus(2)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RandomAlbum.2.Play))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #3</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(4022).HasFocus(3)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RandomAlbum.3.Play))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #4</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(4022).HasFocus(4)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RandomAlbum.4.Play))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #5</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(4022).HasFocus(5)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RandomAlbum.5.Play))</visible>
                             </control>
                             <control type="image">
                                 <decription>Dot #6</decription>
-                                <include>HomeDotIndicator</include>
+                                <include>HomeDotIndicatorsmall</include>
                                 <animation type="Conditional" condition="!Container(4022).HasFocus(6)">
-                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="fade" start="0" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RandomAlbum.6.Play))</visible>
+                            </control>
+                        </control>
+                        <control type="grouplist">
+                            <posx>471</posx>
+                            <posy>580</posy>
+                            <align>right</align>
+                            <width>96</width>
+                            <height>16</height>
+                            <orientation>horizontal</orientation>
+                            <itemgap>0</itemgap>
+                            <visible>!IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
+                            <include>visiblehidefadeinfo</include>
+                            <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(402).HasFocus">Conditional</animation>
+                            <control type="image">
+                                <decription>Dot #1</decription>
+                                <include>HomeDotIndicatorMusic</include>
+                                <animation type="Conditional" condition="!Container(4022).HasFocus(1)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #2</decription>
+                                <include>HomeDotIndicatorMusic</include>
+                                <animation type="Conditional" condition="!Container(4022).HasFocus(2)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RandomAlbum.2.Play))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #3</decription>
+                                <include>HomeDotIndicatorMusic</include>
+                                <animation type="Conditional" condition="!Container(4022).HasFocus(3)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RandomAlbum.3.Play))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #4</decription>
+                                <include>HomeDotIndicatorMusic</include>
+                                <animation type="Conditional" condition="!Container(4022).HasFocus(4)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RandomAlbum.4.Play))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #5</decription>
+                                <include>HomeDotIndicatorMusic</include>
+                                <animation type="Conditional" condition="!Container(4022).HasFocus(5)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RandomAlbum.5.Play))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #6</decription>
+                                <include>HomeDotIndicatorMusic</include>
+                                <animation type="Conditional" condition="!Container(4022).HasFocus(6)">
+                                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
                                     <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
                                 </animation>
                                 <visible>!IsEmpty(Window.Property(RandomAlbum.6.Play))</visible>
@@ -4088,7 +4434,7 @@
                             <height>25</height>
                             <font>Font-Condensed-S20</font>
                             <!--11000000-->
-                            <textcolor>smalllabelhome</textcolor>
+                            <textcolor>eewhite2</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
@@ -4350,7 +4696,7 @@
                         <height>25</height>
                         <font>Font-Condensed-S20</font>
                         <!--11000000-->
-                        <textcolor>smalllabelhome</textcolor>
+                        <textcolor>eewhite2</textcolor>
                         <align>left</align>
                         <aligny>center</aligny>
                         <textoffsetx>5</textoffsetx>
@@ -4376,14 +4722,6 @@
                         <itemlayout width="289" height="289">
                             <control type="group">
 								<animation effect="fade" end="100" time="0" condition="true">Conditional</animation>
-                                <control type="image">
-                                    <posx>19</posx>
-                                    <posy>19</posy>
-                                    <width>293</width>
-                                    <height>293</height>
-                                    <texture border="7">windows/home/addedtile.png</texture>
-                                    <visible>[[!IsEmpty(ListItem.Property(recent) | !IsEmpty(ListItem.Property(noaddon)] + Skin.HasSetting(HomeMusicTiles)] | [Skin.HasSetting(HomeMusicTiles) + Skin.HasSetting(HomeBackgroundOpacity)]</visible>
-                                </control>
                                 <control type="image">
                                     <posx>19</posx>
                                     <posy>19</posy>
@@ -4566,7 +4904,9 @@
                                         </control>
                                     </control>
                                 </control>
+
                                 <control type="image">
+																											                               
                                     <posx>3</posx>
                                     <posy>3</posy>
                                     <width>325</width>
@@ -4631,6 +4971,15 @@
                         </animation>
 						<visible>ControlGroup(402).HasFocus</visible>
                     </control>
+					<!--<control type="image">
+						<posx>912</posx>
+						<posy>284</posy>
+						<width>293</width>
+						<height>293</height>
+						<texture border="7">windows/home/addedtile.png</texture>
+						<visible>[[[!IsEmpty(ListItem.Property(recent) | !IsEmpty(ListItem.Property(noaddon)] + Skin.HasSetting(HomeMusicTiles)] | [Skin.HasSetting(HomeMusicTiles) + Skin.HasSetting(HomeBackgroundOpacity)]] + Skin.HasSetting(MusicTileVisible) + !Container(403).HasFocus(2)</visible>
+                    </control>-->
+
                 </control>
             </control>
             
@@ -5182,7 +5531,7 @@
                                 <height>25</height>
                                 <font>Font-Condensed-S20</font>
                                 <!--11000000-->
-                                <textcolor>smalllabelhome</textcolor>
+                                <textcolor>eewhite2</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <textoffsetx>5</textoffsetx>
@@ -5269,7 +5618,7 @@
                                 <height>25</height>
                                 <font>Font-Condensed-S20</font>
                                 <!--11000000-->
-                                <textcolor>smalllabelhome</textcolor>
+                                <textcolor>eewhite2</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <textoffsetx>5</textoffsetx>

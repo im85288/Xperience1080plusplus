@@ -495,6 +495,14 @@
                     <label>Show weather fanart instead of weather background</label>
                     <visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + [stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)]</visible>
                 </control>
+				<!--<control type="radiobutton" id="2008">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(MusicTileVisible)</selected>
+                    <onclick>Skin.ToggleSetting(MusicTileVisible)</onclick>
+                    <label>Recently Added Music-Tile Overlay</label>
+                </control>-->
+
                 <control type="group" id="2007">
                     <description>Fake spin control</description>
                     <width>1210</width>

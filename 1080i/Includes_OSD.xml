@@ -401,9 +401,9 @@
                         <info>Player.Progress</info>
                         <reveal>true</reveal>
                         <texturebg>osd/fullscreen/progress/back.png</texturebg>
-                        <midtexture>osd/fullscreen/progress/mid.png</midtexture>
-                        <lefttexture>osd/fullscreen/progress/left.png</lefttexture>
-                        <righttexture>osd/fullscreen/progress/right.png</righttexture>
+                        <midtexture>osd/fullscreen/progress/mid-music.png</midtexture>
+                        <lefttexture>osd/fullscreen/progress/left-music.png</lefttexture>
+                        <righttexture>osd/fullscreen/progress/right-music.png</righttexture>
                         <overlaytexture>-</overlaytexture>
                     </control>
 					<control type="progress">
@@ -415,9 +415,9 @@
                         <info>Player.Progress</info>
                         <reveal>true</reveal>
                         <texturebg>osd/fullscreen/progress/back.png</texturebg>
-                        <midtexture>osd/fullscreen/progress/mid.png</midtexture>
-                        <lefttexture>osd/fullscreen/progress/left.png</lefttexture>
-                        <righttexture>osd/fullscreen/progress/right.png</righttexture>
+                        <midtexture>osd/fullscreen/progress/mid-music.png</midtexture>
+                        <lefttexture>osd/fullscreen/progress/left-music.png</lefttexture>
+                        <righttexture>osd/fullscreen/progress/right-music.png</righttexture>
                         <overlaytexture>-</overlaytexture>
                     </control>
                     <control type="label">
