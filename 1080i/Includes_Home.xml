@@ -606,8 +606,8 @@
                                 <posy>218</posy>
                                 <width>1259</width>
                                 <height>136</height>
-                                <texture border="7">windows/home/tile-search.png</texture>
-                                <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
+                                <texture border="7">windows/home/tile.png</texture>
+                                <visible>Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeSearchTile)</visible>
                             </control>
                             <control type="image">
                                 <posx>-5</posx>
@@ -615,7 +615,15 @@
                                 <width>1259</width>
                                 <height>136</height>
                                 <texture border="7">windows/home/tile2.png</texture>
-                                <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
+                                <visible>!Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeSearchTile)</visible>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>218</posy>
+                                <width>1259</width>
+                                <height>136</height>
+                                <texture border="7">windows/home/tile-search.png</texture>
+                                <visible>Skin.HasSetting(HomeSearchTile)</visible>
                             </control>
                             <control type="image">
                                 <posx>1115</posx>
@@ -795,8 +803,8 @@
                                     <posy>19</posy>
                                     <width>293</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/tile-livetv.png</texture>
-                                    <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
+                                    <texture border="7">windows/home/tile.png</texture>
+                                    <visible>Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeLiveTVTiles)</visible>
                                 </control>
                                 <control type="image">
                                     <posx>19</posx>
@@ -804,7 +812,15 @@
                                     <width>293</width>
                                     <height>293</height>
                                     <texture border="7">windows/home/tile2.png</texture>
-                                    <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
+                                    <visible>!Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeLiveTVTiles)</visible>
+                                </control>
+                                <control type="image">
+                                    <posx>19</posx>
+                                    <posy>19</posy>
+                                    <width>293</width>
+                                    <height>293</height>
+                                    <texture border="7">windows/home/tile-livetv.png</texture>
+                                    <visible>Skin.HasSetting(HomeLiveTVTiles)</visible>
                                 </control>
                                 <control type="image">
                                     <posx>24</posx>
@@ -844,22 +860,30 @@
                                     <animation type="Unfocus">
                                         <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
                                     </animation>
-                                    <control type="image">
-                                        <posx>19</posx>
-                                        <posy>19</posy>
-                                        <width>293</width>
-                                        <height>293</height>
-                                        <texture border="7">windows/home/tile-livetv.png</texture>
-                                        <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
-                                    </control>
-                                    <control type="image">
-                                        <posx>19</posx>
-                                        <posy>19</posy>
-                                        <width>293</width>
-                                        <height>293</height>
-                                        <texture border="7">windows/home/tile2.png</texture>
-                                        <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
-                                    </control>
+                                <control type="image">
+                                    <posx>19</posx>
+                                    <posy>19</posy>
+                                    <width>293</width>
+                                    <height>293</height>
+                                    <texture border="7">windows/home/tile.png</texture>
+                                    <visible>Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeLiveTVTiles)</visible>
+                                </control>
+                                <control type="image">
+                                    <posx>19</posx>
+                                    <posy>19</posy>
+                                    <width>293</width>
+                                    <height>293</height>
+                                    <texture border="7">windows/home/tile2.png</texture>
+                                    <visible>!Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeLiveTVTiles)</visible>
+                                </control>
+                                <control type="image">
+                                    <posx>19</posx>
+                                    <posy>19</posy>
+                                    <width>293</width>
+                                    <height>293</height>
+                                    <texture border="7">windows/home/tile-livetv.png</texture>
+                                    <visible>Skin.HasSetting(HomeLiveTVTiles)</visible>
+                                </control>
                                     <control type="image">
                                         <posx>24</posx>
                                         <posy>241</posy>
@@ -1757,8 +1781,8 @@
                                     <posy>19</posy>
                                     <width>293</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/tile-home.png</texture>
-                                    <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
+                                    <texture border="7">windows/home/tile.png</texture>
+                                    <visible>Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeHomeTiles)</visible>
                                 </control>
                                 <control type="image">
                                     <posx>19</posx>
@@ -1766,7 +1790,15 @@
                                     <width>293</width>
                                     <height>293</height>
                                     <texture border="7">windows/home/tile2.png</texture>
-                                    <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
+                                    <visible>!Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeHomeTiles)</visible>
+                                </control>
+                                <control type="image">
+                                    <posx>19</posx>
+                                    <posy>19</posy>
+                                    <width>293</width>
+                                    <height>293</height>
+                                    <texture border="7">windows/home/tile-home.png</texture>
+                                    <visible>Skin.HasSetting(HomeHomeTiles)</visible>
                                 </control>
                                 <control type="image">
                                     <posx>24</posx>
@@ -1806,22 +1838,30 @@
                                     <animation type="Unfocus">
                                         <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
                                     </animation>
-                                    <control type="image">
-                                        <posx>19</posx>
-                                        <posy>19</posy>
-                                        <width>293</width>
-                                        <height>293</height>
-                                        <texture border="7">windows/home/tile-home.png</texture>
-                                        <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
-                                    </control>
-                                    <control type="image">
-                                        <posx>19</posx>
-                                        <posy>19</posy>
-                                        <width>293</width>
-                                        <height>293</height>
-                                        <texture border="7">windows/home/tile2.png</texture>
-                                        <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
-                                    </control>
+                                <control type="image">
+                                    <posx>19</posx>
+                                    <posy>19</posy>
+                                    <width>293</width>
+                                    <height>293</height>
+                                    <texture border="7">windows/home/tile.png</texture>
+                                    <visible>Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeHomeTiles)</visible>
+                                </control>
+                                <control type="image">
+                                    <posx>19</posx>
+                                    <posy>19</posy>
+                                    <width>293</width>
+                                    <height>293</height>
+                                    <texture border="7">windows/home/tile2.png</texture>
+                                    <visible>!Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeHomeTiles)</visible>
+                                </control>
+                                <control type="image">
+                                    <posx>19</posx>
+                                    <posy>19</posy>
+                                    <width>293</width>
+                                    <height>293</height>
+                                    <texture border="7">windows/home/tile-home.png</texture>
+                                    <visible>Skin.HasSetting(HomeHomeTiles)</visible>
+                                </control>
                                     <control type="image">
                                         <posx>24</posx>
                                         <posy>241</posy>
@@ -5842,8 +5882,8 @@
                                     <posy>19</posy>
                                     <width>256</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/tile-system.png</texture>
-                                    <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
+                                    <texture border="7">windows/home/tile.png</texture>
+                                    <visible>Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeSystemTiles)</visible>
                                 </control>
                                 <control type="image">
                                     <posx>19</posx>
@@ -5851,8 +5891,16 @@
                                     <width>256</width>
                                     <height>293</height>
                                     <texture border="7">windows/home/tile2.png</texture>
-                                    <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
+                                    <visible>!Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeSystemTiles)</visible>
                                 </control>
+                                    <control type="image">
+                                        <posx>19</posx>
+                                        <posy>19</posy>
+                                        <width>256</width>
+                                        <height>293</height>
+                                        <texture border="7">windows/home/tile-system.png</texture>
+                                        <visible>Skin.HasSetting(HomeSystemTiles)</visible>
+                                    </control>
                                 <control type="image">
                                     <posx>24</posx>
                                     <posy>241</posy>
@@ -5896,8 +5944,8 @@
                                         <posy>19</posy>
                                         <width>256</width>
                                         <height>293</height>
-                                        <texture border="7">windows/home/tile-system.png</texture>
-                                        <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
+                                        <texture border="7">windows/home/tile.png</texture>
+                                        <visible>Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeSystemTiles)</visible>
                                     </control>
                                     <control type="image">
                                         <posx>19</posx>
@@ -5905,7 +5953,15 @@
                                         <width>256</width>
                                         <height>293</height>
                                         <texture border="7">windows/home/tile2.png</texture>
-                                        <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
+                                        <visible>!Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(HomeSystemTiles)</visible>
+                                    </control>
+                                    <control type="image">
+                                        <posx>19</posx>
+                                        <posy>19</posy>
+                                        <width>256</width>
+                                        <height>293</height>
+                                        <texture border="7">windows/home/tile-system.png</texture>
+                                        <visible>Skin.HasSetting(HomeSystemTiles)</visible>
                                     </control>
                                     <control type="image">
                                         <posx>24</posx>
