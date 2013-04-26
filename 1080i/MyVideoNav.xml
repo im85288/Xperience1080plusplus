@@ -74,7 +74,7 @@
                         <texturefocus>dialogs/options/buttons/custom-fo.png</texturefocus>
                         <texturenofocus>dialogs/options/buttons/custom-nf.png</texturenofocus>
                         <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(21)">Conditional</animation>
-                        <enable>Control.IsVisible(52) | Control.IsVisible(53) | [Control.IsVisible(60) + Container.Content(TVShows)] | [Control.IsVisible(54) + Container.Content(tvshows)] | Control.IsVisible(505) | Control.IsVisible(500) | Control.IsVisible(501)</enable>
+                        <enable>Control.IsVisible(52) | Control.IsVisible(53) | [Control.IsVisible(60) + Container.Content(TVShows)] | [Control.IsVisible(54) + Container.Content(tvshows)] | Control.IsVisible(505) | Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(504) | Control.IsVisible(70)</enable>
                     </control>
                     <control type="button" id="98">
                         <description>Label</description>
@@ -428,6 +428,19 @@
                         <radioposx>-19</radioposx>
                         <visible>Control.IsVisible(54)</visible>
                     </control>
+                    <control type="radiobutton" id="119">
+                        <description>Use Hometile colour</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Use Hometile colour</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Skin.ToggleSetting(LibraryTileTVShows)</onclick>
+                        <selected>Skin.HasSetting(LibraryTileTVShows)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Control.IsVisible(54) | Control.IsVisible(505) | Control.IsVisible(504) | Control.IsVisible(70)</visible>
+                    </control>
+					
                     <control type="radiobutton" id="118">
                         <description>Show plot in movies landscape view</description>
                         <include>optionsbuttonsdimensions</include>

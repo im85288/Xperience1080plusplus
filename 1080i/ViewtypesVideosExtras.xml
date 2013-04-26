@@ -409,9 +409,29 @@
                                 <posy>475</posy>
                                 <width>330</width>
                                 <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-tvshows.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+								<visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons) + !Container.Content(episodes) | !Skin.HasSetting(LibraryTileTVShows)</visible>
+
                             </control>
+							
+
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>493</posy>
@@ -523,7 +543,22 @@
                                 <height>50</height>
                                 <width>340</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
-                            </control>
+                            </control>                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-tvshows.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
                             <control type="image">
                                 <posx>-5</posx>
                                 <posy>475</posy>
@@ -531,8 +566,9 @@
                                 <height>110</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                            </control>
-                            <control type="label">
+								<visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons) + !Container.Content(episodes) | !Skin.HasSetting(LibraryTileTVShows)</visible>
+
+                            </control><control type="label">
                                 <posx>20</posx>
                                 <posy>493</posy>
                                 <width>280</width>
@@ -643,7 +679,22 @@
                                 <height>50</height>
                                 <width>340</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
-                            </control>
+                            </control>                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-tvshows.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
                             <control type="image">
                                 <posx>-5</posx>
                                 <posy>475</posy>
@@ -651,8 +702,9 @@
                                 <height>110</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                            </control>
-                            <control type="label">
+								<visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons) + !Container.Content(episodes) | !Skin.HasSetting(LibraryTileTVShows)</visible>
+
+                            </control><control type="label">
                                 <posx>20</posx>
                                 <posy>493</posy>
                                 <width>280</width>
@@ -763,7 +815,22 @@
                                 <height>50</height>
                                 <width>340</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
-                            </control>
+                            </control><control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-tvshows.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
                             <control type="image">
                                 <posx>-5</posx>
                                 <posy>475</posy>
@@ -771,8 +838,9 @@
                                 <height>110</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                            </control>
-                            <control type="label">
+								<visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons) + !Container.Content(episodes) | !Skin.HasSetting(LibraryTileTVShows)</visible>
+
+                            </control><control type="label">
                                 <posx>20</posx>
                                 <posy>493</posy>
                                 <width>280</width>
@@ -883,7 +951,22 @@
                                 <height>50</height>
                                 <width>340</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
-                            </control>
+                            </control><control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-tvshows.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
                             <control type="image">
                                 <posx>-5</posx>
                                 <posy>475</posy>
@@ -891,8 +974,9 @@
                                 <height>110</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                            </control>
-                            <control type="label">
+								<visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons) + !Container.Content(episodes) | !Skin.HasSetting(LibraryTileTVShows)</visible>
+
+                            </control><control type="label">
                                 <posx>20</posx>
                                 <posy>493</posy>
                                 <width>280</width>
@@ -1003,7 +1087,22 @@
                                 <height>50</height>
                                 <width>340</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
-                            </control>
+                            </control>                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-tvshows.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
                             <control type="image">
                                 <posx>-5</posx>
                                 <posy>475</posy>
@@ -1011,8 +1110,9 @@
                                 <height>110</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                            </control>
-                            <control type="label">
+								<visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons) + !Container.Content(episodes) | !Skin.HasSetting(LibraryTileTVShows)</visible>
+
+                            </control><control type="label">
                                 <posx>20</posx>
                                 <posy>493</posy>
                                 <width>280</width>
@@ -1119,15 +1219,30 @@
                         <height>50</height>
                         <width>340</width>
                         <texture>dialogs/shutdown/shadow.png</texture>
-                    </control>
-                    <control type="image">
-                        <posx>-5</posx>
-                        <posy>475</posy>
-                        <width>330</width>
-                        <height>110</height>
-                        <texture border="7">windows/home/tile-grey.png</texture>
-                    </control>
-                    <control type="label">
+                    </control>                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>								<visible>Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-tvshows.png</texture>								<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                
+								<visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons) + !Container.Content(episodes) | !Skin.HasSetting(LibraryTileTVShows)</visible>
+
+                            </control><control type="label">
                         <posx>20</posx>
                         <posy>493</posy>
                         <width>280</width>
@@ -1245,7 +1360,22 @@
                                 <height>50</height>
                                 <width>340</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
-                            </control>
+                            </control>                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-tvshows.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>								<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
                             <control type="image">
                                 <posx>-5</posx>
                                 <posy>475</posy>
@@ -1253,8 +1383,9 @@
                                 <height>110</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                            </control>
-                            <control type="label">
+								<visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons) + !Container.Content(episodes) | !Skin.HasSetting(LibraryTileTVShows)</visible>
+
+                            </control><control type="label">
                                 <posx>20</posx>
                                 <posy>493</posy>
                                 <width>280</width>
@@ -1355,15 +1486,30 @@
                                 </animation>
                                 <animation type="Unfocus" condition="Container(504).OnNext | Container(504).OnPrevious">
                                     <effect type="fade" start="100" end="60" time="300" tween="sine" easing="inout" />
-                                </animation>
-                                <control type="image">
-                                    <posx>-5</posx>
-                                    <posy>475</posy>
-                                    <width>330</width>
-                                    <height>110</height>
-                                    <texture border="7">windows/home/tile-grey.png</texture>
-                                </control>
-                            </control>
+                                </animation>                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>								<visible>Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-tvshows.png</texture>								<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>475</posy>
+                                <width>330</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                
+								<visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons) + !Container.Content(episodes) | !Skin.HasSetting(LibraryTileTVShows)</visible>
+
+                            </control></control>
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>493</posy>
@@ -1551,20 +1697,33 @@
                                 <posy>265</posy>
                                 <width>490</width>
                                 <height>360</height>
-                                <texture border="7">windows/home/tile-grey.png</texture>
-                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
-                            </control>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
                             <control type="image">
                                 <posx>-5</posx>
                                 <posy>265</posy>
                                 <width>490</width>
                                 <height>110</height>
-                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <texture border="7">windows/home/tile-movies.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                <visible>!Skin.HasSetting(ExtendedMoviePlot)</visible>
+                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
                             </control>
                             <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>360</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + [!Container.Content(movies) | !Skin.HasSetting(LibraryTileTVShows)]</visible>
+</control>                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + [!Container.Content(movies) | !Skin.HasSetting(LibraryTileTVShows)]</visible>
+</control>
+<control type="image">
                                 <posx>0</posx>
                                 <posy>270</posy>
                                 <width>480</width>
@@ -1687,6 +1846,22 @@
                                 <width>500</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
                                 <animation effect="slide" start="0,0" end="0,-250" time="0" condition="!Skin.HasSetting(ExtendedMoviePlot)">Conditional</animation>
+                            </control>                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>360</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies)</visible>
                             </control>
                             <control type="image">
                                 <posx>-5</posx>
@@ -1694,19 +1869,15 @@
                                 <width>490</width>
                                 <height>360</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
-                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
-                            </control>
-                            <control type="image">
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + [!Container.Content(movies) | !Skin.HasSetting(LibraryTileTVShows)]</visible>
+</control>                            <control type="image">
                                 <posx>-5</posx>
                                 <posy>265</posy>
                                 <width>490</width>
                                 <height>110</height>
-                                <texture border="7">windows/home/tile-grey.png</texture>
-                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                <visible>!Skin.HasSetting(ExtendedMoviePlot)</visible>
-                            </control>
-                            <control type="image">
+                                <texture border="7">windows/home/tile-grey.png</texture>                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + [!Container.Content(movies) | !Skin.HasSetting(LibraryTileTVShows)]</visible>
+</control>
+<control type="image">
                                 <posx>0</posx>
                                 <posy>270</posy>
                                 <width>480</width>
@@ -1829,6 +2000,22 @@
                                 <width>500</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
                                 <animation effect="slide" start="0,0" end="0,-250" time="0" condition="!Skin.HasSetting(ExtendedMoviePlot)">Conditional</animation>
+                            </control>                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>360</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies)</visible>
                             </control>
                             <control type="image">
                                 <posx>-5</posx>
@@ -1836,19 +2023,15 @@
                                 <width>490</width>
                                 <height>360</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
-                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
-                            </control>
-                            <control type="image">
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + [!Container.Content(movies) | !Skin.HasSetting(LibraryTileTVShows)]</visible>
+</control>                            <control type="image">
                                 <posx>-5</posx>
                                 <posy>265</posy>
                                 <width>490</width>
                                 <height>110</height>
-                                <texture border="7">windows/home/tile-grey.png</texture>
-                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                <visible>!Skin.HasSetting(ExtendedMoviePlot)</visible>
-                            </control>
-                            <control type="image">
+                                <texture border="7">windows/home/tile-grey.png</texture>                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + [!Container.Content(movies) | !Skin.HasSetting(LibraryTileTVShows)]</visible>
+</control>
+<control type="image">
                                 <posx>0</posx>
                                 <posy>270</posy>
                                 <width>480</width>
@@ -1971,6 +2154,22 @@
                                 <width>500</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
                                 <animation effect="slide" start="0,0" end="0,-250" time="0" condition="!Skin.HasSetting(ExtendedMoviePlot)">Conditional</animation>
+                            </control>                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>360</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies)</visible>
                             </control>
                             <control type="image">
                                 <posx>-5</posx>
@@ -1978,19 +2177,15 @@
                                 <width>490</width>
                                 <height>360</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
-                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
-                            </control>
-                            <control type="image">
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + [!Container.Content(movies) | !Skin.HasSetting(LibraryTileTVShows)]</visible>
+</control>                            <control type="image">
                                 <posx>-5</posx>
                                 <posy>265</posy>
                                 <width>490</width>
                                 <height>110</height>
-                                <texture border="7">windows/home/tile-grey.png</texture>
-                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                <visible>!Skin.HasSetting(ExtendedMoviePlot)</visible>
-                            </control>
-                            <control type="image">
+                                <texture border="7">windows/home/tile-grey.png</texture>                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + [!Container.Content(movies) | !Skin.HasSetting(LibraryTileTVShows)]</visible>
+</control>
+<control type="image">
                                 <posx>0</posx>
                                 <posy>270</posy>
                                 <width>480</width>
@@ -2110,22 +2305,35 @@
                         <texture>dialogs/shutdown/shadow.png</texture>
                         <animation effect="slide" start="0,0" end="0,-250" time="0" condition="!Skin.HasSetting(ExtendedMoviePlot)">Conditional</animation>
                     </control>
-                    <control type="image">
-                        <posx>-5</posx>
-                        <posy>265</posy>
-                        <width>490</width>
-                        <height>360</height>
-                        <texture border="7">windows/home/tile-grey.png</texture>
-                        <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
-                    </control>
-                    <control type="image">
-                        <posx>-5</posx>
-                        <posy>265</posy>
-                        <width>490</width>
-                        <height>110</height>
-                        <texture border="7">windows/home/tile-grey.png</texture>
-                        <visible>!Skin.HasSetting(ExtendedMoviePlot)</visible>
-                    </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>360</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies)</visible>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>360</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + [!Container.Content(movies) | !Skin.HasSetting(LibraryTileTVShows)]</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + !Container.Content(movies) + !Container.Content(tvshows) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
                     <control type="image">
                         <posx>0</posx>
                         <posy>270</posy>
@@ -2257,6 +2465,22 @@
                                 <width>500</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
                                 <animation effect="slide" start="0,0" end="0,-250" time="0" condition="!Skin.HasSetting(ExtendedMoviePlot)">Conditional</animation>
+                            </control>                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>360</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies)</visible>
                             </control>
                             <control type="image">
                                 <posx>-5</posx>
@@ -2264,19 +2488,15 @@
                                 <width>490</width>
                                 <height>360</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
-                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
-                            </control>
-                            <control type="image">
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + [!Container.Content(movies) | !Skin.HasSetting(LibraryTileTVShows)]</visible>
+</control>                            <control type="image">
                                 <posx>-5</posx>
                                 <posy>265</posy>
                                 <width>490</width>
                                 <height>110</height>
-                                <texture border="7">windows/home/tile-grey.png</texture>
-                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                <visible>!Skin.HasSetting(ExtendedMoviePlot)</visible>
-                            </control>
-                            <control type="image">
+                                <texture border="7">windows/home/tile-grey.png</texture>                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + [!Container.Content(movies) | !Skin.HasSetting(LibraryTileTVShows)]</visible>
+</control>
+<control type="image">
                                 <posx>0</posx>
                                 <posy>270</posy>
                                 <width>480</width>
@@ -2390,22 +2610,35 @@
                                 <animation type="Unfocus" condition="Container(505).OnNext | Container(505).OnPrevious">
                                     <effect type="fade" start="100" end="60" time="300" tween="sine" easing="inout" />
                                 </animation>
-                                <control type="image">
-                                    <posx>-5</posx>
-                                    <posy>265</posy>
-                                    <width>490</width>
-                                    <height>360</height>
-                                    <texture border="7">windows/home/tile-grey.png</texture>
-                                    <visible>Skin.HasSetting(ExtendedMoviePlot)</visible>
-                                </control>
-                                <control type="image">
-                                    <posx>-5</posx>
-                                    <posy>265</posy>
-                                    <width>490</width>
-                                    <height>110</height>
-                                    <texture border="7">windows/home/tile-grey.png</texture>
-                                    <visible>!Skin.HasSetting(ExtendedMoviePlot)</visible>
-                                </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>360</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-movies.png</texture>
+                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + Container.Content(movies)</visible>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>360</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>                                <visible>Skin.HasSetting(ExtendedMoviePlot) + [!Container.Content(movies) | !Skin.HasSetting(LibraryTileTVShows)]</visible>
+</control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>110</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>                                <visible>!Skin.HasSetting(ExtendedMoviePlot) + !Container.Content(movies) + !Container.Content(tvshows) + Skin.HasSetting(LibraryTileTVShows)</visible>
+</control>
                             </control>
                             <control type="image">
                                 <posx>0</posx>
