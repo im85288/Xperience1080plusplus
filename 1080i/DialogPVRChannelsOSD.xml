@@ -238,11 +238,11 @@
                         </control>
                         <control type="label">
                             <description>Label</description>
-                            <posx>602</posx>
+                            <posx>650</posx>
                             <posy>0</posy>
                             <width>539</width>
                             <height>95</height>
-                            <font>Font-Condensed-S75</font>
+                            <font>Font-Condensed-S50</font>
                             <align>right</align>
                             <label>$INFO[ListItem.ChannelNumber]</label>
                             <textcolor>99FFFFFF</textcolor>
@@ -250,29 +250,43 @@
                             <scroll>false</scroll>
                             <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
                         </control>
+                        <control type="label">
+                            <description>Label</description>
+                            <posx>650</posx>
+                            <posy>0</posy>
+                            <width>539</width>
+                            <height>95</height>
+                            <font>Font-Condensed-S50</font>
+                            <align>right</align>
+                            <label>$INFO[ListItem.ChannelNumber]</label>
+                            <textcolor>ffe8b854</textcolor>
+                            <selectedcolor>ffe8b854</selectedcolor>
+                            <scroll>false</scroll>
+                            <visible>ListItem.HasTimer | ListItem.IsRecording + ListItem.IsPlaying</visible>
+                        </control>
                         <control type="group">
                             <visible>ListItem.IsRecording</visible>
                             <control type="image">
-                            	<posx>602</posx>
-                            	<posy>7</posy>
-                            	<width>66</width>
-                            	<height>80</height>
+                            	<posx>600</posx>
+                            	<posy>0</posy>
+                            	<width>33</width>
+                            	<height>40</height>
                             	<texture>windows/pvr/epg-recording.png</texture>
                             </control>
                             <control type="image">
-                            	<posx>602</posx>
-                            	<posy>7</posy>
-                            	<width>66</width>
-                            	<height>80</height>
+                            	<posx>600</posx>
+                            	<posy>0</posy>
+                            	<width>33</width>
+                            	<height>40</height>
                             	<texture>windows/pvr/epg-recording-pulse.png</texture>
                             	<animation effect="fade" start="65" end="100" time="750" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
                             </control>
                         </control>
                         <control type="image">
-                        	<posx>602</posx>
-                        	<posy>7</posy>
-                        	<width>66</width>
-                        	<height>80</height>
+                        	<posx>600</posx>
+                        	<posy>0</posy>
+                        	<width>33</width>
+                        	<height>40</height>
                         	<texture>windows/pvr/epg-timer.png</texture>
                         	<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
                         </control>
@@ -652,11 +666,11 @@
                             </control>
                             <control type="label">
                                 <description>Label</description>
-                                <posx>602</posx>
+                                <posx>650</posx>
                                 <posy>0</posy>
                                 <width>539</width>
                                 <height>95</height>
-                                <font>Font-Condensed-S75</font>
+                                <font>Font-Condensed-S50</font>
                                 <align>right</align>
                                 <label>$INFO[ListItem.ChannelNumber]</label>
                                 <textcolor>eewhite</textcolor>
@@ -664,30 +678,44 @@
                                 <scroll>false</scroll>
                                 <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
                             </control>
+                            <control type="label">
+                                <description>Label</description>
+                                <posx>650</posx>
+                                <posy>0</posy>
+                                <width>539</width>
+                                <height>95</height>
+                                <font>Font-Condensed-S50</font>
+                                <align>right</align>
+                                <label>$INFO[ListItem.ChannelNumber]</label>
+                                <textcolor>ffe8b854</textcolor>
+                                <selectedcolor>ffe8b854</selectedcolor>
+                                <scroll>false</scroll>
+                                <visible>ListItem.HasTimer | ListItem.IsRecording + ListItem.IsPlaying</visible>
+                            </control>
                         </control>
                         <control type="group">
                             <visible>ListItem.IsRecording</visible>
                             <control type="image">
-                            	<posx>502</posx>
-                            	<posy>51</posy>
-                            	<width>66</width>
-                            	<height>80</height>
+                            	<posx>600</posx>
+                            	<posy>0</posy>
+                            	<width>33</width>
+                            	<height>40</height>
                             	<texture>windows/pvr/epg-recording.png</texture>
                             </control>
                             <control type="image">
-                            	<posx>502</posx>
-                            	<posy>51</posy>
-                            	<width>66</width>
-                            	<height>80</height>
+                            	<posx>600</posx>
+                            	<posy>0</posy>
+                            	<width>33</width>
+                            	<height>40</height>
                             	<texture>windows/pvr/epg-recording-pulse.png</texture>
                             	<animation effect="fade" start="65" end="100" time="750" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
                             </control>
                         </control>
                         <control type="image">
-                        	<posx>502</posx>
-                        	<posy>52</posy>
-                        	<width>66</width>
-                        	<height>80</height>
+                        	<posx>600</posx>
+                        	<posy>0</posy>
+                        	<width>33</width>
+                        	<height>40</height>
                         	<texture>windows/pvr/epg-timer.png</texture>
                         	<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
                         </control>
