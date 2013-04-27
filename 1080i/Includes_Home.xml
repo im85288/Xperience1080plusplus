@@ -293,7 +293,8 @@
                 <width>32</width>
                 <height>32</height>
 				<texture>windows/home/search.png</texture>
-                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(101)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(125)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(125)" reversible="false">Conditional</animation>
 				<visible>System.HasAddon(script.globalsearch)</visible>
@@ -303,7 +304,8 @@
                 <description>Live TV</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[41220]</label>
-                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(9)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(901)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(9)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(925)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(925)" reversible="false">Conditional</animation>
                 
@@ -329,7 +331,8 @@
                 <description>Home</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[41524]</label>
-                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(501)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(525)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(525)" reversible="false">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeHome)</visible>
@@ -354,7 +357,8 @@
                 <description>Movies</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[342]</label>
-                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(3)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(201)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(225)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(225)" reversible="false">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeMovies)</visible>
@@ -378,7 +382,8 @@
                 <description>TV Shows</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[20343]</label>
-                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(4)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(301)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(4)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(325)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(325)" reversible="false">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeTVShows)</visible>
@@ -402,7 +407,8 @@
                 <description>Music</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[2]</label>
-                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(5)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(401)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(5)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(425)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(425)" reversible="false">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeMusic)</visible>
@@ -411,7 +417,8 @@
                 <description>Applications</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[41504]</label>
-                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(6)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(601)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(6)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(625)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(625)" reversible="false">Conditional</animation>
                <visible>!Skin.HasSetting(HomePrograms)</visible>
@@ -420,7 +427,8 @@
                 <description>Weather</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[8]</label>
-                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(7)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(701)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(7)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(725)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(725)" reversible="false">Conditional</animation>
 				<visible>!Skin.HasSetting(HomeWeather)</visible>
@@ -432,7 +440,8 @@
                 <width>32</width>
                 <height>32</height>
                 <texture>windows/home/settings.png</texture>
-                <animation effect="fade" start="100" end="70" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(801)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(825)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(825)" reversible="false">Conditional</animation>
 
@@ -844,8 +853,18 @@
                                     <width>283</width>
                                     <height>66</height>
                                     <texture border="1">windows/home/tile-overlay.png</texture>
-                                    <colordiffuse>99FFFFFF</colordiffuse>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
                                 </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                 <control type="image">
                                     <posx>24</posx>
                                     <posy>24</posy>
@@ -864,6 +883,7 @@
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                 </control>
                             </control>
                         </itemlayout>
@@ -906,8 +926,18 @@
                                         <width>283</width>
                                         <height>66</height>
                                         <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                    </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                     <control type="image">
                                         <posx>24</posx>
                                         <posy>24</posy>
@@ -930,6 +960,7 @@
                                         <align>left</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                 <control type="image">
                                     <posx>3</posx>
@@ -1255,7 +1286,17 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>System.HasAddon(service.skin.widgets)</visible>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),Default)</visible>
+                        </control>
+                        <control type="image">
+                            <decription>Title overlay</decription>
+                            <posx>0</posx>
+                            <posy>508</posy>
+                            <width>572</width>
+                            <height>64</height>
+                            <colordiffuse>dd000000</colordiffuse>
+                            <texture border="1">windows/common/black.png</texture>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),200%)</visible>
                         </control>
                         <control type="group">
                             <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RandomEpisode.1.File)) + IsEmpty(Window.Property(RandomMovie.1.File))</visible>
@@ -1305,7 +1346,7 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
-                            <visible>!IsEmpty(Window.Property(RandomMovie.1.File)) + !IsEmpty(Window.Property(RandomEpisode.1.File))</visible>
+                            <visible>!IsEmpty(Window.Property(RandomMovie.1.File)) + !IsEmpty(Window.Property(RandomEpisode.1.File)) + !stringcompare(Skin.String(BarTransparency),0%)</visible>
                             <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
@@ -1679,7 +1720,17 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>System.HasAddon(service.skin.widgets)</visible>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),Default)</visible>
+                        </control>
+                        <control type="image">
+                            <decription>Title overlay</decription>
+                            <posx>0</posx>
+                            <posy>508</posy>
+                            <width>382</width>
+                            <height>64</height>
+                            <colordiffuse>dd000000</colordiffuse>
+                            <texture border="1">windows/common/black.png</texture>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),200%)</visible>
                         </control>
                         <control type="group">
                             <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RecommendedEpisode.1.File))</visible>
@@ -1729,7 +1780,7 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
-                            <visible>!IsEmpty(Window.Property(RecommendedEpisode.1.File))</visible>
+                            <visible>!IsEmpty(Window.Property(RecommendedEpisode.1.File)) + !stringcompare(Skin.String(BarTransparency),0%)</visible>
                             <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
@@ -1954,8 +2005,18 @@
                                     <width>283</width>
                                     <height>66</height>
                                     <texture border="1">windows/home/tile-overlay.png</texture>
-                                    <colordiffuse>99FFFFFF</colordiffuse>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
                                 </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                 <control type="image">
                                     <posx>24</posx>
                                     <posy>24</posy>
@@ -1974,6 +2035,7 @@
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <textoffsetx>20</textoffsetx>
+									<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                 </control>
                             </control>
                         </itemlayout>
@@ -2016,8 +2078,18 @@
                                         <width>283</width>
                                         <height>66</height>
                                         <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                    </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                     <control type="image">
                                         <posx>24</posx>
                                         <posy>24</posy>
@@ -2040,6 +2112,7 @@
                                         <align>left</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                 <control type="image">
                                     <posx>3</posx>
@@ -2315,7 +2388,17 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>System.HasAddon(service.skin.widgets)</visible>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),Default)</visible>
+                        </control>
+                        <control type="image">
+                            <decription>Title overlay</decription>
+                            <posx>0</posx>
+                            <posy>508</posy>
+                            <width>382</width>
+                            <height>64</height>
+                            <colordiffuse>dd000000</colordiffuse>
+                            <texture border="1">windows/common/black.png</texture>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),200%)</visible>
                         </control>
                         <control type="group">
                             <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RecentMovie.1.File))</visible>
@@ -2365,7 +2448,7 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
-                            <visible>!IsEmpty(Window.Property(RecentMovie.1.File))</visible>
+                            <visible>!IsEmpty(Window.Property(RecentMovie.1.File)) + !stringcompare(Skin.String(BarTransparency),0%)</visible>
                             <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
@@ -2556,8 +2639,18 @@
                                     <width>283</width>
                                     <height>66</height>
                                     <texture border="1">windows/home/tile-overlay.png</texture>
-                                    <colordiffuse>99FFFFFF</colordiffuse>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
                                 </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                 <control type="image">
                                     <posx>24</posx>
                                     <posy>24</posy>
@@ -2576,6 +2669,7 @@
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                 </control>
                                 <control type="label">
                                     <posx>307</posx>
@@ -2588,7 +2682,7 @@
                                     <align>right</align>
                                     <aligny>center</aligny>
                                     <textoffsetx>20</textoffsetx>
-                                    <visible>!IsEmpty(ListItem.Label2)</visible>
+                                    <visible>!IsEmpty(ListItem.Label2) | !Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                 </control>
                             </control>
                         </itemlayout>
@@ -2614,8 +2708,18 @@
                                         <width>283</width>
                                         <height>66</height>
                                         <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                    </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                     <control type="image">
                                         <posx>24</posx>
                                         <posy>24</posy>
@@ -2638,6 +2742,7 @@
                                         <align>left</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                     <control type="label">
                                         <posx>307</posx>
@@ -2650,7 +2755,7 @@
                                         <align>right</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
-                                        <visible>!IsEmpty(ListItem.Label2)</visible>
+                                    	<visible>!IsEmpty(ListItem.Label2) | !Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                 <control type="image">
                                     <posx>3</posx>
@@ -2762,8 +2867,18 @@
                                         <width>283</width>
                                         <height>66</height>
                                         <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                    </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                     <control type="label">
                                         <posx>24</posx>
                                         <posy>241</posy>
@@ -2775,6 +2890,7 @@
                                         <align>left</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                 </control>
                             </control>
@@ -2845,8 +2961,18 @@
                                             <width>283</width>
                                             <height>66</height>
                                             <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                        </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                         <control type="label">
                                             <posx>24</posx>
                                             <posy>241</posy>
@@ -2858,6 +2984,7 @@
                                             <align>left</align>
                                             <aligny>center</aligny>
                                             <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                         </control>
                                     </control>
                                 <control type="image">
@@ -3183,7 +3310,17 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>System.HasAddon(service.skin.widgets)</visible>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),Default)</visible>
+                        </control>
+                        <control type="image">
+                            <decription>Title overlay</decription>
+                            <posx>0</posx>
+                            <posy>508</posy>
+                            <width>671</width>
+                            <height>64</height>
+                            <colordiffuse>dd000000</colordiffuse>
+                            <texture border="1">windows/common/black.png</texture>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),200%)</visible>
                         </control>
                         <control type="group">
                             <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
@@ -3233,7 +3370,7 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
-                            <visible>!IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
+                            <visible>!IsEmpty(Window.Property(RecentEpisode.1.File)) + !stringcompare(Skin.String(BarTransparency),0%)</visible>
                             <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
@@ -3426,8 +3563,18 @@
                                     <width>283</width>
                                     <height>66</height>
                                     <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
                                 </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                 <control type="image">
                                     <posx>24</posx>
                                     <posy>24</posy>
@@ -3446,6 +3593,7 @@
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                 </control>
                                 <control type="label">
                                     <posx>307</posx>
@@ -3458,7 +3606,7 @@
                                     <align>right</align>
                                     <aligny>center</aligny>
                                     <textoffsetx>20</textoffsetx>
-                                    <visible>!IsEmpty(ListItem.Label2)</visible>
+                                    <visible>!IsEmpty(ListItem.Label2) | !Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                 </control>
                             </control>
                         </itemlayout>
@@ -3484,8 +3632,18 @@
                                         <width>283</width>
                                         <height>66</height>
                                         <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                    </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                     <control type="image">
                                         <posx>24</posx>
                                         <posy>24</posy>
@@ -3508,6 +3666,7 @@
                                         <align>left</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                     <control type="label">
                                         <posx>307</posx>
@@ -3520,7 +3679,7 @@
                                         <align>right</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
-                                        <visible>!IsEmpty(ListItem.Label2)</visible>
+                                    <visible>!IsEmpty(ListItem.Label2) | !Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                 <control type="image">
                                     <posx>3</posx>
@@ -3631,8 +3790,18 @@
                                         <width>283</width>
                                         <height>66</height>
                                         <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                    </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                     <control type="label">
                                         <posx>24</posx>
                                         <posy>241</posy>
@@ -3644,6 +3813,7 @@
                                         <align>left</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                 </control>
                             </control>
@@ -3714,8 +3884,18 @@
                                             <width>283</width>
                                             <height>66</height>
                                             <texture border="1">windows/home/tile-overlay.png</texture>
-                                            <colordiffuse>99FFFFFF</colordiffuse>
-                                        </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                         <control type="label">
                                             <posx>24</posx>
                                             <posy>241</posy>
@@ -3727,7 +3907,9 @@
                                             <align>left</align>
                                             <aligny>center</aligny>
                                             <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                         </control>
+                                    </control>
                                 <control type="image">
                                     <posx>3</posx>
                                     <posy>3</posy>
@@ -3741,7 +3923,6 @@
                                         <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
                                     </animation>
                                 </control>
-                                    </control>
                                 </control>
                             </control>
                         </focusedlayout>
@@ -4026,7 +4207,17 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>System.HasAddon(service.skin.widgets)</visible>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),Default)</visible>
+                        </control>
+                        <control type="image">
+                            <decription>Title overlay</decription>
+                            <posx>0</posx>
+                            <posy>508</posy>
+                            <width>572</width>
+                            <height>64</height>
+                            <colordiffuse>dd000000</colordiffuse>
+                            <texture border="1">windows/common/black.png</texture>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),200%)</visible>
                         </control>
                         <control type="group">
                             <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
@@ -4075,7 +4266,7 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
-                            <visible>!IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
+                            <visible>!IsEmpty(Window.Property(RandomAlbum.1.Play)) + !stringcompare(Skin.String(BarTransparency),0%)</visible>
                             <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
@@ -4498,8 +4689,18 @@
                                         <width>283</width>
                                         <height>66</height>
                                         <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                    </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                     <control type="label">
                                         <posx>24</posx>
                                         <posy>241</posy>
@@ -4511,6 +4712,7 @@
                                         <align>left</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                     <control type="label">
                                         <posx>307</posx>
@@ -4523,7 +4725,7 @@
                                         <align>right</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
-                                        <visible>!IsEmpty(ListItem.Label2)</visible>
+                                    <visible>!IsEmpty(ListItem.Label2) | !Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                 </control>
                             </control>
@@ -4576,8 +4778,18 @@
                                             <width>283</width>
                                             <height>66</height>
                                             <texture border="1">windows/home/tile-overlay.png</texture>
-                                            <colordiffuse>99FFFFFF</colordiffuse>
-                                        </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                         <control type="label">
                                             <posx>24</posx>
                                             <posy>241</posy>
@@ -4589,6 +4801,7 @@
                                             <align>left</align>
                                             <aligny>center</aligny>
                                             <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                         </control>
                                         <control type="label">
                                             <posx>307</posx>
@@ -4601,7 +4814,7 @@
                                             <align>right</align>
                                             <aligny>center</aligny>
                                             <textoffsetx>20</textoffsetx>
-                                            <visible>!IsEmpty(ListItem.Label2)</visible>
+                                    <visible>!IsEmpty(ListItem.Label2) | !Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                         </control>
                                     </control>
                                 <control type="image">
@@ -4780,8 +4993,18 @@
                                         <width>283</width>
                                         <height>66</height>
                                         <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                    </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                     <control type="label">
                                         <posx>24</posx>
                                         <posy>241</posy>
@@ -4793,6 +5016,7 @@
                                         <align>left</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                 </control>
 								
@@ -4888,8 +5112,18 @@
                                             <width>283</width>
                                             <height>66</height>
                                             <texture border="1">windows/home/tile-overlay.png</texture>
-                                            <colordiffuse>99FFFFFF</colordiffuse>
-                                        </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                         <control type="label">
                                             <posx>24</posx>
                                             <posy>241</posy>
@@ -4901,6 +5135,7 @@
                                             <align>left</align>
                                             <aligny>center</aligny>
                                             <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                         </control>
                                     </control>
                                 </control>
@@ -5133,8 +5368,18 @@
                                         <width>283</width>
                                         <height>66</height>
                                         <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                    </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                     <control type="label">
                                         <posx>24</posx>
                                         <posy>241</posy>
@@ -5146,6 +5391,7 @@
                                         <align>left</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                 </control>
                             </control>
@@ -5218,8 +5464,18 @@
                                             <width>283</width>
                                             <height>66</height>
                                             <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                        </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                         <control type="label">
                                             <posx>24</posx>
                                             <posy>241</posy>
@@ -5231,6 +5487,7 @@
                                             <align>left</align>
                                             <aligny>center</aligny>
                                             <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                         </control>
                                     </control>
                                 <control type="image">
@@ -5521,9 +5778,20 @@
                                 <posy>385</posy>
                                 <width>572</width>
                                 <height>187</height>
+                            	<texture border="1">windows/common/black.png</texture>
                                 <colordiffuse>99000000</colordiffuse>
-                                <texture border="1">windows/common/black.png</texture>
-                            </control>
+                            <visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+                        </control>
+                        <control type="image">
+                            <decription>Title overlay</decription>
+                            <posx>0</posx>
+                            <posy>385</posy>
+                            <width>572</width>
+                            <height>187</height>
+                            <colordiffuse>dd000000</colordiffuse>
+                            <texture border="1">windows/common/black.png</texture>
+                            <visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+                        </control>
                             <control type="label">
                                 <posx>0</posx>
                                 <posy>574</posy>
@@ -6048,8 +6316,18 @@
                                     <width>283</width>
                                     <height>66</height>
                                     <texture border="1">windows/home/tile-overlay.png</texture>
-                                    <colordiffuse>99FFFFFF</colordiffuse>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
                                 </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                 <control type="image">
                                     <posx>24</posx>
                                     <posy>24</posy>
@@ -6068,6 +6346,7 @@
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                 </control>
                             </control>
                         </itemlayout>
@@ -6093,8 +6372,18 @@
                                         <width>283</width>
                                         <height>66</height>
                                         <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                    </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>283</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                     <control type="image">
                                         <posx>24</posx>
                                         <posy>24</posy>
@@ -6117,6 +6406,7 @@
                                         <align>left</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                 <control type="image">
                                     <posx>3</posx>
@@ -6256,8 +6546,18 @@
                                     <width>246</width>
                                     <height>66</height>
                                     <texture border="1">windows/home/tile-overlay.png</texture>
-                                    <colordiffuse>99FFFFFF</colordiffuse>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
                                 </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>246</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                 <control type="image">
                                     <posx>5</posx>
                                     <posy>24</posy>
@@ -6276,6 +6576,7 @@
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                 </control>
                             </control>
                         </itemlayout>
@@ -6318,8 +6619,18 @@
                                         <width>246</width>
                                         <height>66</height>
                                         <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
-                                    </control>
+									<visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>
+								<control type="image">
+                                    <posx>24</posx>
+                                    <posy>241</posy>
+                                    <width>246</width>
+                                    <height>66</height>
+                                    <texture border="1">windows/home/tile-overlay200.png</texture>
+									<visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+									<colordiffuse>99FFFFFF</colordiffuse>
+                                </control>                                
                                     <control type="image">
                                         <posx>5</posx>
                                         <posy>24</posy>
@@ -6342,6 +6653,7 @@
                                         <align>left</align>
                                         <aligny>center</aligny>
                                         <textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(HideTextOnTiles) | !stringcompare(Skin.String(BarTransparency),0%)</visible>
                                     </control>
                                 <control type="image">
                                     <posx>3</posx>
