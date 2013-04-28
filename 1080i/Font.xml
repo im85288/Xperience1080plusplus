@@ -16,6 +16,12 @@
             <filename>OpenSansCond.ttf</filename>
             <size>20</size>
         </font>
+		<font>
+            <name>Font-Condensed-S22</name>
+            <filename>OpenSansCond.ttf</filename>
+            <size>22</size>
+        </font>
+
         <font>
             <name>Font-Condensed-S20-B</name>
             <filename>OpenSansCond.ttf</filename>
