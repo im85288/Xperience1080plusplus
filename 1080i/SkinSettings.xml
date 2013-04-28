@@ -476,10 +476,10 @@
                         <ondown>2000</ondown>
                         <texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
                         <texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),Default)">Skin.SetString(BarTransparency,200%)</onclick>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),0%)">Skin.SetString(BarTransparency,Default)</onclick>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),200%)">Skin.SetString(BarTransparency,0%)</onclick>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),Default)">Skin.SetString(BarTransparency,200%)</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),Default)">Skin.SetString(BarTransparency,darker)</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),hide)">Skin.SetString(BarTransparency,Default)</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),darker)">Skin.SetString(BarTransparency,hide)</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),Default)">Skin.SetString(BarTransparency,darker)</onclick>
                     </control>
                     <control type="button" id="220092">
                         <posx>1147</posx>
@@ -492,10 +492,10 @@
                         <ondown>2000</ondown>
                         <texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
                         <texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),0%)">Skin.SetString(BarTransparency,200%)</onclick>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),Default)">Skin.SetString(BarTransparency,0%)</onclick>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),200%)">Skin.SetString(BarTransparency,Default)</onclick>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),0%)">Skin.SetString(BarTransparency,200%)</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),hide)">Skin.SetString(BarTransparency,darker)</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),Default)">Skin.SetString(BarTransparency,hide)</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),darker)">Skin.SetString(BarTransparency,Default)</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),hide)">Skin.SetString(BarTransparency,darker)</onclick>
                     </control>
                     <control type="button">
                         <posx>0</posx>
@@ -507,7 +507,7 @@
                         <textoffsetx>35</textoffsetx>
                         <font>Font-Condensed-S30</font>
                         <textcolor>96FFFFFF</textcolor>
-                        <label>Random-Tiles-Overlay Opacity (default as base)</label>
+                        <label>Title Text on HomeWidgets</label>
                         <label2>$INFO[Skin.String(BarTransparency)]</label2>
                         <visible>!ControlGroup(22009).HasFocus</visible>
                     </control>
@@ -521,7 +521,7 @@
                         <textoffsetx>35</textoffsetx>
                         <font>Font-Condensed-S30</font>
                         <textcolor>white</textcolor>
-                        <label>Tile-Overlay Opacity (default as base)</label>
+                        <label>Title Text on HomeWidgets</label>
                         <label2>$INFO[Skin.String(BarTransparency)]</label2>
                         <visible>ControlGroup(22009).HasFocus</visible>
                     </control>
@@ -533,7 +533,7 @@
                     <selected>Skin.HasSetting(HideTextOnTiles)</selected>
                     <onclick>Skin.ToggleSetting(HideTextOnTiles)</onclick>
                     <label> • hide text on tiles</label>
-					<visible>stringcompare(Skin.String(BarTransparency),0%)</visible>
+					<visible>stringcompare(Skin.String(BarTransparency),hide)</visible>
                 </control>-->
 
 

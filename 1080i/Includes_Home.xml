@@ -1274,7 +1274,7 @@
                             <height>64</height>
                             <colordiffuse>dd000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),200%)</visible>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),darker)</visible>
                         </control>
                         <control type="group">
                             <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RandomEpisode.1.File)) + IsEmpty(Window.Property(RandomMovie.1.File))</visible>
@@ -1324,7 +1324,7 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
-                            <visible>!IsEmpty(Window.Property(RandomMovie.1.File)) + !IsEmpty(Window.Property(RandomEpisode.1.File)) + !stringcompare(Skin.String(BarTransparency),0%)</visible>
+                            <visible>!IsEmpty(Window.Property(RandomMovie.1.File)) + !IsEmpty(Window.Property(RandomEpisode.1.File)) + !stringcompare(Skin.String(BarTransparency),hide)</visible>
                             <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
@@ -1332,7 +1332,7 @@
                             <posy>576</posy>
                             <width>572</width>
                             <height>25</height>
-                            <font>Font-Condensed-S20</font>
+                            <font>Font-Condensed-S22</font>
                             <!--		11000000-->
                             <textcolor>eewhite2</textcolor>
                             <align>left</align>
@@ -1347,7 +1347,7 @@
                             <posy>576</posy>
                             <width>572</width>
                             <height>25</height>
-                            <font>Font-Condensed-S20</font>
+                            <font>Font-Condensed-S22</font>
                             <!--11000000-->
                             <textcolor>eewhite2</textcolor>
                             <align>left</align>
@@ -1708,7 +1708,7 @@
                             <height>64</height>
                             <colordiffuse>dd000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),200%)</visible>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),darker)</visible>
                         </control>
                         <control type="group">
                             <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RecommendedEpisode.1.File))</visible>
@@ -1758,7 +1758,7 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
-                            <visible>!IsEmpty(Window.Property(RecommendedEpisode.1.File)) + !stringcompare(Skin.String(BarTransparency),0%)</visible>
+                            <visible>!IsEmpty(Window.Property(RecommendedEpisode.1.File)) + !stringcompare(Skin.String(BarTransparency),hide)</visible>
                             <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
@@ -1766,7 +1766,7 @@
                             <posy>576</posy>
                             <width>382</width>
                             <height>25</height>
-                            <font>Font-Condensed-S20</font>
+                            <font>Font-Condensed-S22</font>
                             <!--11000000-->
                             <textcolor>eewhite2</textcolor>
                             <align>left</align>
@@ -1781,7 +1781,7 @@
                             <posy>576</posy>
                             <width>382</width>
                             <height>25</height>
-                            <font>Font-Condensed-S20</font>
+                            <font>Font-Condensed-S22</font>
                             <!--11000000-->
                             <textcolor>eewhite2</textcolor>
                             <align>left</align>
@@ -2354,7 +2354,7 @@
                             <height>64</height>
                             <colordiffuse>dd000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),200%)</visible>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),darker)</visible>
                         </control>
                         <control type="group">
                             <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RecentMovie.1.File))</visible>
@@ -2404,7 +2404,7 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
-                            <visible>!IsEmpty(Window.Property(RecentMovie.1.File)) + !stringcompare(Skin.String(BarTransparency),0%)</visible>
+                            <visible>!IsEmpty(Window.Property(RecentMovie.1.File)) + !stringcompare(Skin.String(BarTransparency),hide)</visible>
                             <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
@@ -2412,7 +2412,7 @@
                             <posy>576</posy>
                             <width>382</width>
                             <height>25</height>
-                            <font>Font-Condensed-S20</font>
+                            <font>Font-Condensed-S22</font>
                             <!--11000000-->
                             <textcolor>eewhite2</textcolor>
                             <align>left</align>
@@ -3231,7 +3231,7 @@
                             <height>64</height>
                             <colordiffuse>dd000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),200%)</visible>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),darker)</visible>
                         </control>
                         <control type="group">
                             <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
@@ -3281,7 +3281,7 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
-                            <visible>!IsEmpty(Window.Property(RecentEpisode.1.File)) + !stringcompare(Skin.String(BarTransparency),0%)</visible>
+                            <visible>!IsEmpty(Window.Property(RecentEpisode.1.File)) + !stringcompare(Skin.String(BarTransparency),hide)</visible>
                             <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
@@ -3289,7 +3289,7 @@
                             <posy>576</posy>
                             <width>671</width>
                             <height>25</height>
-                            <font>Font-Condensed-S20</font>
+                            <font>Font-Condensed-S22</font>
                             <!--11000000-->
                             <textcolor>eewhite2</textcolor>
                             <align>left</align>
@@ -4083,7 +4083,7 @@
                             <height>64</height>
                             <colordiffuse>dd000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),200%)</visible>
+                            <visible>System.HasAddon(service.skin.widgets) + stringcompare(Skin.String(BarTransparency),darker)</visible>
                         </control>
                         <control type="group">
                             <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
@@ -4132,7 +4132,7 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
-                            <visible>!IsEmpty(Window.Property(RandomAlbum.1.Play)) + !stringcompare(Skin.String(BarTransparency),0%)</visible>
+                            <visible>!IsEmpty(Window.Property(RandomAlbum.1.Play)) + !stringcompare(Skin.String(BarTransparency),hide)</visible>
                             <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
@@ -4140,7 +4140,7 @@
                             <posy>576</posy>
                             <width>477</width>
                             <height>25</height>
-                            <font>Font-Condensed-S20</font>
+                            <font>Font-Condensed-S22</font>
                             <!--11000000-->
                             <textcolor>eewhite2</textcolor>
                             <align>left</align>
@@ -4489,7 +4489,7 @@
                             <posy>576</posy>
                             <width>477</width>
                             <height>25</height>
-                            <font>Font-Condensed-S20</font>
+                            <font>Font-Condensed-S22</font>
                             <!--11000000-->
                             <textcolor>eewhite2</textcolor>
                             <align>left</align>
@@ -4749,7 +4749,7 @@
                         <posy>576</posy>
                         <width>477</width>
                         <height>25</height>
-                        <font>Font-Condensed-S20</font>
+                        <font>Font-Condensed-S22</font>
                         <!--11000000-->
                         <textcolor>eewhite2</textcolor>
                         <align>left</align>
@@ -5588,14 +5588,14 @@
                             <height>187</height>
                             <colordiffuse>dd000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>stringcompare(Skin.String(BarTransparency),200%)</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),darker)</visible>
                         </control>
                             <control type="label">
                                 <posx>0</posx>
                                 <posy>574</posy>
                                 <width>477</width>
                                 <height>25</height>
-                                <font>Font-Condensed-S20</font>
+                                <font>Font-Condensed-S22</font>
                                 <!--11000000-->
                                 <textcolor>eewhite2</textcolor>
                                 <align>left</align>
@@ -5682,7 +5682,7 @@
                                 <posy>572</posy>
                                 <width>572</width>
                                 <height>25</height>
-                                <font>Font-Condensed-S20</font>
+                                <font>Font-Condensed-S22</font>
                                 <!--11000000-->
                                 <textcolor>eewhite2</textcolor>
                                 <align>left</align>
