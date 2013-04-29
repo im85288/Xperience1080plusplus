@@ -122,8 +122,8 @@
     
     <!-- Overlays -->
     <variable name="InfoListOverlay">
-        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/list-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/list-w.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/list-w.png]</value>
+		<value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/list-p.png]</value>
         <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/,/list-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/,/list-w.png]</value>
         <value condition="Container.ListItem.IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/list-p.png]</value>
@@ -131,8 +131,8 @@
     </variable>
     
     <variable name="InfoPanelOverlay">
-        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/panel-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/panel-w.png]</value>
+        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/panel-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/panel-w.png]</value>
         <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/,/panel-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/,/panel-w.png]</value>
         <value condition="Container.ListItem.IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/panel-p.png]</value>
@@ -140,8 +140,8 @@
     </variable>
     
     <variable name="DefaultListOverlay">
-        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/default-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/default-w.png]</value>
+        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/default-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/default-w.png]</value>
         <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/,/default-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/,/default-w.png]</value>
         <value condition="Container.ListItem.IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/default-p.png]</value>
@@ -150,64 +150,64 @@
     
     <!--extended overlay-->
     <variable name="ExtendedOverlay">
-        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/extended-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/extended-w.png]</value>
+        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/extended-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/extended-w.png]</value>
         <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
         <value condition="Container.ListItem.IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/extended-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/extended-w.png]</value>
     </variable>
     <variable name="ExtendedOverlay0">
-        <value condition="ListItem(0).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(0).Overlay,overlays/,/extended-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(0).Overlay,overlays/,/extended-w.png]</value>
+        <value condition="ListItem(0).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(0).Overlay,overlays/movies/,/extended-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(0).Overlay,overlays/movies/,/extended-w.png]</value>
         <value condition="ListItem(0).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(0).Overlay,overlays/,/extended-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(0).Overlay,overlays/,/extended-w.png]</value>
         <value condition="ListItem(0).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(0).Overlay,overlays/blacks/,/extended-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(0).Overlay,overlays/blacks/,/extended-w.png]</value>
     </variable>
     <variable name="ExtendedOverlay1">
-        <value condition="ListItem(1).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(1).Overlay,overlays/,/extended-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(1).Overlay,overlays/,/extended-w.png]</value>
+        <value condition="ListItem(1).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(1).Overlay,overlays/movies/,/extended-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(1).Overlay,overlays/movies/,/extended-w.png]</value>
         <value condition="ListItem(1).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(1).Overlay,overlays/,/extended-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(1).Overlay,overlays/,/extended-w.png]</value>
         <value condition="ListItem(1).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(1).Overlay,overlays/blacks/,/extended-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(1).Overlay,overlays/blacks/,/extended-w.png]</value>
     </variable>
     <variable name="ExtendedOverlay2">
-        <value condition="ListItem(2).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(2).Overlay,overlays/,/extended-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(2).Overlay,overlays/,/extended-w.png]</value>
+        <value condition="ListItem(2).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(2).Overlay,overlays/movies/,/extended-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(2).Overlay,overlays/movies/,/extended-w.png]</value>
         <value condition="ListItem(2).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(2).Overlay,overlays/,/extended-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(2).Overlay,overlays/,/extended-w.png]</value>
         <value condition="ListItem(2).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(2).Overlay,overlays/blacks/,/extended-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(2).Overlay,overlays/blacks/,/extended-w.png]</value>
     </variable>
     <variable name="ExtendedOverlay3">
-        <value condition="ListItem(3).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(3).Overlay,overlays/,/extended-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(3).Overlay,overlays/,/extended-w.png]</value>
+        <value condition="ListItem(3).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(3).Overlay,overlays/movies/,/extended-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(3).Overlay,overlays/movies/,/extended-w.png]</value>
         <value condition="ListItem(3).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(3).Overlay,overlays/,/extended-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(3).Overlay,overlays/,/extended-w.png]</value>
         <value condition="ListItem(3).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(3).Overlay,overlays/blacks/,/extended-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(3).Overlay,overlays/blacks/,/extended-w.png]</value>
     </variable>
     <variable name="ExtendedOverlay4">
-        <value condition="ListItem(4).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(4).Overlay,overlays/,/extended-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(4).Overlay,overlays/,/extended-w.png]</value>
+        <value condition="ListItem(4).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(4).Overlay,overlays/movies/,/extended-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(4).Overlay,overlays/movies/,/extended-w.png]</value>
         <value condition="ListItem(4).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(4).Overlay,overlays/,/extended-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(4).Overlay,overlays/,/extended-w.png]</value>
         <value condition="ListItem(4).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(4).Overlay,overlays/blacks/,/extended-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(4).Overlay,overlays/blacks/,/extended-w.png]</value>
     </variable>
     <variable name="ExtendedOverlay5">
-        <value condition="ListItem(5).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(5).Overlay,overlays/,/extended-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(5).Overlay,overlays/,/extended-w.png]</value>
+        <value condition="ListItem(5).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(5).Overlay,overlays/movies/,/extended-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(5).Overlay,overlays/movies/,/extended-w.png]</value>
         <value condition="ListItem(5).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(5).Overlay,overlays/,/extended-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(5).Overlay,overlays/,/extended-w.png]</value>
         <value condition="ListItem(5).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(5).Overlay,overlays/blacks/,/extended-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(5).Overlay,overlays/blacks/,/extended-w.png]</value>
     </variable>
     <variable name="ExtendedOverlay-1">
-        <value condition="ListItem(-1).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(-1).Overlay,overlays/,/extended-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(-1).Overlay,overlays/,/extended-w.png]</value>
+        <value condition="ListItem(-1).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(-1).Overlay,overlays/movies/,/extended-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(-1).Overlay,overlays/movies/,/extended-w.png]</value>
         <value condition="ListItem(-1).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(-1).Overlay,overlays/,/extended-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(-1).Overlay,overlays/,/extended-w.png]</value>
         <value condition="ListItem(-1).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(-1).Overlay,overlays/blacks/,/extended-p.png]</value>
@@ -216,80 +216,80 @@
     
     <!--poster overlay-->
     <variable name="PosterOverlay">
-        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/poster-p.png]</value>
-        <value  condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/poster-w.png]</value>
+        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/poster-p.png]</value>
+        <value  condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/poster-w.png]</value>
         <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/,/poster-p.png]</value>
         <value  condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/,/poster-w.png]</value>
         <value condition="Container.ListItem.IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/poster-p.png]</value>
         <value  condition="Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/poster-w.png]</value>
     </variable>
     <variable name="PosterOverlay0">
-        <value condition="ListItem(0).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(0).Overlay,overlays/,/poster-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(0).Overlay,overlays/,/poster-w.png]</value>
+        <value condition="ListItem(0).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(0).Overlay,overlays/movies/,/poster-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(0).Overlay,overlays/movies/,/poster-w.png]</value>
         <value condition="ListItem(0).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(0).Overlay,overlays/,/poster-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(0).Overlay,overlays/,/poster-w.png]</value>
         <value condition="ListItem(0).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(0).Overlay,overlays/blacks/,/poster-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(0).Overlay,overlays/blacks/,/poster-w.png]</value>
     </variable>
     <variable name="PosterOverlay1">
-        <value condition="ListItem(1).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(1).Overlay,overlays/,/poster-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(1).Overlay,overlays/,/poster-w.png]</value>
+        <value condition="ListItem(1).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(1).Overlay,overlays/movies/,/poster-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(1).Overlay,overlays/movies/,/poster-w.png]</value>
         <value condition="ListItem(1).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(1).Overlay,overlays/,/poster-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(1).Overlay,overlays/,/poster-w.png]</value>
         <value condition="ListItem(1).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(1).Overlay,overlays/blacks/,/poster-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(1).Overlay,overlays/blacks/,/poster-w.png]</value>
     </variable>
     <variable name="PosterOverlay2">
-        <value condition="ListItem(2).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(2).Overlay,overlays/,/poster-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(2).Overlay,overlays/,/poster-w.png]</value>
+        <value condition="ListItem(2).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(2).Overlay,overlays/movies/,/poster-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(2).Overlay,overlays/movies/,/poster-w.png]</value>
         <value condition="ListItem(2).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(2).Overlay,overlays/,/poster-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(2).Overlay,overlays/,/poster-w.png]</value>
         <value condition="ListItem(2).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(2).Overlay,overlays/blacks/,/poster-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(2).Overlay,overlays/blacks/,/poster-w.png]</value>
     </variable>
     <variable name="PosterOverlay3">
-        <value condition="ListItem(3).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(3).Overlay,overlays/,/poster-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(3).Overlay,overlays/,/poster-w.png]</value>
+        <value condition="ListItem(3).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(3).Overlay,overlays/movies/,/poster-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(3).Overlay,overlays/movies/,/poster-w.png]</value>
         <value condition="ListItem(3).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(3).Overlay,overlays/,/poster-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(3).Overlay,overlays/,/poster-w.png]</value>
         <value condition="ListItem(3).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(3).Overlay,overlays/blacks/,/poster-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(3).Overlay,overlays/blacks/,/poster-w.png]</value>
     </variable>
     <variable name="PosterOverlay4">
-        <value condition="ListItem(4).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(4).Overlay,overlays/,/poster-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(4).Overlay,overlays/,/poster-w.png]</value>
+        <value condition="ListItem(4).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(4).Overlay,overlays/movies/,/poster-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(4).Overlay,overlays/movies/,/poster-w.png]</value>
         <value condition="ListItem(4).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(4).Overlay,overlays/,/poster-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(4).Overlay,overlays/,/poster-w.png]</value>
         <value condition="ListItem(4).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(4).Overlay,overlays/blacks/,/poster-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(4).Overlay,overlays/blacks/,/poster-w.png]</value>
     </variable>
     <variable name="PosterOverlay5">
-        <value condition="ListItem(5).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(5).Overlay,overlays/,/poster-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(5).Overlay,overlays/,/poster-w.png]</value>
+        <value condition="ListItem(5).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(5).Overlay,overlays/movies/,/poster-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(5).Overlay,overlays/movies/,/poster-w.png]</value>
         <value condition="ListItem(5).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(5).Overlay,overlays/,/poster-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(5).Overlay,overlays/,/poster-w.png]</value>
         <value condition="ListItem(5).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(5).Overlay,overlays/blacks/,/poster-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(5).Overlay,overlays/blacks/,/poster-w.png]</value>
     </variable>
     <variable name="PosterOverlay6">
-        <value condition="ListItem(6).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(6).Overlay,overlays/,/poster-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(6).Overlay,overlays/,/poster-w.png]</value>
+        <value condition="ListItem(6).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(6).Overlay,overlays/movies/,/poster-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(6).Overlay,overlays/movies/,/poster-w.png]</value>
         <value condition="ListItem(6).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(6).Overlay,overlays/,/poster-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(6).Overlay,overlays/,/poster-w.png]</value>
         <value condition="ListItem(6).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(6).Overlay,overlays/blacks/,/poster-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(6).Overlay,overlays/blacks/,/poster-w.png]</value>
     </variable>
     <variable name="PosterOverlay7">
-        <value condition="ListItem(7).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(7).Overlay,overlays/,/poster-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(7).Overlay,overlays/,/poster-w.png]</value>
+        <value condition="ListItem(7).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(7).Overlay,overlays/movies/,/poster-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(7).Overlay,overlays/movies/,/poster-w.png]</value>
         <value condition="ListItem(7).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(7).Overlay,overlays/,/poster-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(7).Overlay,overlays/,/poster-w.png]</value>
         <value condition="ListItem(7).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(7).Overlay,overlays/blacks/,/poster-p.png]</value>
         <value condition="Skin.HasSetting(BWatched)">$INFO[ListItem(7).Overlay,overlays/blacks/,/poster-w.png]</value>
     </variable>
     <variable name="PosterOverlay-1">
-        <value condition="ListItem(-1).IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(-1).Overlay,overlays/,/poster-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem(-1).Overlay,overlays/,/poster-w.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(-1).Overlay,overlays/movies/,/poster-w.png]</value>
+        <value condition="ListItem(-1).IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem(-1).Overlay,overlays/movies/,/poster-p.png]</value>
         <value condition="ListItem(-1).IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem(-1).Overlay,overlays/,/poster-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem(-1).Overlay,overlays/,/poster-w.png]</value>
         <value condition="ListItem(-1).IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem(-1).Overlay,overlays/blacks/,/poster-p.png]</value>
@@ -297,8 +297,8 @@
     </variable>
 
     <variable name="VideoInfoOverlay">
-        <value condition="IntegerGreaterThan(ListItem.PercentPlayed,0) + !IntegerGreaterThan(ListItem.PercentPlayed,99) + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/extended-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/extended-w.png]</value>
+        <value condition="IntegerGreaterThan(ListItem.PercentPlayed,0) + !IntegerGreaterThan(ListItem.PercentPlayed,99) + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/extended-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/extended-w.png]</value>
         <value condition="IntegerGreaterThan(ListItem.PercentPlayed,0) + !IntegerGreaterThan(ListItem.PercentPlayed,99) + !Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
         <value condition="IntegerGreaterThan(ListItem.PercentPlayed,0) + !IntegerGreaterThan(ListItem.PercentPlayed,99) + Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/extended-p.png]</value>
@@ -306,8 +306,8 @@
     </variable>
     
     <variable name="BannerOverlayFo">
-        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/banner-p-fo.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/banner-w-fo.png]</value>
+        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/banner-p-fo.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/banner-w-fo.png]</value>
         <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/,/banner-p-fo.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/,/banner-w-fo.png]</value>
         <value condition="Container.ListItem.IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/banner-p-fo.png]</value>
@@ -316,8 +316,8 @@
     </variable>
 	
 	<variable name="BannerOverlayNF">
-        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/banner-p-nf.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/banner-w-nf.png]</value>
+        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/banner-p-nf.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/banner-w-nf.png]</value>
         <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/,/banner-p-nf.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/,/banner-w-nf.png]</value>
         <value condition="Container.ListItem.IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/banner-p-nf.png]</value>
@@ -332,8 +332,8 @@
     </variable>
 
     <variable name="WallOverlay">
-        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/wall-p.png]</value>
-        <value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/wall-w.png]</value>
+        <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/wall-p.png]</value>
+        <value condition="!Skin.HasSetting(BWatched) + [Container.Content(movies) | Container.Content(Sets)]">$INFO[ListItem.Overlay,overlays/movies/,/wall-w.png]</value>
         <value condition="Container.ListItem.IsResumable + !Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/,/wall-p.png]</value>
         <value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/,/wall-w.png]</value>
         <value condition="Container.ListItem.IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/wall-p.png]</value>

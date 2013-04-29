@@ -2580,7 +2580,7 @@
                         <ondown>80</ondown>
                         <scrolltime>0</scrolltime>
                         <itemlayout width="289" height="289">
-                            <control type="group">
+							<control type="group">
                                 <animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
                                 <control type="image">
                                     <posx>19</posx>
@@ -4523,7 +4523,7 @@
                         <scrolltime>0</scrolltime>
                         <itemlayout width="289" height="289">
                             <control type="group">
-                                <animation effect="fade" end="100" time="0" condition="true">Conditional</animation>
+                                <animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
                                 <control type="image">
                                     <posx>19</posx>
                                     <posy>19</posy>
@@ -4588,10 +4588,10 @@
                             <control type="group">
                                 <control type="group">
                                     <animation type="Focus">
-                                        <effect type="fade" start="100" end="100" time="200" tween="sine" easing="in" />
+                                        <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
                                     </animation>
                                     <animation type="Unfocus">
-                                        <effect type="fade" start="100" end="100" time="200" tween="sine" easing="out" />
+                                        <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
                                     </animation>
                                     <control type="image">
                                           <posx>19</posx>
@@ -4776,7 +4776,7 @@
 						
                         <itemlayout width="289" height="289">
                             <control type="group">
-								<animation effect="fade" end="100" time="0" condition="true">Conditional</animation>
+								<animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
                                 <control type="image">
                                     <posx>19</posx>
                                     <posy>19</posy>
@@ -4877,7 +4877,7 @@
                                         <posy>19</posy>
                                         <width>293</width>
                                         <height>293</height>
-                                        <texture border="7">windows/home/tile2.png</texture>
+                                        <texture border="7">windows/home/tile2..png</texture>
                                         <visible>IsEmpty(ListItem.Property(recent) + !Skin.HasSetting(HomeMusicTiles) + !Skin.HasSetting(HomeBackgroundOpacity)</visible>
                                     </control>
                                     <control type="image">
