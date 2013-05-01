@@ -311,22 +311,6 @@
                 
 				<visible>System.GetBool(pvrmanager.enabled)</visible>
             </control>
-            <control type="group">
-                <posx>-25</posx>
-                <posy>-3</posy>
-                <width>-50</width>
-                <height>100</height>
-                <visible>!Skin.HasSetting(HomeHome) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>12</posy>
-                    <width>16</width>
-                    <height>33</height>
-                    <texture>windows/home/submenu-arrow.png</texture>
-                    <include>visiblehidefadeinfo</include>
-                    <animation effect="fade"  start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(525) + Container(20).HasFocus(2)]">Conditional</animation>
-                </control>
-            </control>
             <control type="label">
                 <description>Home</description>
                 <include>HomeLabel</include>
@@ -1032,8 +1016,8 @@
                     <onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">625</onright>
                     <onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">725</onright>
                     <onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">825</onright>
-                    <onup>ActivateWindow(3023)</onup>
                     <ondown>501</ondown>
+                    <onup>21</onup>
                 </control>
                 <control type="group" id="550">
                     <posy>100</posy>
@@ -2695,7 +2679,7 @@
                                     <posy>3</posy>
                                     <width>325</width>
                                     <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <texture border="40">windows/home/tile-fo-movies.png</texture>
                                     <animation type="Focus">
                                         <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
                                     </animation>
@@ -2903,7 +2887,7 @@
                                     <posy>3</posy>
                                     <width>325</width>
                                     <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <texture border="40">windows/home/tile-fo-movies.png</texture>
                                     <animation type="Focus">
                                         <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
                                     </animation>
@@ -2998,7 +2982,7 @@
                         <posy>-21</posy>
                         <width>424</width>
                         <height>614</height>
-                        <texture border="40">windows/home/tile-fo.png</texture>
+                        <texture border="40">windows/home/tile-fo-movies.png</texture>
                         <animation type="Visible">
                             <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
                         </animation>
@@ -3574,7 +3558,7 @@
                                     <posy>3</posy>
                                     <width>325</width>
                                     <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <texture border="40">windows/home/tile-fo-tvshows.png</texture>
                                     <animation type="Focus">
                                         <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
                                     </animation>
@@ -3781,7 +3765,7 @@
                                     <posy>3</posy>
                                     <width>325</width>
                                     <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <texture border="40">windows/home/tile-fo-tvshows.png</texture>
                                     <animation type="Focus">
                                         <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
                                     </animation>
@@ -3836,7 +3820,7 @@
                         <posy>-21</posy>
                         <width>713</width>
                         <height>614</height>
-                        <texture border="40">windows/home/tile-fo.png</texture>
+                        <texture border="40">windows/home/tile-fo-tvshows.png</texture>
                         <animation type="Visible">
                             <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
                         </animation>
@@ -4664,7 +4648,7 @@
                                     <posy>3</posy>
                                     <width>325</width>
                                     <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <texture border="40">windows/home/tile-fo-music.png</texture>
                                     <animation type="Focus">
                                         <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
                                     </animation>
@@ -4966,7 +4950,7 @@
                                     <posy>3</posy>
                                     <width>325</width>
                                     <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <texture border="40">windows/home/tile-fo-music.png</texture>
                                     <animation type="Focus">
                                         <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
                                     </animation>
@@ -5017,7 +5001,7 @@
                         <posy>-21</posy>
                         <width>614</width>
                         <height>614</height>
-                        <texture border="40">windows/home/tile-fo.png</texture>
+                        <texture border="40">windows/home/tile-fo-music.png</texture>
                         <animation type="Visible">
                             <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
                         </animation>
@@ -6189,7 +6173,7 @@
                                     <posy>3</posy>
                                     <width>325</width>
                                     <height>325</height>
-                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <texture border="40">windows/home/tile-fo-weather.png</texture>
                                     <animation type="Focus">
                                         <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
                                     </animation>
