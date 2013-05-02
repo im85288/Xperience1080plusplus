@@ -709,6 +709,14 @@
                         <onclick>Skin.ToggleSetting(MovieInformation.PlayTrailer)</onclick>
                         <label>$LOCALIZE[41202]</label>
                     </control>
+				<control type="radiobutton" id="30091">
+                        <width>1210</width>
+                        <include>SettingsCategoryRadioButtonVars</include>
+                        <selected>Skin.HasSetting(PlayTrailerEvenWatched)</selected>
+                        <onclick>Skin.ToggleSetting(PlayTrailerEvenWatched)</onclick>
+                        <label> • even if watched</label>
+						<visible>Skin.HasSetting(MovieInformation.PlayTrailer)</visible>
+                    </control>
 				<control type="button" id="3006">
                         <width>1210</width>
                         <include>SettingsCategoryDefaultButtonVars</include>
