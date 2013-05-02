@@ -2702,7 +2702,7 @@
                             <width>210</width>
                             <height>96</height>
                             <label>$INFO[ListItem.TrackNumber]</label>
-                            <font>Font-Condensed-S80-B</font>
+                            <font>Font-Condensed-S80</font>
                             <textcolor>banner2</textcolor>
                             <scroll>false</scroll>
                             <align>right</align>
@@ -2714,7 +2714,7 @@
                             <width>210</width>
                             <height>96</height>
                             <label>$INFO[ListItem.PlayCount]</label>
-                            <font>Font-Condensed-S80-B</font>
+                            <font>Font-Condensed-S80</font>
                             <textcolor>banner2</textcolor>
                             <scroll>false</scroll>
                             <align>right</align>

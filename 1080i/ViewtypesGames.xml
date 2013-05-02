@@ -52,7 +52,7 @@
                                 <width>296</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
                                 <scroll>false</scroll>
@@ -132,7 +132,7 @@
                                 <width>296</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
                                 <scroll>true</scroll>
@@ -276,7 +276,7 @@
                                 <width>340</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
                                 <scroll>false</scroll>
@@ -356,7 +356,7 @@
                                 <width>340</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
                                 <scroll>true</scroll>
@@ -500,7 +500,7 @@
                                 <width>500</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
                                 <scroll>false</scroll>
@@ -580,7 +580,7 @@
                                 <width>500</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font-Condensed-S32-B</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>ddwhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
                                 <scroll>true</scroll>

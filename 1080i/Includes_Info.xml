@@ -1,34 +1,5 @@
 <includes>
 
-    <include name="Common-Loading">
-        <control type="group">
-            <animation type="WindowOpen" reversible="false">
-                <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout"/>
-            </animation>
-            <animation type="WindowClose" reversible="false">
-                <effect type="zoom" start="100" end="200" center="960,540" easing="out" tween="sine" time="300" />
-                <effect type="fade" start="100" end="0" time="250" easing="out" tween="cubic" />
-            </animation>
-            <control type="image">
-                <description>Loading Back</description>
-                <posx>785</posx>
-                <posy>365</posy>
-                <width>350</width>
-                <height>350</height>
-                <texture>windows/startup/loading-back.png</texture>
-            </control>
-            <control type="image">
-                <description>Loading</description>
-                <posx>785</posx>
-                <posy>365</posy>
-                <width>350</width>
-                <height>350</height>
-                <texture>windows/startup/loading.png</texture>
-                <animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
-            </control>
-        </control>
-    </include>
-
     <include name="Common-Clock">
         <control type="group">
             <animation type="WindowOpen" condition="Window.IsActive(loginscreen) | [Window.IsActive(startup) + !Window.Previous(loginscreen)] | Window.Previous(fullscreenvideo) | Window.Previous(visualisation) | Window.Previous(slideshow)" reversible="false">
@@ -50,37 +21,18 @@
                     <visible>Weather.IsFetched + ![stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]</visible>
                     <include>visiblehidefadeinfo</include>
                 </control>
-                <control type="group">
+                <control type="label">
+                    <description>Clock label</description>
+                    <posx>160r</posx>
+                    <posy>950</posy>
+                    <width>180</width>
+                    <height>100</height>
+                    <label>$INFO[System.Time]</label>
+                    <font>Font-Condensed-S34</font>
+                    <textcolor>eewhite2</textcolor>
+                    <align>right</align>
+                    <scroll>false</scroll>
                     <animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
-                    <control type="label">
-                        <description>Clock label</description>
-                        <posx>160r</posx>
-                        <posy>950</posy>
-                        <width>180</width>
-                        <height>100</height>
-                        <label>$INFO[System.Time]</label>
-                        <font>Font-Condensed-S34</font>
-                        <textcolor>eewhite2</textcolor>
-                        
-                        <align>right</align>
-                        <scroll>false</scroll>
-                        <animation effect="slide" end="0,-16" time="150" tween="sine" easing="inout" condition="!Skin.HasSetting(HideHomeDate) + [Control.HasFocus(21) | Control.HasFocus(22)]">Conditional</animation>
-                    </control>
-                    <control type="label">
-                        <description>Date label</description>
-                        <posx>160r</posx>
-                        <posy>970</posy>
-                        <width>480</width>
-                        <height>100</height>
-                        <label>$INFO[System.Date]</label>
-                        <font>Font-Condensed-S28</font>
-                        <textcolor>smallinfohome</textcolor>
-                        <scroll>false</scroll>
-                        <align>right</align>
-                        <visible>!Skin.HasSetting(HideHomeDate) + [Control.HasFocus(21) | Control.HasFocus(22)]</visible>
-                        <animation effect="fade" start="0" end="100" time="250" tween="sine" easing="inout">Visible</animation>
-                        <animation effect="fade" start="100" end="0" time="150" tween="sine" easing="inout">Hidden</animation>
-                    </control>
                 </control>
             </control>
             <control type="group">
@@ -92,7 +44,6 @@
                     <posy>950</posy>
                     <width>100</width>
                     <height>100</height>
-                    <aspect>keep</aspect>
                     <texture>windows/pvr/recording-info.png</texture>
                 </control>
                 <control type="image">
@@ -100,7 +51,6 @@
                     <posy>950</posy>
                     <width>100</width>
                     <height>100</height>
-                    <aspect>keep</aspect>
                     <texture>windows/pvr/recording-info-pulse.png</texture>
                     <animation effect="fade" start="65" end="100" time="750" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
                 </control>
@@ -110,7 +60,6 @@
                 <posy>950</posy>
                 <width>100</width>
                 <height>100</height>
-                <aspect>keep</aspect>
                 <texture>windows/pvr/timer.png</texture>
                 <animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
                 <include>visiblehidefadeinfo</include>
@@ -122,13 +71,21 @@
                 <posy>950</posy>
                 <width>100</width>
                 <height>100</height>
-                <aspect>keep</aspect>
                 <texture>overlays/volume/muted.png</texture>
                 <include>visiblehidefadeinfo</include>
                 <visible>Window.IsActive(mutebug)</visible>
             </control>
         </control>
     </include>
+    
+    <variable name="OptionsButtonTexture">
+        <value condition="Window.IsActive(programs) + [Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(60) | Control.IsVisible(61) | [Control.IsVisible(50) + substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)]]">buttons/options-right.png</value>
+        <value condition="Window.IsActive(programs) + [Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58)]">buttons/options-down.png</value>
+        <value condition="Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(60) | Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(502)">buttons/options-leftright.png</value>
+        <value condition="Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(55) | Window.IsActive(weather)">buttons/options-updown.png</value>
+        <value condition="Window.IsActive(script-NextAired-TVGuide.xml)">buttons/options-left.png</value>
+        <value>buttons/options_nofo.png</value>
+    </variable>
     
     <!-- Options Button -->
     <include name="Common-Options">
@@ -146,11 +103,18 @@
                 <onright>50</onright>
                 <onup>50</onup>
                 <ondown>50</ondown>
-                <texturefocus>buttons/options_nofo.png</texturefocus>
-                <texturenofocus>buttons/options_nofo.png</texturenofocus>
+                <texturefocus>-</texturefocus>
+                <texturenofocus>-</texturenofocus>
                 <onfocus>SetFocus(9111)</onfocus>
+                <visible allowhiddenfocus="true">!Skin.HasSetting(HideOptionsButton)</visible>
+            </control>
+            <control type="image">
+                <description>Options Button texture</description>
+                <width>100</width>
+                <height>100</height>
+                <texture>$VAR[OptionsButtonTexture]</texture>
                 <include>homebuttonsanim3</include>
-                <visible allowhiddenfocus="true">!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo)</visible>
+                <visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo)</visible>
             </control>
             <control type="label">
                 <description>Options Label</description>
@@ -161,9 +125,8 @@
                 <label>$LOCALIZE[41600]</label>
                 <font>Font-Condensed-S34</font>
                 <textcolor>eewhite2</textcolor>
-                
                 <include>homebuttonsanim4</include>
-                <visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo)</visible>
+                <visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo)</visible>
             </control>
         </control>
     </include>
@@ -189,7 +152,6 @@
                 <label>$LOCALIZE[41507]</label>
                 <font>Font-Condensed-S34</font>
                 <textcolor>eewhite2</textcolor>
-                
                 <include>homebuttonsanim2</include>
                 <visible>!Skin.HasSetting(HideShutdownButton)</visible>
             </control>
@@ -206,7 +168,7 @@
     <variable name="NowPlayingSubTitle">
         <value condition="Player.HasVideo + !Pvr.IsPlayingTv">$INFO[Player.FinishTime,$LOCALIZE[41371] ,]</value>
         <value condition="Player.HasVideo + Pvr.IsPlayingTv">$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: ,]$INFO[VideoPlayer.NextStartTime, (,)]</value>
-        <value condition="Player.HasAudio + !Pvr.IsPlayingRadio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, • ,]$INFO[MusicPlayer.Year, • ,]</value>
+        <value condition="Player.HasAudio + !Pvr.IsPlayingRadio">$INFO[MusicPlayer.Artist]</value>
         <value condition="Player.HasAudio + Pvr.IsPlayingRadio">$INFO[MusicPlayer.ChannelName]</value>
     </variable>
     
@@ -247,114 +209,73 @@
                     <scroll>false</scroll>
                     <align>right</align>
                 </control>
-                <control type="image">
-                    <description>Now Playing - Paused</description>
-                    <posx>0</posx>
-                    <posy>25</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <texture>overlays/nowplaying/pause.png</texture>
-                    <animation type="Visible">
-                        <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-                        <effect type="zoom" start="50" end="100" center="50,77" tween="sine" easing="inout" time="300" />
-                    </animation>
-                    <animation type="Hidden">
-                        <effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
-                        <effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
-                    </animation>
-                    <visible>Player.Paused</visible>
-                </control>
-                <control type="image">
-                    <description>Now Playing - Play</description>
-                    <posx>0</posx>
-                    <posy>25</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <texture>overlays/nowplaying/play.png</texture>
-                    <animation type="Visible">
-                        <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-                        <effect type="zoom" start="50" end="100" center="50,77" tween="sine" easing="inout" time="300" />
-                    </animation>
-                    <animation type="Hidden">
-                        <effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
-                        <effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
-                    </animation>
-                    <visible>!Player.Paused</visible>
-                </control>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>25</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <texture>dialogs/extendedprogress/loading-back.png</texture>
-                </control>
-                <control type="progress" id="933">
-                    <texturebg>-</texturebg>
-                    <lefttexture>-</lefttexture>
-                    <midtexture>-</midtexture>
-                    <righttexture>-</righttexture>
-                    <info>Player.Progress</info>
-                    <visible>false</visible>
-                </control>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>25</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <texture>$INFO[Control.GetLabel(933),overlays/nowplaying/progress/p,.png]</texture>
-                    <visible>!IsEmpty(Player.Duration)</visible>
-                </control>
-                <control type="image">
-                    <description>Loading indicator</description>
-                    <posx>0</posx>
-                    <posy>25</posy>
-                    <width>100</width>
-                    <height>100</height>
-                    <texture>dialogs/search/loading.png</texture>
-                    <animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!Player.Paused">Conditional</animation>
-                    <visible>IsEmpty(Player.Duration)</visible>
-                </control>
-            </control>
-        </control>
-    </include>
-    
-    <include name="Common-HomeClassicNowPlaying">
-        <control type="group">
-            <visible>Player.HasAudio + Player.Paused + !IsEmpty(Player.Art(thumb))</visible>
-            <animation type="Visible" reversible="false">
-                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
-                <effect type="zoom" start="200" end="100" time="300" center="960,540" tween="sine" easing="inout" />
-                <effect type="fade" start="100" end="0" time="300" delay="4000" tween="sine" easing="inout" />
-                <effect type="zoom" start="100" end="200" time="300" center="960,540" delay="4000" tween="sine" easing="inout" />
-            </animation>
-            <animation type="Hidden" reversible="false">
-                <effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
-                <effect type="zoom" start="100" end="200" time="300" center="960,540" delay="0" tween="sine" easing="inout" />
-            </animation>
-            <control type="image">
-                <posx>770</posx>
-                <posy>350</posy>
-                <width>380</width>
-                <height>380</height>
-                <texture>overlays/notification/back.png</texture>
-                <aspectratio>stretch</aspectratio>
-            </control>
-            <control type="image">
-                <posx>825</posx>
-                <posy>405</posy>
-                <width>270</width>
-                <height>270</height>
-                <aspectratio align="center">stretch</aspectratio>
-                <texture>$INFO[Player.Art(thumb)]</texture>
-                <colordiffuse>DD000000</colordiffuse>
-            </control>
-            <control type="image">
-                <posx>786</posx>
-                <posy>366</posy>
-                <width>348</width>
-                <height>348</height>
-                <texture>overlays/notification/cover-overlay.png</texture>
-                <aspectratio>stretch</aspectratio>
+    			<control type="image">
+    			    <description>Now Playing - Paused</description>
+    			    <posx>0</posx>
+    			    <posy>25</posy>
+    			    <width>100</width>
+    			    <height>100</height>
+    			    <texture>overlays/nowplaying/pause.png</texture>
+    			    <animation type="Visible">
+    			        <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+    			        <effect type="zoom" start="50" end="100" center="50,77" tween="sine" easing="inout" time="300" />
+    			    </animation>
+    			    <animation type="Hidden">
+    			        <effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+    			        <effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
+    			    </animation>
+    			    <visible>Player.Paused</visible>
+    			</control>
+    			<control type="image">
+    			    <description>Now Playing - Play</description>
+    			    <posx>0</posx>
+    			    <posy>25</posy>
+    			    <width>100</width>
+    			    <height>100</height>
+    			    <texture>overlays/nowplaying/play.png</texture>
+    			    <animation type="Visible">
+    			        <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+    			        <effect type="zoom" start="50" end="100" center="50,77" tween="sine" easing="inout" time="300" />
+    			    </animation>
+    			    <animation type="Hidden">
+    			        <effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+    			        <effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
+    			    </animation>
+    			    <visible>!Player.Paused</visible>
+    			</control>
+    			<control type="image">
+    			    <posx>0</posx>
+    			    <posy>25</posy>
+    			    <width>100</width>
+    			    <height>100</height>
+    			    <texture>dialogs/extendedprogress/loading-back.png</texture>
+    			</control>
+    			<control type="progress" id="933">
+    			    <texturebg>-</texturebg>
+    				<lefttexture>-</lefttexture>
+    				<midtexture>-</midtexture>
+    				<righttexture>-</righttexture>
+    				<info>Player.Progress</info>
+    				<visible>false</visible>
+    			</control>
+    			<control type="image">
+    			    <posx>0</posx>
+    			    <posy>25</posy>
+    			    <width>100</width>
+    			    <height>100</height>
+    			    <texture>$INFO[Control.GetLabel(933),overlays/nowplaying/progress/p,.png]</texture>
+    			    <visible>!IsEmpty(Player.Duration)</visible>
+    			</control>
+    			<control type="image">
+    			    <description>Loading indicator</description>
+    			    <posx>0</posx>
+    			    <posy>25</posy>
+    			    <width>100</width>
+    			    <height>100</height>
+    			    <texture>dialogs/search/loading.png</texture>
+    			    <animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!Player.Paused">Conditional</animation>
+    			    <visible>IsEmpty(Player.Duration)</visible>
+    			</control>
             </control>
         </control>
     </include>
@@ -362,7 +283,6 @@
     <include name="Common-Home-Info">
         <include>Common-Clock</include>
         <include>Common-NowPlaying</include>
-        <include condition="stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)">Common-HomeClassicNowPlaying</include>
     </include>
     
     <include name="Common-Info">
