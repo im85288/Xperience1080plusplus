@@ -119,7 +119,7 @@
             <name>Font-Condensed-S33-B</name>
             <filename>OpenSansCond.ttf</filename>
             <size>33</size>
-            <!--<style>bold</style>-->
+            <style>bold</style>
         </font>
         <font>
             <name>Font-Condensed-S34</name>
@@ -130,7 +130,7 @@
             <name>Font-Condensed-S34-B</name>
             <filename>OpenSansCond.ttf</filename>
             <size>34</size>
-            <!--<style>bold</style>-->
+            <style>bold</style>
         </font>
         <font>
             <name>Font-Condensed-S35</name>
