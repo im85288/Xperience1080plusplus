@@ -109,8 +109,8 @@
         <width min="0" max="500">auto</width>
         <height>100</height>
         <font>Font-Condensed-S40</font>
-        <textcolor>white2</textcolor>
-        <focusedcolor>white2</focusedcolor>
+        <textcolor>eewhite2</textcolor>
+        <focusedcolor>eewhite2</focusedcolor>
         <!--menushadow-->
         <align>left</align>
         <aligny>top</aligny>
@@ -324,8 +324,8 @@
                 <width>32</width>
                 <height>32</height>
 				<texture>windows/home/search.png</texture>
- 				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(101)">Conditional</animation>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(101)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(125)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(125)" reversible="false">Conditional</animation>
 				<visible>System.HasAddon(script.globalsearch)</visible>
@@ -335,8 +335,8 @@
                 <description>Live TV</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[41220]</label>
- 				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(901)">Conditional</animation>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(9)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(901)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(9)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(925)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(925)" reversible="false">Conditional</animation>
                 
@@ -346,8 +346,8 @@
                 <description>Home</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[41524]</label>
- 				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(501) | Control.HasFocus(5021) | Control.HasFocus(5031)">Conditional</animation>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(501) | Control.HasFocus(5021) | Control.HasFocus(5031)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(525)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(525)" reversible="false">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeHome)</visible>
@@ -372,8 +372,8 @@
                 <description>Movies</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[342]</label>
- 				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(201) | Control.HasFocus(2021) | Control.HasFocus(203)">Conditional</animation>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(3)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(201) | Control.HasFocus(2021) | Control.HasFocus(203)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(225)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(225)" reversible="false">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeMovies)</visible>
@@ -397,8 +397,8 @@
                 <description>TV Shows</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[20343]</label>
- 				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(301) | Control.HasFocus(3021) | Control.HasFocus(303)">Conditional</animation>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(4)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(301) | Control.HasFocus(3021) | Control.HasFocus(303)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(4)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(325)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(325)" reversible="false">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeTVShows)</visible>
@@ -422,8 +422,8 @@
                 <description>Music</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[2]</label>
- 				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(401) | Control.HasFocus(4021) | Control.HasFocus(403)">Conditional</animation>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(5)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(401) | Control.HasFocus(4021) | Control.HasFocus(403)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(5)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(425)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(425)" reversible="false">Conditional</animation>
                 <visible>!Skin.HasSetting(HomeMusic)</visible>
@@ -432,8 +432,8 @@
                 <description>Applications</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[41504]</label>
- 				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(601)">Conditional</animation>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(6)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(601)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(6)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(625)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(625)" reversible="false">Conditional</animation>
                <visible>!Skin.HasSetting(HomePrograms)</visible>
@@ -442,8 +442,8 @@
                 <description>Weather</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[8]</label>
- 				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(701)">Conditional</animation>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(7)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(701)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(7)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(725)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(725)" reversible="false">Conditional</animation>
 				<visible>!Skin.HasSetting(HomeWeather)</visible>
@@ -455,8 +455,8 @@
                 <width>32</width>
                 <height>32</height>
                 <texture>windows/home/settings.png</texture>
- 				<animation effect="fade" start="100" end="80" time="300" tween="cubic" easing="out" condition="Control.HasFocus(801)">Conditional</animation>
-                <animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8)">Conditional</animation>
+ 				<animation effect="fade" start="100" end="75" time="300" tween="cubic" easing="out" condition="Control.HasFocus(801)">Conditional</animation>
+                <animation effect="fade" start="100" end="60" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8)">Conditional</animation>
 				<animation effect="zoom" end="115" time="75" tween="sine" easing="out" center="auto" condition="Control.HasFocus(825)" reversible="false">Conditional</animation>
 				<animation effect="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" condition="Control.HasFocus(825)" reversible="false">Conditional</animation>
 
