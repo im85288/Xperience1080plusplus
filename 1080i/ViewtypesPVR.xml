@@ -1078,7 +1078,7 @@
 					    <posy>0</posy>
 					    <width>500</width>
 					    <height>79</height>
-					    <texture border="150,1,150,1">views/other/blue-focus.png</texture>
+					    <texture border="150,1,150,1">views/other/lightblue-focus.png</texture>
 					    <include>visiblehidefadeinfo</include>
 					  	<visible>ListItem.IsPlaying</visible>
 					</control>
@@ -1090,7 +1090,7 @@
 					    <texture border="150,1,150,1">views/other/focus.png</texture>
 					    <include>visiblehidefadeinfo</include>
 					  <!--  <visible>Control.HasFocus(10)</visible> -->
-					</control>
+					</control> 
 				    <control type="image">
 				        <posx>20</posx>
 				        <posy>5</posy>
@@ -1111,6 +1111,21 @@
 				        <textcolor>eewhite</textcolor>
 				        <selectedcolor>eewhite</selectedcolor>
 				        <scroll>false</scroll>
+				        <visible>!ListItem.IsPlaying</visible>
+				    </control>
+				     <control type="label">
+				        <description>Label</description>
+				        <posx>150</posx>
+				        <posy>0</posy>
+				        <width>375</width>
+				        <height>80</height>
+				        <font>Font-Condensed-S34</font>
+				        <align>left</align>
+				        <label>$INFO[ListItem.ChannelName]</label>
+				        <textcolor>black</textcolor>
+				        <selectedcolor>black</selectedcolor>
+				        <scroll>false</scroll>
+				        <visible>ListItem.IsPlaying</visible>
 				    </control>
 				    <control type="label">
 				        <description>Label</description>
@@ -1124,6 +1139,21 @@
 				        <textcolor>eewhite</textcolor>
 				        <selectedcolor>eewhite</selectedcolor>
 				        <scroll>false</scroll>
+				        <visible>!ListItem.IsPlaying</visible>
+				    </control>
+				     <control type="label">
+				        <description>Label</description>
+				        <posx>480</posx>
+				        <posy>0</posy>
+				        <width>375</width>
+				        <height>80</height>
+				        <font>Font-Condensed-S34</font>
+				        <align>right</align>
+				        <label>$INFO[ListItem.ChannelNumber]</label>
+				        <textcolor>black</textcolor>
+				        <selectedcolor>black</selectedcolor>
+				        <scroll>false</scroll>
+				        <visible>ListItem.IsPlaying</visible>
 				    </control>
 				</channellayout>
 				<focusedchannellayout height="80" width="505">
@@ -1139,7 +1169,7 @@
 					    <posy>0</posy>
 					    <width>500</width>
 					    <height>79</height>
-					    <texture border="150,1,150,1">views/other/blue-focus.png</texture>
+					    <texture border="150,1,150,1">views/other/lightblue-focus.png</texture>
 					    <include>visiblehidefadeinfo</include>
 					  	<visible>ListItem.IsPlaying</visible>
 					</control>
@@ -1150,7 +1180,7 @@
 					    <height>79</height>
 					    <texture border="150,1,150,1">views/other/focus.png</texture>
 					    <include>visiblehidefadeinfo</include>
-					  	 <visible>Control.HasFocus(10)</visible> 
+					  	<!-- <visible>Control.HasFocus(10)</visible> -->
 					</control> 
 					<control type="image">
 					    <posx>20</posx>
@@ -1174,6 +1204,21 @@
     					    <textcolor>eewhite</textcolor>
     					    <selectedcolor>eewhite</selectedcolor>
     					    <scroll>false</scroll>
+    					    <visible>!ListItem.IsPlaying</visible>
+    					</control>
+    					<control type="label">
+    					    <description>Label</description>
+    					    <posx>150</posx>
+    					    <posy>0</posy>
+    					    <width>375</width>
+    					    <height>80</height>
+    					    <font>Font-Condensed-S34</font>
+    					    <align>left</align>
+    					    <label>$INFO[ListItem.ChannelName]</label>
+    					    <textcolor>black</textcolor>
+    					    <selectedcolor>black</selectedcolor>
+    					    <scroll>false</scroll>
+    					    <visible>ListItem.IsPlaying</visible>
     					</control>
     					<control type="label">
     					    <description>Label</description>
@@ -1187,6 +1232,21 @@
     					    <textcolor>eewhite</textcolor>
     					    <selectedcolor>eewhite</selectedcolor>
     					    <scroll>false</scroll>
+    					    <visible>!ListItem.IsPlaying</visible>
+    					</control>
+    					<control type="label">
+    					    <description>Label</description>
+    					    <posx>480</posx>
+    					    <posy>0</posy>
+    					    <width>375</width>
+    					    <height>80</height>
+    					    <font>Font-Condensed-S34</font>
+    					    <align>right</align>
+    					    <label>$INFO[ListItem.ChannelNumber]</label>
+    					    <textcolor>black</textcolor>
+    					    <selectedcolor>black</selectedcolor>
+    					    <scroll>false</scroll>
+    					    <visible>ListItem.IsPlaying</visible>
     					</control>
 					</control>
 				</focusedchannellayout>
@@ -1200,7 +1260,7 @@
 						<!-- <texture border="5">windows/pvr/epg-fo.png</texture> -->
 						<texture border="5">views/list/panel/panel.png</texture> 
 						<visible>!Skin.HasSetting(EPGGenreColors.Enabled)</visible> 
-					</control>
+					</control> 
 					<control type="image" id="2">
 					    <posx>2</posx>
 					    <posy>0</posy>
@@ -1272,9 +1332,19 @@
 					    <posy>0</posy>
 						<width>98</width>
 						<height>80</height>
+						<aspectratio>stretch</aspectratio>
+						<!-- <texture border="5">windows/pvr/epg-fo.png</texture> -->
+						<texture border="5">views/other/lightblue-focus.png</texture> 
+						<visible>StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible> 
+					</control>
+					<control type="image" id="2">
+					    <posx>2</posx>
+					    <posy>0</posy>
+						<width>98</width>
+						<height>80</height>
 						<!-- <aspectratio>stretch</aspectratio> -->
 						<texture border="5">views/other/blue-focus.png</texture>
-						<visible>!Skin.HasSetting(EPGGenreColors.Enabled)</visible>
+						<visible>!Skin.HasSetting(EPGGenreColors.Enabled) + !StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
 					</control>
 					<control type="image" id="2">
 					    <posx>2</posx>
@@ -1292,12 +1362,26 @@
 						<height>78</height>
 						<font>Font-Condensed-S34</font>
 						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<selectedcolor>black</selectedcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>false</scroll>
+						<visible>!ListItem.IsRecording + !ListItem.HasTimer + StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
+					</control>
+					<control type="label" id="1">
+						<posx>17</posx>
+						<posy>0</posy>
+						<width>68</width>
+						<height>78</height>
+						<font>Font-Condensed-S34</font>
+						<aligny>center</aligny>
 						<textcolor>eewhite</textcolor>
 						<selectedcolor>eewhite</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>false</scroll>
-						<visible>!ListItem.IsRecording + !ListItem.HasTimer</visible>
+						<visible>!ListItem.IsRecording + !ListItem.HasTimer + !StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
 					</control>
 					<control type="label" id="1">
 						<posx>53</posx>
@@ -1453,6 +1537,21 @@
     			    <aligny>center</aligny>
     			    <visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
     			</control>
+    			 <control type="progress">
+	                 <posx>1300</posx>
+	                 <posy>265</posy>
+	                 <width>518</width>
+	                 <height>19</height>
+	                 <reveal>true</reveal>
+	                 <texturebg>windows/pvr/progress-back-wide.png</texturebg>
+	                 <lefttexture>windows/pvr/progress-leftright.png</lefttexture>
+	                 <midtexture>windows/pvr/progress-mid-wide.png</midtexture>
+	                 <righttexture>windows/pvr/progress-leftright.png</righttexture>
+	                 <info>Container(10).ListItem.Progress</info>
+	                 <colordiffuse>bbwhite</colordiffuse>
+	                 <visible>!Player.HasVideo + !Pvr.IsPlayingTv + StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) </visible>
+	             </control>
+	             
     		</control> 
 		</control>
 	</include>
