@@ -312,7 +312,7 @@
                             <posy>0</posy>
                             <width>680</width>
                             <height>96</height>
-                       		<texture border="0,0,0,0">views/other/yellow-focus.png</texture> 
+                       		<texture border="0,0,0,0">views/other/blue-focus.png</texture> 
                             <aspectratio>stretch</aspectratio>
                         </control>
                         <control type="image">
