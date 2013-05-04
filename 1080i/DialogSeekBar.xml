@@ -225,32 +225,7 @@
                                 <itemgap>0</itemgap>
                                 <visible>VideoPlayer.Content(LiveTV)</visible>
                                 <usecontrolcoords>true</usecontrolcoords>
-                                <!-- Channel Number -->
-								<control type="label">
-                                    <posx>0</posx>
-                                    <posy>0</posy>
-                                    <width min="0" max="400">auto</width>
-                                    <height>100</height>
-                                    <label>$INFO[VideoPlayer.ChannelNumber]</label>
-                                    <textcolor>77FFFFFF</textcolor>
-                                    <font>Font-Condensed-S60</font>
-                                    <align>left</align>
-                                    <aligny>center</aligny>
-                                    <scroll>false</scroll>
-                                </control>
-								<!-- Channel Name -->
-                                <control type="label">
-                                    <posx>0</posx>
-                                    <posy>0</posy>
-                                    <width>900</width>
-                                    <height>100</height>
-                                    <label>[UPPERCASE]$INFO[VideoPlayer.ChannelName, ,][/UPPERCASE]</label>
-                                    <textcolor>77FFFFFF</textcolor>
-                                    <font>Font-Condensed-S60</font>
-                                    <align>left</align>
-                                    <aligny>center</aligny>
-                                    <scroll>false</scroll>
-                                </control>
+                         
                             </control>
                         </control>
                         <control type="group">
@@ -282,7 +257,7 @@
                                 <width>1085</width>
                                 <height>56</height>
                                 <label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
-                                <textcolor>bbwhite</textcolor>
+                                <textcolor>eewhite</textcolor>
                                 <font>Font-Condensed-S50</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -295,7 +270,7 @@
                                 <width>1085</width>
                                 <height>56</height>
                                 <label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
-                                <textcolor>bbwhite</textcolor>
+                                <textcolor>eewhite</textcolor>
                                 <font>Font-Condensed-S50</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -314,7 +289,7 @@
                                     <width>1600</width>
                                     <height>200</height>
                                     <label>$INFO[VideoPlayer.Plot]</label>
-                                    <textcolor>aawhite</textcolor>
+                                    <textcolor>eewhite</textcolor>
                                     <font>Font-Condensed-S36</font>
                                     <align>justify</align>
                                     <autoscroll delay="11500" time="5000" repeat="7500" />
@@ -360,7 +335,7 @@
                                 <width>1085</width>
                                 <height>56</height>
                                 <label>[UPPERCASE]$INFO[VideoPlayer.Episode,,. ]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
-                                <textcolor>bbwhite</textcolor>
+                                <textcolor>eewhite</textcolor>
                                 <font>Font-Condensed-S50</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -380,7 +355,7 @@
                                     <width>1600</width>
                                     <height>200</height>
                                     <label>$INFO[VideoPlayer.Plot]</label>
-                                    <textcolor>aawhite</textcolor>
+                                    <textcolor>eewhite</textcolor>
                                     <font>Font-Condensed-S36</font>
                                     <align>justify</align>
                                     <autoscroll delay="11500" time="5000" repeat="7500" />
@@ -398,16 +373,31 @@
                                 <texture background="true">$INFO[Player.Art(thumb)]</texture>
                                 <aspectratio aligny="top">keep</aspectratio>
                             </control>
+                          
+								<!-- Channel Name -->
+                                <control type="label">
+                                    <posx>25</posx>
+                                    <posy>50</posy>
+                                    <width>900</width>
+                                    <height>100</height>
+                                    <label>[UPPERCASE]$INFO[VideoPlayer.ChannelName, ,][/UPPERCASE]</label>
+                                    <textcolor>eewhite</textcolor>
+                                    <font>Font-Condensed-S60</font>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                    <scroll>false</scroll>
+                                </control>
+                            
 							<!-- LiveTV Sendungstitel -->
                             <control type="label">
 								<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
                                 <include>visiblehidefadeinfo</include>
-                                <posx>290</posx>
+                                <posx>500</posx>
                                 <posy>136</posy>
                                 <width>1410</width>
                                 <height>56</height>
                                 <label>[UPPERCASE]$VAR[OSDTitle][/UPPERCASE]</label>
-                                <textcolor>bbwhite</textcolor>
+                                <textcolor>eewhite</textcolor>
                                 <font>Font-Condensed-S50</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -415,6 +405,37 @@
                                 <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
 								
                             </control>
+                            
+                            <control type="label">						
+                                <include>visiblehidefadeinfo</include>
+                                <posx>390</posx>
+                                <posy>136</posy>
+                                <width>1410</width>
+                                <height>56</height>
+                                <label>$INFO[VideoPlayer.StartTime]</label>
+                                <textcolor>eewhite</textcolor>
+                                <font>Font-Condensed-S50</font>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                                <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>								
+                            </control>
+                            
+                            <control type="label">						
+                                <include>visiblehidefadeinfo</include>
+                                <posx>290</posx>
+                                <posy>136</posy>
+                                <width>1410</width>
+                                <height>56</height>
+                                <label>Now: </label>
+                                <textcolor>eewhite</textcolor>
+                                <font>Font-Condensed-S50</font>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                                <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>								
+                            </control>
+                            
                             <control type="group">
                                 <visible>IsEmpty(Window.Property(ExtendPlot))</visible>
                                 <include>visiblehidefadeinfo</include>
@@ -424,8 +445,8 @@
                                     <width>1100</width>
                                     <height>44</height>
                                     <label>$VAR[OSDNextTitle]</label>
-                                    <textcolor>77FFFFFF</textcolor>
-                                    <font>Font-Condensed-S36</font>
+                                    <textcolor>blue</textcolor>
+                                    <font>Font-Condensed-S40</font>
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
@@ -436,7 +457,7 @@
                                     <width>1600</width>
                                     <height>105</height>
                                     <label>$VAR[OSDPlot]</label>
-                                    <textcolor>aawhite</textcolor>
+                                    <textcolor>eewhite</textcolor>
                                     <font>Font-Condensed-S32</font>
                                     <align>justify</align>
                                     <autoscroll delay="11500" time="5000" repeat="7500" />
@@ -462,7 +483,7 @@
                                 <width>1400</width>
                                 <height>56</height>
                                 <label>$INFO[VideoPlayer.Title]</label>
-                                <textcolor>bbwhite</textcolor>
+                                <textcolor>eewhite</textcolor>
                                 <font>Font-Condensed-S50</font>
                                 <align>left</align>
                                 <aligny>center</aligny>

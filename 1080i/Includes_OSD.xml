@@ -45,7 +45,7 @@
     
     <variable name="OSDNextTitle">
         <value condition="!IsEmpty(Window(seekbar).Property(ShowNext))">$INFO[VideoPlayer.NextStartTime,$LOCALIZE[19080] ,]$INFO[VideoPlayer.NextEndTime, • $LOCALIZE[19081] ,]</value>
-        <value>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: ,]$INFO[VideoPlayer.NextStartTime, (,)]</value>
+        <value>$INFO[VideoPlayer.NextStartTime,$LOCALIZE[19031]: ,]$INFO[VideoPlayer.NextTitle, ,]</value>
     </variable>
     
     <variable name="OSDMusicFanart">
