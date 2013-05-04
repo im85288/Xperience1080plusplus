@@ -1469,6 +1469,20 @@
     				<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
     				<label fallback="161">$INFO[ListItem.Plot]</label>
     			</control>
+    			 <control type="progress">
+	                 <posx>20</posx>
+	                 <posy>250</posy>
+	                 <width>1220</width>
+	                 <height>19</height>
+	                 <reveal>true</reveal>
+	                 <texturebg>windows/pvr/progress-back-wide.png</texturebg>
+	                 <lefttexture>windows/pvr/progress-leftright.png</lefttexture>
+	                 <midtexture>windows/pvr/progress-mid-wide.png</midtexture>
+	                 <righttexture>windows/pvr/progress-leftright.png</righttexture>
+	                 <info>Container(10).ListItem.Progress</info>
+	                 <colordiffuse>bbwhite</colordiffuse>
+	                 <visible>StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) </visible>
+	             </control>        
     			
     			<control type="image">
 			    	<posx>1285</posx>
@@ -1497,7 +1511,7 @@
 				</control>
 	            <control type="label">
     			    <posx>1500</posx>
-    			    <posy>-25</posy>
+    			    <posy>0</posy>
     			    <width>250</width>
     			    <height>86</height>
     			    <label>$INFO[VideoPlayer.ChannelName]</label>
@@ -1508,7 +1522,7 @@
     			</control>
     			<control type="label">
     			    <posx>1300</posx>
-    			    <posy>-25</posy>
+    			    <posy>0</posy>
     			    <width>250</width>
     			    <height>86</height>
     			    <label>$INFO[ListItem.ChannelName]</label>
@@ -1519,7 +1533,7 @@
     			</control>
     			<control type="image">
 				    <posx>1300</posx>
-				    <posy>50</posy>
+				    <posy>95</posy>
 				    <width>200</width>
 				    <height>200</height>
 				    <texture background="true" fallback="windows/pvr/defaultchannel.png">$INFO[Container(10).ListItem.Icon]</texture>
@@ -1528,7 +1542,7 @@
 				 </control>
 				 <control type="label">
     			    <posx>1300</posx>
-    			    <posy>175</posy>
+    			    <posy>220</posy>
     			    <width>500</width>
     			    <height>86</height>
     			    <label>$INFO[ListItem.Title]</label>
@@ -1536,22 +1550,7 @@
     			    <font>Font-Condensed-S38</font>
     			    <aligny>center</aligny>
     			    <visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
-    			</control>
-    			 <control type="progress">
-	                 <posx>1300</posx>
-	                 <posy>265</posy>
-	                 <width>518</width>
-	                 <height>19</height>
-	                 <reveal>true</reveal>
-	                 <texturebg>windows/pvr/progress-back-wide.png</texturebg>
-	                 <lefttexture>windows/pvr/progress-leftright.png</lefttexture>
-	                 <midtexture>windows/pvr/progress-mid-wide.png</midtexture>
-	                 <righttexture>windows/pvr/progress-leftright.png</righttexture>
-	                 <info>Container(10).ListItem.Progress</info>
-	                 <colordiffuse>bbwhite</colordiffuse>
-	                 <visible>!Player.HasVideo + !Pvr.IsPlayingTv + StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) </visible>
-	             </control>
-	             
+    			</control>    
     		</control> 
 		</control>
 	</include>
