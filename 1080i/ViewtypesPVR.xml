@@ -37,7 +37,7 @@
                         <width>516</width>
                         <font>Font-Condensed-S40</font>
                         <label>$INFO[Container(11).ListItem.Title]</label>
-                        <textcolor>ddwhite</textcolor>
+                        <textcolor>ffe8b854</textcolor>
                         <scroll>false</scroll>
                     </control>
                     <control type="group">
@@ -51,7 +51,7 @@
                             <height>416</height>
                             <info>Container(11).ListItem.Plot</info>
                             <align>justify</align>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>eewhite</textcolor>
                             <pagecontrol>71</pagecontrol>
                             <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
                             <font>Font-Condensed-S34</font>
@@ -65,7 +65,7 @@
                             <height>122</height>
                             <info>Container(11).ListItem.Plot</info>
                             <align>justify</align>
-                            <textcolor>aawhite</textcolor>
+                            <textcolor>eewhite</textcolor>
                             <pagecontrol>71</pagecontrol>
                             <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
                             <font>Font-Condensed-S28</font>
@@ -82,6 +82,26 @@
                         <include>visiblehidefadeinfo</include>
                         <visible>Player.HasVideo + Pvr.IsPlayingTv</visible>
                     </control>
+                    <control type="image">
+			    		<posx>30</posx>
+			    		<posy>85</posy>
+			    		<width>516</width>
+			    		<height>40</height>
+			   			<texture border="0">windows/common/black_content.png</texture> 
+			    		<visible>Player.HasVideo + Pvr.IsPlayingTv</visible>
+					</control>
+	            	<control type="label">
+    			    	<posx>235</posx>
+    			   	 	<posy>60</posy>
+    			    	<width>250</width>
+    			   	 	<height>86</height>
+    			    	<label>$INFO[VideoPlayer.ChannelName]</label>
+    			    	<textcolor>ffe8b854</textcolor>
+    			    	<font>Font-Condensed-S38</font>
+    			    	<aligny>center</aligny>
+    			    	<visible>Player.HasVideo + Pvr.IsPlayingTv</visible>
+    				</control>
+                    
                     <control type="group">
                     	<visible>Container(11).ListItem.HasEpg</visible>
 	                    <control type="progress">
@@ -103,7 +123,7 @@
 	                        <width>516</width>
 	                        <font>Font-Condensed-S30</font>
 	                        <label>$INFO[Container(11).ListItem.Genre]</label>
-	                        <textcolor>aawhite</textcolor>
+	                        <textcolor>eewhite</textcolor>
 	                        <scroll>false</scroll>
 	                    </control>
 	                    <control type="label">
@@ -112,7 +132,7 @@
 	                        <width>516</width>
 	                        <font>Font-Condensed-S30</font>
 	                        <label>$INFO[Container(11).ListItem.NextTitle,$LOCALIZE[19031]: ,]$INFO[Container(11).ListItem.NextStartTime, (,)]</label>
-	                        <textcolor>aawhite</textcolor>
+	                        <textcolor>blue</textcolor>
 	                        <scroll>false</scroll>
 	                    </control>
 	            	</control>
@@ -141,7 +161,7 @@
                 	<width>200</width>
                 	<height>30</height>
                 	<font>Font-Condensed-S30</font>
-                	<textcolor>livetv</textcolor>
+                	<textcolor>eewhite</textcolor>
                 	<align>left</align>
                 	<aligny>center</aligny>
                 	<label>$VAR[TVNumItemsLabel]</label>
@@ -184,10 +204,21 @@
                             <texture border="90,3,90,3">views/list/other/separator.png</texture>
                         </control>
                         <control type="image">
-                            <posx>20</posx>
-                            <posy>5</posy>
-                            <width>86</width>
-                            <height>86</height>
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>1022</width>
+                            <height>95</height>
+                            <texture border="150,1,150,1">views/other/lightblue-focus.png</texture>
+                            <animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
+                            <animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
+                            <include>visiblehidefadeinfo</include>
+                            <visible>ListItem.IsPlaying</visible>
+                        </control>
+                        <control type="image">
+                            <posx>3</posx>
+                            <posy>-10</posy>
+                            <width>100</width>
+                            <height>100</height>
                             <texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
                             <aspectratio>keep</aspectratio>
                         </control>
@@ -202,8 +233,22 @@
 	                    	<midtexture>windows/pvr/progress-mid.png</midtexture>
 	                    	<righttexture>windows/pvr/progress-leftright.png</righttexture>
 	                    	<info>ListItem.Progress</info>
-	                    	<colordiffuse>77white</colordiffuse>
-	                    	<visible>ListItem.HasEpg</visible>
+	                    	<colordiffuse>eewhite</colordiffuse>
+	                    	<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
+	                    </control>
+	                    <control type="progress">
+	                        <posx>124</posx>
+	                        <posy>58</posy>
+	                        <width>67</width>
+	                        <height>19</height>
+	                        <reveal>true</reveal>
+	                        <texturebg>windows/pvr/progress-back.png</texturebg>
+	                    	<lefttexture>windows/pvr/progress-leftright.png</lefttexture>
+	                    	<midtexture>windows/pvr/progress-mid.png</midtexture>
+	                    	<righttexture>windows/pvr/progress-leftright.png</righttexture>
+	                    	<info>ListItem.Progress</info>
+	                    	<colordiffuse>black</colordiffuse>
+	                    	<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 	                    </control>
 	                    <control type="label">
 	                        <description>Label</description>
@@ -214,10 +259,24 @@
 	                        <font>Font-Condensed-S34</font>
 	                        <align>left</align>
 	                        <label>$INFO[ListItem.Label]</label>
-	                        <textcolor>99FFFFFF</textcolor>
-	                        <selectedcolor>99FFFFFF</selectedcolor>
+	                        <textcolor>eewhite</textcolor>
+	                        <selectedcolor>eewhite</selectedcolor>
 	                        <scroll>false</scroll>
-	                        <visible>ListItem.HasEpg</visible>
+	                        <visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
+	                    </control>
+	                    <control type="label">
+	                        <description>Label</description>
+	                        <posx>126</posx>
+	                        <posy>0</posy>
+	                        <width>876</width>
+	                        <height>58</height>
+	                        <font>Font-Condensed-S34</font>
+	                        <align>left</align>
+	                        <label>$INFO[ListItem.Label]</label>
+	                        <textcolor>black</textcolor>
+	                        <selectedcolor>black</selectedcolor>
+	                        <scroll>false</scroll>
+	                        <visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 	                    </control>
 	                    <control type="label">
 	                        <description>Title</description>
@@ -228,10 +287,24 @@
 	                        <font>Font-Condensed-S28</font>
 	                        <align>left</align>
 	                        <label>$INFO[ListItem.Title]</label>
-	                        <textcolor>77white</textcolor>
-	                        <selectedcolor>77white</selectedcolor>
+	                        <textcolor>eewhite</textcolor>
+	                        <selectedcolor>eewhite</selectedcolor>
 	                        <scroll>false</scroll>
-	                        <visible>ListItem.HasEpg</visible>
+	                        <visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
+	                    </control>
+	                    <control type="label">
+	                        <description>Title</description>
+	                        <posx>203</posx>
+	                        <posy>42</posy>
+	                        <width>799</width>
+	                        <height>50</height>
+	                        <font>Font-Condensed-S28</font>
+	                        <align>left</align>
+	                        <label>$INFO[ListItem.Title]</label>
+	                        <textcolor>black</textcolor>
+	                        <selectedcolor>black</selectedcolor>
+	                        <scroll>false</scroll>
+	                        <visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 	                    </control>
 	                    <control type="label">
                             <description>Label</description>
@@ -242,8 +315,8 @@
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Label]</label>
-                            <textcolor>99FFFFFF</textcolor>
-                            <selectedcolor>99FFFFFF</selectedcolor>
+                            <textcolor>eewhite</textcolor>
+                            <selectedcolor>eewhite</selectedcolor>
                             <scroll>false</scroll>
                             <visible>!ListItem.HasEpg</visible>
                         </control>
@@ -256,10 +329,24 @@
                             <font>Font-Condensed-S75</font>
                             <align>right</align>
                             <label>$INFO[ListItem.ChannelNumber]</label>
-                            <textcolor>99FFFFFF</textcolor>
-                            <selectedcolor>99FFFFFF</selectedcolor>
+                            <textcolor>eewhite</textcolor>
+                            <selectedcolor>eewhite</selectedcolor>
                             <scroll>false</scroll>
-                            <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
+                            <visible>!ListItem.HasTimer + !ListItem.IsRecording + !ListItem.IsPlaying</visible>
+                        </control>
+                        <control type="label">
+                            <description>Label</description>
+                            <posx>1002</posx>
+                            <posy>0</posy>
+                            <width>946</width>
+                            <height>96</height>
+                            <font>Font-Condensed-S75</font>
+                            <align>right</align>
+                            <label>$INFO[ListItem.ChannelNumber]</label>
+                            <textcolor>black</textcolor>
+                            <selectedcolor>black</selectedcolor>
+                            <scroll>false</scroll>
+                            <visible>!ListItem.HasTimer + !ListItem.IsRecording + ListItem.IsPlaying</visible>
                         </control>
                         <control type="label">
                             <description>Label</description>
@@ -270,8 +357,8 @@
                             <font>Font-Condensed-S75</font>
                             <align>right</align>
                             <label>$INFO[ListItem.ChannelNumber]</label>
-                            <textcolor>99FFFFFF</textcolor>
-                            <selectedcolor>99FFFFFF</selectedcolor>
+                            <textcolor>eewhite</textcolor>
+                            <selectedcolor>eewhite</selectedcolor>
                             <scroll>false</scroll>
                             <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
                         </control>
@@ -301,14 +388,6 @@
                         	<texture>windows/pvr/epg-timer.png</texture>
                         	<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
                         </control>
-    					<control type="image">
-    					    <posx>993</posx>
-    					    <posy>-10</posy>
-    					    <width>39</width>
-    					    <height>39</height>
-    					    <texture>windows/filemanager/selected.png</texture>
-    					    <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-    					</control>
                     </itemlayout>
                     <focusedlayout height="96">
                         <control type="image">
@@ -328,12 +407,21 @@
                             <animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
                             <include>visiblehidefadeinfo</include>
                             <visible>Control.HasFocus(11)</visible>
-                        </control>
+                        </control> 
+                      	<control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>1022</width>
+                            <height>95</height>
+                            <texture border="150,1,150,1">views/other/lightblue-focus.png</texture>
+                   
+                            <visible>ListItem.IsPlaying</visible>
+                        </control> 
                         <control type="image">
-                            <posx>20</posx>
-                            <posy>5</posy>
-                            <width>86</width>
-                            <height>86</height>
+                            <posx>3</posx>
+                            <posy>-10</posy>
+                            <width>100</width>
+                            <height>100</height>
                             <texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
                             <aspectratio>keep</aspectratio>
                         </control>
@@ -353,8 +441,22 @@
 		                    	<midtexture>windows/pvr/progress-mid.png</midtexture>
 		                    	<righttexture>windows/pvr/progress-leftright.png</righttexture>
 		                    	<info>ListItem.Progress</info>
-		                    	<colordiffuse>D4FFFFFF</colordiffuse>
-		                    	<visible>ListItem.HasEpg</visible>
+		                    	<colordiffuse>eewhite</colordiffuse>
+		                    	<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
+		                    </control>
+		                    <control type="progress">
+		                        <posx>124</posx>
+		                        <posy>58</posy>
+		                        <width>67</width>
+		                        <height>19</height>
+		                        <reveal>true</reveal>
+		                        <texturebg>windows/pvr/progress-back.png</texturebg>
+		                    	<lefttexture>windows/pvr/progress-leftright.png</lefttexture>
+		                    	<midtexture>windows/pvr/progress-mid.png</midtexture>
+		                    	<righttexture>windows/pvr/progress-leftright.png</righttexture>
+		                    	<info>ListItem.Progress</info>
+		                    	<colordiffuse>black</colordiffuse>
+		                    	<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 		                    </control>
 		                    <control type="label">
 		                        <description>Label</description>
@@ -368,7 +470,21 @@
 		                        <textcolor>eewhite</textcolor>
 		                        <selectedcolor>eewhite</selectedcolor>
 		                        <scroll>false</scroll>
-		                        <visible>ListItem.HasEpg</visible>
+		                        <visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
+		                    </control>
+		                    <control type="label">
+		                        <description>Label</description>
+		                        <posx>126</posx>
+		                        <posy>0</posy>
+		                        <width>876</width>
+		                        <height>58</height>
+		                        <font>Font-Condensed-S34</font>
+		                        <align>left</align>
+		                        <label>$INFO[ListItem.Label]</label>
+		                        <textcolor>black</textcolor>
+		                        <selectedcolor>black</selectedcolor>
+		                        <scroll>false</scroll>
+		                        <visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 		                    </control>
 		                    <control type="label">
 		                        <description>Title</description>
@@ -379,10 +495,24 @@
 		                        <font>Font-Condensed-S28</font>
 		                        <align>left</align>
 		                        <label>$INFO[ListItem.Title]</label>
-		                        <textcolor>D4FFFFFF</textcolor>
-		                        <selectedcolor>D4FFFFFF</selectedcolor>
+		                        <textcolor>eewhite</textcolor>
+		                        <selectedcolor>eewhite</selectedcolor>
 		                        <scroll>false</scroll>
-		                        <visible>ListItem.HasEpg</visible>
+		                        <visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
+		                    </control>
+		                    <control type="label">
+		                        <description>Title</description>
+		                        <posx>203</posx>
+		                        <posy>42</posy>
+		                        <width>799</width>
+		                        <height>50</height>
+		                        <font>Font-Condensed-S28</font>
+		                        <align>left</align>
+		                        <label>$INFO[ListItem.Title]</label>
+		                        <textcolor>black</textcolor>
+		                        <selectedcolor>black</selectedcolor>
+		                        <scroll>false</scroll>
+		                        <visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 		                    </control>
 		                    <control type="label">
 	                            <description>Label</description>
@@ -410,7 +540,21 @@
                                 <textcolor>eewhite</textcolor>
                                 <selectedcolor>eewhite</selectedcolor>
                                 <scroll>false</scroll>
-                                <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
+                                <visible>!ListItem.HasTimer + !ListItem.IsRecording + !ListItem.IsPlaying</visible>
+                            </control>
+                            <control type="label">
+                                <description>Label</description>
+                                <posx>1002</posx>
+                                <posy>0</posy>
+                                <width>946</width>
+                                <height>96</height>
+                                <font>Font-Condensed-S75</font>
+                                <align>right</align>
+                                <label>$INFO[ListItem.ChannelNumber]</label>
+                                <textcolor>black</textcolor>
+                                <selectedcolor>black</selectedcolor>
+                                <scroll>false</scroll>
+                                <visible>!ListItem.HasTimer + !ListItem.IsRecording + ListItem.IsPlaying</visible>
                             </control>
                             <control type="label">
                                 <description>Label</description>
@@ -452,14 +596,6 @@
                         	<height>80</height>
                         	<texture>windows/pvr/epg-timer.png</texture>
                         	<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-                        </control>
-                        <control type="image">
-                            <posx>993</posx>
-                            <posy>-10</posy>
-                            <width>39</width>
-                            <height>39</height>
-                            <texture>windows/filemanager/selected.png</texture>
-                            <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
                         </control>
                     </focusedlayout>
                 </control>
@@ -1593,7 +1729,7 @@
 	                    <width>516</width>
 	                    <font>Font-Condensed-S40</font>
 	                    <label>$INFO[Container(15).ListItem.Title]</label>
-	                    <textcolor>ddwhite</textcolor>
+	                    <textcolor>ffe8b854</textcolor>
 	                    <scroll>false</scroll>
 	                </control>
 	                <control type="group">
@@ -1607,7 +1743,7 @@
 	                        <height>440</height>
 	                        <info>Container(15).ListItem.Plot</info>
 	                        <align>justify</align>
-	                        <textcolor>aawhite</textcolor>
+	                        <textcolor>eewhite</textcolor>
 	                        <pagecontrol>71</pagecontrol>
 	                        <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
 	                        <font>Font-Condensed-S32</font>
@@ -1621,7 +1757,7 @@
 	                        <height>150</height>
 	                        <info>Container(15).ListItem.Plot</info>
 	                        <align>justify</align>
-	                        <textcolor>aawhite</textcolor>
+	                        <textcolor>eewhite</textcolor>
 	                        <pagecontrol>71</pagecontrol>
 	                        <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
 	                        <font>Font-Condensed-S28</font>
@@ -1644,7 +1780,7 @@
 	                    <width>516</width>
 	                    <font>Font-Condensed-S30</font>
 	                    <label>$INFO[Container(15).ListItem.Genre]</label>
-	                    <textcolor>aawhite</textcolor>
+	                    <textcolor>eewhite</textcolor>
 	                    <scroll>false</scroll>
 	                </control>
 	            </control>
@@ -1690,7 +1826,7 @@
 	                <width>1022</width>
 	                <height>600</height>
 	                <label>$LOCALIZE[19055]</label>
-	                <textcolor>77white</textcolor>
+	                <textcolor>eewhite</textcolor>
 	                <font>Font-Condensed-S50</font>
 	                <scroll>false</scroll>
 	                <align>center</align>
