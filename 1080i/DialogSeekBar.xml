@@ -377,12 +377,12 @@
 								<!-- Channel Name -->
                                 <control type="label">
                                     <posx>25</posx>
-                                    <posy>50</posy>
+                                    <posy>57</posy>
                                     <width>900</width>
                                     <height>100</height>
                                     <label>[UPPERCASE]$INFO[VideoPlayer.ChannelName, ,][/UPPERCASE]</label>
                                     <textcolor>eewhite</textcolor>
-                                    <font>Font-Condensed-S60</font>
+                                    <font>Font-Condensed-S50</font>
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
@@ -393,7 +393,7 @@
 								<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
                                 <include>visiblehidefadeinfo</include>
                                 <posx>500</posx>
-                                <posy>136</posy>
+                                <posy>80</posy>
                                 <width>1410</width>
                                 <height>56</height>
                                 <label>[UPPERCASE]$VAR[OSDTitle][/UPPERCASE]</label>
@@ -409,7 +409,7 @@
                             <control type="label">						
                                 <include>visiblehidefadeinfo</include>
                                 <posx>390</posx>
-                                <posy>136</posy>
+                                <posy>80</posy>
                                 <width>1410</width>
                                 <height>56</height>
                                 <label>$INFO[VideoPlayer.StartTime]</label>
@@ -419,12 +419,13 @@
                                 <aligny>center</aligny>
                                 <scroll>false</scroll>
                                 <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>								
+                           		<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
                             </control>
                             
                             <control type="label">						
                                 <include>visiblehidefadeinfo</include>
                                 <posx>290</posx>
-                                <posy>136</posy>
+                                <posy>80</posy>
                                 <width>1410</width>
                                 <height>56</height>
                                 <label>Now: </label>
@@ -434,14 +435,14 @@
                                 <aligny>center</aligny>
                                 <scroll>false</scroll>
                                 <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>								
+                            	<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
                             </control>
-                            
                             <control type="group">
                                 <visible>IsEmpty(Window.Property(ExtendPlot))</visible>
                                 <include>visiblehidefadeinfo</include>
                                 <control type="label">
                                     <posx>290</posx>
-                                    <posy>198</posy>
+                                    <posy>142</posy>
                                     <width>1100</width>
                                     <height>44</height>
                                     <label>$VAR[OSDNextTitle]</label>
@@ -453,12 +454,12 @@
                                 </control>
                                 <control type="textbox">
                                     <posx>290</posx>
-                                    <posy>246</posy>
+                                    <posy>190</posy>
                                     <width>1600</width>
-                                    <height>105</height>
+                                    <height>185</height>
                                     <label>$VAR[OSDPlot]</label>
                                     <textcolor>eewhite</textcolor>
-                                    <font>Font-Condensed-S32</font>
+                                    <font>Font-Condensed-S40</font>
                                     <align>justify</align>
                                     <autoscroll delay="11500" time="5000" repeat="7500" />
                                 </control>
@@ -495,7 +496,7 @@
                                 <width>1400</width>
                                 <height>44</height>
                                 <label>$INFO[Player.FolderPath]</label>
-                                <textcolor>88FFFFFF</textcolor>
+                                <textcolor>eewhite</textcolor>
                                 <font>Font-Condensed-S36</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
