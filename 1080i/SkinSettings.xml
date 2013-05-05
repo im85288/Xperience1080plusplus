@@ -4,7 +4,7 @@
     <backgroundcolor>0</backgroundcolor>
     <onload condition="IsEmpty(Skin.String(music.name))">Skin.SetString(music.name,$LOCALIZE[14022])</onload>
     <onload condition="IsEmpty(Skin.String(rss.setting))">Skin.SetString(rss.setting,$LOCALIZE[1223])</onload>
-	<onload condition="IsEmpty(Skin.String(BarTransparency))">Skin.SetString(BarTransparency,Default)</onload>
+	<onload condition="IsEmpty(Skin.String(BarTransparency)">Skin.SetString(BarTransparency,$LOCALIZE[41124])</onload>
     <controls>
         <include>CommonSettingsItems</include>
         <include>SettingsHeader</include>
@@ -210,14 +210,14 @@
 						<selected>Skin.HasSetting(BackgroundOpacity)</selected>
 						<onclick condition="!Skin.HasSetting(BackgroundOpacity)">Skin.Reset(HomeBackgroundOpacity)</onclick>
 						<onclick>Skin.ToggleSetting(BackgroundOpacity)</onclick>
-						<label>Show more Fanart</label>
+						<label>$LOCALIZE[41127]</label>
 					</control>
 					<control type="radiobutton" id="10031">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>
 						<selected>Skin.HasSetting(HomeBackgroundOpacity)</selected>
 						<onclick>Skin.ToggleSetting(HomeBackgroundOpacity)</onclick>
-						<label> • but not on the Home screen</label>
+						<label> • $LOCALIZE[41128]</label>
 						<visible>Skin.HasSetting(BackgroundOpacity)</visible>
 					</control>
                     <control type="radiobutton" id="1005">
@@ -393,16 +393,16 @@
                         <posy>8</posy>
                         <width>43</width>
                         <height>60</height>
-                        <onleft>220092</onleft>
+                        <onleft>30</onleft>
                         <onright>220092</onright>
-                        <onup>1001</onup>
-                        <ondown>22010</ondown>
+                        <onup>20071</onup>
+                        <ondown>22011</ondown>
                         <texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
                         <texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),Default)">Skin.SetString(BarTransparency,darker)</onclick>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),hide)">Skin.SetString(BarTransparency,Default)</onclick>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),darker)">Skin.SetString(BarTransparency,hide)</onclick>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),Default)">Skin.SetString(BarTransparency,darker)</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),$LOCALIZE[41124])">Skin.SetString(BarTransparency,$LOCALIZE[41123])</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),$LOCALIZE[41125])">Skin.SetString(BarTransparency,$LOCALIZE[41124])</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),$LOCALIZE[41123])">Skin.SetString(BarTransparency,$LOCALIZE[41125])</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),$LOCALIZE[41124])">Skin.SetString(BarTransparency,$LOCALIZE[41123])</onclick>
                     </control>
                     <control type="button" id="220092">
                         <posx>1147</posx>
@@ -410,15 +410,15 @@
                         <width>43</width>
                         <height>60</height>
                         <onleft>220091</onleft>
-                        <onright>220091</onright>
-                        <onup>1001</onup>
-                        <ondown>22010</ondown>
+                        <onright>40</onright>
+                        <onup>20071</onup>
+                        <ondown>22011</ondown>
                         <texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
                         <texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),hide)">Skin.SetString(BarTransparency,darker)</onclick>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),Default)">Skin.SetString(BarTransparency,hide)</onclick>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),darker)">Skin.SetString(BarTransparency,Default)</onclick>
-                        <onclick condition="stringcompare(Skin.String(BarTransparency),hide)">Skin.SetString(BarTransparency,darker)</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),$LOCALIZE[41125])">Skin.SetString(BarTransparency,$LOCALIZE[41123])</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),$LOCALIZE[41124])">Skin.SetString(BarTransparency,$LOCALIZE[41125])</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),$LOCALIZE[41123])">Skin.SetString(BarTransparency,$LOCALIZE[41124])</onclick>
+                        <onclick condition="stringcompare(Skin.String(BarTransparency),$LOCALIZE[41125])">Skin.SetString(BarTransparency,$LOCALIZE[41123])</onclick>
                     </control>
                     <control type="button">
                         <posx>0</posx>
@@ -430,7 +430,7 @@
                         <textoffsetx>35</textoffsetx>
                         <font>Font-Condensed-S30</font>
                         <textcolor>96FFFFFF</textcolor>
-                        <label>Title Text on HomeWidgets</label>
+                        <label>$LOCALIZE[41126]</label>
                         <label2>$INFO[Skin.String(BarTransparency)]</label2>
                         <visible>!ControlGroup(22009).HasFocus</visible>
                     </control>
@@ -444,18 +444,26 @@
                         <textoffsetx>35</textoffsetx>
                         <font>Font-Condensed-S30</font>
                         <textcolor>white</textcolor>
-                        <label>Title Text on HomeWidgets</label>
+                        <label>$LOCALIZE[41126]</label>
                         <label2>$INFO[Skin.String(BarTransparency)]</label2>
                         <visible>ControlGroup(22009).HasFocus</visible>
                     </control>
+                </control>
+                <control type="radiobutton" id="22011">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(BarIfFanart)</selected>
+                    <onclick>Skin.ToggleSetting(BarIfFanart)</onclick>
+                    <label> • $LOCALIZE[41121]</label>
+					<visible>!stringcompare(Skin.String(BarTransparency),$LOCALIZE[41125])</visible>
                 </control>
                 <control type="radiobutton" id="22010">
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
                     <selected>Skin.HasSetting(BarIfFocused)</selected>
                     <onclick>Skin.ToggleSetting(BarIfFocused)</onclick>
-                    <label> • only if focused</label>
-					<visible>!stringcompare(Skin.String(BarTransparency),hide)</visible>
+                    <label> • $LOCALIZE[41122]</label>
+					<visible>!stringcompare(Skin.String(BarTransparency),$LOCALIZE[41125])</visible>
                 </control>
                     <control type="button" id="2000">
                         <width>1210</width>
@@ -544,7 +552,7 @@
                             <onleft>20072</onleft>
                             <onright>20072</onright>
                             <onup>2006</onup>
-                            <ondown>4001</ondown>
+                            <ondown>220091</ondown>
                             <texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
                             <texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>
                             <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[1038])">Skin.SetString(music.name,$LOCALIZE[14022])</onclick>
@@ -586,7 +594,7 @@
                             <onleft>20071</onleft>
                             <onright>20071</onright>
                             <onup>2006</onup>
-                            <ondown>4001</ondown>
+                            <ondown>220091</ondown>
                             <texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
                             <texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
                             <onclick condition="stringcompare(Skin.String(music.name),$LOCALIZE[14022])">Skin.SetString(music.name,$LOCALIZE[1038])</onclick>

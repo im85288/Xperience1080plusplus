@@ -56,6 +56,42 @@ msgctxt "#41114"
 msgid "Bottom"
 msgstr "Unten"
 
+msgctxt "#41121"
+msgid "only if fanart widget"
+msgstr "nur bei Fanart-Widgets"
+
+msgctxt "#41122"
+msgid "only if focused"
+msgstr "nur wenn fokussiert"
+
+msgctxt "#41123"
+msgid "darker"
+msgstr "dunkler"
+
+msgctxt "#41124"
+msgid "default"
+msgstr "standard"
+
+msgctxt "#41125"
+msgid "hidden"
+msgstr "verstecken"
+
+msgctxt "#41126"
+msgid "Titlebar on home widgets"
+msgstr "Titelbalken auf Home Widgets"
+
+msgctxt "#41127"
+msgid "Show more fanart"
+msgstr "Zeige mehr Fanart"
+
+msgctxt "#41128"
+msgid "but not on homescreen"
+msgstr "aber nicht auf der Startseite"
+
+msgctxt "#41129"
+msgid "Use 'Black's app-section"
+msgstr "'Black's App Homescreenlayout nutzen"
+
 msgctxt "#41130"
 msgid "Home"
 msgstr "Hauptmenü"
@@ -63,6 +99,14 @@ msgstr "Hauptmenü"
 msgctxt "#41131"
 msgid "Manage categories"
 msgstr "Kategorien verwalten"
+
+msgctxt "#41132"
+msgid "Manage custom home tile colors"
+msgstr "Eigene Hauptmenü-Kachelfarben verwalten"
+
+msgctxt "#41133"
+msgid "Set custom home tiles to grey for"
+msgstr "Eigene Kachelfarben auf grau setzen für"
 
 msgctxt "#41134"
 msgid "Show profile image"
@@ -526,7 +570,7 @@ msgstr "Energie"
 
 msgctxt "#41524"
 msgid "Home"
-msgstr "Startseite"
+msgstr "Start"
 
 msgctxt "#41525"
 msgid "search XBMC for"

@@ -1865,7 +1865,6 @@
                 <effect type="zoom" start="100" end="75" center="960,540" easing="in" tween="back" time="300" />
                 <effect type="fade" start="100" end="0" delay="200" time="100" />
             </animation>
-	        <animation effect="slide" end="0,81" time="0" condition="!Window.IsActive(videoosd)">Conditional</animation>
             <control type="label">
                 <description>Header</description>
                     <posx>0</posx>

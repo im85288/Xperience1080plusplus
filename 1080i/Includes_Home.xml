@@ -1179,7 +1179,7 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>stringcompare(Skin.String(BarTransparency),Default) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(5021) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),$LOCALIZE[41124]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(5021) | !Skin.HasSetting(BarIfFocused)]</visible>
                         </control>
                         <control type="image">
                             <description>Title overlay</description>
@@ -1189,7 +1189,7 @@
                             <height>64</height>
                             <colordiffuse>dd000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>stringcompare(Skin.String(BarTransparency),Darker) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(5021) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),$LOCALIZE[41123]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(5021) | !Skin.HasSetting(BarIfFocused)]</visible>
                         </control>
                         <control type="group" id="5023">
                             <visible>!IntegerGreaterThan(Container(5022).NumItems,0)</visible>
@@ -1238,7 +1238,7 @@
                             <align>left</align>
                             <aligny>center</aligny>
                             <enable>false</enable>
-                            <visible>IntegerGreaterThan(Container(5022).NumItems,0) + !stringcompare(Skin.String(BarTransparency),Hide) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(5021) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>IntegerGreaterThan(Container(5022).NumItems,0) + !stringcompare(Skin.String(BarTransparency),$LOCALIZE[41125]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(5021) | !Skin.HasSetting(BarIfFocused)]</visible>
                         </control>
                         <control type="label">
                             <posx>0</posx>
@@ -1478,7 +1478,7 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>stringcompare(Skin.String(BarTransparency),Default) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(5031) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),$LOCALIZE[41124]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(5031) | !Skin.HasSetting(BarIfFocused)] + !Skin.HasSetting(BarIfFanart)</visible>
                         </control>
                         <control type="image">
                             <description>Title overlay</description>
@@ -1488,7 +1488,7 @@
                             <height>64</height>
                             <colordiffuse>dd000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>stringcompare(Skin.String(BarTransparency),Darker) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(5031) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),$LOCALIZE[41123]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(5031) | !Skin.HasSetting(BarIfFocused)] + !Skin.HasSetting(BarIfFanart)</visible>
                         </control>
                         <control type="group" id="5033">
                             <visible>!IntegerGreaterThan(Container(5032).NumItems,0)</visible>
@@ -1537,7 +1537,7 @@
                             <align>left</align>
                             <aligny>center</aligny>
                             <enable>false</enable>
-                            <visible>IntegerGreaterThan(Container(5032).NumItems,0) + !stringcompare(Skin.String(BarTransparency),Hide) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(5031) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>IntegerGreaterThan(Container(5032).NumItems,0) + !stringcompare(Skin.String(BarTransparency),$LOCALIZE[41125]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(5031) | !Skin.HasSetting(BarIfFocused)] + !Skin.HasSetting(BarIfFanart)</visible>
                         </control>
                         <control type="label">
                             <posx>0</posx>
@@ -2038,7 +2038,7 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>stringcompare(Skin.String(BarTransparency),Default) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(2021) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),$LOCALIZE[41124]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(2021) | !Skin.HasSetting(BarIfFocused)] + !Skin.HasSetting(BarIfFanart)</visible>
                         </control>
                         <control type="image">
                             <description>Title overlay</description>
@@ -2048,7 +2048,7 @@
                             <height>64</height>
                             <colordiffuse>dd000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>stringcompare(Skin.String(BarTransparency),Darker) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(2021) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),$LOCALIZE[41123]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(2021) | !Skin.HasSetting(BarIfFocused)] + !Skin.HasSetting(BarIfFanart)</visible>
                         </control>
                         <control type="group" id="2023">
                             <visible>!IntegerGreaterThan(Container(2022).NumItems,0)</visible>
@@ -2097,7 +2097,7 @@
                             <align>left</align>
                             <aligny>center</aligny>
                             <enable>false</enable>
-                            <visible>IntegerGreaterThan(Container(2022).NumItems,0) + !stringcompare(Skin.String(BarTransparency),Hide) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(2021) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>IntegerGreaterThan(Container(2022).NumItems,0) + !stringcompare(Skin.String(BarTransparency),$LOCALIZE[41125]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(2021) | !Skin.HasSetting(BarIfFocused)] + !Skin.HasSetting(BarIfFanart)</visible>
                         </control>
                         <control type="label">
                             <posx>0</posx>
@@ -2845,7 +2845,7 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>stringcompare(Skin.String(BarTransparency),Default) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(3021) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),$LOCALIZE[41124]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(3021) | !Skin.HasSetting(BarIfFocused)]</visible>
                         </control>
                         <control type="image">
                             <description>Title overlay</description>
@@ -2855,7 +2855,7 @@
                             <height>64</height>
                             <colordiffuse>dd000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>stringcompare(Skin.String(BarTransparency),Darker) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(3021) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),$LOCALIZE[41123]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(3021) | !Skin.HasSetting(BarIfFocused)]</visible>
                         </control>
                         <control type="group" id="3023">
                             <visible>!IntegerGreaterThan(Container(3022).NumItems,0)</visible>
@@ -2904,7 +2904,7 @@
                             <align>left</align>
                             <aligny>center</aligny>
                             <enable>false</enable>
-                            <visible>IntegerGreaterThan(Container(3022).NumItems,0) + !stringcompare(Skin.String(BarTransparency),Hide) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(3021) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>IntegerGreaterThan(Container(3022).NumItems,0) + !stringcompare(Skin.String(BarTransparency),$LOCALIZE[41125]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(3021) | !Skin.HasSetting(BarIfFocused)]</visible>
                         </control>
                         <control type="label">
                             <posx>0</posx>
@@ -3609,7 +3609,7 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>stringcompare(Skin.String(BarTransparency),Default) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(4021) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),$LOCALIZE[41124]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(4021) | !Skin.HasSetting(BarIfFocused)] + !Skin.HasSetting(BarIfFanart)</visible>
                         </control>
                         <control type="image">
                             <description>Title overlay</description>
@@ -3619,7 +3619,7 @@
                             <height>64</height>
                             <colordiffuse>dd000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>stringcompare(Skin.String(BarTransparency),Darker) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(4021) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),$LOCALIZE[41123]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(4021) | !Skin.HasSetting(BarIfFocused)] + !Skin.HasSetting(BarIfFanart)</visible>
                         </control>
                         <control type="group" id="4023">
                             <visible>!IntegerGreaterThan(Container(4022).NumItems,0)</visible>
@@ -3668,7 +3668,7 @@
                             <align>left</align>
                             <aligny>center</aligny>
                             <enable>false</enable>
-                            <visible>IntegerGreaterThan(Container(4022).NumItems,0) + !stringcompare(Skin.String(BarTransparency),Hide) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(4021) | !Skin.HasSetting(BarIfFocused)]</visible>
+                            <visible>IntegerGreaterThan(Container(4022).NumItems,0) + !stringcompare(Skin.String(BarTransparency),$LOCALIZE[41125]) + [Skin.HasSetting(BarIfFocused) + Control.HasFocus(4021) | !Skin.HasSetting(BarIfFocused)] + !Skin.HasSetting(BarIfFanart)</visible>
                         </control>
                         <control type="label">
                             <posx>0</posx>
@@ -5333,7 +5333,7 @@
                                 <height>187</height>
                             	<texture border="1">windows/common/black.png</texture>
                                 <colordiffuse>99000000</colordiffuse>
-                            <visible>stringcompare(Skin.String(BarTransparency),Default)</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),$LOCALIZE[41124])</visible>
                         </control>
                         <control type="image">
                             <decription>Title overlay</decription>
@@ -5343,7 +5343,7 @@
                             <height>187</height>
                             <colordiffuse>dd000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
-                            <visible>stringcompare(Skin.String(BarTransparency),darker)</visible>
+                            <visible>stringcompare(Skin.String(BarTransparency),$LOCALIZE[41123])</visible>
                         </control>
                             <control type="label">
                                 <posx>0</posx>

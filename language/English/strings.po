@@ -67,8 +67,40 @@ msgstr ""
 #empty strings from id 41115 to 41129
 #Home
 
+msgctxt "#41121"
+msgid "only if fanart widget"
+msgstr ""
+
+msgctxt "#41122"
+msgid "only if focused"
+msgstr ""
+
+msgctxt "#41123"
+msgid "darker"
+msgstr ""
+
+msgctxt "#41124"
+msgid "default"
+msgstr ""
+
+msgctxt "#41125"
+msgid "hidden"
+msgstr ""
+
+msgctxt "#41126"
+msgid "Titlebar on home widgets"
+msgstr ""
+
+msgctxt "#41127"
+msgid "Show more fanart"
+msgstr ""
+
+msgctxt "#41128"
+msgid "but not on home screen"
+msgstr ""
+
 msgctxt "#41129"
-msgid "Use 'Black's App Section"
+msgid "Use 'Black's app-section"
 msgstr ""
 
 msgctxt "#41130"
@@ -83,11 +115,11 @@ msgstr ""
 #41132/41133
 
 msgctxt "#41132"
-msgid "Manage Custom-Home-Tile colors"
+msgid "Manage custom home tile colors"
 msgstr ""
 
 msgctxt "#41133"
-msgid "Set Custom-Home-Tiles to grey for"
+msgid "Set custom home tiles to grey for"
 msgstr ""
 
 msgctxt "#41134"
