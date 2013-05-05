@@ -11,7 +11,7 @@
                 <posy>-149</posy>
 	            <width>1520</width>
 	            <height>1377</height>
-	            <texture border="610,340,610,340">osd/fullscreen/osdsettings.png</texture>
+	            <texture border="610,340,610,340">osd/fullscreen/lightosdsettings.png</texture>
 	            <aspectratio>stretch</aspectratio>
 	        </control>
 	        <control type="group">
@@ -49,6 +49,15 @@
 	                        <height>77</height>
 	                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
 	                    </control>
+	                    <control type="image">
+	                        <posx>0</posx>
+	                        <posy>0</posy>
+	                        <width>680</width>
+	                        <height>75</height>
+	                        <texture border="150,1,150,1">views/other/lightblue-focus.png</texture>
+	                        <aspectratio>stretch</aspectratio>                
+	                        <visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>     
+	                    </control>
 	                    <control type="label">
 	                        <description>Label</description>
 	                        <posx>30</posx>
@@ -58,9 +67,24 @@
 	                        <font>Font-Condensed-S34</font>
 	                        <align>left</align>
 	                        <label>$INFO[ListItem.StartTime]</label>
-	                        <textcolor>99FFFFFF</textcolor>
-	                        <selectedcolor>99FFFFFF</selectedcolor>
+	                        <textcolor>eewhite</textcolor>
+	                        <selectedcolor>eewhite</selectedcolor>
 	                        <scroll>false</scroll>
+	                        <visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible> 
+	                    </control>
+	                    <control type="label">
+	                        <description>Label</description>
+	                        <posx>30</posx>
+	                        <posy>0</posy>
+	                        <width>620</width>
+	                        <height>76</height>
+	                        <font>Font-Condensed-S34</font>
+	                        <align>left</align>
+	                        <label>$INFO[ListItem.StartTime]</label>
+	                        <textcolor>black</textcolor>
+	                        <selectedcolor>black</selectedcolor>
+	                        <scroll>false</scroll>
+	                        <visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 	                    </control>
 	                    <control type="label">
 	                        <description>Label</description>
@@ -71,10 +95,24 @@
 	                        <font>Font-Condensed-S34</font>
 	                        <align>right</align>
 	                        <label>$INFO[ListItem.Label]</label>
-	                        <textcolor>77white</textcolor>
-	                        <selectedcolor>77white</selectedcolor>
+	                        <textcolor>eewhite</textcolor>
+	                        <selectedcolor>eewhite</selectedcolor>
 	                        <scroll>false</scroll>
-	                        <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
+	                        <visible>!ListItem.HasTimer + !ListItem.IsRecording + !StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
+	                    </control>
+	                    <control type="label">
+	                        <description>Label</description>
+	                        <posx>650</posx>
+	                        <posy>0</posy>
+	                        <width>620</width>
+	                        <height>76</height>
+	                        <font>Font-Condensed-S34</font>
+	                        <align>right</align>
+	                        <label>$INFO[ListItem.Label]</label>
+	                        <textcolor>black</textcolor>
+	                        <selectedcolor>black</selectedcolor>
+	                        <scroll>false</scroll>
+	                        <visible>!ListItem.HasTimer + !ListItem.IsRecording + StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 	                    </control>
 	                    <control type="label">
 	                        <description>Label</description>
@@ -116,14 +154,6 @@
 	                    	<texture>windows/pvr/epg-timer.png</texture>
 	                    	<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 	                    </control>
-	                    <control type="image">
-	                        <posx>651</posx>
-	                        <posy>-10</posy>
-	                        <width>39</width>
-	                        <height>39</height>
-	                        <texture>windows/filemanager/selected.png</texture>
-	                        <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-	                    </control>
 	                </itemlayout>
 	                <focusedlayout width="1080" height="76">
 	                    <control type="image">
@@ -140,8 +170,18 @@
 	                        <height>75</height>
 	                        <texture border="150,1,150,1">views/other/blue-focus.png</texture>
 	                        <aspectratio>stretch</aspectratio>
-	                        <visible>Control.HasFocus(11)</visible>
-	                        <include>visiblehidefadeinfo</include>
+	                        <visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
+	                       
+	                    </control>
+	                    <control type="image">
+	                        <posx>0</posx>
+	                        <posy>0</posy>
+	                        <width>680</width>
+	                        <height>75</height>
+	                        <texture border="150,1,150,1">views/other/lightblue-focus.png</texture>
+	                        <aspectratio>stretch</aspectratio>
+	                        <visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
+	          
 	                    </control>
 	                    <control type="group">
 	                        <animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(11)">Conditional</animation>
@@ -151,12 +191,41 @@
 	                            <posy>0</posy>
 	                            <width>620</width>
 	                            <height>76</height>
-	                            <font>Font-Condensed-S34</font>
+	                            <font>Font-Condensed-S34-B</font>
 	                            <align>left</align>
 	                            <label>$INFO[ListItem.StartTime]</label>
 	                            <textcolor>eewhite</textcolor>
 	                            <selectedcolor>eewhite</selectedcolor>
 	                            <scroll>false</scroll>
+	                            <visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
+	                        </control>
+	                        <control type="label">
+	                            <description>Label</description>
+	                            <posx>30</posx>
+	                            <posy>0</posy>
+	                            <width>620</width>
+	                            <height>76</height>
+	                            <font>Font-Condensed-S34</font>
+	                            <align>left</align>
+	                            <label>$INFO[ListItem.StartTime]</label>
+	                            <textcolor>black</textcolor>
+	                            <selectedcolor>black</selectedcolor>
+	                            <scroll>false</scroll>
+	                            <visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
+	                        </control>
+	                        <control type="label">
+	                            <description>Label</description>
+	                            <posx>650</posx>
+	                            <posy>0</posy>
+	                            <width>620</width>
+	                            <height>76</height>
+	                            <font>Font-Condensed-S34-B</font>
+	                            <align>right</align>
+	                            <label>$INFO[ListItem.Label]</label>
+	                            <textcolor>eewhite</textcolor>
+	                            <selectedcolor>eewhite</selectedcolor>
+	                            <scroll>false</scroll>
+	                            <visible>!ListItem.HasTimer + !ListItem.IsRecording + !StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 	                        </control>
 	                        <control type="label">
 	                            <description>Label</description>
@@ -167,10 +236,10 @@
 	                            <font>Font-Condensed-S34</font>
 	                            <align>right</align>
 	                            <label>$INFO[ListItem.Label]</label>
-	                            <textcolor>D4FFFFFF</textcolor>
-	                            <selectedcolor>77white</selectedcolor>
+	                            <textcolor>black</textcolor>
+	                            <selectedcolor>black</selectedcolor>
 	                            <scroll>false</scroll>
-	                            <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
+	                            <visible>!ListItem.HasTimer + !ListItem.IsRecording + StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 	                        </control>
 	                        <control type="label">
 	                            <description>Label</description>
@@ -213,14 +282,7 @@
 	                    	<texture>windows/pvr/epg-timer.png</texture>
 	                    	<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 	                    </control>
-	                    <control type="image">
-	                        <posx>651</posx>
-	                        <posy>-10</posy>
-	                        <width>39</width>
-	                        <height>39</height>
-	                        <texture>windows/filemanager/selected.png</texture>
-	                        <visible>ListItem.IsSelected | ListItem.IsPlaying</visible>
-	                    </control>
+	                
 	                </focusedlayout>
 	            </control>
 	            <control type="image" id="62">
