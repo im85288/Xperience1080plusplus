@@ -410,7 +410,7 @@
                                 <posy>80</posy>
                                 <width>1410</width>
                                 <height>56</height>
-                                <label>$INFO[VideoPlayer.NextStartTime,$LOCALIZE[19031]: ,]$INFO[VideoPlayer.Title, ,]</label>
+                                <label>$INFO[VideoPlayer.NextStartTime,$LOCALIZE[19031]: ,]$INFO[VideoPlayer.NextTitle, ,]</label>
                                 <textcolor>blue</textcolor>
                                 <font>Font-Condensed-S45-B</font>
                                 <align>left</align>
