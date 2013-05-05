@@ -212,29 +212,45 @@
 							</control>
 							
 							<control type="label">
-								<posx>290</posx>
-                                <posy>744</posy>
+								<posx>300</posx>
+                                <posy>750</posy>
                                 <width>1410</width>
                                 <height>56</height>
-                                <label>[UPPERCASE]$VAR[OSDTitle][/UPPERCASE]</label>
-                                <textcolor>bbwhite</textcolor>
-                                <font>Font-Condensed-S50</font>
+                                <label>$VAR[OSDTitle]</label>
+                                <textcolor>eewhite</textcolor>
+                                <font>Font-Condensed-S45-B</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <scroll>false</scroll>
                                 <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
-								<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + VideoPlayer.Content(LiveTV)</visible>
-                <include>visiblehidefadeinfo</include>
+								<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + VideoPlayer.Content(LiveTV)</visible>
+                				<include>visiblehidefadeinfo</include>
+                            </control>
+                            
+							<control type="label">
+								<posx>300</posx>
+                                <posy>750</posy>
+                                <width>1410</width>
+                                <height>56</height>
+                                <label>$VAR[OSDTitle]</label>
+                                <textcolor>blue</textcolor>
+                                <font>Font-Condensed-S45-B</font>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                                <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot)) + !IsEmpty(Window(seekbar).Property(ShowNext)) + VideoPlayer.Content(LiveTV)</visible>
+                				<include>visiblehidefadeinfo</include>
                             </control>
 								
 			
 			<control type="textbox">
-                <posx>290</posx>
-                <posy>807</posy>
+                <posx>300</posx>
+                <posy>813</posy>
                 <width>1333</width>
                 <height>220</height>
                 <label>$VAR[OSDPlot]</label>
-                <textcolor>aawhite</textcolor>
+                <textcolor>eewhite</textcolor>
                 <font>Font-Condensed-S40</font>
                 <align>justify</align>
                 <autoscroll delay="11500" time="5000" repeat="7500" />
@@ -243,12 +259,12 @@
             </control>
 			
 			<control type="textbox">
-                <posx>290</posx>
-                <posy>807</posy>
+                <posx>300</posx>
+                <posy>813</posy>
                 <width>1333</width>
                 <height>220</height>
                 <label>$VAR[OSDPlot]</label>
-                <textcolor>aawhite</textcolor>
+                <textcolor>eewhite</textcolor>
                 <font>Font-Condensed-S32</font>
                 <align>justify</align>
                 <autoscroll delay="11500" time="5000" repeat="7500" />

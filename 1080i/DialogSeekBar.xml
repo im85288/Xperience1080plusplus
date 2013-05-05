@@ -377,83 +377,128 @@
 								<!-- Channel Name -->
                                 <control type="label">
                                     <posx>25</posx>
-                                    <posy>57</posy>
+                                    <posy>59</posy>
                                     <width>900</width>
                                     <height>100</height>
                                     <label>[UPPERCASE]$INFO[VideoPlayer.ChannelName, ,][/UPPERCASE]</label>
                                     <textcolor>eewhite</textcolor>
-                                    <font>Font-Condensed-S50</font>
-                                    <align>left</align>
-                                    <aligny>center</aligny>
-                                    <scroll>false</scroll>
-                                </control>
-                            
-							<!-- LiveTV Sendungstitel -->
-                            <control type="label">
-								<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
-                                <include>visiblehidefadeinfo</include>
-                                <posx>500</posx>
-                                <posy>80</posy>
-                                <width>1410</width>
-                                <height>56</height>
-                                <label>[UPPERCASE]$VAR[OSDTitle][/UPPERCASE]</label>
-                                <textcolor>eewhite</textcolor>
-                                <font>Font-Condensed-S50</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <scroll>false</scroll>
-                                <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
-								
-                            </control>
-                            
-                            <control type="label">						
-                                <include>visiblehidefadeinfo</include>
-                                <posx>390</posx>
-                                <posy>80</posy>
-                                <width>1410</width>
-                                <height>56</height>
-                                <label>$INFO[VideoPlayer.StartTime]</label>
-                                <textcolor>eewhite</textcolor>
-                                <font>Font-Condensed-S50</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <scroll>false</scroll>
-                                <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>								
-                           		<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
-                            </control>
-                            
-                            <control type="label">						
-                                <include>visiblehidefadeinfo</include>
-                                <posx>290</posx>
-                                <posy>80</posy>
-                                <width>1410</width>
-                                <height>56</height>
-                                <label>Now: </label>
-                                <textcolor>eewhite</textcolor>
-                                <font>Font-Condensed-S50</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <scroll>false</scroll>
-                                <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>								
-                            	<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
-                            </control>
-                            <control type="group">
-                                <visible>IsEmpty(Window.Property(ExtendPlot))</visible>
-                                <include>visiblehidefadeinfo</include>
-                                <control type="label">
-                                    <posx>290</posx>
-                                    <posy>142</posy>
-                                    <width>1100</width>
-                                    <height>44</height>
-                                    <label>$VAR[OSDNextTitle]</label>
-                                    <textcolor>blue</textcolor>
                                     <font>Font-Condensed-S40</font>
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
                                 </control>
+                            
+							<!-- LiveTV Title -->
+                            <control type="label">
+                                <include>visiblehidefadeinfo</include>
+                                <posx>300</posx>
+                                <posy>80</posy>
+                                <width>1410</width>
+                                <height>56</height>                        
+                                <label>$INFO[VideoPlayer.StartTime,$LOCALIZE[19030]: ,]$INFO[VideoPlayer.Title, ,]</label>
+                                <textcolor>eewhite</textcolor>
+                                <font>Font-Condensed-S45-B</font>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                                <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>		
+                       			<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext))</visible>
+                            </control>
+                            <control type="label">
+                                <include>visiblehidefadeinfo</include>
+                                <posx>300</posx>
+                                <posy>80</posy>
+                                <width>1410</width>
+                                <height>56</height>
+                                <label>$INFO[VideoPlayer.NextStartTime,$LOCALIZE[19031]: ,]$INFO[VideoPlayer.Title, ,]</label>
+                                <textcolor>blue</textcolor>
+                                <font>Font-Condensed-S45-B</font>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                                <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>		
+                          		<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + !IsEmpty(Window(seekbar).Property(ShowNext))</visible>
+                            </control>
+                            
+                      
+                            
+                            <control type="label">						
+                                <include>visiblehidefadeinfo</include>
+                                <posx>1400</posx>
+                                <posy>80</posy>
+                                <width>1410</width>
+                                <height>56</height>
+                                <label>$INFO[VideoPlayer.TimeRemaining,, $LOCALIZE[12391]]</label>
+                                <textcolor>eewhite</textcolor>
+                                <font>Font-Condensed-S45-B</font>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                                <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>								
+                            	<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext))</visible>
+                            </control>
+                     
+                            
+                            <control type="label">						
+                                <include>visiblehidefadeinfo</include>
+                                <posx>1400</posx>
+                                <posy>80</posy>
+                                <width>1410</width>
+                                <height>56</height>
+                                <label>$INFO[VideoPlayer.NextDuration,, $LOCALIZE[12391]]</label>
+                                <textcolor>blue</textcolor>
+                                <font>Font-Condensed-S45-B</font>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                                <animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>								
+                            	<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + !IsEmpty(Window(seekbar).Property(ShowNext))</visible>
+                            </control>
+                            
+                            <control type="group">
+                                <visible>IsEmpty(Window.Property(ExtendPlot))</visible>
+                                <include>visiblehidefadeinfo</include>
+                                <control type="label">
+                                    <posx>300</posx>
+                                    <posy>142</posy>
+                                    <width>1100</width>
+                                    <height>44</height>
+                                    <label>$VAR[OSDNextTitle]</label>
+                                    <textcolor>blue</textcolor>
+                                    <font>Font-Condensed-S45-B</font>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                    <scroll>false</scroll>
+                                    <visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext))</visible> 
+                                </control>
+                                <control type="label">
+                                    <posx>1400</posx>
+                                    <posy>142</posy>
+                                    <width>1100</width>
+                                    <height>44</height>
+                                    <label>$INFO[VideoPlayer.NextDuration,, $LOCALIZE[12391]]</label>
+                                    <textcolor>blue</textcolor>
+                                    <font>Font-Condensed-S45-B</font>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                    <scroll>false</scroll>
+                                    <visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext))</visible> 
+                                </control>
+                              <!--  <control type="label">
+                                    <posx>300</posx>
+                                    <posy>142</posy>
+                                    <width>1100</width>
+                                    <height>44</height>
+                                    <label>$VAR[OSDNextTitle]</label>
+                                    <textcolor>eewhite</textcolor>
+                                    <font>Font-Condensed-S45-B</font>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                    <scroll>false</scroll>
+                                    <visible>!IsEmpty(Window(seekbar).Property(ShowNext))</visible>
+                                </control> -->
                                 <control type="textbox">
-                                    <posx>290</posx>
+                                    <posx>300</posx>
                                     <posy>190</posy>
                                     <width>1600</width>
                                     <height>185</height>
@@ -462,6 +507,7 @@
                                     <font>Font-Condensed-S40</font>
                                     <align>justify</align>
                                     <autoscroll delay="11500" time="5000" repeat="7500" />
+                                   <visible> IsEmpty(Window(seekbar).Property(ExtendPlot)) </visible>
                                 </control>
                             </control>
                         </control>
