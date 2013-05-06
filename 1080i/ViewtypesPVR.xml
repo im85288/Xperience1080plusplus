@@ -401,12 +401,21 @@
                             <posy>0</posy>
                             <width>1022</width>
                             <height>95</height>
-                            <texture border="150,1,150,1">views/other/focus.png</texture>
+                            <texture border="150,1,150,1">views/other/blue-focus.png</texture>
+                            <animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
+                            <animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>                   
+                            <visible>!ListItem.IsPlaying</visible>
+                        </control> 
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>1022</width>
+                            <height>95</height>
+                            <texture border="150,1,150,1">views/other/lightblue-focus.png</texture>
                             <animation effect="slide" start="0,96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
                             <animation effect="slide" start="0,-96" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-                            <include>visiblehidefadeinfo</include>
-                            <visible>Control.HasFocus(11)</visible>
-                        </control> 
+                            <visible>ListItem.IsPlaying</visible>
+                        </control>
                       	<control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
