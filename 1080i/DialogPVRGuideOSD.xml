@@ -5,7 +5,6 @@
 	    <control type="group">
 	        <include>NowPlayingFullscreen2</include>
 	        <include>FullscreenDimensions</include>
-	        <animation effect="slide" end="0,81" time="0" condition="!Window.IsActive(videoosd)">Conditional</animation>
 	        <control type="image">
                 <posx>-420</posx>
                 <posy>-149</posy>
