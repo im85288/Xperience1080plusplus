@@ -87,7 +87,7 @@
 			    		<posy>85</posy>
 			    		<width>516</width>
 			    		<height>40</height>
-			   			<texture border="0">windows/common/black_content.png</texture> 
+			   			<texture border="0">windows/common/black_content2.png</texture> 
 			    		<visible>Player.HasVideo + Pvr.IsPlayingTv</visible>
 					</control>
 	            	<control type="label">
@@ -1692,7 +1692,7 @@
 			    	<posy>0</posy>
 			    	<width>516</width>
 			    	<height>40</height>
-			   		<texture border="0">windows/common/black_content.png</texture> 
+			   		<texture border="0">windows/common/black_content2.png</texture> 
 			    	<visible>Player.HasVideo + Pvr.IsPlayingTv</visible>
 				</control>
 	            <control type="label">
