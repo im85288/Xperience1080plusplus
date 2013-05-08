@@ -2318,7 +2318,7 @@
                                     <align>right</align>
                                     <aligny>center</aligny>
                                     <textoffsetx>20</textoffsetx>
-                                    <visible>IsEmpty(ListItem.Label2)</visible>
+                                    <visible>!IsEmpty(ListItem.Label2)</visible>
                                 </control>
                             </control>
                         </itemlayout>
