@@ -11,7 +11,7 @@
     <include name="VideoViews">
         <include>Viewtype-List</include>
         <include>Viewtype-InfoList</include>
-        <include>Viewtype-Top250InfoList</include>
+        <include>Viewtype-Top250InfoList</include>  <!--VideosExtras-->
         <include>Viewtype-EpisodeInfoList</include>     <!--VideosExtras-->
         <include>Viewtype-Panel</include>
         <include>Viewtype-Landscape</include>

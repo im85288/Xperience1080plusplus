@@ -731,7 +731,28 @@
                         <label>MPAA Language</label>
                         <label2 fallback="US">[COLOR=SettingsBlue]$VAR[MovieMPAALangLabel][/COLOR]</label2>
                         <onclick>ActivateWindow(3007)</onclick>
-                    </control>
+                </control>
+                <control type="radiobutton" id="3010">
+                        <width>1210</width>
+                        <include>SettingsCategoryDefaultButtonVars</include>
+                        <selected>Skin.HasSetting(ShowCDArt)</selected>
+                    	<onclick>Skin.ToggleSetting(ShowCDArt)</onclick>
+                        <label>Show CDArt</label>                                     
+                </control>
+                <control type="radiobutton" id="3011">
+                        <width>1210</width>
+                        <include>SettingsCategoryDefaultButtonVars</include>
+                        <selected>Skin.HasSetting(ShowClearArt)</selected>
+                    	<onclick>Skin.ToggleSetting(ShowClearArt)</onclick>
+                        <label>Show ClearArt/ClearLogo</label>                     
+                </control>
+                <control type="radiobutton" id="3012">
+                        <width>1210</width>
+                        <include>SettingsCategoryDefaultButtonVars</include>
+                        <selected>Skin.HasSetting(ShowBoxes)</selected>
+                    	<onclick>Skin.ToggleSetting(ShowBoxes)</onclick>
+                        <label>Show Boxes</label>                     
+                </control>
             </control>
                 
                 <!-- OSD Settings -->
