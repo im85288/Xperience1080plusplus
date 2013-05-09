@@ -1571,7 +1571,18 @@
                             <label fallback="••••">$INFO[ListItem.Year]</label>
                             <align>center</align>
                             <textcolor>eewhite</textcolor>
-                            
+                            <visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>46</posx>
+                            <width>100</width>
+                            <height>58</height>
+                            <font>Font-Condensed-S31</font>
+                            <label fallback="••••">$INFO[Window(home).Property(Set.Movie.1.Year)]</label>               					 
+                            <align>center</align>
+                            <textcolor>eewhite</textcolor>
+                            <visible>substring(ListItem.Path,videodb://1/7,left)</visible>
                             <scroll>false</scroll>
                         </control>
                         <control type="label">
@@ -1829,11 +1840,21 @@
                                 <font>Font-Condensed-S31</font>
                                 <label fallback="••••">$INFO[ListItem.Year]</label>
                                 <align>center</align>
-                                <textcolor>eewhite</textcolor>
-                                
+                                <textcolor>eewhite</textcolor>                         
                                 <scroll>false</scroll>
-                               <visible>Container.Content(Movies) | !Skin.HasSetting(ShowBanner)</visible>
+                               <visible>!substring(ListItem.Path,videodb://1/7,left) | !Skin.HasSetting(ShowBanner)</visible>
                             </control>
+                            <control type="label">
+                            	<posx>46</posx>
+                           	 	<width>100</width>
+                            	<height>58</height>
+                            	<font>Font-Condensed-S31</font>
+                            	<label fallback="••••">$INFO[Window(home).Property(Set.Movie.1.Year)]</label>
+                            	<align>center</align>
+                            	<textcolor>eewhite</textcolor>
+                            	<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+                            	<scroll>false</scroll>
+                       		 </control>
                             <control type="label">
                                 <posx>690</posx>
                                 <width>590</width>
