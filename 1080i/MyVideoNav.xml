@@ -651,7 +651,7 @@
                     <control type="radiobutton" id="203">
                         <description>Info List</description>
                         <include>optionsbuttonsdimensions</include>
-                        <label>Info list</label>
+                        <label>Info List</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(52)</onclick>
                         <selected>Control.IsVisible(52)</selected>
@@ -687,7 +687,7 @@
                     <control type="radiobutton" id="212">
                         <description>Info List</description>
                         <include>optionsbuttonsdimensions</include>
-                        <label>Info list</label>
+                        <label>Info List</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(51)</onclick>
                         <selected>Control.IsVisible(51)</selected>

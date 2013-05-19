@@ -1493,7 +1493,7 @@
                     <onright condition="Skin.HasSetting(InfoListPlot) + !Control.IsVisible(70)">71</onright>
                     <onup>52</onup>
                     <ondown>52</ondown>
-                    <viewtype label="Info list">list</viewtype>
+                    <viewtype label="Info List">list</viewtype>
                     <preloaditems>2</preloaditems>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
                     <itemlayout height="60" condition="!Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Sets) + Container.HasFiles">
