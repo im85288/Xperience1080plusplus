@@ -209,6 +209,7 @@
 						<include>SettingsCategoryRadioButtonVars</include>
 						<selected>Skin.HasSetting(BackgroundOpacity)</selected>
 						<onclick condition="!Skin.HasSetting(BackgroundOpacity)">Skin.Reset(HomeBackgroundOpacity)</onclick>
+						<onclick condition="!Skin.HasSetting(BackgroundOpacity)">Skin.Reset(MoreBackgroundOpacity)</onclick>
 						<onclick>Skin.ToggleSetting(BackgroundOpacity)</onclick>
 						<label>$LOCALIZE[41127]</label>
 					</control>
@@ -219,6 +220,14 @@
 						<onclick>Skin.ToggleSetting(HomeBackgroundOpacity)</onclick>
 						<label> • $LOCALIZE[41128]</label>
 						<visible>Skin.HasSetting(BackgroundOpacity)</visible>
+					</control>
+					<control type="radiobutton" id="10038">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(MoreBackgroundOpacity)</selected>
+						<onclick condition="!Skin.HasSetting(MoreBackgroundOpacity)">Skin.Reset(BackgroundOpacity)</onclick>
+						<onclick>Skin.ToggleSetting(MoreBackgroundOpacity)</onclick>
+						<label>Show even more fanart</label>
 					</control>
                     <control type="radiobutton" id="1005">
                         <width>1210</width>
@@ -752,6 +761,14 @@
                         <selected>Skin.HasSetting(ShowBoxes)</selected>
                     	<onclick>Skin.ToggleSetting(ShowBoxes)</onclick>
                         <label>Show Boxes</label>                     
+                </control>
+                <control type="radiobutton" id="3013">
+                        <width>1210</width>
+                        <include>SettingsCategoryDefaultButtonVars</include>
+                        <selected>Skin.HasSetting(ShowAlternateBoxes)</selected>
+                    	<onclick>Skin.ToggleSetting(ShowAlternateBoxes)</onclick>
+                    	<visible>Skin.HasSetting(ShowBoxes)</visible>
+                        <label>Show Alternate Boxes</label>                     
                 </control>
             </control>
                 

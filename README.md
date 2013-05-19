@@ -8,3 +8,4 @@ Xperience1080++ is my custom mod of the awesome mod made by Saste's which is bas
   		- - complete redesign of PVR sections, including enhanced EPG TimeLine view 
   		- - adapted info-list view
   		- - added top250 view  
+  		- - support for sets script provided by phil65

@@ -13,8 +13,9 @@
     </include>
 
     <variable name="FullscreenOverlay">
+     	<value condition="Skin.HasSetting(MoreBackgroundOpacity)">windows/common/fanartoverlay.png</value>
         <value condition="!Skin.HasSetting(BackgroundOpacity)">windows/common/overlay.png</value>
-        <value condition="Skin.HasSetting(BackgroundOpacity)">windows/common/overlay2.png</value>
+        <value condition="Skin.HasSetting(BackgroundOpacity)">windows/common/overlay2.png</value>     
     </variable>
     
 <!-- ================================================== -->

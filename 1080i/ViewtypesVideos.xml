@@ -1146,7 +1146,18 @@
                     <height>674</height>
                     <aspectratio scalediffuse="false">stretch</aspectratio>
                     <texture background="true">boxes/movies/$VAR[GlobalCaseVar]</texture>
-                    <visible>Skin.HasSetting(ShowBoxes) + [Container.Content(Movies) | Container.Content(Sets)]</visible>
+                    <visible>[Skin.HasSetting(ShowBoxes) + !Skin.HasSetting(ShowAlternateBoxes)] + [Container.Content(Movies) | Container.Content(Sets)]</visible>
+                    <fadetime>400</fadetime>
+                </control>
+                <control type="image">
+                    <posx>29</posx>
+                    <posy>265</posy>
+                    <fadetime>50</fadetime>
+                    <width>490</width>
+                    <height>674</height>
+                    <aspectratio scalediffuse="false">stretch</aspectratio>
+                    <texture background="true">boxes/tvshows/$VAR[GlobalCaseVar]</texture>
+                    <visible>[Skin.HasSetting(ShowBoxes) + Skin.HasSetting(ShowAlternateBoxes)] + [Container.Content(Movies) | Container.Content(Sets)]</visible>
                     <fadetime>400</fadetime>
                 </control>
                 <control type="group">
@@ -1333,6 +1344,16 @@
                         <aspect>keepaspect</aspect>
                         <texture>$VAR[MovieMPAAVar,colourflags/mpaa/movie/,.png]</texture>
                         <visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies)</visible>
+                     </control>
+                     
+                     <control type="image">
+                        <posx>255</posx>
+                        <posy>577</posy>
+                        <width>130</width>
+                        <height>76</height>
+                        <aspect>keepaspect</aspect>
+                        <texture>$VAR[AudioFlagVar,colourflags/audio/,.png]</texture>
+                        <visible>!IsEmpty(ListItem.AudioCodec) + Container.Content(movies)</visible>
                      </control>
                      
                      <control type="image">
@@ -1842,8 +1863,9 @@
                                 <align>center</align>
                                 <textcolor>eewhite</textcolor>                         
                                 <scroll>false</scroll>
-                               <visible>!substring(ListItem.Path,videodb://1/7,left) | !Skin.HasSetting(ShowBanner)</visible>
+                               	<visible>!Skin.HasSetting(ShowBanner) | [Container.Content(Movies) + !substring(ListItem.Path,videodb://1/7,left)]</visible>
                             </control>
+                            
                             <control type="label">
                             	<posx>46</posx>
                            	 	<width>100</width>

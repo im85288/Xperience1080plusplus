@@ -1176,7 +1176,7 @@
 			<control type="image">
 			    <posx>534</posx>
 			    <posy>455</posy>
-			    <width>1321</width>
+			    <width>1351</width>
 			    <height>40</height>
 			    <texture border="4">views/list/panel/panel.png</texture>
 			</control>
@@ -1184,7 +1184,7 @@
 				<description>EPG Grid</description>
 				<posx>30</posx>
 				<posy>458</posy>
-				<width>1825</width>
+				<width>1855</width>
 				<height>520</height>
 				<pagecontrol>10</pagecontrol>
 				<scrolltime>250</scrolltime>
@@ -1574,7 +1574,7 @@
 			    <control type="image">
 			    	<posx>0</posx>
 			    	<posy>-10</posy>
-			    	<width>1280</width>
+			    	<width>1310</width>
 			    	<height>310</height>
 			    	<texture border="4">views/list/panel/panel.png</texture>
 				</control>
@@ -1602,7 +1602,7 @@
   
     			</control>
     			<control type="label">
-    			    <posx>940</posx>
+    			    <posx>970</posx>
     			    <posy>0</posy>
     			    <width>350</width>
     			    <height>86</height>
@@ -1614,7 +1614,7 @@
     			
     			</control>
     			<control type="label">
-    			    <posx>940</posx>
+    			    <posx>970</posx>
     			    <posy>0</posy>
     			    <width>350</width>
     			    <height>86</height>
@@ -1671,7 +1671,7 @@
 	             </control>        
     			
     			<control type="image">
-			    	<posx>1285</posx>
+			    	<posx>1315</posx>
 			    	<posy>-10</posy>
 			    	<width>540</width>
 			    	<height>310</height>
@@ -1679,7 +1679,7 @@
 				</control>
     			<control type="videowindow">
 	                <description>video</description>
-	                <posx>1295</posx>
+	                <posx>1325</posx>
 	                <posy>0</posy>
 	                <width>516</width>
 	                <height>290</height>           
@@ -1688,7 +1688,7 @@
 	            
 	           
 	            <control type="image">
-			    	<posx>1295</posx>
+			    	<posx>1325</posx>
 			    	<posy>0</posy>
 			    	<width>516</width>
 			    	<height>40</height>
@@ -1696,7 +1696,7 @@
 			    	<visible>Player.HasVideo + Pvr.IsPlayingTv</visible>
 				</control>
 	            <control type="label">
-    			    <posx>1500</posx>
+    			    <posx>1530</posx>
     			    <posy>-25</posy>
     			    <width>250</width>
     			    <height>86</height>
@@ -1708,7 +1708,7 @@
     			    <visible>Player.HasVideo + Pvr.IsPlayingTv</visible>
     			</control>
     			<control type="label">
-    			    <posx>1300</posx>
+    			    <posx>1330</posx>
     			    <posy>0</posy>
     			    <width>250</width>
     			    <height>86</height>
@@ -1719,7 +1719,7 @@
     			    <visible>!Player.HasVideo + !Pvr.IsPlayingTv + StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
     			</control>
     			<control type="label">
-    			    <posx>1300</posx>
+    			    <posx>1330</posx>
     			    <posy>0</posy>
     			    <width>250</width>
     			    <height>86</height>
@@ -1730,7 +1730,7 @@
     			    <visible>!Player.HasVideo + !Pvr.IsPlayingTv + !StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
     			</control>
     			<control type="image">
-				    <posx>1300</posx>
+				    <posx>1330</posx>
 				    <posy>95</posy>
 				    <width>200</width>
 				    <height>200</height>
@@ -1739,7 +1739,7 @@
 				    <visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
 				 </control>
 				 <control type="label">
-    			    <posx>1300</posx>
+    			    <posx>1330</posx>
     			    <posy>220</posy>
     			    <width>500</width>
     			    <height>86</height>
@@ -1750,7 +1750,7 @@
     			    <visible>!Player.HasVideo + !Pvr.IsPlayingTv + StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
     			</control>
     			<control type="label">
-    			    <posx>1300</posx>
+    			    <posx>1330</posx>
     			    <posy>220</posy>
     			    <width>500</width>
     			    <height>86</height>

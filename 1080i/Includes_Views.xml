@@ -12,6 +12,7 @@
         <include>Viewtype-List</include>
         <include>Viewtype-InfoList</include>
         <include>Viewtype-Top250InfoList</include>  <!--VideosExtras-->
+        <include>Viewtype-RightList</include>  <!--VideosExtras-->
         <include>Viewtype-EpisodeInfoList</include>     <!--VideosExtras-->
         <include>Viewtype-Panel</include>
         <include>Viewtype-Landscape</include>
@@ -821,6 +822,10 @@
         <value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Art(tvshow.clearart)]</value>
         <value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
         <value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+    </variable>
+    
+    <variable name="AudioFlagVar">
+        <value>$INFO[ListItem.AudioCodec]$INFO[ListItem.AudioChannels]</value>
     </variable>
     
 </includes>
