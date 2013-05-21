@@ -6414,10 +6414,10 @@
 				
 				 <control type="image">
                 	<description>cdart</description>
-                    <posx>15</posx>
+                    <posx>22</posx>
                     <posy>70</posy>
-                    <width>370</width>
-                    <height>370</height>
+                    <width>360</width>
+                    <height>360</height>
                     <aligny>center</aligny>
                     <fadetime>200</fadetime>
                     <aspectratio align="center">keep</aspectratio>
