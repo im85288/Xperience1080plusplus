@@ -828,4 +828,8 @@
         <value>$INFO[ListItem.AudioCodec]$INFO[ListItem.AudioChannels]</value>
     </variable>
     
+    <variable name="DurationAndDirectorVar"> 
+        <value>$INFO[ListItem.Duration,$LOCALIZE[180]: , $LOCALIZE[12391]] $INFO[ListItem.Director,$LOCALIZE[20339]: ,]</value> 	                            
+    </variable>
+    
 </includes>
