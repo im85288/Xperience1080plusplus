@@ -7,6 +7,7 @@
 • Bugfixes
 
 
+
 [B]2.0 Beta 2[/B]
 • Added progress cache to seekbar
 • Added show info on pause
