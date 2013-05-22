@@ -1,7 +1,7 @@
 <window>
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <views>50,52,53,54,55,56,500,501,60</views>
+    <views>50,52,53,54,55,56,500,501,60,888</views>
     <controls>
         
         <include>CommonItems</include>
@@ -277,6 +277,18 @@
                     <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
                     <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                     <radioposx>-19</radioposx>
+                    <visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Window.IsVisible(MusicPlaylist)</visible>
+                </control>
+                <control type="radiobutton" id="211">                 
+                    <description>Right List</description>
+                    <include>optionsbuttonsdimensions</include>
+                    <label>Right List</label>
+                    <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                    <onclick>Container.SetViewMode(888)</onclick>
+                    <selected>Control.IsVisible(888)</selected>
+                    <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                    <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                    <radioposx>-19</radioposx>                 
                     <visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Window.IsVisible(MusicPlaylist)</visible>
                 </control>
                 <control type="radiobutton" id="204">
