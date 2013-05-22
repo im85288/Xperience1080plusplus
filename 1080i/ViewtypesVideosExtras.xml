@@ -6199,11 +6199,25 @@
 							<width>1080</width>
 							<height>100</height>
 							<aspectratio>stretch</aspectratio>
-							<texture>windows/common/black_content2.png</texture>
+							<texture>windows/common/magenta_content.png</texture>
+							 <animation type="focus">
+						     <effect type="zoom" start="0" right="100" center="300,50" time="200" reversible="false"/>
+						     <effect type="fade" start="0" end="100" time="100" reversible="false"/>					  
+						     </animation>
+						      <visible>!Container.Content(Movies)</visible>
+						</control>
+						<control type="image">
+							<posx>160</posx>
+							<posy>0</posy>
+							<width>1080</width>
+							<height>100</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>windows/common/cyan_content.png</texture>
 							 <animation type="focus">
 						     <effect type="zoom" start="0" right="100" center="300,50" time="200" reversible="false"/>
 						     <effect type="fade" start="0" end="100" time="100" reversible="false"/>
 						     </animation>
+						     <visible>Container.Content(Movies)</visible>
 						</control>
 						<control type="label">
 							<posx>1045</posx>
@@ -6213,7 +6227,7 @@
 							<font>Font-Condensed-S38-B</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>eewhite</textcolor>
+							<textcolor>black</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -6224,7 +6238,7 @@
 							<font>Font-Condensed-S32</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>eewhite</textcolor>
+							<textcolor>black</textcolor>
 							<label>$INFO[ListItem.Property(TotalSeasons),$LOCALIZE[33054]: ,]</label>
 						</control>
 						<control type="label">
@@ -6235,7 +6249,7 @@
 							<font>Font-Condensed-S32</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>eewhite</textcolor>
+							<textcolor>black</textcolor>
 							<label>$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360]: ,]</label>
 							<visible>!Container.Content(Seasons)</visible>
 						</control>
@@ -6247,7 +6261,7 @@
 							<font>Font-Condensed-S32</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>eewhite</textcolor>
+							<textcolor>black</textcolor>
 							<label>$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360]: ,]</label>
 							<visible>Container.Content(Seasons)</visible>
 						</control>
@@ -6259,7 +6273,7 @@
 							<font>Font-Condensed-S32</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>eewhite</textcolor>
+							<textcolor>black</textcolor>
 							<label>$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[16101]: ,]</label>
 							<visible>Container.Content(Seasons)</visible>
 						</control>
@@ -6271,7 +6285,7 @@
 							<font>Font-Condensed-S32</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>eewhite</textcolor>
+							<textcolor>black</textcolor>
 							<label>$INFO[ListItem.Duration,$LOCALIZE[180]: , $LOCALIZE[12391]]</label>
 							<visible>Container.Content(Episodes)</visible>
 						</control>			
@@ -6284,7 +6298,7 @@
 							<font>Font-Condensed-S32</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>eewhite</textcolor>
+							<textcolor>black</textcolor>
 							<label>$VAR[DurationAndDirectorVar]</label>
 							<visible>Container.Content(Movies) + !substring(ListItem.Path,videodb://1/7,left)</visible>
 						</control>

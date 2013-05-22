@@ -1724,7 +1724,7 @@
 				
 				<control type="label">
 					<posx>20</posx>
-					<width>600</width>
+					<width>800</width>
 					<height>13</height>
 					<align>left</align>
 					<font>Font-Condensed-S40-B</font>
@@ -1761,6 +1761,20 @@
 					<posy>840</posy>
 					<scroll>false</scroll>
 					<label>$INFO[ListItem.Property(Album_Theme),$LOCALIZE[21895]: ,]</label>
+					<visible>!Container.Content(Artists)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>420</posx>
+					<width>600</width>
+					<height>13</height>
+					<align>left</align>
+					<font>Font-Condensed-S32</font>
+					<textcolor>eewhite</textcolor>	
+					<posy>840</posy>
+					<scroll>false</scroll>
+					<label>$INFO[ListItem.Property(Artist_Genre),$LOCALIZE[515]: ,]</label>
+					<visible>Container.Content(Artists)</visible>
 				</control>
 
 				<control type="label">
@@ -1773,8 +1787,22 @@
 					<scroll>false</scroll>
 					<posy>880</posy>
 					<label>$INFO[ListItem.Property(Album_Style),$LOCALIZE[176]: ,]</label>
-					
+					<visible>!Container.Content(Artists)</visible>
 				</control>
+				
+				<control type="label">
+					<posx>420</posx>
+					<width>600</width>
+					<height>13</height>
+					<align>left</align>
+					<font>Font-Condensed-S32</font>
+					<textcolor>eewhite</textcolor>
+					<scroll>false</scroll>
+					<posy>880</posy>
+					<label>$INFO[ListItem.Property(Artist_Style),$LOCALIZE[176]: ,]</label>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				
 				<control type="label">
 					<posx>420</posx>
 					<width>600</width>
@@ -1784,7 +1812,21 @@
 					<textcolor>eewhite</textcolor>
 					<scroll>false</scroll>
 					<posy>920</posy>
-					<label>$INFO[ListItem.Property(Album_Mood),$LOCALIZE[175]: ,]</label>				
+					<label>$INFO[ListItem.Property(Album_Mood),$LOCALIZE[175]: ,]</label>	
+					<visible>!Container.Content(Artists)</visible>			
+				</control>
+				
+				<control type="label">
+					<posx>420</posx>
+					<width>600</width>
+					<height>13</height>
+					<align>left</align>
+					<font>Font-Condensed-S32</font>
+					<textcolor>eewhite</textcolor>
+					<scroll>false</scroll>
+					<posy>920</posy>
+					<label>$INFO[ListItem.Property(Artist_Mood),$LOCALIZE[175]: ,]</label>	
+					<visible>Container.Content(Artists)</visible>			
 				</control>
 				
 				 
@@ -1916,6 +1958,19 @@
 							<label>$INFO[ListItem.Duration,$LOCALIZE[180]: , $LOCALIZE[12391]]</label>
 							<visible>Container.Content(Songs)</visible>
 						</control>
+						
+						<control type="label">
+							<posx>1045</posx>
+							<posy>50</posy>
+							<width>540</width>
+							<height>40</height>
+							<font>Font-Condensed-S32</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>black</textcolor>
+							<label>$INFO[ListItem.Property(Artist_Born),$LOCALIZE[21893]: ,]</label>
+							<visible>Container.Content(Artists)</visible>
+						</control>
 					
 					</focusedlayout>
 				
@@ -1934,6 +1989,18 @@
 					<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>					
 					<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
 					<visible>!Control.HasFocus(9915) + !substring(ListItem.Path,videodb://1/7,left)</visible>
+				</control>
+				<control type="textbox"> <!-- album description -->
+					<posx>1040</posx>
+					<posy>780</posy>
+					<width>800</width>
+					<height>180</height>
+					<font>Font-Condensed-S34</font>
+					<info>ListItem.Property(Artist_Description)</info>
+					<textcolor>eewhite</textcolor>
+					<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>					
+					<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
+					<visible>Container.Content(Artists)</visible>
 				</control>
 				
 				
