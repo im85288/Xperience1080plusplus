@@ -1,7 +1,7 @@
 Xperience1080++
 =================
 
-Xperience1080++ is my custom mod of the awesome mod made by Saste's which is based on the original Black's Xperience1080 skin
+Xperience1080++ is my custom mod of the awesome mod made by Saste which is based on Crnis mod of the original Xperience1080 skin designed by Black
 
   - - features include 
   
