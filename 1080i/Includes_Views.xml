@@ -109,18 +109,57 @@
         <value>flagsosd/defs/sd.png</value>
     </variable>
     <variable name="ListHDSDFlag">
+        <value condition="SubString(ListItem.FileNameAndPath,.3D.) | SubString(ListItem.FileNameAndPath,-3D.)">flags/other/3d-default.png</value>
         <value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">flags/defs/hd.png</value>
-        <value>flags/defs/sd.png</value>
+        <value condition="!IsEmpty(ListItem.VideoResolution)">flags/defs/sd.png</value>
     </variable>
     
     <variable name="ListHDSDFlagSmall">
+        <value condition="SubString(ListItem.FileNameAndPath,.3D.) | SubString(ListItem.FileNameAndPath,-3D.)">flags/other/3d-ilist.png</value>
         <value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">flags/defs/hd-ilist.png</value>
-        <value>flags/defs/sd-ilist.png</value>
+        <value condition="!IsEmpty(ListItem.VideoResolution)">flags/defs/sd-ilist.png</value>
     </variable>
     
     <variable name="BannerListHDSDFlag">
+        <value condition="SubString(ListItem.FileNameAndPath,.3D.) | SubString(ListItem.FileNameAndPath,-3D.)">flags/other/3d-black.png</value>
         <value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">flags/defs/hd-black.png</value>
-        <value>flags/defs/sd-black.png</value>
+        <value condition="!IsEmpty(ListItem.VideoResolution)">flags/defs/sd-black.png</value>
+    </variable>
+    
+    <variable name="LandscapeHDSD3DLabel">
+        <value condition="SubString(ListItem.FileNameAndPath,.3D.) | SubString(ListItem.FileNameAndPath,-3D.)"> • 3D</value>
+        <value condition="IntegerGreaterThan(ListItem.VideoResolution,719)"> • HD</value>
+        <value condition="!IsEmpty(ListItem.VideoResolution)"> • SD</value>
+    </variable>
+    
+    <variable name="LandscapeHDSD3DLabel0">
+        <value condition="SubString(Container(54).ListItem(0).FileNameAndPath,.3D.) | SubString(Container(54).ListItem(0).FileNameAndPath,-3D.)"> • 3D</value>
+        <value condition="IntegerGreaterThan(Container(54).ListItem(0).VideoResolution,719)"> • HD</value>
+        <value condition="!IsEmpty(Container(54).ListItem(0).VideoResolution)"> • SD</value>
+    </variable>
+    
+    <variable name="LandscapeHDSD3DLabel1">
+        <value condition="SubString(Container(54).ListItem(1).FileNameAndPath,.3D.) | SubString(Container(54).ListItem(1).FileNameAndPath,-3D.)"> • 3D</value>
+        <value condition="IntegerGreaterThan(Container(54).ListItem(1).VideoResolution,719)"> • HD</value>
+        <value condition="!IsEmpty(Container(54).ListItem(1).VideoResolution)"> • SD</value>
+    </variable>
+    
+    <variable name="LandscapeHDSD3DLabel2">
+        <value condition="SubString(Container(54).ListItem(2).FileNameAndPath,.3D.) | SubString(Container(54).ListItem(2).FileNameAndPath,-3D.)"> • 3D</value>
+        <value condition="IntegerGreaterThan(Container(54).ListItem(2).VideoResolution,719)"> • HD</value>
+        <value condition="!IsEmpty(Container(54).ListItem(2).VideoResolution)"> • SD</value>
+    </variable>
+    
+    <variable name="LandscapeHDSD3DLabel3">
+        <value condition="SubString(Container(54).ListItem(3).FileNameAndPath,.3D.) | SubString(Container(54).ListItem(3).FileNameAndPath,-3D.)"> • 3D</value>
+        <value condition="IntegerGreaterThan(Container(54).ListItem(3).VideoResolution,719)"> • HD</value>
+        <value condition="!IsEmpty(Container(54).ListItem(3).VideoResolution)"> • SD</value>
+    </variable>
+    
+    <variable name="LandscapeHDSD3DLabel-1">
+        <value condition="SubString(Container(54).ListItem(-1).FileNameAndPath,.3D.) | SubString(Container(54).ListItem(-1).FileNameAndPath,-3D.)"> • 3D</value>
+        <value condition="IntegerGreaterThan(Container(54).ListItem(-1).VideoResolution,719)"> • HD</value>
+        <value condition="!IsEmpty(Container(54).ListItem(-1).VideoResolution)"> • SD</value>
     </variable>
     
     <!-- Overlays -->
