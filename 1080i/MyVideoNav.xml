@@ -675,7 +675,7 @@
                     <control type="radiobutton" id="216">
                         <description>Top 250 Info List</description>
                         <include>optionsbuttonsdimensions</include>
-                        <label>Top 250 Info list</label>
+                        <label>Top 250 Info List</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(999)</onclick>
                         <selected>Control.IsVisible(999)</selected>
