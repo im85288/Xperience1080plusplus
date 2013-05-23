@@ -1294,7 +1294,7 @@
                             <posy>5</posy>
                             <width>516</width>
                             <height>275</height>
-                            <info>Window(home).Property(Set.Movies.Plot)</info>
+                            <info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
                             <align>justify</align>
                             <textcolor>eewhite</textcolor>
                             33000000

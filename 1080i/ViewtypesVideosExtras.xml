@@ -5325,7 +5325,7 @@
                             <posy>105</posy>
                             <width>516</width>
                             <height>270</height>
-                            <info>Window(home).Property(Set.Movies.Plot)</info>
+                            <info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
                             <align>justify</align>
                             <textcolor>CCFFFFFF</textcolor>
                             33000000
@@ -6146,7 +6146,7 @@
 					<height>468</height>
 					<font>Font-Condensed-S30</font>
 					<textcolor>eewhite</textcolor>
-					<info>Window(home).Property(Set.Movies.Plot)</info>
+					<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
 					<autoscroll delay="30000" time="3000" repeat="30000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<animation effect="slide" time="600" start="400,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
 					<animation effect="slide" time="400" start="0,0" end="400,0" tween="cubic" easing="inout">Hidden</animation>
@@ -6382,7 +6382,7 @@
 					<width>760</width>
 					<height>180</height>
 					<font>Font-Condensed-S34</font>				
-					<info>Window(home).Property(Set.Movies.Plot)</info>
+					<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
 					<textcolor>eewhite</textcolor>
 					<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>			
 					<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
