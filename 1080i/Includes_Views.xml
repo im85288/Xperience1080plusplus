@@ -7,6 +7,7 @@
     <include file="ViewtypesPrograms.xml" />
     <include file="ViewtypesAddons.xml" />
     <include file="ViewtypesPVR.xml" />
+    <include file="ViewtypesConcerts.xml" />
 
     <include name="VideoViews">
         <include>Viewtype-List</include>
@@ -97,6 +98,10 @@
             <include>Viewtype-TVTimersView</include>
             <include>Viewtype-TVSearch</include>
         </control>
+    </include>
+    
+    <include name="ConcertViews">
+        <include>Viewtype-Concert2</include>
     </include>
     
 <!-- ========= -->  

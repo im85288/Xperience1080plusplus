@@ -62,16 +62,22 @@
                 <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
             </control>
             <control type="label">
+                <description>Concerts</description>
+                <include>HomeLabel</include>
+                <label>Concerts</label>
+                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(7)">Conditional</animation>
+            </control>
+            <control type="label">
                 <description>Top 100</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[271]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(7)">Conditional</animation>
+                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
             </control>
             <control type="label">
                 <description>Playlists</description>
                 <include>HomeLabel</include>
                 <label>$LOCALIZE[136]</label>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
+                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
             </control>
             <control type="image">
                 <posx>0</posx>
@@ -79,7 +85,7 @@
                 <width>32</width>
                 <height>38</height>
                 <texture>windows/home/update-library.png</texture>
-                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
+                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(10)">Conditional</animation>
                 <animation effect="rotate" center="16,34" start="360" end="0" time="1000" loop="true" condition="Library.IsScanningMusic">Conditional</animation>
             </control>
         </control>
@@ -135,14 +141,19 @@
                 <item id="7">
                     <label>-</label>
                     <onclick>PreviousMenu</onclick>
-                    <onclick>ActivateWindow(musiclibrary,top100,return)</onclick>
+                    <onclick>ActivateWindow(8888)</onclick>
                 </item>
                 <item id="8">
                     <label>-</label>
                     <onclick>PreviousMenu</onclick>
+                    <onclick>ActivateWindow(musiclibrary,top100,return)</onclick>
+                </item>
+                <item id="9">
+                    <label>-</label>
+                    <onclick>PreviousMenu</onclick>
                     <onclick>ActivateWindow(musiclibrary,playlists,return)</onclick>
                 </item>
-                <item id="9">           
+                <item id="10">           
                     <label>-</label>
                     <onclick condition="!Library.IsScanningMusic">UpdateLibrary(music)</onclick>
                 </item>

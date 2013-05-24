@@ -27,3 +27,4 @@
         <include condition="!IsEmpty(Window.Property(SingleDialog)) + IsEmpty(Window.Property(CustomDialog))">PanelDialogHomeSingle</include>
     </controls>
 </window>
+
