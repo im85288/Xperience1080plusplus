@@ -7,7 +7,7 @@
 			<control type="image">
 				<posx>100</posx>
 				<posy>187</posy>
-				<height>800</height>
+				<height>790</height>
 				<width>1700</width>
 				<texture border="4">views/list/panel/panel.png</texture>
 			</control>
