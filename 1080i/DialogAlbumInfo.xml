@@ -2,6 +2,7 @@
     <defaultcontrol always="true">9333</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <controls>  
+    	 <include>CommonItems2</include>
         <!-- Albums, Artists -->
         <control type="group">
             <posx>0</posx>

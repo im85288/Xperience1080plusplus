@@ -78,15 +78,10 @@
 		<include>HomeCustomBackdrops</include>
 		<include>CommonOverlayHome</include>
 	</include>
-	<include name="CommonItemsHomeClassic">
+	<include name="CommonItems2">
 		<include>CommonContent</include>
-		<include>HomeCustomBackdrops</include>
-		<include>CommonOverlayHomeClassic</include>
-	</include>
-	<include name="CommonItemsHomeHorizontal">
-		<include>CommonContent</include>
-		<include>HomeCustomBackdrops</include>
-		<include>CommonOverlayHomeHorizontal</include>
+		<include>BackgroundFanart</include>
+		<include>CommonOverlayHome</include>
 	</include>
 	<include name="CommonItemsMusicOSD">
 		<include condition="Skin.HasSetting(OSDVisualisation.Enabled) + ![System.HasAddon(script.artistslideshow) + Skin.HasSetting(ArtistSlideShow.Enabled)]">OSDVisualisation</include>
