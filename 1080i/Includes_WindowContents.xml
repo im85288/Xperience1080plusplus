@@ -68,6 +68,20 @@
 			<visible>!Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(MoreBackgroundOpacity)</visible>
 		</control>
 	</include>
+	<include name="CommonOverlayMusicAndVideoInfo">
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
+		</control>
+		<control type="visualisation">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasAudio + Skin.HasSetting(OSDVisualisation.Enabled) + Skin.HasSetting(HomeVisualisation.Enabled)</visible>
+		</control>
+		<control type="image"> 
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/overlay2.png</texture>
+		</control>
+	</include>
 	<include name="CommonItems">
 		<include>CommonContent</include>
 		<include>BackgroundFanart</include>
@@ -81,7 +95,7 @@
 	<include name="CommonItems2">
 		<include>CommonContent</include>
 		<include>BackgroundFanart</include>
-		<include>CommonOverlayHome</include>
+		<include>CommonOverlayMusicAndVideoInfo</include>
 	</include>
 	<include name="CommonItemsMusicOSD">
 		<include condition="Skin.HasSetting(OSDVisualisation.Enabled) + ![System.HasAddon(script.artistslideshow) + Skin.HasSetting(ArtistSlideShow.Enabled)]">OSDVisualisation</include>
