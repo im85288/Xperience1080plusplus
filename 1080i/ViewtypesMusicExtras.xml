@@ -1711,7 +1711,7 @@
 				<animation effect="slide" time="500" start="0,400" end="0,0" tween="cubic" easing="out">Visible</animation>
 				<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
 				<control type="label">
-					<posx>700</posx>
+					<posx>800</posx>
 					<width>800</width>
 					<height>13</height>
 					<align>left</align>
