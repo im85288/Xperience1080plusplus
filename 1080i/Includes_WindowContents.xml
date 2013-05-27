@@ -82,6 +82,53 @@
 			<texture>windows/common/overlay2.png</texture>
 		</control>
 	</include>
+	<include name="CommonMediumOverlay">
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
+		</control>
+		<control type="image"> 
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/overlay2.png</texture>
+		</control>
+	</include>
+	<include name="CommonSkinSettingsDecisionOverlay">
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
+		</control>
+		<control type="image"> <!-- show even more fanart but not on homescreen -->
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/overlay2.png</texture>
+			<visible>Skin.HasSetting(MoreHomeBackgroundOpacity) + Skin.HasSetting(MoreBackgroundOpacity)</visible>
+		</control>
+		<control type="image"> <!-- show even more fanart and also on homescreen -->
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/fanartoverlay.png</texture>
+			<visible>!Skin.HasSetting(MoreHomeBackgroundOpacity) + Skin.HasSetting(MoreBackgroundOpacity)</visible>
+		</control>
+		<control type="image"> <!-- show more fanart but not on homescreen -->
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/overlay.png</texture>
+			<visible>Skin.HasSetting(HomeBackgroundOpacity) + Skin.HasSetting(BackgroundOpacity)</visible>
+		</control>
+		<control type="image"> <!-- show more fanart and also on homescreen -->
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/overlay2.png</texture>
+			<visible>!Skin.HasSetting(HomeBackgroundOpacity) + Skin.HasSetting(BackgroundOpacity)</visible>
+		</control>
+		<control type="image"> <!-- neither show more or show even more -->
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/overlay.png</texture>
+			<visible>!Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(MoreBackgroundOpacity)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<include>Animation_FanartFade</include>
+			<texture>windows/common/stage-dark.png</texture>
+			<visible>Skin.HasSetting(Stage.Enabled)</visible>
+		</control>
+	</include>
 	<include name="CommonItems">
 		<include>CommonContent</include>
 		<include>BackgroundFanart</include>
@@ -95,7 +142,7 @@
 	<include name="CommonItems2">
 		<include>CommonContent</include>
 		<include>BackgroundFanart</include>
-		<include>CommonOverlayMusicAndVideoInfo</include>
+		<include>CommonSkinSettingsDecisionOverlay</include>
 	</include>
 	<include name="CommonItemsMusicOSD">
 		<include condition="Skin.HasSetting(OSDVisualisation.Enabled) + ![System.HasAddon(script.artistslideshow) + Skin.HasSetting(ArtistSlideShow.Enabled)]">OSDVisualisation</include>
@@ -103,7 +150,7 @@
 	</include>
 	<include name="CommonSettingsItems">
 		<include>CommonContent</include>
-		<include>CommonOverlay</include>
+		<include>CommonSkinSettingsDecisionOverlay</include>
 	</include>
 	<include name="CommonPlaylistEditorItems">
 		<include>CommonContent</include>
@@ -114,11 +161,11 @@
 			<texture background="true">$VAR[PlaylistEditorFanart]</texture>
 			<visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
 		</control>
-		<include>CommonOverlay</include>
+		<include>CommonSkinSettingsDecisionOverlay</include>
 	</include>
 	<include name="CommonPVRItems">
 		<include>CommonContent</include>
-		<include>CommonOverlay</include>
+		<include>CommonSkinSettingsDecisionOverlay</include>
 	</include>
 	<include name="CommonWeatherItems">
 		<include>CommonContent</include>
@@ -132,7 +179,7 @@
 			<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
 			<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
 		</control>
-		<include>CommonOverlay</include>
+		<include>CommonSkinSettingsDecisionOverlay</include>
 	</include>
 	<include name="BackdropMultiTime1">
 		<timeperimage>15000</timeperimage>

@@ -235,7 +235,7 @@
 						<include>SettingsCategoryRadioButtonVars</include>
 						<selected>Skin.HasSetting(MoreHomeBackgroundOpacity)</selected>
 						<onclick>Skin.ToggleSetting(MoreHomeBackgroundOpacity)</onclick>
-						<label> • $LOCALIZE[41128]</label>
+						<label> • restrict to video and music views</label>
 						<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
 					</control>
                     <control type="radiobutton" id="1005">
