@@ -857,6 +857,13 @@
                     <enable>!IsEmpty(Skin.String(SubtitleScript_Path))</enable>
                     <label>$LOCALIZE[41242]</label>
                 </control>
+                <control type="radiobutton" id="8007">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(OSDLightOverlay.Enabled)</selected>
+                    <onclick>Skin.ToggleSetting(OSDLightOverlay.Enabled)</onclick>
+                   <label>Use light overlay on osd info</label>
+                </control>
             </control>
                 
                 <!-- Background Settings -->

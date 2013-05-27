@@ -33,6 +33,15 @@
 					<width>1920</width>
 					<height>740</height>
 					<texture border="1,401,1,45">osd/fullscreen/osd-back-info.png</texture>
+					<visible>!Skin.HasSetting(OSDLightOverlay.Enabled)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>674</posy>
+					<width>1920</width>
+					<height>740</height>
+					<texture border="1,401,1,45">osd/fullscreen/osd-lightback-info.png</texture>
+					<visible>Skin.HasSetting(OSDLightOverlay.Enabled)</visible>
 				</control>
 				<control type="group">
 					<animation effect="slide" start="0,0" end="0,275" time="300" tween="cubic" easing="inout" condition="[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd)">Conditional</animation>
