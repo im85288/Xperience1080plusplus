@@ -80,7 +80,7 @@
 						<posy>-3</posy>
 						<width>580</width>
 						<height>604</height>
-						<texture background="true">views/list/panel/panel.png</texture>
+						<texture background="true">views/list/panel/panel2.png</texture>
 						<include>visiblehidefadeinfo</include>
 					</control>
 					<control type="image">
@@ -179,7 +179,7 @@
 					<posy>274</posy>
 					<width>714</width>
 					<height>604</height>
-					<texture>views/list/panel/panel.png</texture>
+					<texture>views/list/panel/panel2.png</texture>
 				</control>
 				<control type="list" id="51">
 					<visible>Container.Content(Episodes)</visible>
@@ -5214,7 +5214,7 @@
 						<posy>-3</posy>
 						<width>580</width>
 						<height>604</height>
-						<texture background="true">views/list/panel/panel.png</texture>
+						<texture background="true">views/list/panel/panel2.png</texture>
 						<visible>IsEmpty(Container(999).ListItem.Art(fanart)) + IsEmpty(Container(999).ListItem.Art(season.fanart))</visible>
 						<include>visiblehidefadeinfo</include>
 					</control>
@@ -5390,7 +5390,7 @@
 					<posy>304</posy>
 					<width>714</width>
 					<height>604</height>
-					<texture>views/list/panel/panel.png</texture>
+					<texture>views/list/panel/panel2.png</texture>
 				</control>
 				<control type="image">
 					<posx>600</posx>

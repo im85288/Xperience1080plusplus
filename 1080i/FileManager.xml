@@ -106,7 +106,7 @@
                         <posy>-3</posy>
                         <width>756</width>
                         <height>604</height>
-                        <texture border="4">views/list/panel/panel.png</texture>
+                        <texture border="4">views/list/panel/panel2.png</texture>
                     </control>
                     <control type="list" id="20">
                         <description>Left File List</description>
@@ -379,7 +379,7 @@
                         <posy>-3</posy>
                         <width>756</width>
                         <height>604</height>
-                        <texture border="4">views/list/panel/panel.png</texture>
+                        <texture border="4">views/list/panel/panel2.png</texture>
                     </control>
                     <control type="list" id="21">
                         <description>Right File List</description>

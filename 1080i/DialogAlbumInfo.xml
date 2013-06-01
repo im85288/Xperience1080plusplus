@@ -199,7 +199,7 @@
 					<posy>658</posy>
 					<width>444</width>
 					<height>250</height>
-					<texture border="3">views/list/panel/panel.png</texture>
+					<texture border="3">views/list/panel/panel2.png</texture>
 				</control>
 				<!-- Artist/Album Thumb -->
 				<control type="image">
@@ -660,7 +660,7 @@
 					<posy>250</posy>
 					<height>680</height>
 					<width>800</width>
-					<texture border="4">views/list/panel/panel.png</texture>
+					<texture border="4">views/list/panel/panel2.png</texture>
 					<visible>Container.Content(Artists)</visible>
 				</control>
 				<control type="list" id="50">
@@ -895,7 +895,7 @@
 					<posy>250</posy>
 					<height>680</height>
 					<width>1000</width>
-					<texture border="4">views/list/panel/panel.png</texture>
+					<texture border="4">views/list/panel/panel2.png</texture>
 				</control>
 				<control type="label">
 					<posx>1200</posx>

@@ -9,7 +9,7 @@
 				<posy>187</posy>
 				<height>790</height>
 				<width>1700</width>
-				<texture border="4">views/list/panel/panel.png</texture>
+				<texture border="4">views/list/panel/panel2.png</texture>
 			</control>
 			<control type="label">
 				<posx>800</posx>

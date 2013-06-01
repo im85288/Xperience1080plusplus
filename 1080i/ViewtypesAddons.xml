@@ -15,7 +15,7 @@
                 <posy>187</posy>
                 <height>704</height>
                 <width>1424</width>
-                <texture border="3">views/list/panel/panel.png</texture>
+                <texture border="3">views/list/panel/panel2.png</texture>
                 <include>visiblehidefadeinfo</include>
             </control>
             <control type="image">

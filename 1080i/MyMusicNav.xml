@@ -460,6 +460,6 @@
         </control>
         
         <include>FadeBackground</include>
-        <include>Common-Info</include>
+        <include>Common-FanartAwareInfo</include>
     </controls>
 </window>

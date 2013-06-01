@@ -14,7 +14,7 @@
                 <posy>187</posy>
                 <height>704</height>
                 <width>1424</width>
-                <texture border="4">views/list/panel/panel.png</texture>
+                <texture border="4">views/list/panel/panel2.png</texture>
             </control>
             <control type="image">
                 <description>Shadow</description>
@@ -336,7 +336,7 @@
                     <posy>274</posy>
                     <width>714</width>
                     <height>604</height>
-                    <texture>views/list/panel/panel.png</texture>
+                    <texture>views/list/panel/panel2.png</texture>
                 </control>
                 <control type="list" id="52">
                     <visible>Container.HasFiles + !Container.Content(addons)</visible>

@@ -2,9 +2,12 @@
     <defaultcontrol>-</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <onload condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(ArtistSlideShow.Enabled)">RunScript(script.artistslideshow)</onload>
+  	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=artistevents,artistname=$ESCINFO[MusicPlayer.offset(0).Artist])</onload>
+	
     <onload>AlarmClock(MusicFlip,Skin.ToggleSetting(MusicVisFlip),00:30,silent,loop)</onload>
     <onunload>CancelAlarm(MusicFlip,true)</onunload>
     <onunload>Skin.Reset(MusicVisFlip)</onunload>
+   
     <controls>
         <include>CommonItemsMusicOSD</include>
         <include condition="!Skin.HasSetting(MusicVisClassic.Enabled)">OSDMusic</include>

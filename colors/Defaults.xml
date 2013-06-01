@@ -65,4 +65,6 @@
         
 <!-- Selected color -->
         <color name="SelectedGreen">FF72F03A</color>
+        
+         <color name="livetvblue">FF1D0AF2</color>
 </colors>

@@ -38,7 +38,7 @@
                     <posy>278</posy>
                     <height>613</height>
                     <width>342</width>
-                    <texture border="4">views/list/panel/panel.png</texture>
+                    <texture border="4">views/list/panel/panel2.png</texture>
                 </control>
                 
                 <!-- Side Buttons -->
@@ -83,7 +83,7 @@
                     <posy>278</posy>
                     <height>613</height>
                     <width>1214</width>
-                    <texture border="4">views/list/panel/panel.png</texture>
+                    <texture border="4">views/list/panel/panel2.png</texture>
                 </control>
                 <control type="image">
                     <description>Shadow</description>

@@ -170,7 +170,7 @@
                     <posy>217</posy>
                     <width>444</width>
                     <height>690</height>
-                    <texture border="3">views/list/panel/panel.png</texture>
+                    <texture border="3">views/list/panel/panel2.png</texture>
                 </control>
                 
                 <!-- Actor Thumb -->

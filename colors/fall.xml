@@ -62,5 +62,8 @@
         <color name="SettingsBlue">FF55b4e7</color>
         
         <color name="DialogSelected">FF4ea1e7</color>
+         <color name="livetvblue">FF1D0AF2</color>
+          <color name="SelectedGreen">FF72F03A</color>
+        
         
 </colors>

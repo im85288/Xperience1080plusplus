@@ -3,9 +3,11 @@
 	<visible>Window.IsActive(fullscreenvideo) + [Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) |
 		Window.IsVisible(fullscreeninfo)] + !Window.IsVisible(sliderdialog) + ![!Window.IsActive(videoosd) + [Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) |
 		Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) |
-		Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]]</visible>
+		Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]]
+	</visible>
 	<controls>
-		<include>OSDWeatherClock</include>
+		<include condition="!Skin.HasSetting(ShowSmallerOSDHeader.Enabled)">OSDWeatherClock</include>
+		<include condition="Skin.HasSetting(ShowSmallerOSDHeader.Enabled)">OSDSmallWeatherClock</include>
 		<control type="group">
 			<animation type="WindowOpen">
 				<effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
@@ -29,11 +31,19 @@
 					condition="Window.IsActive(videoosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 				<control type="image">
 					<posx>0</posx>
+					<posy>1000</posy>
+					<width>1920</width>
+					<height>360</height>
+					<texture border="29">dialogs/dialogWindow.png</texture>
+					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
 					<posy>674</posy>
 					<width>1920</width>
 					<height>740</height>
 					<texture border="1,401,1,45">osd/fullscreen/osd-back-info.png</texture>
-					<visible>!Skin.HasSetting(OSDLightOverlay.Enabled)</visible>
+					<visible>!Skin.HasSetting(OSDLightOverlay.Enabled) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -41,7 +51,7 @@
 					<width>1920</width>
 					<height>740</height>
 					<texture border="1,401,1,45">osd/fullscreen/osd-lightback-info.png</texture>
-					<visible>Skin.HasSetting(OSDLightOverlay.Enabled)</visible>
+					<visible>Skin.HasSetting(OSDLightOverlay.Enabled) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="group">
 					<animation effect="slide" start="0,0" end="0,275" time="300" tween="cubic" easing="inout" condition="[Player.ShowInfo | Window.IsVisible(fullscreeninfo)] + !Window.IsActive(videoosd)">Conditional</animation>
@@ -55,6 +65,38 @@
 						<animation effect="slide" start="0,0" end="0,0" time="300" tween="cubic" easing="inout"
 							condition="!Window.IsActive(fullscreeninfo) +!Window.IsActive(videoosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 						<control type="progress">
+							<posx>70</posx>
+							<posy>-40</posy>
+							<width>1250</width>
+							<height>25</height>
+							<info>Player.CacheLevel</info>
+							<texturebg>osd/fullscreen/progress/cache-back.png</texturebg>
+							<midtexture border="1">osd/fullscreen/progress/cache-mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/cache-left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/cache-right.png</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV)] + [Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)]
+								+ Skin.HasSetting(AlternateOSDLiveTv.Enabled)
+							</visible>
+							<colordiffuse>black</colordiffuse>
+						</control>
+						<control type="progress">
+							<posx>180</posx>
+							<posy>0</posy>
+							<width>1010</width>
+							<height>25</height>
+							<info>Player.CacheLevel</info>
+							<texturebg>osd/fullscreen/progress/cache-back.png</texturebg>
+							<midtexture border="1">osd/fullscreen/progress/cache-mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/cache-left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/cache-right.png</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV)] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) +
+								Window.IsActive(seekbar)]] + Skin.HasSetting(AlternateOSDLiveTv.Enabled)
+							</visible>
+							<colordiffuse>black</colordiffuse>
+						</control>
+						<control type="progress">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>1337</width>
@@ -65,6 +107,20 @@
 							<lefttexture>osd/fullscreen/progress/cache-left.png</lefttexture>
 							<righttexture>osd/fullscreen/progress/cache-right.png</righttexture>
 							<overlaytexture>-</overlaytexture>
+							<visible>!VideoPlayer.Content(episodes) + !VideoPlayer.Content(movies) + !VideoPlayer.Content(LiveTV) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+						</control>
+						<control type="progress">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1337</width>
+							<height>25</height>
+							<info>Player.CacheLevel</info>
+							<texturebg>osd/fullscreen/progress/cache-back.png</texturebg>
+							<midtexture border="1">osd/fullscreen/progress/cache-mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/cache-left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/cache-right.png</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 						</control>
 						<control type="progress">
 							<posx>0</posx>
@@ -78,7 +134,41 @@
 							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
 							<righttexture>osd/fullscreen/progress/right.png</righttexture>
 							<colordiffuse>44FFFFFF</colordiffuse>
-							<visible>!VideoPlayer.Content(episodes)</visible>
+							<visible>!VideoPlayer.Content(episodes) + [!VideoPlayer.Content(movies) + !VideoPlayer.Content(LiveTV) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)]</visible>
+							<overlaytexture>-</overlaytexture>
+						</control>
+						<control type="progress">
+							<posx>70</posx>
+							<posy>-40</posy>
+							<width>1250</width>
+							<height>25</height>
+							<info>Player.ProgressCache</info>
+							<reveal>true</reveal>
+							<texturebg>osd/fullscreen/progress/back.png</texturebg>
+							<midtexture>osd/fullscreen/progress/mid-tvshows.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left-tvshows.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right-tvshows.png</righttexture>
+							<colordiffuse>black</colordiffuse>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV)] + [Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)]
+								+ Skin.HasSetting(AlternateOSDLiveTv.Enabled)
+							</visible>
+							<overlaytexture>-</overlaytexture>
+						</control>
+						<control type="progress">
+							<posx>180</posx>
+							<posy>0</posy>
+							<width>1010</width>
+							<height>25</height>
+							<info>Player.ProgressCache</info>
+							<reveal>true</reveal>
+							<texturebg>osd/fullscreen/progress/back.png</texturebg>
+							<midtexture>osd/fullscreen/progress/mid-tvshows.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left-tvshows.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right-tvshows.png</righttexture>
+							<colordiffuse>black</colordiffuse>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV)] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) +
+								Window.IsActive(seekbar)]] + Skin.HasSetting(AlternateOSDLiveTv.Enabled)
+							</visible>
 							<overlaytexture>-</overlaytexture>
 						</control>
 						<control type="progress">
@@ -93,7 +183,7 @@
 							<lefttexture>osd/fullscreen/progress/left-tvshows.png</lefttexture>
 							<righttexture>osd/fullscreen/progress/right-tvshows.png</righttexture>
 							<colordiffuse>44FFFFFF</colordiffuse>
-							<visible>VideoPlayer.Content(episodes)</visible>
+							<visible>VideoPlayer.Content(episodes) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							<overlaytexture>-</overlaytexture>
 						</control>
 						<control type="progress" id="23">
@@ -108,7 +198,55 @@
 							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
 							<righttexture>osd/fullscreen/progress/right.png</righttexture>
 							<overlaytexture>-</overlaytexture>
-							<visible>!VideoPlayer.Content(episodes)</visible>
+							<visible>!VideoPlayer.Content(episodes) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+						</control>
+						<control type="progress" id="23">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1337</width>
+							<height>25</height>
+							<info>Player.Progress</info>
+							<reveal>true</reveal>
+							<texturebg>osd/fullscreen/progress/back.png</texturebg>
+							<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right.png</righttexture>
+							<colordiffuse>black</colordiffuse>
+							<visible>!VideoPlayer.Content(episodes) + !VideoPlayer.Content(movies) + !VideoPlayer.Content(LiveTV) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+						</control>
+						<control type="progress" id="23">
+							<posx>70</posx>
+							<posy>-40</posy>
+							<width>1250</width>
+							<height>25</height>
+							<info>Player.Progress</info>
+							<reveal>true</reveal>
+							<texturebg>osd/fullscreen/progress/back.png</texturebg>
+							<midtexture>osd/fullscreen/progress/mid-tvshows.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left-tvshows.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right-tvshows.png</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<colordiffuse>black</colordiffuse>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV)] + [Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd) ]
+								+ Skin.HasSetting(AlternateOSDLiveTv.Enabled)
+							</visible>
+						</control>
+						<control type="progress" id="23">
+							<posx>180</posx>
+							<posy>0</posy>
+							<width>1010</width>
+							<height>25</height>
+							<info>Player.Progress</info>
+							<reveal>true</reveal>
+							<texturebg>osd/fullscreen/progress/back.png</texturebg>
+							<midtexture>osd/fullscreen/progress/mid-tvshows.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left-tvshows.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right-tvshows.png</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<colordiffuse>black</colordiffuse>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV)] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) +
+								Window.IsActive(seekbar)]] + Skin.HasSetting(AlternateOSDLiveTv.Enabled)
+							</visible>
 						</control>
 						<control type="progress" id="23">
 							<posx>0</posx>
@@ -122,10 +260,43 @@
 							<lefttexture>osd/fullscreen/progress/left-tvshows.png</lefttexture>
 							<righttexture>osd/fullscreen/progress/right-tvshows.png</righttexture>
 							<overlaytexture>-</overlaytexture>
-							<visible>VideoPlayer.Content(episodes)</visible>
+							<visible>VideoPlayer.Content(episodes) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 						</control>
 						<control type="label">
-							<visible>[Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)]</visible>
+							<visible>[Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)] + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + !VideoPlayer.Content(LiveTV)</visible>
+							<posx>70</posx>
+							<posy>0</posy>
+							<width>360</width>
+							<height>25</height>
+							<label>$INFO[Player.Time(hh:mm:ss)]</label>
+							<textcolor>black</textcolor>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+						</control>
+						<control type="label">
+							<visible>[Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)] + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + !VideoPlayer.Content(LiveTV)</visible>
+							<posx>600</posx>
+							<posy>0</posy>
+							<width>360</width>
+							<height>25</height>
+							<label>$INFO[System.Time(hh:mm)]$INFO[Player.FinishTime(hh:mm), / ,]</label>
+							<textcolor>black</textcolor>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+						</control>
+						<control type="label">
+							<visible>[Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)] + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + !VideoPlayer.Content(LiveTV)</visible>
+							<posx>1214</posx>
+							<posy>0</posy>
+							<width>360</width>
+							<height>25</height>
+							<label>$INFO[Player.Duration(hh:mm:ss)]</label>
+							<textcolor>black</textcolor>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+						</control>
+						<control type="label">
+							<visible>[Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)] + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							<posx>1363</posx>
 							<posy>0</posy>
 							<width>360</width>
@@ -136,7 +307,18 @@
 							<align>left</align>
 						</control>
 						<control type="label">
-							<visible>Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
+							<visible>[Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]] + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							<posx>70</posx>
+							<posy>0</posy>
+							<width>360</width>
+							<height>25</height>
+							<label>$INFO[Player.Time(hh:mm:ss)]</label>
+							<textcolor>black</textcolor>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+						</control>
+						<control type="label">
+							<visible>[Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]] + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							<posx>1363</posx>
 							<posy>0</posy>
 							<width>360</width>
@@ -147,7 +329,18 @@
 							<align>left</align>
 						</control>
 						<control type="label">
-							<visible>Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
+							<visible>[Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]] + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							<posx>1214</posx>
+							<posy>0</posy>
+							<width>360</width>
+							<height>25</height>
+							<label>$INFO[Player.Duration(hh:mm:ss)]</label>
+							<textcolor>black</textcolor>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+						</control>
+						<control type="label">
+							<visible>[Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]] + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							<posx>-26</posx>
 							<posy>0</posy>
 							<width>360</width>
@@ -156,6 +349,29 @@
 							<textcolor>aawhite</textcolor>
 							<font>Font-Condensed-S34</font>
 							<align>right</align>
+						</control>
+						<control type="group">
+							<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled) + Skin.HasSetting(ShowSmallerOSDHeader.Enabled) + ![Player.Forwarding|Player.Seeking]</visible>
+							<control type="image">
+								<posx>300</posx>
+								<posy>-1030</posy>
+								<width>513</width>
+								<height>87</height>
+								<texture flipy="true">dialogs/osd_top_bar.png</texture>
+								<visible>Player.Paused</visible>
+							</control>
+							<control type="label">
+								<posx>340</posx>
+								<posy>-1035</posy>
+								<width>420</width>
+								<height>42</height>
+								<align>center</align>
+								<label>$LOCALIZE[112]</label>
+								<font>Font-Condensed-S38</font>
+								<shadowcolor>88e5e5e5</shadowcolor>
+								<textcolor>black</textcolor>
+								<visible>Player.Paused</visible>
+							</control>
 						</control>
 					</control>
 				</control>
@@ -190,6 +406,87 @@
 						<control type="group">
 							<posy>825</posy>
 							<visible>VideoPlayer.Content(Movies)</visible>
+							<control type="group">
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								<width>748</width>
+								<height>42</height>
+								<animation effect="slide" start="-225,0" end="0,0" time="160">WindowOpen</animation>
+								<animation effect="slide" end="-225,0" time="160">WindowClose</animation>
+								<animation effect="slide" start="-225,0" end="0,0" time="160">Visible</animation>
+								<animation effect="slide" end="-225,0" time="160">Hidden</animation>
+								<visible>IntegerGreaterThan(Player.ChapterCount,0) + ![Player.Forwarding | Player.Rewinding]</visible>
+								<posx>800</posx>
+								<posy>-4</posy>
+								<control type="image">
+									<posx>-50</posx>
+									<posy>-5</posy>
+									<width>513</width>
+									<height>87</height>
+									<texture>dialogs/osd_bottom_bar.png</texture>
+								</control>
+								<control type="label" id="1">
+									<posx>320</posx>
+									<width>748</width>
+									<posy>36</posy>
+									<height>42</height>
+									<align>right</align>
+									<label>$LOCALIZE[21396]: $INFO[Player.Chapter]$INFO[Player.ChapterCount, / ]</label>
+									<font>Font-Condensed-S38</font>
+									<shadowcolor>88e5e5e5</shadowcolor>
+									<textcolor>black</textcolor>
+									<visible>player.chaptercount + ![Player.Forwarding | Player.Rewinding]</visible>
+								</control>
+							</control>
+							<control type="group">
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								<posx>1700</posx>
+								<posy>145</posy>
+								<control type="image">
+									<align>left</align>
+									<posy>-70</posy>
+									<posx>7</posx>
+									<width>196</width>
+									<height>323</height>
+									<texture border="4">views/list/panel/blackpanel.png</texture>
+								</control>
+								<!--<control type="image"> <posy>0</posy> <visible>!IsEmpty(VideoPlayer.VideoCodec)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> 
+									<width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.VideoCodec,flagsosd/video/,.png]</texture> </control> <control type="image"> <posy>56</posy> <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible> 
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> 
+									<texture>$INFO[VideoPlayer.VideoResolution,flagsosd/res/,.png]</texture> </control> <control type="image"> <posy>112</posy> <visible>!IsEmpty(VideoPlayer.VideoAspect)</visible> <visible>!IsEmpty(VideoPlayer.Plot) 
+									+ !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.VideoAspect,flagsosd/aspectratio/,.png]</texture> 
+									</control> <control type="image"> <posy>0</posy> <posx>98</posx> <visible>!IsEmpty(VideoPlayer.AudioCodec)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> 
+									<include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.AudioCodec,flagsosd/audio/,.png]</texture> </control> <control 
+									type="image"> <posy>56</posy> <posx>98</posx> <visible>!IsEmpty(VideoPlayer.AudioChannels)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> 
+									<width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.AudioChannels,flagsosd/channels/,.png]</texture> </control> -->
+								<control type="grouplist">
+									<include>visiblehidefadeinfo</include>
+									<posx>10</posx>
+									<width>100</width>
+									<height>240</height>
+									<align>left</align>
+									<aligny>top</aligny>
+									<itemgap>0</itemgap>
+									<orientation>vertical</orientation>
+									<visible>!VideoPlayer.Content(tvshows)</visible>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+									<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+									<include>InfoFlagsAlternateOSD</include>
+								</control>
+								<control type="grouplist">
+									<posx>110</posx>
+									<width>100</width>
+									<height>240</height>
+									<align>left</align>
+									<aligny>top</aligny>
+									<itemgap>0</itemgap>
+									<orientation>vertical</orientation>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+									<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+									<include>InfoFlagsAlternateOSD2</include>
+								</control>
+							</control>
 							<control type="image">
 								<posx>10</posx>
 								<posy>39</posy>
@@ -199,12 +496,100 @@
 								<aspectratio>stretch</aspectratio>
 							</control>
 							<control type="image">
+								<posx>17</posx>
+								<posy>-99</posy>
+								<width>300</width>
+								<height>500</height>
+								<texture background="true" fallback="views/fallbacks/DefaultAudio.png/medium.png">$INFO[Player.Art(thumb)]</texture>
+								<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
+								<bordersize>5</bordersize>
+								<aspectratio>scale</aspectratio>
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="image">
 								<posx>30</posx>
 								<posy>59</posy>
 								<width>236</width>
 								<height>354</height>
 								<texture background="true" fallback="views/fallbacks/DefaultVideo.png/medium.png">$INFO[Player.Art(thumb)]</texture>
 								<aspectratio>stretch</aspectratio>
+								<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="label">
+								<posx>350</posx>
+								<posy>77</posy>
+								<width>1085</width>
+								<height>56</height>
+								<label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
+								<textcolor>black</textcolor>
+								<font>Font-Condensed-S50-B</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="image">
+								<align>left</align>
+								<posy>148</posy>
+								<posx>315</posx>
+								<width>1392</width>
+								<height>85</height>
+								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="fadelabel">
+								<posx>350</posx>
+								<posy>240</posy>
+								<width>1330</width>
+								<height>56</height>
+								<label>$INFO[VideoPlayer.PlotOutline,[COLOR=darkgrey2]$LOCALIZE[203] [/COLOR]]</label>
+								<textcolor>black</textcolor>
+								<font>Font-Condensed-S40-B</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								<scrollout>false</scrollout>
+								<pauseatend>3800</pauseatend>
+								<scrollspeed>80</scrollspeed>
+							</control>
+							<control type="label">
+								<posx>900</posx>
+								<posy>282</posy>
+								<width>1085</width>
+								<height>56</height>
+								<label>Press Up for Plot</label>
+								<textcolor>darkgrey</textcolor>
+								<font>Font-Condensed-S28</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<!-- fade switch screen view -->
+							<control type="fadelabel">
+								<posx>350</posx>
+								<posy>154</posy>
+								<width>1305</width>
+								<height>56</height>
+								<label>$INFO[VideoPlayer.Director,[COLOR=midgrey]Directored by [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Writer,[COLOR=midgrey]Written by [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Season,[COLOR=midgrey]$LOCALIZE[20373] [/COLOR], ]$INFO[VideoPlayer.Episode,[COLOR=midgrey]$LOCALIZE[20359] [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Genre,[COLOR=midgrey]$LOCALIZE[515] [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Country,[COLOR=midgrey]$LOCALIZE[574] [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Year,[COLOR=midgrey]$LOCALIZE[562] [/COLOR],]</label>
+								<textcolor>blue</textcolor>
+								<font>Font-Condensed-S45-B</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								<scrollout>false</scrollout>
+								<pauseatend>3800</pauseatend>
+								<scrollspeed>28</scrollspeed>
 							</control>
 							<control type="label">
 								<posx>290</posx>
@@ -218,19 +603,7 @@
 								<aligny>center</aligny>
 								<scroll>false</scroll>
 								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
-							</control>
-							<control type="label">
-								<posx>290</posx>
-								<posy>77</posy>
-								<width>1085</width>
-								<height>56</height>
-								<label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
-								<textcolor>eewhite</textcolor>
-								<font>Font-Condensed-S50</font>
-								<align>left</align>
-								<aligny>center</aligny>
-								<scroll>false</scroll>
-								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
 							<control type="group">
 								<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
@@ -245,6 +618,7 @@
 									<font>Font-Condensed-S36</font>
 									<align>justify</align>
 									<autoscroll delay="11500" time="5000" repeat="7500" />
+									<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 								</control>
 							</control>
 						</control>
@@ -252,8 +626,85 @@
 							<posy>825</posy>
 							<visible>VideoPlayer.Content(Episodes)</visible>
 							<control type="group">
-								<visible>stringcompare(Skin.String(OSDTVShowsImage),poster) | [stringcompare(Skin.String(OSDTVShowsImage),clearart) + IsEmpty(Player.Art(tvshow.clearart))] |
-									[stringcompare(Skin.String(OSDTVShowsImage),clearlogo) + IsEmpty(Player.Art(tvshow.clearlogo))]</visible>
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								<posx>1700</posx>
+								<posy>145</posy>
+								<control type="image">
+									<align>left</align>
+									<posy>-70</posy>
+									<posx>7</posx>
+									<width>196</width>
+									<height>323</height>
+									<texture border="4">views/list/panel/blackpanel.png</texture>
+								</control>
+								<!--<control type="image"> <posy>0</posy> <visible>!IsEmpty(VideoPlayer.VideoCodec)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> 
+									<width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.VideoCodec,flagsosd/video/,.png]</texture> </control> <control type="image"> <posy>56</posy> <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible> 
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> 
+									<texture>$INFO[VideoPlayer.VideoResolution,flagsosd/res/,.png]</texture> </control> <control type="image"> <posy>112</posy> <visible>!IsEmpty(VideoPlayer.VideoAspect)</visible> <visible>!IsEmpty(VideoPlayer.Plot) 
+									+ !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.VideoAspect,flagsosd/aspectratio/,.png]</texture> 
+									</control> <control type="image"> <posy>0</posy> <posx>98</posx> <visible>!IsEmpty(VideoPlayer.AudioCodec)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> 
+									<include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.AudioCodec,flagsosd/audio/,.png]</texture> </control> <control 
+									type="image"> <posy>56</posy> <posx>98</posx> <visible>!IsEmpty(VideoPlayer.AudioChannels)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> 
+									<width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.AudioChannels,flagsosd/channels/,.png]</texture> </control> -->
+								<control type="grouplist">
+									<include>visiblehidefadeinfo</include>
+									<posx>10</posx>
+									<width>100</width>
+									<height>240</height>
+									<align>left</align>
+									<itemgap>2</itemgap>
+									<orientation>vertical</orientation>
+									<visible>!VideoPlayer.Content(tvshows)</visible>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+									<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+									<include>InfoFlagsAlternateOSD</include>
+								</control>
+								<control type="grouplist">
+									<posx>110</posx>
+									<width>100</width>
+									<height>240</height>
+									<align>left</align>
+									<itemgap>0</itemgap>
+									<orientation>vertical</orientation>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+									<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+									<include>InfoFlagsAlternateOSD2</include>
+								</control>
+							</control>
+							<control type="group">
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								<width>748</width>
+								<height>42</height>
+								<animation effect="slide" start="-225,0" end="0,0" time="160">WindowOpen</animation>
+								<animation effect="slide" end="-225,0" time="160">WindowClose</animation>
+								<animation effect="slide" start="-225,0" end="0,0" time="160">Visible</animation>
+								<animation effect="slide" end="-225,0" time="160">Hidden</animation>
+								<visible>IntegerGreaterThan(Player.ChapterCount,0) + ![Player.Forwarding | Player.Rewinding]</visible>
+								<posx>800</posx>
+								<posy>-4</posy>
+								<control type="image">
+									<posx>-10</posx>
+									<posy>-5</posy>
+									<width>513</width>
+									<height>87</height>
+									<texture>dialogs/osd_bottom_bar.png</texture>
+								</control>
+								<control type="label" id="1">
+									<posx>360</posx>
+									<width>748</width>
+									<posy>36</posy>
+									<height>42</height>
+									<align>right</align>
+									<label>$LOCALIZE[21396]: $INFO[Player.Chapter]$INFO[Player.ChapterCount, / ]</label>
+									<font>Font-Condensed-S38</font>
+									<shadowcolor>88e5e5e5</shadowcolor>
+									<textcolor>black</textcolor>
+									<visible>player.chaptercount + ![Player.Forwarding | Player.Rewinding]</visible>
+								</control>
+							</control>
+							<control type="group">
 								<control type="image">
 									<posx>10</posx>
 									<posy>39</posy>
@@ -263,16 +714,105 @@
 									<aspectratio>stretch</aspectratio>
 								</control>
 								<control type="image">
+									<posx>17</posx>
+									<posy>-99</posy>
+									<width>300</width>
+									<height>500</height>
+									<texture background="true" fallback="views/fallbacks/DefaultAudio.png/medium.png">$INFO[Player.Art(tvshow.poster)]</texture>
+									<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
+									<bordersize>5</bordersize>
+									<aspectratio>scale</aspectratio>
+									<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								</control>
+								<control type="image">
 									<posx>30</posx>
 									<posy>59</posy>
 									<width>236</width>
 									<height>354</height>
 									<texture background="true" fallback="views/fallbacks/DefaultVideo.png/medium.png">$INFO[Player.Art(tvshow.poster)]</texture>
 									<aspectratio>stretch</aspectratio>
+									<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 								</control>
 							</control>
 							<!--<control type="image"> <posx>10</posx> <posy>125</posy> <width>361</width> <height>140</height> <texture background="true">$INFO[Player.Art(tvshow.clearlogo)]</texture> <aspectratio>stretch</aspectratio> 
 								<visible>stringcompare(Skin.String(OSDTVShowsImage),clearlogo) + !IsEmpty(Player.Art(tvshow.clearlogo))</visible> </control> -->
+							<control type="label">
+								<posx>350</posx>
+								<posy>77</posy>
+								<width>1085</width>
+								<height>56</height>
+								<label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
+								<textcolor>black</textcolor>
+								<font>Font-Condensed-S50-B</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="image">
+								<align>left</align>
+								<posy>148</posy>
+								<posx>315</posx>
+								<width>1392</width>
+								<height>85</height>
+								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="label">
+								<posx>350</posx>
+								<posy>250</posy>
+								<width>1085</width>
+								<height>56</height>
+								<label>$INFO[VideoPlayer.TVShowTitle]</label>
+								<textcolor>black</textcolor>
+								<font>Font-Condensed-S45-B</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="label">
+								<posx>900</posx>
+								<posy>282</posy>
+								<width>1085</width>
+								<height>56</height>
+								<label>Press Up for Plot</label>
+								<textcolor>darkgrey</textcolor>
+								<font>Font-Condensed-S28</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<!-- episode switch screen view -->
+							<control type="fadelabel">
+								<posx>350</posx>
+								<posy>154</posy>
+								<width>1305</width>
+								<height>56</height>
+								<label>$INFO[VideoPlayer.Director,[COLOR=midgrey]Directored by [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Writer,[COLOR=midgrey]Written by [/COLOR],]</label>
+								<label>$INFO[Window(Home).Property(NextAired.AirTime),[COLOR=midgrey]First aired [/COLOR],]</label>
+								<label>$INFO[Window(Home).Property(NextAired.NextDate),[COLOR=midgrey]Next aired [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Season,[COLOR=midgrey]$LOCALIZE[20373] [/COLOR], ]$INFO[VideoPlayer.Episode,[COLOR=midgrey]$LOCALIZE[20359] [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Genre,[COLOR=midgrey]$LOCALIZE[515] [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Country,[COLOR=midgrey]$LOCALIZE[574] [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Year,[COLOR=midgrey]$LOCALIZE[562] [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.PlotOutline,[COLOR=midgrey]$LOCALIZE[203] [/COLOR],]</label>
+								<textcolor>blue</textcolor>
+								<font>Font-Condensed-S45-B</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								<scrollout>false</scrollout>
+								<pauseatend>3800</pauseatend>
+								<scrollspeed>28</scrollspeed>
+							</control>
 							<control type="label">
 								<posx>290</posx>
 								<posy>77</posy>
@@ -285,10 +825,13 @@
 								<aligny>center</aligny>
 								<scroll>false</scroll>
 								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
 							<control type="group">
 								<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
 								<include>visiblehidefadeinfo</include>
+								<!-- <control type="textbox"> <posx>290</posx> <posy>141</posy> <width>1600</width> <height>200</height> <label>$INFO[VideoPlayer.Plot]</label> <textcolor>black</textcolor> <font>Font-Condensed-S36</font> 
+									<align>justify</align> <autoscroll delay="11500" time="5000" repeat="7500" /> <visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible> </control> -->
 								<control type="textbox">
 									<posx>290</posx>
 									<posy>141</posy>
@@ -299,12 +842,46 @@
 									<font>Font-Condensed-S36</font>
 									<align>justify</align>
 									<autoscroll delay="11500" time="5000" repeat="7500" />
+									<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 								</control>
 							</control>
 						</control>
+						<!-- LIVE TV Section -->
 						<control type="group">
 							<posy>825</posy>
 							<visible>VideoPlayer.Content(LiveTV)</visible>
+							<control type="image">
+								<posx>13</posx>
+								<posy>74</posy>
+								<width>277</width>
+								<height>325</height>
+								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="image">
+								<posx>289</posx>
+								<posy>352</posy>
+								<width>1418</width>
+								<height>46</height>
+								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="image">
+								<posx>289</posx>
+								<posy>140</posy>
+								<width>1418</width>
+								<height>155</height>
+								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled) + IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+							</control>
+							<control type="image">
+								<posx>289</posx>
+								<posy>74</posy>
+								<width>1418</width>
+								<height>70</height>
+								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+							</control>
 							<control type="image">
 								<posx>30</posx>
 								<posy>148</posy>
@@ -312,8 +889,23 @@
 								<height>236</height>
 								<texture background="true">$INFO[Player.Art(thumb)]</texture>
 								<aspectratio aligny="top">keep</aspectratio>
+								<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
+								<bordersize>1</bordersize>
 							</control>
 							<!-- Channel Name -->
+							<control type="label">
+								<posx>5</posx>
+								<posy>59</posy>
+								<width>280</width>
+								<height>100</height>
+								<label>[UPPERCASE]$INFO[VideoPlayer.ChannelName, ,][/UPPERCASE]</label>
+								<textcolor>eewhite</textcolor>
+								<font>Font-Condensed-S40</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
 							<control type="label">
 								<posx>25</posx>
 								<posy>59</posy>
@@ -325,22 +917,48 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
+								<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="label">
+								<posx>5</posx>
+								<posy>280</posy>
+								<width>280</width>
+								<height>100</height>
+								<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]</label>
+								<textcolor>eewhite</textcolor>
+								<font>Font-Condensed-S40</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="label">
+								<posx>31</posx>
+								<posy>280</posy>
+								<width>900</width>
+								<height>100</height>
+								<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]</label>
+								<textcolor>eewhite</textcolor>
+								<font>Font-Condensed-S40</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
 							<!-- LiveTV Title -->
 							<control type="label">
 								<include>visiblehidefadeinfo</include>
 								<posx>300</posx>
 								<posy>80</posy>
-								<width>1410</width>
+								<width>1000</width>
 								<height>56</height>
-								<label>$INFO[VideoPlayer.StartTime,$LOCALIZE[19030]: ,]$INFO[VideoPlayer.Title, ,]</label>
-								<textcolor>eewhite</textcolor>
+								<label>$INFO[VideoPlayer.Title]</label>
+								<textcolor>black</textcolor>
 								<font>Font-Condensed-S45-B</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
-								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
-								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext))</visible>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
 							<control type="label">
 								<include>visiblehidefadeinfo</include>
@@ -348,44 +966,108 @@
 								<posy>80</posy>
 								<width>1410</width>
 								<height>56</height>
-								<label>$INFO[VideoPlayer.NextStartTime,$LOCALIZE[19031]: ,]$INFO[VideoPlayer.NextTitle, ,]</label>
-								<textcolor>blue</textcolor>
-								<font>Font-Condensed-S45-B</font>
-								<align>left</align>
-								<aligny>center</aligny>
-								<scroll>false</scroll>
-								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
-								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + !IsEmpty(Window(seekbar).Property(ShowNext))</visible>
-							</control>
-							<control type="label">
-								<include>visiblehidefadeinfo</include>
-								<posx>1400</posx>
-								<posy>80</posy>
-								<width>1410</width>
-								<height>56</height>
-								<label>$INFO[VideoPlayer.TimeRemaining,, $LOCALIZE[12391]]</label>
+								<label>$INFO[VideoPlayer.Title]</label>
 								<textcolor>eewhite</textcolor>
 								<font>Font-Condensed-S45-B</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
 								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
-								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext))</visible>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
 							<control type="label">
 								<include>visiblehidefadeinfo</include>
-								<posx>1400</posx>
+								<posx>300</posx>
 								<posy>80</posy>
 								<width>1410</width>
 								<height>56</height>
-								<label>$INFO[VideoPlayer.NextDuration,, $LOCALIZE[12391]]</label>
+								<label>$INFO[VideoPlayer.NextTitle]</label>
+								<textcolor>darkgrey2</textcolor>
+								<font>Font-Condensed-S45</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + !IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="label">
+								<include>visiblehidefadeinfo</include>
+								<posx>300</posx>
+								<posy>80</posy>
+								<width>1410</width>
+								<height>56</height>
+								<label>$INFO[VideoPlayer.NextTitle]</label>
 								<textcolor>blue</textcolor>
 								<font>Font-Condensed-S45-B</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
 								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
-								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + !IsEmpty(Window(seekbar).Property(ShowNext))</visible>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + !IsEmpty(Window(seekbar).Property(ShowNext)) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="label">
+								<include>visiblehidefadeinfo</include>
+								<posx>1460</posx>
+								<posy>90</posy>
+								<width>540</width>
+								<height>38</height>
+								<align>left</align>
+								<label>$INFO[System.Time]$INFO[VideoPlayer.EndTime, → ,]</label>
+								<font>Font-Condensed-S45</font>
+								<textcolor>black</textcolor>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="label">
+								<posx>900</posx>
+								<posy>282</posy>
+								<width>1085</width>
+								<height>56</height>
+								<label>Press Up for Next</label>
+								<textcolor>darkgrey</textcolor>
+								<font>Font-Condensed-S28</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<!-- live tv current -->
+							<control type="fadelabel">
+								<posx>300</posx>
+								<posy>345</posy>
+								<width>1400</width>
+								<height>56</height>
+								<font>Font-Condensed-S35</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$INFO[VideoPlayer.Genre,[COLOR=midgrey]$LOCALIZE[515] [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.NextStartTime,[COLOR=midgrey]Next at [/COLOR], ]$INFO[VideoPlayer.NextTitle,[COLOR=midgrey]$LOCALIZE[556] [/COLOR],]$INFO[VideoPlayer.NextEndTime,[COLOR=midgrey] Ends at [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.NextPlotOutline,[COLOR=midgrey]Next $LOCALIZE[203] [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.ParentalRating,[COLOR=midgrey]Next $LOCALIZE[563] [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Director,[COLOR=midgrey]Directored by [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Writer,[COLOR=midgrey]Written by [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Season,[COLOR=midgrey]$LOCALIZE[20373] [/COLOR], ]$INFO[VideoPlayer.Episode,[COLOR=midgrey]$LOCALIZE[20359] [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Country,[COLOR=midgrey]$LOCALIZE[574] [/COLOR],]</label>
+								<label>$INFO[VideoPlayer.Year,[COLOR=midgrey]$LOCALIZE[562] [/COLOR],]</label>
+								<textcolor>blue</textcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+								<scrollout>false</scrollout>
+								<pauseatend>3800</pauseatend>
+								<scrollspeed>80</scrollspeed>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="label">
+								<include>visiblehidefadeinfo</include>
+								<posx>1460</posx>
+								<posy>90</posy>
+								<width>540</width>
+								<height>38</height>
+								<align>left</align>
+								<label>$INFO[System.Time]$INFO[VideoPlayer.EndTime, → ,]</label>
+								<font>Font-Condensed-S45</font>
+								<textcolor>eewhite</textcolor>
+								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
 							<control type="group">
 								<visible>IsEmpty(Window.Property(ExtendPlot))</visible>
@@ -395,29 +1077,64 @@
 									<posy>142</posy>
 									<width>1100</width>
 									<height>44</height>
-									<label>$VAR[OSDNextTitle]</label>
+									<label>$INFO[VideoPlayer.NextTitle]</label>
 									<textcolor>blue</textcolor>
 									<font>Font-Condensed-S45-B</font>
 									<align>left</align>
 									<aligny>center</aligny>
 									<scroll>false</scroll>
-									<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext))</visible>
+									<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 								</control>
 								<control type="label">
-									<posx>1400</posx>
-									<posy>142</posy>
-									<width>1100</width>
-									<height>44</height>
-									<label>$INFO[VideoPlayer.NextDuration,, $LOCALIZE[12391]]</label>
-									<textcolor>blue</textcolor>
-									<font>Font-Condensed-S45-B</font>
+									<include>visiblehidefadeinfo</include>
+									<posx>1460</posx>
+									<posy>90</posy>
+									<width>540</width>
+									<height>38</height>
 									<align>left</align>
-									<aligny>center</aligny>
-									<scroll>false</scroll>
-									<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext))</visible>
+									<label>$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime, → ,]</label>
+									<font>Font-Condensed-S45</font>
+									<textcolor>black</textcolor>
+									<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + !IsEmpty(Window(seekbar).Property(ShowNext)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								</control>
+								<control type="label">
+									<include>visiblehidefadeinfo</include>
+									<posx>1460</posx>
+									<posy>90</posy>
+									<width>540</width>
+									<height>38</height>
+									<align>left</align>
+									<label>$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime, → ,]</label>
+									<font>Font-Condensed-S45</font>
+									<textcolor>blue</textcolor>
+									<visible> IsEmpty(Window(seekbar).Property(ExtendPlot)) + !IsEmpty(Window(seekbar).Property(ShowNext)) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 								</control>
 								<!-- <control type="label"> <posx>300</posx> <posy>142</posy> <width>1100</width> <height>44</height> <label>$VAR[OSDNextTitle]</label> <textcolor>eewhite</textcolor> <font>Font-Condensed-S45-B</font> 
 									<align>left</align> <aligny>center</aligny> <scroll>false</scroll> <visible>!IsEmpty(Window(seekbar).Property(ShowNext))</visible> </control> -->
+								<control type="textbox">
+									<posx>300</posx>
+									<posy>135</posy>
+									<width>1400</width>
+									<height>160</height>
+									<label>$INFO[VideoPlayer.Plot]</label>
+									<textcolor>eewhite</textcolor>
+									<font>Font-Condensed-S40</font>
+									<align>justify</align>
+									<autoscroll delay="6000" time="3000" repeat="7500" />
+									<visible>!IsEmpty(VideoPlayer.Plot) + IsEmpty(Window(seekbar).Property(ExtendPlot)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								</control>
+								<control type="textbox">
+									<posx>300</posx>
+									<posy>135</posy>
+									<width>1400</width>
+									<height>160</height>
+									<label>$INFO[VideoPlayer.PlotOutline]</label>
+									<textcolor>eewhite</textcolor>
+									<font>Font-Condensed-S40</font>
+									<align>justify</align>
+									<autoscroll delay="6000" time="3000" repeat="7500" />
+									<visible>IsEmpty(VideoPlayer.Plot) + IsEmpty(Window(seekbar).Property(ExtendPlot)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								</control>
 								<control type="textbox">
 									<posx>300</posx>
 									<posy>190</posy>
@@ -428,7 +1145,55 @@
 									<font>Font-Condensed-S40</font>
 									<align>justify</align>
 									<autoscroll delay="11500" time="5000" repeat="7500" />
-									<visible> IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+									<visible> IsEmpty(Window(seekbar).Property(ExtendPlot)) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								</control>
+							</control>
+							<control type="group">
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+								<posx>1700</posx>
+								<posy>145</posy>
+								<control type="image">
+									<align>left</align>
+									<posy>-70</posy>
+									<posx>7</posx>
+									<width>196</width>
+									<height>323</height>
+									<texture border="4">views/list/panel/blackpanel.png</texture>
+								</control>
+								<!--<control type="image"> <posy>0</posy> <visible>!IsEmpty(VideoPlayer.VideoCodec)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> 
+									<width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.VideoCodec,flagsosd/video/,.png]</texture> </control> <control type="image"> <posy>56</posy> <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible> 
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> 
+									<texture>$INFO[VideoPlayer.VideoResolution,flagsosd/res/,.png]</texture> </control> <control type="image"> <posy>112</posy> <visible>!IsEmpty(VideoPlayer.VideoAspect)</visible> <visible>!IsEmpty(VideoPlayer.Plot) 
+									+ !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.VideoAspect,flagsosd/aspectratio/,.png]</texture> 
+									</control> <control type="image"> <posy>0</posy> <posx>98</posx> <visible>!IsEmpty(VideoPlayer.AudioCodec)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> 
+									<include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.AudioCodec,flagsosd/audio/,.png]</texture> </control> <control 
+									type="image"> <posy>56</posy> <posx>98</posx> <visible>!IsEmpty(VideoPlayer.AudioChannels)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> 
+									<width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.AudioChannels,flagsosd/channels/,.png]</texture> </control> -->
+								<control type="grouplist">
+									<include>visiblehidefadeinfo</include>
+									<posx>10</posx>
+									<width>100</width>
+									<height>240</height>
+									<align>left</align>
+									<itemgap>2</itemgap>
+									<orientation>vertical</orientation>
+									<visible>!VideoPlayer.Content(tvshows)</visible>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+									<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+									<include>InfoFlagsAlternateOSD</include>
+								</control>
+								<control type="grouplist">
+									<posx>110</posx>
+									<width>100</width>
+									<height>240</height>
+									<align>left</align>
+									<itemgap>0</itemgap>
+									<orientation>vertical</orientation>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
+									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+									<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+									<include>InfoFlagsAlternateOSD2</include>
 								</control>
 							</control>
 						</control>

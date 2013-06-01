@@ -112,7 +112,7 @@
                     <posy>654</posy>
                     <width>440</width>
                     <height>254</height>
-                    <texture border="3">views/list/panel/panel.png</texture>
+                    <texture border="3">views/list/panel/panel2.png</texture>
                 </control>
                 
                 <!-- Icon -->

@@ -13,7 +13,7 @@
                 <posy>187</posy>
                 <height>704</height>
                 <width>1424</width>
-                <texture border="4">views/list/panel/panel.png</texture>
+                <texture border="4">views/list/panel/panel2.png</texture>
             </control>
             <control type="image">
                 <description>Shadow</description>
@@ -928,7 +928,7 @@
                         <posy>-3</posy>
                         <width>580</width>
                         <height>484</height>
-                        <texture background="true">views/list/panel/panel.png</texture>
+                        <texture background="true">views/list/panel/panel2.png</texture>
                         <colordiffuse>77white</colordiffuse>
                         <visible>IsEmpty(Container(52).ListItem.Art(fanart))</visible>
                         <include>visiblehidefadeinfo</include>
@@ -1048,7 +1048,7 @@
                     <posy>394</posy>
                     <width>634</width>
                     <height>484</height>
-                    <texture>views/list/panel/panel.png</texture>
+                    <texture>views/list/panel/panel2.png</texture>
                 </control>
                 <control type="list" id="52">
                     <visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Window.IsVisible(MusicPlaylist)</visible>
@@ -1594,7 +1594,7 @@
                         <posy>-3</posy>
                         <width>566</width>
                         <height>484</height>
-                        <texture background="true">views/list/panel/panel.png</texture>
+                        <texture background="true">views/list/panel/panel2.png</texture>
                         <colordiffuse>77white</colordiffuse>
                         <visible>IsEmpty(Container(53).ListItem.Art(fanart))</visible>
                         <include>visiblehidefadeinfo</include>
