@@ -18,12 +18,9 @@
 				<posx>100</posx>
 				<posy>400</posy>
 				<animation effect="fade" start="0" end="100" time="0" reversible="false">Visible</animation>
-				<visible>Window.Next(Home) | Window.Next(programs) | Window.Next(pictures) | Window.Next(filemanager) | Window.Next(settings) | Window.Next(music) | Window.Next(systeminfo) |
-					Window.Next(screencalibration) | Window.Next(picturessettings) | Window.Next(programssettings) | Window.Next(weathersettings) | Window.Next(musicsettings) | Window.Next(systemsettings) |
-					Window.Next(videossettings) | Window.Next(servicesettings) | Window.Next(appearancesettings) | Window.Next(pvrsettings) | Window.Next(videos) | Window.Next(videoplaylist) |
-					Window.Next(LoginScreen) | Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) |
-					Window.Next(smartplaylisteditor) | Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) |
-					Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(81)
+				<visible>Window.Next(Home) | Window.Next(programs) | Window.Next(pictures) | Window.Next(filemanager) | Window.Next(settings) | Window.Next(music) | Window.Next(systeminfo) | Window.Next(screencalibration) | Window.Next(picturessettings) | Window.Next(programssettings) | Window.Next(weathersettings) | Window.Next(musicsettings) | Window.Next(systemsettings) | Window.Next(videossettings) | Window.Next(servicesettings) | Window.Next(appearancesettings) | Window.Next(pvrsettings) |
+					Window.Next(videos) | Window.Next(videoplaylist) | Window.Next(LoginScreen) | Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) | Window.Next(smartplaylisteditor) | Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather)
+					| Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(81)
 				</visible>
 				<control type="group">
 					<animation type="WindowOpen" reversible="true">
@@ -720,12 +717,9 @@
 				<posx>136</posx>
 				<posy>360</posy>
 				<animation effect="fade" start="0" end="100" time="0" reversible="false">Visible</animation>
-				<visible>Window.Next(Home) | Window.Next(programs) | Window.Next(pictures) | Window.Next(filemanager) | Window.Next(settings) | Window.Next(music) | Window.Next(systeminfo) |
-					Window.Next(screencalibration) | Window.Next(picturessettings) | Window.Next(programssettings) | Window.Next(weathersettings) | Window.Next(musicsettings) | Window.Next(systemsettings) |
-					Window.Next(videossettings) | Window.Next(networksettings) | Window.Next(appearancesettings) | Window.Next(scripts) | Window.Next(videos) | Window.Next(videoplaylist) | Window.Next(LoginScreen) |
-					Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) | Window.Next(smartplaylisteditor) |
-					Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) | Window.Next(visualisation) |
-					Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | !Control.IsVisible(82)
+				<visible>Window.Next(Home) | Window.Next(programs) | Window.Next(pictures) | Window.Next(filemanager) | Window.Next(settings) | Window.Next(music) | Window.Next(systeminfo) | Window.Next(screencalibration) | Window.Next(picturessettings) | Window.Next(programssettings) | Window.Next(weathersettings) | Window.Next(musicsettings) | Window.Next(systemsettings) | Window.Next(videossettings) | Window.Next(networksettings) | Window.Next(appearancesettings) | Window.Next(scripts) |
+					Window.Next(videos) | Window.Next(videoplaylist) | Window.Next(LoginScreen) | Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) | Window.Next(smartplaylisteditor) | Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather)
+					| !Control.IsVisible(82)
 				</visible>
 				<control type="group">
 					<animation type="Conditional" condition="true">
@@ -1722,31 +1716,17 @@
 					<label>[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
 				</control>
 				<!-- Upcoming Concerts -->
-				<!-- <control type="image"> <posx>5</posx> <posy>150</posy> <width>700</width> <height>400</height> <texture>views/list/panel/panel2.png</texture> <aspectratio>scale</aspectratio> <visible>Skin.HasSetting(ShowUpcomingConcerts)</visible> 
-					</control> <control type="label"> <posx>200</posx> <width>400</width> <height>40</height> <align>left</align> <font>Font-Condensed-S40-B</font> <textcolor>eewhite</textcolor> <posy>160</posy> <scroll>false</scroll> 
-					<label>[UPPERCASE]Upcoming Concerts[/UPPERCASE]</label> <visible>Skin.HasSetting(ShowUpcomingConcerts)</visible> </control> <control type="fixedlist" id="51"> <description>Concerts List</description> <posx>50</posx> 
-					<posy>200</posy> <width>620</width> <height>300</height> <visible>Skin.HasSetting(ShowUpcomingConcerts)</visible> <viewtype label="Concerts list">list</viewtype> <orientation>vertical</orientation> <pagecontrol>25</pagecontrol> 
-					<scrolltime tween="sine" easing="out">200</scrolltime> <focusposition>1</focusposition> <content> <item id="1"> <label>$INFO[Window(Home).Property(ArtistEvents.1.Artists)]</label> <label2>$INFO[Window(Home).Property(ArtistEvents.1.Date)]</label2> 
-					<property name="City">$INFO[Window(Home).Property(ArtistEvents.1.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.1.Name)]</property> <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.1.Artists)],return)</onclick> 
-					<onclick>Dialog.Close(1139)</onclick> <visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),0)</visible> </item> <item id="2"> <label>$INFO[Window(Home).Property(ArtistEvents.2.Artists)]</label> 
-					<label2>$INFO[Window(Home).Property(ArtistEvents.2.Date)]</label2> <property name="City">$INFO[Window(Home).Property(ArtistEvents.2.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.2.Name)]</property> 
-					<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.2.Artists)],return)</onclick> <onclick>Dialog.Close(1139)</onclick> 
-					<visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),1)</visible> </item> <item id="3"> <label>$INFO[Window(Home).Property(ArtistEvents.3.Artists)]</label> <label2>$INFO[Window(Home).Property(ArtistEvents.3.Date)]</label2> 
-					<property name="City">$INFO[Window(Home).Property(ArtistEvents.3.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.3.Name)]</property> <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.3.Artists)],return)</onclick> 
-					<onclick>Dialog.Close(1139)</onclick> <visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),2)</visible> </item> <item id="4"> <label>$INFO[Window(Home).Property(ArtistEvents.4.Artists)]</label> 
-					<label2>$INFO[Window(Home).Property(ArtistEvents.4.Date)]</label2> <property name="City">$INFO[Window(Home).Property(ArtistEvents.4.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.4.Name)]</property> 
-					<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.4.Artists)],return)</onclick> <onclick>Dialog.Close(1139)</onclick> 
-					<visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),3)</visible> </item> <item id="5"> <label>$INFO[Window(Home).Property(ArtistEvents.5.Artists)]</label> <label2>$INFO[Window(Home).Property(ArtistEvents.5.Date)]</label2> 
-					<property name="City">$INFO[Window(Home).Property(ArtistEvents.5.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.5.Name)]</property> <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.5.Artists)],return)</onclick> 
-					<onclick>Dialog.Close(1139)</onclick> <visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),4)</visible> </item> <item id="6"> <label>$INFO[Window(Home).Property(ArtistEvents.6.Artists)]</label> 
-					<label2>$INFO[Window(Home).Property(ArtistEvents.6.Date)]</label2> <property name="City">$INFO[Window(Home).Property(ArtistEvents.6.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.6.Name)]</property> 
-					<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.6.Artists)],return)</onclick> <onclick>Dialog.Close(1139)</onclick> 
-					<visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),5)</visible> </item> <item id="7"> <label>$INFO[Window(Home).Property(ArtistEvents.7.Artists)]</label> <label2>$INFO[Window(Home).Property(ArtistEvents.7.Date)]</label2> 
-					<property name="City">$INFO[Window(Home).Property(ArtistEvents.7.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.7.Name)]</property> <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.7.Artists)],return)</onclick> 
-					<onclick>Dialog.Close(1139)</onclick> <visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),6)</visible> </item> </content> <itemlayout width="620" height="50"> <control type="image"> <posx>0</posx> 
-					<posy>0</posy> <width>620</width> <height>51</height> <texture>views/list/other/separator.png</texture> </control> <control type="label"> <posx>0</posx> <posy>4</posy> <width>620</width> <height>44</height> 
-					<font>Font-Condensed-S31</font> <label>$INFO[ListItem.Label, [B]$LOCALIZE[133]:[/B] ]</label> <textcolor>eewhite</textcolor> <align>left</align> </control> </itemlayout> <focusedlayout height="50" width="620"> 
-					</focusedlayout> </control> -->
+				<!-- <control type="image"> <posx>5</posx> <posy>150</posy> <width>700</width> <height>400</height> <texture>views/list/panel/panel2.png</texture> <aspectratio>scale</aspectratio> <visible>Skin.HasSetting(ShowUpcomingConcerts)</visible> </control> <control type="label"> <posx>200</posx> <width>400</width> <height>40</height> <align>left</align> <font>Font-Condensed-S40-B</font> <textcolor>eewhite</textcolor> <posy>160</posy> <scroll>false</scroll> <label>[UPPERCASE]Upcoming Concerts[/UPPERCASE]</label> 
+					<visible>Skin.HasSetting(ShowUpcomingConcerts)</visible> </control> <control type="fixedlist" id="51"> <description>Concerts List</description> <posx>50</posx> <posy>200</posy> <width>620</width> <height>300</height> <visible>Skin.HasSetting(ShowUpcomingConcerts)</visible> <viewtype label="Concerts list">list</viewtype> <orientation>vertical</orientation> <pagecontrol>25</pagecontrol> <scrolltime tween="sine" easing="out">200</scrolltime> <focusposition>1</focusposition> <content> <item id="1"> <label>$INFO[Window(Home).Property(ArtistEvents.1.Artists)]</label> 
+					<label2>$INFO[Window(Home).Property(ArtistEvents.1.Date)]</label2> <property name="City">$INFO[Window(Home).Property(ArtistEvents.1.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.1.Name)]</property> <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.1.Artists)],return)</onclick> <onclick>Dialog.Close(1139)</onclick> <visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),0)</visible> 
+					</item> <item id="2"> <label>$INFO[Window(Home).Property(ArtistEvents.2.Artists)]</label> <label2>$INFO[Window(Home).Property(ArtistEvents.2.Date)]</label2> <property name="City">$INFO[Window(Home).Property(ArtistEvents.2.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.2.Name)]</property> <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.2.Artists)],return)</onclick> 
+					<onclick>Dialog.Close(1139)</onclick> <visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),1)</visible> </item> <item id="3"> <label>$INFO[Window(Home).Property(ArtistEvents.3.Artists)]</label> <label2>$INFO[Window(Home).Property(ArtistEvents.3.Date)]</label2> <property name="City">$INFO[Window(Home).Property(ArtistEvents.3.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.3.Name)]</property> <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.3.Artists)],return)</onclick> 
+					<onclick>Dialog.Close(1139)</onclick> <visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),2)</visible> </item> <item id="4"> <label>$INFO[Window(Home).Property(ArtistEvents.4.Artists)]</label> <label2>$INFO[Window(Home).Property(ArtistEvents.4.Date)]</label2> <property name="City">$INFO[Window(Home).Property(ArtistEvents.4.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.4.Name)]</property> <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.4.Artists)],return)</onclick> 
+					<onclick>Dialog.Close(1139)</onclick> <visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),3)</visible> </item> <item id="5"> <label>$INFO[Window(Home).Property(ArtistEvents.5.Artists)]</label> <label2>$INFO[Window(Home).Property(ArtistEvents.5.Date)]</label2> <property name="City">$INFO[Window(Home).Property(ArtistEvents.5.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.5.Name)]</property> <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.5.Artists)],return)</onclick> 
+					<onclick>Dialog.Close(1139)</onclick> <visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),4)</visible> </item> <item id="6"> <label>$INFO[Window(Home).Property(ArtistEvents.6.Artists)]</label> <label2>$INFO[Window(Home).Property(ArtistEvents.6.Date)]</label2> <property name="City">$INFO[Window(Home).Property(ArtistEvents.6.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.6.Name)]</property> <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.6.Artists)],return)</onclick> 
+					<onclick>Dialog.Close(1139)</onclick> <visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),5)</visible> </item> <item id="7"> <label>$INFO[Window(Home).Property(ArtistEvents.7.Artists)]</label> <label2>$INFO[Window(Home).Property(ArtistEvents.7.Date)]</label2> <property name="City">$INFO[Window(Home).Property(ArtistEvents.7.City)]</property> <property name="Name">$INFO[Window(Home).Property(ArtistEvents.7.Name)]</property> <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(ArtistEvents.7.Artists)],return)</onclick> 
+					<onclick>Dialog.Close(1139)</onclick> <visible>IntegerGreaterThan(Window(Home).Property(ArtistEvents.Count),6)</visible> </item> </content> <itemlayout width="620" height="50"> <control type="image"> <posx>0</posx> <posy>0</posy> <width>620</width> <height>51</height> <texture>views/list/other/separator.png</texture> </control> <control type="label"> <posx>0</posx> <posy>4</posy> <width>620</width> <height>44</height> <font>Font-Condensed-S31</font> <label>$INFO[ListItem.Label, [B]$LOCALIZE[133]:[/B] 
+					]</label> <textcolor>eewhite</textcolor> <align>left</align> </control> </itemlayout> <focusedlayout height="50" width="620"> </focusedlayout> </control> -->
 				<control type="image">
 					<posx>-25</posx>
 					<posy>770</posy>
@@ -1754,117 +1734,366 @@
 					<height>200</height>
 					<texture>views/list/panel/panel2.png</texture>
 					<aspectratio>scale</aspectratio>
-				</control>
-				<control type="label">
-					<include>RightListLabel</include>
-					<posy>800</posy>
-					<label>$INFO[ListItem.Year]</label>
-				</control>
-				<control type="label">
-					<posx>420</posx>
-					<width>600</width>
-					<height>13</height>
-					<align>left</align>
-					<font>Font-Condensed-S32</font>
-					<textcolor>eewhite</textcolor>
-					<posy>840</posy>
-					<scroll>false</scroll>
-					<label>$INFO[ListItem.Property(Album_Theme),$LOCALIZE[21895]: ,]</label>
-					<visible>!Container.Content(Artists)</visible>
-				</control>
-				<control type="label">
-					<posx>420</posx>
-					<width>600</width>
-					<height>13</height>
-					<align>left</align>
-					<font>Font-Condensed-S32</font>
-					<textcolor>eewhite</textcolor>
-					<posy>840</posy>
-					<scroll>false</scroll>
-					<label>$INFO[ListItem.Property(Artist_Genre),$LOCALIZE[515]: ,]</label>
-					<visible>Container.Content(Artists)</visible>
-				</control>
-				<control type="label">
-					<posx>420</posx>
-					<width>600</width>
-					<height>13</height>
-					<align>left</align>
-					<font>Font-Condensed-S32</font>
-					<textcolor>eewhite</textcolor>
-					<scroll>false</scroll>
-					<posy>880</posy>
-					<label>$INFO[ListItem.Property(Album_Style),$LOCALIZE[176]: ,]</label>
-					<visible>!Container.Content(Artists)</visible>
-				</control>
-				<control type="label">
-					<posx>420</posx>
-					<width>600</width>
-					<height>13</height>
-					<align>left</align>
-					<font>Font-Condensed-S32</font>
-					<textcolor>eewhite</textcolor>
-					<scroll>false</scroll>
-					<posy>880</posy>
-					<label>$INFO[ListItem.Property(Artist_Style),$LOCALIZE[176]: ,]</label>
-					<visible>Container.Content(Artists)</visible>
-				</control>
-				<control type="label">
-					<posx>420</posx>
-					<width>600</width>
-					<height>13</height>
-					<align>left</align>
-					<font>Font-Condensed-S32</font>
-					<textcolor>eewhite</textcolor>
-					<scroll>false</scroll>
-					<posy>920</posy>
-					<label>$INFO[ListItem.Property(Album_Mood),$LOCALIZE[175]: ,]</label>
-					<visible>!Container.Content(Artists)</visible>
-				</control>
-				<control type="label">
-					<posx>420</posx>
-					<width>600</width>
-					<height>13</height>
-					<align>left</align>
-					<font>Font-Condensed-S32</font>
-					<textcolor>eewhite</textcolor>
-					<scroll>false</scroll>
-					<posy>920</posy>
-					<label>$INFO[ListItem.Property(Artist_Mood),$LOCALIZE[175]: ,]</label>
-					<visible>Container.Content(Artists)</visible>
+					<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="image">
-					<posx>520</posx>
-					<posy>785</posy>
-					<include>visiblehidefadeinfo</include>
-					<width>97</width>
-					<height>40</height>
-					<colordiffuse>eewhite</colordiffuse>
-					<texture>$INFO[ListItem.Property(Album_Label),colourflags/music/recordlabel/,.png]</texture>
-					<visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
+					<posx>360</posx>
+					<posy>770</posy>
+					<width>1700</width>
+					<height>213</height>
+					<texture>dialogs/dialogWindow.png</texture>
+					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="image">
+					<align>left</align>
+					<posy>773</posy>
 					<posx>1700</posx>
-					<posy>785</posy>
-					<width>48</width>
-					<height>40</height>
-					<texture>$INFO[ListItem.DiscNumber,colourflags/discnumber/,.png]</texture>
-					<visible>!IsEmpty(ListItem.DiscNumber)</visible>
+					<width>220</width>
+					<height>202</height>
+					<texture border="4">views/list/panel/blackpanel.png</texture>
+					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="image">
-					<posx>1690</posx>
-					<posy>835</posy>
-					<width>120</width>
-					<height>50</height>
-					<texture>$INFO[ListItem.FileExtension,colourflags/audio/,.png]</texture>
-					<visible>!IsEmpty(ListItem.FileExtension)</visible>
+					<posy>830</posy>
+					<posx>400</posx>
+					<width>1300</width>
+					<height>85</height>
+					<texture border="4">views/list/panel/blackpanel.png</texture>
+					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
-				<control type="image">
-					<posx>1650</posx>
-					<posy>885</posy>
-					<width>204</width>
-					<height>56</height>
-					<texture fallback="colourflags/music/rating/rating0.png">$INFO[ListItem.StarRating,colourflags/music/rating/,]</texture>
-					<visible>!IsEmpty(ListItem.StarRating) + Container.Content(Songs)</visible>
+				<control type="group">
+					<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+					<control type="label">
+						<include>RightListLabel</include>
+						<posy>800</posy>
+						<label>$INFO[ListItem.Year]</label>
+					</control>
+					<control type="label">
+						<posx>420</posx>
+						<width>600</width>
+						<height>13</height>
+						<align>left</align>
+						<font>Font-Condensed-S32</font>
+						<textcolor>eewhite</textcolor>
+						<posy>840</posy>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Property(Album_Theme),$LOCALIZE[21895]: ,]</label>
+						<visible>!Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<posx>420</posx>
+						<width>600</width>
+						<height>13</height>
+						<align>left</align>
+						<font>Font-Condensed-S32</font>
+						<textcolor>eewhite</textcolor>
+						<posy>840</posy>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Property(Artist_Genre),$LOCALIZE[515]: ,]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<posx>420</posx>
+						<width>600</width>
+						<height>13</height>
+						<align>left</align>
+						<font>Font-Condensed-S32</font>
+						<textcolor>eewhite</textcolor>
+						<scroll>false</scroll>
+						<posy>880</posy>
+						<label>$INFO[ListItem.Property(Album_Style),$LOCALIZE[176]: ,]</label>
+						<visible>!Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<posx>420</posx>
+						<width>600</width>
+						<height>13</height>
+						<align>left</align>
+						<font>Font-Condensed-S32</font>
+						<textcolor>eewhite</textcolor>
+						<scroll>false</scroll>
+						<posy>880</posy>
+						<label>$INFO[ListItem.Property(Artist_Style),$LOCALIZE[176]: ,]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<posx>420</posx>
+						<width>600</width>
+						<height>13</height>
+						<align>left</align>
+						<font>Font-Condensed-S32</font>
+						<textcolor>eewhite</textcolor>
+						<scroll>false</scroll>
+						<posy>920</posy>
+						<label>$INFO[ListItem.Property(Album_Mood),$LOCALIZE[175]: ,]</label>
+						<visible>!Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<posx>420</posx>
+						<width>600</width>
+						<height>13</height>
+						<align>left</align>
+						<font>Font-Condensed-S32</font>
+						<textcolor>eewhite</textcolor>
+						<scroll>false</scroll>
+						<posy>920</posy>
+						<label>$INFO[ListItem.Property(Artist_Mood),$LOCALIZE[175]: ,]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="image">
+						<posx>520</posx>
+						<posy>785</posy>
+						<include>visiblehidefadeinfo</include>
+						<width>97</width>
+						<height>40</height>
+						<colordiffuse>eewhite</colordiffuse>
+						<texture>$INFO[ListItem.Property(Album_Label),colourflags/music/recordlabel/,.png]</texture>
+						<visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
+					</control>
+					<control type="image">
+						<posx>1700</posx>
+						<posy>785</posy>
+						<width>48</width>
+						<height>40</height>
+						<texture>$INFO[ListItem.DiscNumber,colourflags/discnumber/,.png]</texture>
+						<visible>!IsEmpty(ListItem.DiscNumber)</visible>
+					</control>
+					<control type="image">
+						<posx>1690</posx>
+						<posy>835</posy>
+						<width>120</width>
+						<height>50</height>
+						<texture>$INFO[ListItem.FileExtension,colourflags/audio/,.png]</texture>
+						<visible>!IsEmpty(ListItem.FileExtension)</visible>
+					</control>
+					<control type="image">
+						<posx>1650</posx>
+						<posy>885</posy>
+						<width>204</width>
+						<height>56</height>
+						<texture fallback="colourflags/music/rating/rating0.png">$INFO[ListItem.StarRating,colourflags/music/rating/,]</texture>
+						<visible>!IsEmpty(ListItem.StarRating) + Container.Content(Songs)</visible>
+					</control>
+					<control type="textbox"> <!-- album description -->
+						<posx>1040</posx>
+						<posy>780</posy>
+						<width>800</width>
+						<height>180</height>
+						<font>Font-Condensed-S34</font>
+						<info>ListItem.Property(Album_Description)</info>
+						<textcolor>eewhite</textcolor>
+						<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
+						<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
+						<visible>!Control.HasFocus(9915) + !substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="textbox"> <!-- album description -->
+						<posx>1040</posx>
+						<posy>780</posy>
+						<width>800</width>
+						<height>180</height>
+						<font>Font-Condensed-S34</font>
+						<info>ListItem.Property(Artist_Description)</info>
+						<textcolor>eewhite</textcolor>
+						<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
+						<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+					<control type="label">
+						<posx>425</posx>
+						<width>1250</width>
+						<height>13</height>
+						<align>center</align>
+						<font>Font-Condensed-S40-B</font>
+						<posy>794</posy>
+						<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+						<textcolor>black</textcolor>
+						<aligny>center</aligny>
+						<scroll>true</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<visible>!Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<posx>425</posx>
+						<width>1250</width>
+						<height>13</height>
+						<align>center</align>
+						<font>Font-Condensed-S40-B</font>
+						<posy>794</posy>
+						<label>[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
+						<textcolor>black</textcolor>
+						<aligny>center</aligny>
+						<scroll>true</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="fadelabel">
+						<posx>425</posx>
+						<posy>842</posy>
+						<width>1250</width>
+						<height>50</height>
+						<label>$INFO[ListItem.Artist,[COLOR=midgrey]$LOCALIZE[557] [/COLOR]]</label>
+						<label>$INFO[ListItem.Album,[COLOR=midgrey]$LOCALIZE[558] [/COLOR]]</label>
+						<textcolor>blue</textcolor>
+						<font>Font-Condensed-S38-B</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<scrollout>false</scrollout>
+						<pauseatend>3800</pauseatend>
+						<scrollspeed>85</scrollspeed>
+						<visible>!Container.Content(Artists)</visible>
+					</control>
+					<control type="fadelabel">
+						<posx>425</posx>
+						<posy>842</posy>
+						<width>1250</width>
+						<height>50</height>
+						<label>$INFO[ListItem.Property(Artist_Born),[COLOR=midgrey]$LOCALIZE[21893] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Died),[COLOR=midgrey]$LOCALIZE[21897] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Genre),[COLOR=midgrey]$LOCALIZE[515] [/COLOR],]</label>
+						<textcolor>blue</textcolor>
+						<font>Font-Condensed-S38-B</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<scrollout>false</scrollout>
+						<pauseatend>3800</pauseatend>
+						<scrollspeed>85</scrollspeed>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="fadelabel">
+						<posx>425</posx>
+						<posy>920</posy>
+						<width>1250</width>
+						<height>40</height>
+						<label>$INFO[ListItem.Genre,[COLOR=darkgrey2]$LOCALIZE[515] [/COLOR],]</label>
+						<label>$INFO[ListItem.Year,[COLOR=darkgrey2]$LOCALIZE[562] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Born),[COLOR=darkgrey2]$LOCALIZE[21893] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Died),[COLOR=darkgrey2]$LOCALIZE[21897] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Formed),[COLOR=darkgrey2]$LOCALIZE[21894] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Disbanded),[COLOR=darkgrey2]$LOCALIZE[21896] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_YeaesActive),[COLOR=darkgrey2]$LOCALIZE[21898] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Instrument),[COLOR=darkgrey2]$LOCALIZE[21892] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Mood),[COLOR=darkgrey2]$LOCALIZE[175] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Style),[COLOR=darkgrey2]$LOCALIZE[176] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Album_Theme),[COLOR=darkgrey2]$LOCALIZE[21895] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Album_Type),[COLOR=darkgrey2]$LOCALIZE[10523] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Album_Label),[COLOR=darkgrey2]$LOCALIZE[21899] [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.1.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.1.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.1.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.2.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.2.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.2.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.3.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.3.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.3.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.4.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.4.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.4.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.5.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.5.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.5.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.6.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.6.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.6.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.7.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.7.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.7.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.8.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.8.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.8.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.9.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.9.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.9.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.10.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.10.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.11.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<textcolor>black</textcolor>
+						<font>Font-Condensed-S36-B</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<scrollout>false</scrollout>
+						<pauseatend>3800</pauseatend>
+						<scrollspeed>70</scrollspeed>
+						<visible>!Container.Content(Artists)</visible>
+					</control>
+					<control type="fadelabel">
+						<posx>425</posx>
+						<posy>920</posy>
+						<width>1250</width>
+						<height>40</height>
+						<label>$INFO[ListItem.Year,[COLOR=darkgrey2]$LOCALIZE[562] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Formed),[COLOR=darkgrey2]$LOCALIZE[21894] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Disbanded),[COLOR=darkgrey2]$LOCALIZE[21896] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_YeaesActive),[COLOR=darkgrey2]$LOCALIZE[21898] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Instrument),[COLOR=darkgrey2]$LOCALIZE[21892] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Mood),[COLOR=darkgrey2]$LOCALIZE[175] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Artist_Style),[COLOR=darkgrey2]$LOCALIZE[176] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Album_Theme),[COLOR=darkgrey2]$LOCALIZE[21895] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Album_Type),[COLOR=darkgrey2]$LOCALIZE[10523] [/COLOR],]</label>
+						<label>$INFO[ListItem.Property(Album_Label),[COLOR=darkgrey2]$LOCALIZE[21899] [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.1.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.1.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.1.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.2.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.2.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.2.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.3.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.3.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.3.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.4.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.4.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.4.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.5.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.5.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.5.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.6.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.6.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.6.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.7.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.7.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.7.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.8.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.8.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.8.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.9.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.9.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.9.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(ArtistEvents.10.City),[COLOR=darkgrey2]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.10.Name),[COLOR=darkgrey2] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.11.Date),[COLOR=darkgrey2] on [/COLOR],]</label>
+						<textcolor>black</textcolor>
+						<font>Font-Condensed-S36-B</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<scrollout>false</scrollout>
+						<pauseatend>3800</pauseatend>
+						<scrollspeed>70</scrollspeed>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="grouplist">
+						<posx>1703</posx>
+						<posy>787</posy>
+						<width>100</width>
+						<height>140</height>
+						<align>left</align>
+						<aligny>top</aligny>
+						<itemgap>0</itemgap>
+						<orientation>vertical</orientation>
+						<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
+						<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<aspect>keepaspect</aspect>
+							<texture>$INFO[ListItem.Property(Album_Label),colourflags/music/recordlabel/,.png]</texture>
+							<visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
+						</control>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<aspect>keepaspect</aspect>
+							<texture>$INFO[ListItem.DiscNumber,colourflags/discnumber/,.png]</texture>
+							<visible>!IsEmpty(ListItem.DiscNumber)</visible>
+						</control>
+					</control>
+					<control type="grouplist">
+						<posx>1813</posx>
+						<posy>775</posy>
+						<width>100</width>
+						<height>140</height>
+						<align>left</align>
+						<aligny>top</aligny>
+						<itemgap>0</itemgap>
+						<orientation>vertical</orientation>
+						<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
+						<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<aspect>keepaspect</aspect>
+							<texture>$INFO[ListItem.FileExtension,colourflags/audio/,.png]</texture>
+							<visible>!IsEmpty(ListItem.FileExtension)</visible>
+						</control>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<texture fallback="colourflags/music/rating/rating0.png">$INFO[ListItem.StarRating,colourflags/music/rating/,]</texture>
+							<visible>!IsEmpty(ListItem.StarRating) + Container.Content(Songs)</visible>
+						</control>
+					</control>
 				</control>
 				<control type="fixedlist" id="888">
 					<viewtype label="Right List">list</viewtype>
@@ -1964,30 +2193,6 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="textbox"> <!-- album description -->
-					<posx>1040</posx>
-					<posy>780</posy>
-					<width>800</width>
-					<height>180</height>
-					<font>Font-Condensed-S34</font>
-					<info>ListItem.Property(Album_Description)</info>
-					<textcolor>eewhite</textcolor>
-					<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
-					<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
-					<visible>!Control.HasFocus(9915) + !substring(ListItem.Path,videodb://1/7,left)</visible>
-				</control>
-				<control type="textbox"> <!-- album description -->
-					<posx>1040</posx>
-					<posy>780</posy>
-					<width>800</width>
-					<height>180</height>
-					<font>Font-Condensed-S34</font>
-					<info>ListItem.Property(Artist_Description)</info>
-					<textcolor>eewhite</textcolor>
-					<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
-					<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
-					<visible>Container.Content(Artists)</visible>
-				</control>
 			</control>
 			<control type="group"><!-- Default Group - Miniaturas -->
 				<posx>30</posx>
@@ -2008,7 +2213,7 @@
 						<aspectratio align="right">keep</aspectratio>
 						<texture background="true" fallback="cdart/vinyl.png">$INFO[ListItem.Path]cdart.png</texture>
 						<bordersize>7</bordersize>
-						<visible>Skin.HasSetting(ShowCDArt) + Container.Content(Songs)</visible>
+						<visible>Skin.HasSetting(ShowCDArt) + Container.Content(Songs) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 					</control>
 					<control type="image"><!-- Music Poster -->
 						<posx>-25</posx>
@@ -2020,6 +2225,31 @@
 						<texture background="true">$VAR[SquareThumbLarge]</texture>
 						<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
 						<bordersize>5</bordersize>
+						<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+					</control>
+					<control type="image">
+						<description>cdart</description>
+						<posx>-28</posx>
+						<posy>40</posy>
+						<width>410</width>
+						<height>410</height>
+						<animation effect="rotate" end="-360" center="auto" time="8000" delay="1000" loop="false" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
+						<aspectratio align="right">keep</aspectratio>
+						<texture background="true" fallback="cdart/vinyl.png">$INFO[ListItem.Path]cdart.png</texture>
+						<bordersize>7</bordersize>
+						<visible>Skin.HasSetting(ShowCDArt) + Container.Content(Songs) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+					</control>
+					<control type="image">
+						<posx>-30</posx>
+						<posy>231</posy>
+						<width>420</width>
+						<height>550</height>
+						<fadetime>200</fadetime>
+						<aspectratio align="center" aligny="bottom">stretch</aspectratio>
+						<texture background="true">$VAR[SquareThumbLarge]</texture>
+						<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
+						<bordersize>5</bordersize>
+						<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 					</control>
 				</control>
 			</control>

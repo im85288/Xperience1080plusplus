@@ -618,24 +618,30 @@
 							<info>Container(11).ListItem.Progress</info>
 							<colordiffuse>black</colordiffuse>
 						</control>
-						<control type="label">
+						<control type="fadelabel">
 							<posx>1060</posx>
 							<posy>853</posy>
-							<width>550</width>
+							<width>520</width>
 							<font>Font-Condensed-S34</font>
-							<label>$INFO[Container(11).ListItem.Genre]</label>
+							<label>$INFO[Container(11).ListItem.Genre,[COLOR=greyblue]$LOCALIZE[135] [/COLOR],]</label>
+							<label>$INFO[Container(11).ListItem.ChannelName,[COLOR=greyblue]$LOCALIZE[19201] [/COLOR],]</label>
 							<textcolor>black</textcolor>
-							<scroll>true</scroll>
+							<align>left</align>
+							<aligny>center</aligny>
+							<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+							<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							<scrollout>false</scrollout>
+							<pauseatend>12000</pauseatend>
 							<scrollspeed>40</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
 							<posx>1060</posx>
 							<posy>910</posy>
-							<width>500</width>
+							<width>520</width>
 							<label>$INFO[Container(11).ListItem.NextTitle,[COLOR=greyblue]$LOCALIZE[19031] [/COLOR],]$INFO[Container(11).ListItem.NextStartTime, [COLOR=greyblue]at [/COLOR],]</label>
 							<label>$INFO[Container(11).ListItem.Title,[COLOR=greyblue]$LOCALIZE[19030] [/COLOR],]$INFO[Container(11).ListItem.StartTime, [COLOR=greyblue]at [/COLOR],]</label>
-							<textcolor>darkgrey</textcolor>
+							<textcolor>black</textcolor>
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<aligny>center</aligny>

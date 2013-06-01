@@ -9,7 +9,8 @@
 			<!-- poster -->
 			<control type="group">
 				<visible>Control.IsVisible(51) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))
+				</visible>
 				<animation type="WindowOpen">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="750" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
@@ -51,7 +52,8 @@
 			<!-- thumb + plot -->
 			<control type="group">
 				<visible>Control.IsVisible(51) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))
+				</visible>
 				<animation type="WindowOpen">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="575" delay="175" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
@@ -153,7 +155,8 @@
 			<!-- list -->
 			<control type="group">
 				<visible>Control.IsVisible(51) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))
+				</visible>
 				<animation type="WindowOpen">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="645" delay="105" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
@@ -359,7 +362,8 @@
 				<animation effect="fade" start="0" end="100" time="0" delay="1255" reversible="false">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)
+				</visible>
 			</control>
 			<control type="group">
 				<posx>100</posx>
@@ -370,7 +374,8 @@
 					Window.Next(videossettings) | Window.Next(servicesettings) | Window.Next(appearancesettings) | Window.Next(pvrsettings) | Window.Next(videos) | Window.Next(videoplaylist) |
 					Window.Next(LoginScreen) | Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) |
 					Window.Next(smartplaylisteditor) | Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) |
-					Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(82)</visible>
+					Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(82)
+				</visible>
 				<control type="group">
 					<animation type="WindowOpen" reversible="true">
 						<effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
@@ -390,7 +395,8 @@
 						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)
+					</visible>
 					<control type="group">
 						<posx>-332</posx>
 						<control type="group">
@@ -526,7 +532,8 @@
 						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)
+					</visible>
 					<control type="group">
 						<posx>1660</posx>
 						<control type="group">
@@ -662,7 +669,8 @@
 						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)
+					</visible>
 					<control type="group">
 						<posx>1328</posx>
 						<control type="group">
@@ -798,7 +806,8 @@
 						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)
+					</visible>
 					<control type="group">
 						<posx>996</posx>
 						<control type="group">
@@ -934,7 +943,8 @@
 						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)
+					</visible>
 					<control type="group">
 						<posx>664</posx>
 						<control type="group">
@@ -1070,7 +1080,8 @@
 						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)
+					</visible>
 					<control type="group">
 						<posx>332</posx>
 						<control type="group">
@@ -1206,7 +1217,8 @@
 						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)
+					</visible>
 					<control type="image">
 						<posx>-10</posx>
 						<posy>585</posy>
@@ -1316,7 +1328,8 @@
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)
+				</visible>
 				<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
 				<animation effect="fade" start="0" end="100" time="0" delay="1255" reversible="false">Visible</animation>
 				<control type="fixedlist" id="504">
@@ -1595,7 +1608,8 @@
 					<effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
 				</animation>
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(504)
+				</visible>
 				<!--Scrollbar -->
 				<control type="image">
 					<description>Scrollbar background (visible on focus)</description>
@@ -1641,7 +1655,8 @@
 				<animation effect="fade" start="0" end="100" time="0" delay="1255" reversible="false">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)
+				</visible>
 			</control>
 			<control type="group">
 				<posx>100</posx>
@@ -1653,7 +1668,8 @@
 					Window.Next(videossettings) | Window.Next(servicesettings) | Window.Next(appearancesettings) | Window.Next(pvrsettings) | Window.Next(videos) | Window.Next(videoplaylist) |
 					Window.Next(LoginScreen) | Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) |
 					Window.Next(smartplaylisteditor) | Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) |
-					Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(83)</visible>
+					Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(83)
+				</visible>
 				<control type="group">
 					<animation type="WindowOpen" reversible="true">
 						<effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
@@ -1673,7 +1689,8 @@
 						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)
+					</visible>
 					<control type="group">
 						<posx>-492</posx>
 						<control type="group">
@@ -1781,7 +1798,8 @@
 							<texture background="true">$VAR[ExtendedViewMovieThumb-1]</texture>
 							<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 							<visible>[!Skin.HasSetting(ExtendedUseClearMovieArt) + !Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(-1).Art(clearart)) +
-								IsEmpty(Container(505).ListItem(-1).Art(clearlogo))]</visible>
+								IsEmpty(Container(505).ListItem(-1).Art(clearlogo))]
+							</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -1791,7 +1809,8 @@
 							<texture background="true">$VAR[ExtendedViewMovieLogo-1]</texture>
 							<aspectratio align="center" aligny="bottom" scalediffuse="false">keep</aspectratio>
 							<visible>[Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)] + ![IsEmpty(Container(505).ListItem(-1).Art(clearart)) +
-								IsEmpty(Container(505).ListItem(-1).Art(clearlogo))]</visible>
+								IsEmpty(Container(505).ListItem(-1).Art(clearlogo))]
+							</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -1801,7 +1820,8 @@
 							<colordiffuse>99000000</colordiffuse>
 							<texture>windows/common/black.png</texture>
 							<visible>[!Skin.HasSetting(ExtendedUseClearMovieArt) + !Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(-1).Art(clearart)) +
-								IsEmpty(Container(505).ListItem(-1).Art(clearlogo))]</visible>
+								IsEmpty(Container(505).ListItem(-1).Art(clearlogo))]
+							</visible>
 						</control>
 						<control type="image">
 							<posx>380</posx>
@@ -1834,7 +1854,8 @@
 						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)
+					</visible>
 					<control type="group">
 						<posx>1476</posx>
 						<control type="group">
@@ -1942,7 +1963,8 @@
 							<texture background="true">$VAR[ExtendedViewMovieThumb3]</texture>
 							<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 							<visible>[!Skin.HasSetting(ExtendedUseClearMovieArt) + !Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(3).Art(clearart)) +
-								IsEmpty(Container(505).ListItem(3).Art(clearlogo))]</visible>
+								IsEmpty(Container(505).ListItem(3).Art(clearlogo))]
+							</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -1952,7 +1974,8 @@
 							<texture background="true">$VAR[ExtendedViewMovieLogo3]</texture>
 							<aspectratio align="center" aligny="bottom" scalediffuse="false">keep</aspectratio>
 							<visible>[Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)] + ![IsEmpty(Container(505).ListItem(3).Art(clearart)) +
-								IsEmpty(Container(505).ListItem(3).Art(clearlogo))]</visible>
+								IsEmpty(Container(505).ListItem(3).Art(clearlogo))]
+							</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -1962,7 +1985,8 @@
 							<colordiffuse>99000000</colordiffuse>
 							<texture>windows/common/black.png</texture>
 							<visible>[!Skin.HasSetting(ExtendedUseClearMovieArt) + !Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(3).Art(clearart)) +
-								IsEmpty(Container(505).ListItem(3).Art(clearlogo))]</visible>
+								IsEmpty(Container(505).ListItem(3).Art(clearlogo))]
+							</visible>
 						</control>
 						<control type="image">
 							<posx>380</posx>
@@ -1995,7 +2019,8 @@
 						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)
+					</visible>
 					<control type="group">
 						<posx>984</posx>
 						<control type="group">
@@ -2103,7 +2128,8 @@
 							<texture background="true">$VAR[ExtendedViewMovieThumb2]</texture>
 							<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 							<visible>[!Skin.HasSetting(ExtendedUseClearMovieArt) + !Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(2).Art(clearart)) +
-								IsEmpty(Container(505).ListItem(2).Art(clearlogo))]</visible>
+								IsEmpty(Container(505).ListItem(2).Art(clearlogo))]
+							</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -2113,7 +2139,8 @@
 							<texture background="true">$VAR[ExtendedViewMovieLogo2]</texture>
 							<aspectratio align="center" aligny="bottom" scalediffuse="false">keep</aspectratio>
 							<visible>[Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)] + ![IsEmpty(Container(505).ListItem(2).Art(clearart)) +
-								IsEmpty(Container(505).ListItem(2).Art(clearlogo))]</visible>
+								IsEmpty(Container(505).ListItem(2).Art(clearlogo))]
+							</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -2123,7 +2150,8 @@
 							<colordiffuse>99000000</colordiffuse>
 							<texture>windows/common/black.png</texture>
 							<visible>[!Skin.HasSetting(ExtendedUseClearMovieArt) + !Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(2).Art(clearart)) +
-								IsEmpty(Container(505).ListItem(2).Art(clearlogo))]</visible>
+								IsEmpty(Container(505).ListItem(2).Art(clearlogo))]
+							</visible>
 						</control>
 						<control type="image">
 							<posx>380</posx>
@@ -2156,7 +2184,8 @@
 						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)
+					</visible>
 					<control type="group">
 						<posx>492</posx>
 						<control type="group">
@@ -2264,7 +2293,8 @@
 							<texture background="true">$VAR[ExtendedViewMovieThumb1]</texture>
 							<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 							<visible>[!Skin.HasSetting(ExtendedUseClearMovieArt) + !Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(1).Art(clearart)) +
-								IsEmpty(Container(505).ListItem(1).Art(clearlogo))]</visible>
+								IsEmpty(Container(505).ListItem(1).Art(clearlogo))]
+							</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -2274,7 +2304,8 @@
 							<texture background="true">$VAR[ExtendedViewMovieLogo1]</texture>
 							<aspectratio align="center" aligny="bottom" scalediffuse="false">keep</aspectratio>
 							<visible>[Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)] + ![IsEmpty(Container(505).ListItem(1).Art(clearart)) +
-								IsEmpty(Container(505).ListItem(1).Art(clearlogo))]</visible>
+								IsEmpty(Container(505).ListItem(1).Art(clearlogo))]
+							</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -2284,7 +2315,8 @@
 							<colordiffuse>99000000</colordiffuse>
 							<texture>windows/common/black.png</texture>
 							<visible>[!Skin.HasSetting(ExtendedUseClearMovieArt) + !Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(1).Art(clearart)) +
-								IsEmpty(Container(505).ListItem(1).Art(clearlogo))]</visible>
+								IsEmpty(Container(505).ListItem(1).Art(clearlogo))]
+							</visible>
 						</control>
 						<control type="image">
 							<posx>380</posx>
@@ -2317,7 +2349,8 @@
 						<effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)
+					</visible>
 					<control type="image">
 						<posx>-10</posx>
 						<posy>625</posy>
@@ -2416,7 +2449,8 @@
 						<texture background="true">$VAR[ExtendedViewMovieThumb0]</texture>
 						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 						<visible>[!Skin.HasSetting(ExtendedUseClearMovieArt) + !Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(0).Art(clearart)) +
-							IsEmpty(Container(505).ListItem(0).Art(clearlogo))]</visible>
+							IsEmpty(Container(505).ListItem(0).Art(clearlogo))]
+						</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -2426,7 +2460,8 @@
 						<texture background="true">$VAR[ExtendedViewMovieLogo0]</texture>
 						<aspectratio align="center" aligny="bottom" scalediffuse="false">keep</aspectratio>
 						<visible>[Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)] + ![IsEmpty(Container(505).ListItem(0).Art(clearart)) +
-							IsEmpty(Container(505).ListItem(0).Art(clearlogo))]</visible>
+							IsEmpty(Container(505).ListItem(0).Art(clearlogo))]
+						</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -2436,7 +2471,8 @@
 						<colordiffuse>99000000</colordiffuse>
 						<texture>windows/common/black.png</texture>
 						<visible>[!Skin.HasSetting(ExtendedUseClearMovieArt) + !Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(0).Art(clearart)) +
-							IsEmpty(Container(505).ListItem(0).Art(clearlogo))]</visible>
+							IsEmpty(Container(505).ListItem(0).Art(clearlogo))]
+						</visible>
 					</control>
 					<control type="image">
 						<posx>380</posx>
@@ -2451,7 +2487,8 @@
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)
+				</visible>
 				<animation effect="slide" start="0,0" end="0,250" time="0" condition="!Skin.HasSetting(ExtendedMoviePlot)">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
 				<animation effect="fade" start="0" end="100" time="0" delay="1255" reversible="false">Visible</animation>
@@ -2774,7 +2811,8 @@
 					<effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
 				</animation>
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(505)
+				</visible>
 				<!--Scrollbar -->
 				<control type="image">
 					<description>Scrollbar background (visible on focus)</description>
@@ -2820,7 +2858,8 @@
 				<animation effect="fade" start="0" end="100" time="0" delay="1310" reversible="false">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)
+				</visible>
 			</control>
 			<control type="group">
 				<posx>136</posx>
@@ -2831,7 +2870,8 @@
 					Window.Next(videossettings) | Window.Next(servicesettings) | Window.Next(appearancesettings) | Window.Next(pvrsettings) | Window.Next(videos) | Window.Next(videoplaylist) |
 					Window.Next(LoginScreen) | Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) |
 					Window.Next(smartplaylisteditor) | Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) |
-					Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(84)</visible>
+					Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(84)
+				</visible>
 				<control type="group">
 					<animation type="Conditional" condition="true">
 						<effect type="zoom" start="100" end="75" time="0" center="-155,400" />
@@ -2853,7 +2893,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)
+					</visible>
 					<control type="group">
 						<posx>-310</posx>
 						<control type="image">
@@ -2939,7 +2980,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)
+					</visible>
 					<control type="group">
 						<posx>1550</posx>
 						<control type="image">
@@ -3025,7 +3067,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)
+					</visible>
 					<control type="group">
 						<posx>1240</posx>
 						<control type="image">
@@ -3111,7 +3154,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)
+					</visible>
 					<control type="group">
 						<posx>930</posx>
 						<control type="image">
@@ -3197,7 +3241,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)
+					</visible>
 					<control type="group">
 						<posx>620</posx>
 						<control type="image">
@@ -3283,7 +3328,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)
+					</visible>
 					<control type="group">
 						<posx>310</posx>
 						<control type="image">
@@ -3367,7 +3413,8 @@
 						<effect type="fade" start="100" end="0" tween="sine" easing="out" delay="200" time="100" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)
+					</visible>
 					<control type="image">
 						<description>Shadow Back</description>
 						<posx>-42</posx>
@@ -3439,7 +3486,8 @@
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)
+				</visible>
 				<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
 				<animation effect="fade" start="0" end="100" time="0" delay="1310" reversible="false">Visible</animation>
 				<control type="fixedlist" id="506">
@@ -3625,7 +3673,8 @@
 					<effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
 				</animation>
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(506)
+				</visible>
 				<control type="group">
 					<control type="group">
 						<animation type="Visible" reversible="false">
@@ -3697,7 +3746,8 @@
 								<posy>65</posy>
 								<width>1730</width>
 								<label>$INFO[Container(506).ListItem.Year,,]$INFO[Container(506).ListItem.Studio, • ,]$INFO[Container(506).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes), (,
-									$LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), • , Unwatched)]</label>
+									$LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), • , Unwatched)]
+								</label>
 								<font>Font-Condensed-S36</font>
 								<textcolor>77white2</textcolor>
 								<scroll>false</scroll>
@@ -3754,7 +3804,8 @@
 						</control>
 						<control type="group">
 							<visible>Container.Content(actors) | [![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(Sets)] +
-								Container.HasFolders]</visible>
+								Container.HasFolders]
+							</visible>
 							<control type="label">
 								<posx>15</posx>
 								<posy>15</posy>
@@ -3813,7 +3864,8 @@
 				<animation effect="fade" start="0" end="100" time="0" delay="1310" reversible="false">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)
+				</visible>
 			</control>
 			<control type="group">
 				<posx>46</posx>
@@ -3824,7 +3876,8 @@
 					Window.Next(videossettings) | Window.Next(servicesettings) | Window.Next(appearancesettings) | Window.Next(pvrsettings) | Window.Next(videos) | Window.Next(videoplaylist) |
 					Window.Next(LoginScreen) | Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) |
 					Window.Next(smartplaylisteditor) | Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) |
-					Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(85)</visible>
+					Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(85)
+				</visible>
 				<control type="group">
 					<animation type="Conditional" condition="true">
 						<effect type="zoom" start="100" end="75" time="0" center="-34,340" />
@@ -3846,7 +3899,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)
+					</visible>
 					<control type="group">
 						<posx>-224</posx>
 						<control type="image">
@@ -3932,7 +3986,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)
+					</visible>
 					<control type="group">
 						<posx>1568</posx>
 						<control type="image">
@@ -4018,7 +4073,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)
+					</visible>
 					<control type="group">
 						<posx>1344</posx>
 						<control type="image">
@@ -4104,7 +4160,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)
+					</visible>
 					<control type="group">
 						<posx>1120</posx>
 						<control type="image">
@@ -4190,7 +4247,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)
+					</visible>
 					<control type="group">
 						<posx>896</posx>
 						<control type="image">
@@ -4276,7 +4334,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)
+					</visible>
 					<control type="group">
 						<posx>672</posx>
 						<control type="image">
@@ -4362,7 +4421,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)
+					</visible>
 					<control type="group">
 						<posx>448</posx>
 						<control type="image">
@@ -4448,7 +4508,8 @@
 						<effect type="fade" delay="75" start="100" end="0" time="25" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)
+					</visible>
 					<control type="group">
 						<posx>224</posx>
 						<control type="image">
@@ -4532,7 +4593,8 @@
 						<effect type="fade" start="100" end="0" tween="sine" easing="out" delay="200" time="100" />
 					</animation>
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
+						IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)
+					</visible>
 					<control type="image">
 						<description>Shadow Back</description>
 						<posx>51</posx>
@@ -4604,7 +4666,8 @@
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)
+				</visible>
 				<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
 				<animation effect="fade" start="0" end="100" time="0" delay="1310" reversible="false">Visible</animation>
 				<control type="fixedlist" id="56">
@@ -4790,7 +4853,8 @@
 					<effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
 				</animation>
 				<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)
+				</visible>
 				<control type="group">
 					<control type="group">
 						<animation type="Visible" reversible="false">
@@ -4862,7 +4926,8 @@
 								<posy>65</posy>
 								<width>1730</width>
 								<label>$INFO[Container(56).ListItem.Year,,]$INFO[Container(56).ListItem.Studio, • ,]$INFO[Container(56).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes), (,
-									$LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), • , Unwatched)]</label>
+									$LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), • , Unwatched)]
+								</label>
 								<font>Font-Condensed-S36</font>
 								<textcolor>77white2</textcolor>
 								<scroll>false</scroll>
@@ -4919,7 +4984,8 @@
 						</control>
 						<control type="group">
 							<visible>Container.Content(actors) | [![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(Sets)] +
-								Container.HasFolders]</visible>
+								Container.HasFolders]
+							</visible>
 							<control type="label">
 								<posx>15</posx>
 								<posy>15</posy>
@@ -4974,7 +5040,8 @@
 			<!-- List Panel -->
 			<control type="group">
 				<visible>Control.IsVisible(999) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))
+				</visible>
 				<animation type="WindowOpen">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="750" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
@@ -5185,7 +5252,8 @@
 			<control type="group">
 				<visible>Control.IsVisible(999) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
 					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) |
-					Container.Content(Sets)]</visible>
+					Container.Content(Sets)]
+				</visible>
 				<animation type="WindowOpen">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="575" delay="175" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
@@ -5362,7 +5430,8 @@
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(999) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))</visible>
+					IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))
+				</visible>
 				<animation type="WindowOpen">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="645" delay="105" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
@@ -5943,7 +6012,8 @@
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
 			<visible>Control.IsVisible(888) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-				IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))</visible>
+				IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))
+			</visible>
 			<control type="button" id="9915">
 				<onup>888</onup>
 				<ondown>888</ondown>
@@ -5989,6 +6059,32 @@
 					<height>200</height>
 					<texture>views/list/panel/panel2.png</texture>
 					<aspectratio>scale</aspectratio>
+					<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+				</control>
+				<control type="image">
+					<posx>360</posx>
+					<posy>770</posy>
+					<width>1700</width>
+					<height>213</height>
+					<texture>dialogs/dialogWindow.png</texture>
+					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+				</control>
+				<control type="image">
+					<align>left</align>
+					<posy>773</posy>
+					<posx>1700</posx>
+					<width>220</width>
+					<height>202</height>
+					<texture border="4">views/list/panel/blackpanel.png</texture>
+					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+				</control>
+				<control type="image">
+					<posy>830</posy>
+					<posx>400</posx>
+					<width>1300</width>
+					<height>85</height>
+					<texture border="4">views/list/panel/blackpanel.png</texture>
+					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -5997,6 +6093,7 @@
 					<height>30</height>
 					<texture flipy="true">shadow_h.png</texture>
 					<colordiffuse>C3FFFFFF</colordiffuse>
+					<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -6006,6 +6103,7 @@
 					<texture>darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
+					<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="image">
 					<posx>271</posx>
@@ -6014,6 +6112,7 @@
 					<height>100</height>
 					<texture flipx="true">shadow.png</texture>
 					<colordiffuse>C3FFFFFF</colordiffuse>
+					<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="image">
 					<posx>300</posx>
@@ -6023,6 +6122,7 @@
 					<texture flipx="true" diffuse="shadow_mask_v.png">darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
+					<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="image">
 					<posx>300</posx>
@@ -6032,114 +6132,402 @@
 					<texture flipx="true" diffuse="shadow_mask_v.png">darkgrey.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<animation effect="fade" end="95" condition="true">Conditional</animation>
+					<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
-				<control type="label">
-					<include>RightListLabel</include>
-					<posy>800</posy>
-					<label>$INFO[ListItem.Year]</label>
-					<visible>[Container.Content(TVShows) | Container.Content(Movies)] + !substring(ListItem.Path,videodb://1/7,left)</visible>
+				<control type="group">
+					<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+					<control type="label">
+						<include>RightListLabel</include>
+						<posy>800</posy>
+						<label>$INFO[ListItem.Year]</label>
+						<visible>[Container.Content(TVShows) | Container.Content(Movies)] + !substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="label">
+						<include>RightListLabel</include>
+						<posy>830</posy>
+						<label>$INFO[ListItem.Premiered,Premiered: ,]</label>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<include>RightListLabel</include>
+						<posy>830</posy>
+						<label>$INFO[ListItem.Country,$LOCALIZE[21875]: ,]</label>
+						<visible>Container.Content(Movies)</visible>
+					</control>
+					<control type="label">
+						<include>RightListLabel</include>
+						<posy>860</posy>
+						<label>$INFO[ListItem.Genre,$LOCALIZE[515]: ,]</label>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<include>RightListLabel</include>
+						<posy>800</posy>
+						<label>$INFO[Window(home).Property(Set.Movies.Years)]</label>
+						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="label">
+						<include>RightListLabel</include>
+						<posy>830</posy>
+						<label>$INFO[Window(home).Property(Set.Movies.Country),$LOCALIZE[21875]: ,]</label>
+						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="label">
+						<include>RightListLabel</include>
+						<posy>860</posy>
+						<label>$INFO[Window(home).Property(Set.Movies.Runtime),$LOCALIZE[20161] $LOCALIZE[180]: , $LOCALIZE[12391]]</label>
+						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="image">
+						<posx>420</posx>
+						<posy>900</posy>
+						<include>visiblehidefadeinfo</include>
+						<width>97</width>
+						<height>62</height>
+						<colordiffuse>eewhite</colordiffuse>
+						<texture>$INFO[ListItem.Studio,colourflags/studios/,.png]</texture>
+						<visible>!IsEmpty(ListItem.Studio) + !substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="image">
+						<posx>420</posx>
+						<posy>900</posy>
+						<include>visiblehidefadeinfo</include>
+						<width>97</width>
+						<height>62</height>
+						<colordiffuse>eewhite</colordiffuse>
+						<texture>$INFO[Window(home).Property(Set.Movies.Studio),colourflags/studios/,.png]</texture>
+						<visible>!IsEmpty(Window(home).Property(Set.Movies.Studio)) + substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="image">
+						<posx>520</posx>
+						<posy>900</posy>
+						<include>visiblehidefadeinfo</include>
+						<width>100</width>
+						<height>65</height>
+						<colordiffuse>eewhite</colordiffuse>
+						<texture>$VAR[MovieMPAAVar,colourflags/mpaa/movie/,.png]</texture>
+						<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies)</visible>
+					</control>
+					<control type="image">
+						<posx>520</posx>
+						<posy>900</posy>
+						<include>visiblehidefadeinfo</include>
+						<width>97</width>
+						<height>64</height>
+						<colordiffuse>eewhite</colordiffuse>
+						<texture>$INFO[ListItem.MPAA,colourflags/rating/,.png]</texture>
+						<visible>!IsEmpty(ListItem.Mpaa) + !Container.Content(movies)</visible>
+					</control>
+					<control type="textbox">
+						<posx>920</posx>
+						<posy>20</posy>
+						<width>340</width>
+						<height>468</height>
+						<font>Font-Condensed-S30</font>
+						<textcolor>eewhite</textcolor>
+						<info>Container(888).ListItem.Plot</info>
+						<autoscroll delay="30000" time="3000" repeat="30000">!Skin.HasSetting(noallowscroll)</autoscroll>
+						<animation effect="slide" time="600" start="400,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
+						<animation effect="slide" time="400" start="0,0" end="400,0" tween="cubic" easing="inout">Hidden</animation>
+						<visible>Control.HasFocus(9915) + !substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="textbox">
+						<posx>920</posx>
+						<posy>20</posy>
+						<width>340</width>
+						<height>468</height>
+						<font>Font-Condensed-S30</font>
+						<textcolor>eewhite</textcolor>
+						<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
+						<autoscroll delay="30000" time="3000" repeat="30000">!Skin.HasSetting(noallowscroll)</autoscroll>
+						<animation effect="slide" time="600" start="400,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
+						<animation effect="slide" time="400" start="0,0" end="400,0" tween="cubic" easing="inout">Hidden</animation>
+						<visible>Control.HasFocus(9915) + substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="textbox"> <!-- plot for tv shows -->
+						<posx>920</posx>
+						<posy>780</posy>
+						<width>760</width>
+						<height>180</height>
+						<font>Font-Condensed-S34</font>
+						<info>Container(888).ListItem.Plot</info>
+						<textcolor>eewhite</textcolor>
+						<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
+						<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
+						<visible>!Control.HasFocus(9915) + !substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="image">
+						<posx>1700</posx>
+						<posy>790</posy>
+						<width>108</width>
+						<height>49</height>
+						<aspect>keepaspect</aspect>
+						<texture>colourflags/posters/imdb.png</texture>
+						<visible>!IsEmpty(ListItem.Rating)</visible>
+					</control>
+					<control type="label">
+						<posx>1785</posx>
+						<posy>787</posy>
+						<width>590</width>
+						<height>58</height>
+						<font>Font-Condensed-S32-B</font>
+						<label fallback="                 •••">$INFO[ListItem.Rating, ,]</label>
+						<textcolor>eewhite</textcolor>
+						<scroll>false</scroll>
+						<align>right</align>
+						<visible>!IsEmpty(ListItem.Rating)</visible>
+					</control>
+					<control type="image">
+						<posx>1690</posx>
+						<posy>860</posy>
+						<width>130</width>
+						<height>76</height>
+						<aspect>keepaspect</aspect>
+						<texture>$VAR[AudioFlagVar,colourflags/audio/,.png]</texture>
+						<visible>!IsEmpty(ListItem.AudioCodec) + [Container.Content(Episodes) | Container.Content(Movies)]</visible>
+					</control>
+					<control type="textbox">
+						<posx>920</posx>
+						<posy>780</posy>
+						<width>760</width>
+						<height>180</height>
+						<font>Font-Condensed-S34</font>
+						<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
+						<textcolor>eewhite</textcolor>
+						<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
+						<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
+						<visible>!Control.HasFocus(9915) + substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
 				</control>
-				<control type="label">
-					<include>RightListLabel</include>
-					<posy>830</posy>
-					<label>$INFO[ListItem.Premiered,Premiered: ,]</label>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
-				</control>
-				<control type="label">
-					<include>RightListLabel</include>
-					<posy>830</posy>
-					<label>$INFO[ListItem.Country,$LOCALIZE[21875]: ,]</label>
-					<visible>Container.Content(Movies)</visible>
-				</control>
-				<control type="label">
-					<include>RightListLabel</include>
-					<posy>860</posy>
-					<label>$INFO[ListItem.Genre,$LOCALIZE[515]: ,]</label>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
-				</control>
-				<control type="label">
-					<include>RightListLabel</include>
-					<posy>800</posy>
-					<label>$INFO[Window(home).Property(Set.Movies.Years)]</label>
-					<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
-				</control>
-				<control type="label">
-					<include>RightListLabel</include>
-					<posy>830</posy>
-					<label>$INFO[Window(home).Property(Set.Movies.Country),$LOCALIZE[21875]: ,]</label>
-					<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
-				</control>
-				<control type="label">
-					<include>RightListLabel</include>
-					<posy>860</posy>
-					<label>$INFO[Window(home).Property(Set.Movies.Runtime),$LOCALIZE[20161] $LOCALIZE[180]: , $LOCALIZE[12391]]</label>
-					<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
-				</control>
-				<control type="image">
-					<posx>420</posx>
-					<posy>900</posy>
-					<include>visiblehidefadeinfo</include>
-					<width>97</width>
-					<height>62</height>
-					<colordiffuse>eewhite</colordiffuse>
-					<texture>$INFO[ListItem.Studio,colourflags/studios/,.png]</texture>
-					<visible>!IsEmpty(ListItem.Studio) + !substring(ListItem.Path,videodb://1/7,left)</visible>
-				</control>
-				<control type="image">
-					<posx>420</posx>
-					<posy>900</posy>
-					<include>visiblehidefadeinfo</include>
-					<width>97</width>
-					<height>62</height>
-					<colordiffuse>eewhite</colordiffuse>
-					<texture>$INFO[Window(home).Property(Set.Movies.Studio),colourflags/studios/,.png]</texture>
-					<visible>!IsEmpty(Window(home).Property(Set.Movies.Studio)) + substring(ListItem.Path,videodb://1/7,left)</visible>
-				</control>
-				<control type="image">
-					<posx>520</posx>
-					<posy>900</posy>
-					<include>visiblehidefadeinfo</include>
-					<width>100</width>
-					<height>65</height>
-					<colordiffuse>eewhite</colordiffuse>
-					<texture>$VAR[MovieMPAAVar,colourflags/mpaa/movie/,.png]</texture>
-					<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies)</visible>
-				</control>
-				<control type="image">
-					<posx>520</posx>
-					<posy>900</posy>
-					<include>visiblehidefadeinfo</include>
-					<width>97</width>
-					<height>64</height>
-					<colordiffuse>eewhite</colordiffuse>
-					<texture>$INFO[ListItem.MPAA,colourflags/rating/,.png]</texture>
-					<visible>!IsEmpty(ListItem.Mpaa) + !Container.Content(movies)</visible>
-				</control>
-				<control type="textbox">
-					<posx>920</posx>
-					<posy>20</posy>
-					<width>340</width>
-					<height>468</height>
-					<font>Font-Condensed-S30</font>
-					<textcolor>eewhite</textcolor>
-					<info>Container(888).ListItem.Plot</info>
-					<autoscroll delay="30000" time="3000" repeat="30000">!Skin.HasSetting(noallowscroll)</autoscroll>
-					<animation effect="slide" time="600" start="400,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
-					<animation effect="slide" time="400" start="0,0" end="400,0" tween="cubic" easing="inout">Hidden</animation>
-					<visible>Control.HasFocus(9915) + !substring(ListItem.Path,videodb://1/7,left)</visible>
-				</control>
-				<control type="textbox">
-					<posx>920</posx>
-					<posy>20</posy>
-					<width>340</width>
-					<height>468</height>
-					<font>Font-Condensed-S30</font>
-					<textcolor>eewhite</textcolor>
-					<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
-					<autoscroll delay="30000" time="3000" repeat="30000">!Skin.HasSetting(noallowscroll)</autoscroll>
-					<animation effect="slide" time="600" start="400,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
-					<animation effect="slide" time="400" start="0,0" end="400,0" tween="cubic" easing="inout">Hidden</animation>
-					<visible>Control.HasFocus(9915) + substring(ListItem.Path,videodb://1/7,left)</visible>
+				<control type="group">
+					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+					<control type="label">
+						<posx>420</posx>
+						<width>1200</width>
+						<height>13</height>
+						<align>center</align>
+						<font>Font-Condensed-S40-B</font>
+						<posy>794</posy>
+						<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+						<textcolor>black</textcolor>
+						<aligny>center</aligny>
+						<scroll>true</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+					</control>
+					<control type="fadelabel">
+						<posx>425</posx>
+						<posy>842</posy>
+						<width>1250</width>
+						<height>50</height>
+						<label>$INFO[Container(888).ListItem.PlotOutline,[COLOR=midgrey]$LOCALIZE[207] [/COLOR], ]</label>
+						<label>$INFO[Window(home).Property(Set.Movies.ExtendedPlot),[COLOR=midgrey]$LOCALIZE[207] [/COLOR], ]</label>
+						<textcolor>blue</textcolor>
+						<font>Font-Condensed-S38-B</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<visible>Container.Content(Movies)</visible>
+						<scrollout>false</scrollout>
+						<pauseatend>3800</pauseatend>
+						<scrollspeed>85</scrollspeed>
+					</control>
+					<control type="fadelabel">
+						<posx>425</posx>
+						<posy>842</posy>
+						<width>1250</width>
+						<height>50</height>
+						<label>$INFO[Container(888).ListItem.Plot,[COLOR=midgrey]$LOCALIZE[207] [/COLOR], ]</label>
+						<textcolor>blue</textcolor>
+						<font>Font-Condensed-S38-B</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<visible>!Container.Content(Movies)</visible>
+						<scrollout>false</scrollout>
+						<pauseatend>3800</pauseatend>
+						<scrollspeed>85</scrollspeed>
+					</control>
+					<control type="fadelabel">
+						<posx>425</posx>
+						<posy>920</posy>
+						<width>1200</width>
+						<height>40</height>
+						<label>$INFO[ListItem.Premiered,[COLOR=darkgrey2]Premiered [/COLOR],]</label>
+						<label>$INFO[ListItem.Director,[COLOR=darkgrey2]Directored by [/COLOR],]</label>
+						<label>$INFO[ListItem.Writer,[COLOR=darkgrey2]Written by [/COLOR],]</label>
+						<label>$INFO[ListItem.Genre,[COLOR=darkgrey2]$LOCALIZE[515] [/COLOR],]</label>
+						<label>$INFO[ListItem.Country,[COLOR=darkgrey2]$LOCALIZE[574] [/COLOR],]</label>
+						<label>$INFO[ListItem.Year,[COLOR=darkgrey2]$LOCALIZE[562] [/COLOR],]</label>
+						<label>$INFO[Window(home).Property(Set.Movies.Years),[COLOR=darkgrey2]$LOCALIZE[652] [/COLOR],]</label>
+						<label>$INFO[Window(home).Property(Set.Movies.Country),[COLOR=darkgrey2]$LOCALIZE[21875] [/COLOR],]</label>
+						<label>$INFO[Window(home).Property(Set.Movies.Runtime),[COLOR=darkgrey2]$LOCALIZE[20161] $LOCALIZE[180] [/COLOR], [COLOR=midgrey]$LOCALIZE[12391] [/COLOR]]</label>
+						<textcolor>black</textcolor>
+						<font>Font-Condensed-S36-B</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<visible>Container.Content(Movies)</visible>
+						<scrollout>false</scrollout>
+						<pauseatend>3800</pauseatend>
+						<scrollspeed>70</scrollspeed>
+					</control>
+					<control type="fadelabel">
+						<posx>425</posx>
+						<posy>920</posy>
+						<width>1200</width>
+						<height>40</height>
+						<label>$INFO[ListItem.Premiered,[COLOR=darkgrey2]Premiered [/COLOR],]</label>
+						<label>$INFO[ListItem.Director,[COLOR=darkgrey2]Directored by [/COLOR],]</label>
+						<label>$INFO[ListItem.Writer,[COLOR=darkgrey2]Written by [/COLOR],]</label>
+						<label>$INFO[ListItem.Genre,[COLOR=darkgrey2]$LOCALIZE[515] [/COLOR],]</label>
+						<label>$INFO[ListItem.Country,[COLOR=darkgrey2]$LOCALIZE[574] [/COLOR],]</label>
+						<label>$INFO[ListItem.Year,[COLOR=darkgrey2]$LOCALIZE[562] [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(NextAired.AirTime),[COLOR=darkgrey2]First aired [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(NextAired.NextDate),[COLOR=darkgrey2]Next aired [/COLOR],]</label>
+						<label>$INFO[ListItem.Season,[COLOR=darkgrey2]$LOCALIZE[20373] [/COLOR], ]$INFO[ListItem.Episode,[COLOR=darkgrey2]$LOCALIZE[20360] [/COLOR],]</label>
+						<textcolor>black</textcolor>
+						<font>Font-Condensed-S36-B</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<visible>!Container.Content(Movies) + !Container.Content(episodes)</visible>
+						<scrollout>false</scrollout>
+						<pauseatend>3800</pauseatend>
+						<scrollspeed>70</scrollspeed>
+					</control>
+					<control type="fadelabel">
+						<posx>425</posx>
+						<posy>920</posy>
+						<width>1200</width>
+						<height>40</height>
+						<label>$INFO[ListItem.Premiered,[COLOR=darkgrey2]Premiered [/COLOR],]</label>
+						<label>$INFO[ListItem.Director,[COLOR=darkgrey2]Directored by [/COLOR],]</label>
+						<label>$INFO[ListItem.Writer,[COLOR=darkgrey2]Written by [/COLOR],]</label>
+						<label>$INFO[ListItem.Genre,[COLOR=darkgrey2]$LOCALIZE[515] [/COLOR],]</label>
+						<label>$INFO[ListItem.Country,[COLOR=darkgrey2]$LOCALIZE[574] [/COLOR],]</label>
+						<label>$INFO[ListItem.Year,[COLOR=darkgrey2]$LOCALIZE[562] [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(NextAired.AirTime),[COLOR=darkgrey2]First aired [/COLOR],]</label>
+						<label>$INFO[Window(Home).Property(NextAired.NextDate),[COLOR=darkgrey2]Next aired [/COLOR],]</label>
+						<label>$INFO[ListItem.Season,[COLOR=darkgrey2]$LOCALIZE[20373] [/COLOR], ]$INFO[ListItem.Episode,[COLOR=darkgrey2]$LOCALIZE[20359] [/COLOR],]</label>
+						<textcolor>black</textcolor>
+						<font>Font-Condensed-S36-B</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<visible>!Container.Content(Movies) + Container.Content(episodes)</visible>
+						<scrollout>false</scrollout>
+						<pauseatend>3800</pauseatend>
+						<scrollspeed>70</scrollspeed>
+					</control>
+					<control type="image">
+						<posx>1703</posx>
+						<posy>787</posy>
+						<width>108</width>
+						<height>49</height>
+						<aspect>keepaspect</aspect>
+						<texture>colourflags/posters/imdb.png</texture>
+						<visible>!IsEmpty(ListItem.Rating)</visible>
+					</control>
+					<control type="label">
+						<posx>1787</posx>
+						<posy>783</posy>
+						<width>590</width>
+						<height>58</height>
+						<font>Font-Condensed-S32-B</font>
+						<label fallback="                 •••">$INFO[ListItem.Rating, ,]</label>
+						<textcolor>eewhite</textcolor>
+						<scroll>false</scroll>
+						<align>right</align>
+						<visible>!IsEmpty(ListItem.Rating)</visible>
+					</control>
+					<control type="grouplist">
+						<posx>1703</posx>
+						<posy>840</posy>
+						<width>100</width>
+						<height>140</height>
+						<align>left</align>
+						<aligny>top</aligny>
+						<itemgap>0</itemgap>
+						<orientation>vertical</orientation>
+						<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
+						<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<aspect>keepaspect</aspect>
+							<texture>$INFO[ListItem.VideoResolution,colourflags/resolution/,.png]</texture>
+							<visible>!IsEmpty(ListItem.VideoResolution) + [Container.Content(Episodes) | Container.Content(Movies)]</visible>
+						</control>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<aspect>keepaspect</aspect>
+							<texture>$INFO[ListItem.VideoAspect,colourflags/aspectratio/,.png]</texture>
+							<visible>!IsEmpty(ListItem.VideoAspect) + [Container.Content(Episodes) | Container.Content(Movies)]</visible>
+						</control>
+					</control>
+					<control type="grouplist">
+						<posx>1813</posx>
+						<posy>775</posy>
+						<width>100</width>
+						<height>140</height>
+						<align>left</align>
+						<aligny>top</aligny>
+						<itemgap>0</itemgap>
+						<orientation>vertical</orientation>
+						<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
+						<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<aspect>keepaspect</aspect>
+							<texture>$VAR[AudioFlagVar,colourflags/audio/,.png]</texture>
+							<visible>!IsEmpty(ListItem.AudioCodec) + [Container.Content(Episodes) | Container.Content(Movies)]</visible>
+						</control>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<texture>$INFO[ListItem.Studio,colourflags/studios/,.png]</texture>
+							<visible>!IsEmpty(ListItem.Studio) + !substring(ListItem.Path,videodb://1/7,left)</visible>
+						</control>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<texture>$INFO[Window(home).Property(Set.Movies.Studio),colourflags/studios/,.png]</texture>
+							<visible>!IsEmpty(Window(home).Property(Set.Movies.Studio)) + substring(ListItem.Path,videodb://1/7,left)</visible>
+						</control>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<texture>$VAR[MovieMPAAVar,colourflags/mpaa/movie/,.png]</texture>
+							<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies)</visible>
+						</control>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<texture>$INFO[ListItem.MPAA,colourflags/rating/,.png]</texture>
+							<visible>!IsEmpty(ListItem.Mpaa) + !Container.Content(movies)</visible>
+						</control>
+					</control>
+					<control type="textbox">
+						<posx>920</posx>
+						<posy>780</posy>
+						<width>760</width>
+						<height>180</height>
+						<font>Font-Condensed-S34</font>
+						<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
+						<textcolor>eewhite</textcolor>
+						<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
+						<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
+						<visible>!Control.HasFocus(9915) + substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
 				</control>
 				<control type="fixedlist" id="888">
 					<viewtype label="Right List">list</viewtype>
@@ -6306,60 +6694,6 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="textbox"> <!-- plot for tv shows -->
-					<posx>920</posx>
-					<posy>780</posy>
-					<width>760</width>
-					<height>180</height>
-					<font>Font-Condensed-S34</font>
-					<info>Container(888).ListItem.Plot</info>
-					<textcolor>eewhite</textcolor>
-					<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
-					<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
-					<visible>!Control.HasFocus(9915) + !substring(ListItem.Path,videodb://1/7,left)</visible>
-				</control>
-				<control type="image">
-					<posx>1700</posx>
-					<posy>790</posy>
-					<width>108</width>
-					<height>49</height>
-					<aspect>keepaspect</aspect>
-					<texture>colourflags/posters/imdb.png</texture>
-					<visible>!IsEmpty(ListItem.Rating)</visible>
-				</control>
-				<control type="label">
-					<posx>1785</posx>
-					<posy>787</posy>
-					<width>590</width>
-					<height>58</height>
-					<font>Font-Condensed-S32-B</font>
-					<label fallback="                 •••">$INFO[ListItem.Rating, ,]</label>
-					<textcolor>eewhite</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-					<visible>!IsEmpty(ListItem.Rating)</visible>
-				</control>
-				<control type="image">
-					<posx>1690</posx>
-					<posy>860</posy>
-					<width>130</width>
-					<height>76</height>
-					<aspect>keepaspect</aspect>
-					<texture>$VAR[AudioFlagVar,colourflags/audio/,.png]</texture>
-					<visible>!IsEmpty(ListItem.AudioCodec) + [Container.Content(Episodes) | Container.Content(Movies)]</visible>
-				</control>
-				<control type="textbox">
-					<posx>920</posx>
-					<posy>780</posy>
-					<width>760</width>
-					<height>180</height>
-					<font>Font-Condensed-S34</font>
-					<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
-					<textcolor>eewhite</textcolor>
-					<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
-					<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
-					<visible>!Control.HasFocus(9915) + substring(ListItem.Path,videodb://1/7,left)</visible>
-				</control>
 			</control>
 			<control type="group"><!-- Default Group - Miniaturas -->
 				<posx>30</posx>
@@ -6483,7 +6817,8 @@
 				<control type="group">
 					<!-- used for TV -->
 					<visible>![!Skin.HasSetting(novideomediacase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Window.IsActive(500) | Window.IsActive(501) |
-						Window.IsActive(502)]</visible>
+						Window.IsActive(502)]
+					</visible>
 					<control type="image"><!-- Filmes/Fotos/Arquivos reflexo -->
 						<posx>-15</posx>
 						<posy>180</posy>
