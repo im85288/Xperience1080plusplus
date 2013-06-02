@@ -116,15 +116,12 @@
 		<control type="group">
 			<include condition="Window.IsActive(fullscreenvideo)">BannerListInfoAnimation</include>
 			<include condition="!Window.IsActive(fullscreenvideo)">BannerListInfoAnimationMusicOSD</include>
-			<visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) |
-				Window.IsActive(fullscreenvideo)] + !Player.ShowCodec
+			<visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec
 			</visible>
 			<animation type="Conditional" condition="Window.IsActive(infodialog)">
 				<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
 				<effect type="zoom" start="100" end="50" center="1569,97" tween="sine" easing="inout" time="300" />
 			</animation>
-			
-			
 			<control type="image">
 				<posx>1470</posx>
 				<posy>470</posy>
@@ -141,7 +138,7 @@
 				<posy>470</posy>
 				<width>450</width>
 				<height>270</height>
-				<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]$INFO[Player.Art(clearlogo)]</texture>	
+				<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]$INFO[Player.Art(clearlogo)]</texture>
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
@@ -169,7 +166,6 @@
 				<aligny>top</aligny>
 				<visible>Skin.HasSetting(ShowClearArt) + !IsEmpty(Player.Art(tvshow.clearlogo) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
 			</control>
-			
 			<control type="image">
 				<posx>1500</posx>
 				<posy>100</posy>
@@ -182,8 +178,7 @@
 				<visible>Skin.HasSetting(ShowClearArt) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 			</control>
 			<control type="group">
-				<visible>stringcompare(Skin.String(OSDTVShowsImage),poster) | [stringcompare(Skin.String(OSDTVShowsImage),clearart) + IsEmpty(Player.Art(tvshow.clearart))] |
-					[stringcompare(Skin.String(OSDTVShowsImage),clearlogo) + IsEmpty(Player.Art(tvshow.clearlogo))]
+				<visible>stringcompare(Skin.String(OSDTVShowsImage),poster) | [stringcompare(Skin.String(OSDTVShowsImage),clearart) + IsEmpty(Player.Art(tvshow.clearart))] | [stringcompare(Skin.String(OSDTVShowsImage),clearlogo) + IsEmpty(Player.Art(tvshow.clearlogo))]
 				</visible>
 				<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				<control type="image">
@@ -237,8 +232,7 @@
 				<posy>15</posy>
 				<width>1247</width>
 				<height>44</height>
-				<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season, • $LOCALIZE[20373] ,]$INFO[VideoPlayer.Episode, • ,. ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, • ,] $INFO[VideoPlayer.Genre, •
-					,]
+				<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season, • $LOCALIZE[20373] ,]$INFO[VideoPlayer.Episode, • ,. ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, • ,] $INFO[VideoPlayer.Genre, • ,]
 				</label>
 				<textcolor>black</textcolor>
 				<font>Font-Condensed-S36</font>
@@ -251,8 +245,7 @@
 				<posy>15</posy>
 				<width>1247</width>
 				<height>44</height>
-				<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season, • $LOCALIZE[20373] ,]$INFO[VideoPlayer.Episode, • ,. ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, • ,] $INFO[VideoPlayer.Genre, •
-					,]
+				<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season, • $LOCALIZE[20373] ,]$INFO[VideoPlayer.Episode, • ,. ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, • ,] $INFO[VideoPlayer.Genre, • ,]
 				</label>
 				<textcolor>aawhite</textcolor>
 				<font>Font-Condensed-S36</font>
@@ -548,8 +541,7 @@
 		<control type="group">
 			<include condition="Window.IsActive(fullscreenvideo)">BannerListInfoAnimation</include>
 			<include condition="!Window.IsActive(fullscreenvideo)">BannerListInfoAnimationMusicOSD</include>
-			<visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) |
-				Window.IsActive(fullscreenvideo)] + !Player.ShowCodec
+			<visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec
 			</visible>
 			<animation type="Conditional" condition="Window.IsActive(infodialog)">
 				<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
@@ -577,17 +569,16 @@
 				<aligny>top</aligny>
 				<visible>!VideoPlayer.Content(movies) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
 			</control>
-			
 			<control type="image">
 				<posx>1420</posx>
 				<posy>470</posy>
 				<width>450</width>
 				<height>270</height>
-				<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]$INFO[Player.Art(clearlogo)]</texture>	
+				<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]$INFO[Player.Art(clearlogo)]</texture>
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>VideoPlayer.Content(movies) +  Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]</visible>
+				<visible>VideoPlayer.Content(movies) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]</visible>
 			</control>
 			<control type="image">
 				<posx>1360</posx>
@@ -598,9 +589,8 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>VideoPlayer.Content(movies) + Skin.HasSetting(ShowClearArt)  + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
+				<visible>VideoPlayer.Content(movies) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
 			</control>
-			
 			<control type="image">
 				<posx>1500</posx>
 				<posy>100</posy>
@@ -878,8 +868,7 @@
 			<visible>Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd)</visible>
 			<control type="group">
 				<animation effect="slide" start="0,0" end="0,-275" time="300" tween="cubic" easing="inout" condition="[Player.ShowInfo | Player.Paused] + !Window.IsActive(musicosd)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,-76" time="300" tween="cubic" easing="inout"
-					condition="Window.IsActive(musicosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-76" time="300" tween="cubic" easing="inout" condition="Window.IsActive(musicosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 				<control type="image">
 					<posx>0</posx>
 					<posy>1000</posy>
@@ -887,6 +876,17 @@
 					<height>360</height>
 					<texture border="29">dialogs/dialogWindow.png</texture>
 					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+				</control>
+				<control type="image">
+					<description>logo</description>
+					<posx>1500</posx>
+					<posy>860</posy>
+					<width>400</width>
+					<height>155</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture background="true">$INFO[Skin.String(MusicDir)]$INFO[MusicPlayer.Artist]/logo.png</texture>
+					<bordersize>7</bordersize>
+					<visible>Skin.HasSetting(ShowClearArt) + !IsEmpty(Skin.String(MusicDir)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -1308,8 +1308,6 @@
 								<label>$INFO[Window(Home).Property(ArtistEvents.8.City),[COLOR=midgrey]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.8.Name),[COLOR=midgrey] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.8.Date),[COLOR=midgrey] on [/COLOR],]</label>
 								<label>$INFO[Window(Home).Property(ArtistEvents.9.City),[COLOR=midgrey]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.9.Name),[COLOR=midgrey] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.9.Date),[COLOR=midgrey] on [/COLOR],]</label>
 								<label>$INFO[Window(Home).Property(ArtistEvents.10.City),[COLOR=midgrey]Upcoming Concert [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.10.Name),[COLOR=midgrey] at [/COLOR],]$INFO[Window(Home).Property(ArtistEvents.11.Date),[COLOR=midgrey] on [/COLOR],]</label>
-								
-						
 								<textcolor>blue</textcolor>
 								<font>Font-Condensed-S45-B</font>
 								<align>left</align>
@@ -1418,8 +1416,7 @@
 				<effect type="fade" start="100" end="0" time="200" tween="sine" easing="in" />
 				<effect type="slide" start="0,0" end="0,85" time="300" tween="sine" easing="in" />
 			</animation>
-			<animation effect="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout"
-				condition="Window.IsActive(musicosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" condition="Window.IsActive(musicosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 			<control type="image">
 				<posx>0</posx>
 				<posy>674</posy>
