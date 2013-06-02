@@ -782,7 +782,6 @@
 						<include>SettingsCategoryDefaultButtonVars</include>
 					</control>
 				</control>
-				
 				<!-- OSD Settings -->
 				<control type="grouplist" id="5">
 					<onleft>30</onleft>
