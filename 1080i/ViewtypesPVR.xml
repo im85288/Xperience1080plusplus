@@ -42,7 +42,8 @@
 						<font>Font-Condensed-S40-B</font>
 						<label>$INFO[Container(11).ListItem.Title]</label>
 						<textcolor>eewhite</textcolor>
-						<scroll>false</scroll>
+						<scroll>true</scroll>
+						<scrollspeed>30</scrollspeed>
 					</control>
 					<control type="group">
 						<visible>Container(11).ListItem.HasEpg</visible>
