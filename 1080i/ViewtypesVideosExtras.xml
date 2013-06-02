@@ -6477,21 +6477,11 @@
 				</control>
 				<control type="image">
 					<align>left</align>
-					<posy>0</posy>
-					<posx>1100</posx>
-					<width>820</width>
-					<height>776</height>
-					<texture border="4">windows/common/darkgrey.png</texture>
-					<visible>Container.Content(movies)</visible>
-				</control>
-				<control type="image">
-					<align>left</align>
 					<posy>150</posy>
 					<posx>1100</posx>
 					<width>820</width>
 					<height>626</height>
-					<texture border="4">windows/common/darkgrey.png</texture>
-					<visible>!Container.Content(movies)</visible>
+					<texture border="4">views/list/panel/panel2.png</texture>
 				</control>
 				<control type="group">
 					<control type="fixedlist" id="888">
