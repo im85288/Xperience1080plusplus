@@ -6320,14 +6320,30 @@
 						<width>1250</width>
 						<height>50</height>
 						<label>$INFO[Container(888).ListItem.PlotOutline,[COLOR=midgrey]$LOCALIZE[207] [/COLOR], ]</label>
-						<label>$INFO[Window(home).Property(Set.Movies.ExtendedPlot),[COLOR=midgrey]$LOCALIZE[207] [/COLOR], ]</label>
 						<textcolor>blue</textcolor>
 						<font>Font-Condensed-S38-B</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<scroll>false</scroll>
 						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
-						<visible>Container.Content(Movies)</visible>
+						<visible>Container.Content(Movies) + !IsEmpty(Container(888).ListItem.PlotOutline)</visible>
+						<scrollout>false</scrollout>
+						<pauseatend>3800</pauseatend>
+						<scrollspeed>85</scrollspeed>
+					</control>
+					<control type="fadelabel">
+						<posx>425</posx>
+						<posy>842</posy>
+						<width>1250</width>
+						<height>50</height>
+						<label>$INFO[Container(888).ListItem.Plot,[COLOR=midgrey]$LOCALIZE[207] [/COLOR], ]</label>
+						<textcolor>blue</textcolor>
+						<font>Font-Condensed-S38-B</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<visible>Container.Content(Movies) + IsEmpty(Container(888).ListItem.PlotOutline)</visible>
 						<scrollout>false</scrollout>
 						<pauseatend>3800</pauseatend>
 						<scrollspeed>85</scrollspeed>
@@ -6358,18 +6374,40 @@
 						<label>$INFO[ListItem.Director,[COLOR=darkgrey2]Directored by [/COLOR],]</label>
 						<label>$INFO[ListItem.Writer,[COLOR=darkgrey2]Written by [/COLOR],]</label>
 						<label>$INFO[ListItem.Genre,[COLOR=darkgrey2]$LOCALIZE[515] [/COLOR],]</label>
+						<label>$INFO[ListItem.Studio,[COLOR=darkgrey2]$LOCALIZE[20388] [/COLOR],]</label>
 						<label>$INFO[ListItem.Country,[COLOR=darkgrey2]$LOCALIZE[574] [/COLOR],]</label>
 						<label>$INFO[ListItem.Year,[COLOR=darkgrey2]$LOCALIZE[562] [/COLOR],]</label>
-						<label>$INFO[Window(home).Property(Set.Movies.Years),[COLOR=darkgrey2]$LOCALIZE[652] [/COLOR],]</label>
-						<label>$INFO[Window(home).Property(Set.Movies.Country),[COLOR=darkgrey2]$LOCALIZE[21875] [/COLOR],]</label>
-						<label>$INFO[Window(home).Property(Set.Movies.Runtime),[COLOR=darkgrey2]$LOCALIZE[20161] $LOCALIZE[180] [/COLOR], [COLOR=midgrey]$LOCALIZE[12391] [/COLOR]]</label>
 						<textcolor>black</textcolor>
 						<font>Font-Condensed-S36-B</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<scroll>false</scroll>
 						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
-						<visible>Container.Content(Movies)</visible>
+						<visible>Container.Content(Movies) + !substring(ListItem.Path,videodb://1/7,left)</visible>
+						<scrollout>false</scrollout>
+						<pauseatend>3800</pauseatend>
+						<scrollspeed>70</scrollspeed>
+					</control>
+					<control type="fadelabel">
+						<posx>425</posx>
+						<posy>920</posy>
+						<width>1200</width>
+						<height>40</height>
+						<label>$INFO[Window(home).Property(Set.Movies.Runtime),[COLOR=darkgrey2]$LOCALIZE[20161] $LOCALIZE[180] [/COLOR], [COLOR=midgrey]$LOCALIZE[12391] [/COLOR]]</label>			
+						<label>$INFO[Window(home).Property(Set.Movies.Premiered),[COLOR=darkgrey2]Premiered [/COLOR],]</label>
+						<label>$INFO[Window(home).Property(Set.Movies.Years),[COLOR=darkgrey2]$LOCALIZE[652] [/COLOR],]</label>
+						<label>$INFO[Window(home).Property(Set.Movies.Country),[COLOR=darkgrey2]$LOCALIZE[21875] [/COLOR],]</label>
+						<label>$INFO[Window(home).Property(Set.Movies.Director),[COLOR=darkgrey2]Directored by [/COLOR],]</label>
+						<label>$INFO[Window(home).Property(Set.Movies.Writer),[COLOR=darkgrey2]Written by [/COLOR],]</label>
+						<label>$INFO[Window(home).Property(Set.Movies.Genre),[COLOR=darkgrey2]$LOCALIZE[515] [/COLOR],]</label>
+						<label>$INFO[Window(home).Property(Set.Movies.Studio),[COLOR=darkgrey2]$LOCALIZE[20388] [/COLOR],]</label>					
+						<textcolor>black</textcolor>
+						<font>Font-Condensed-S36-B</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>
+						<visible>Container.Content(Movies) + substring(ListItem.Path,videodb://1/7,left)</visible>
 						<scrollout>false</scrollout>
 						<pauseatend>3800</pauseatend>
 						<scrollspeed>70</scrollspeed>
@@ -6462,14 +6500,14 @@
 							<height>68</height>
 							<aspect>keepaspect</aspect>
 							<texture>$INFO[ListItem.VideoResolution,colourflags/resolution/,.png]</texture>
-							<visible>!IsEmpty(ListItem.VideoResolution) + [Container.Content(Episodes) | Container.Content(Movies)]</visible>
+							<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 						</control>
 						<control type="image">
 							<width>90</width>
 							<height>68</height>
 							<aspect>keepaspect</aspect>
 							<texture>$INFO[ListItem.VideoAspect,colourflags/aspectratio/,.png]</texture>
-							<visible>!IsEmpty(ListItem.VideoAspect) + [Container.Content(Episodes) | Container.Content(Movies)]</visible>
+							<visible>!IsEmpty(ListItem.VideoAspect)</visible>
 						</control>
 					</control>
 					<control type="grouplist">
@@ -6489,7 +6527,7 @@
 							<height>68</height>
 							<aspect>keepaspect</aspect>
 							<texture>$VAR[AudioFlagVar,colourflags/audio/,.png]</texture>
-							<visible>!IsEmpty(ListItem.AudioCodec) + [Container.Content(Episodes) | Container.Content(Movies)]</visible>
+							<visible>!IsEmpty(ListItem.AudioCodec)</visible>
 						</control>
 						<control type="image">
 							<width>90</width>
@@ -6516,18 +6554,7 @@
 							<visible>!IsEmpty(ListItem.Mpaa) + !Container.Content(movies)</visible>
 						</control>
 					</control>
-					<control type="textbox">
-						<posx>920</posx>
-						<posy>780</posy>
-						<width>760</width>
-						<height>180</height>
-						<font>Font-Condensed-S34</font>
-						<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
-						<textcolor>eewhite</textcolor>
-						<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
-						<animation effect="slide" start="0,0" end="9,0" time="200" condition="Control.HasFocus(80)">Conditional</animation>
-						<visible>!Control.HasFocus(9915) + substring(ListItem.Path,videodb://1/7,left)</visible>
-					</control>
+					
 				</control>
 				<control type="fixedlist" id="888">
 					<viewtype label="Right List">list</viewtype>
