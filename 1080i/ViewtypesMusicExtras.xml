@@ -2251,6 +2251,17 @@
 						<bordersize>5</bordersize>
 						<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 					</control>
+					<control type="image">
+						<description>logo</description>
+						<posx>380</posx>
+						<posy>430</posy>
+						<width>400</width>
+						<height>155</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture background="true">$INFO[Skin.String(MusicDir)]$INFO[ListItem.Artist]/logo.png</texture>
+						<bordersize>7</bordersize>
+						<visible>Skin.HasSetting(ShowClearArt) + !IsEmpty(Skin.String(MusicDir)) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+					</control>
 				</control>
 			</control>
 			<control type="scrollbar" id="80">

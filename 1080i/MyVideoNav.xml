@@ -614,7 +614,7 @@
                         <visible>Control.IsVisible(52) + Container.Content(tvshows)</visible>
                     </control>
                     <control type="radiobutton" id="122">
-                        <description>Use banner in info list (tvshows)</description>
+                        <description>Use banner in right list (tvshows)</description>
                         <include>optionsbuttonsdimensions</include>
                         <label>Show banner</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>

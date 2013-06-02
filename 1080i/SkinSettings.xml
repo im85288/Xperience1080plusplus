@@ -772,6 +772,15 @@
 						<visible>Skin.HasSetting(ShowBoxes)</visible>
 						<label>Show Alternate Boxes</label>
 					</control>
+					<control type="button" id="3014">
+						<description>Set music path</description>
+						<label>Set Path to Music (for clearLOGO)</label>
+						<onclick>Skin.SetPath(MusicDir)</onclick>
+						<width>1210</width>
+						<texturefocus border="150,3,150,3">windows/settings/images/right-focus-arrow-fo.png</texturefocus>
+						<texturenofocus border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
+						<include>SettingsCategoryDefaultButtonVars</include>
+					</control>
 				</control>
 				<!-- OSD Settings -->
 				<control type="grouplist" id="5">
