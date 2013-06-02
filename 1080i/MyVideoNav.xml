@@ -681,7 +681,7 @@
 						<textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
 						<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
 						<radioposx>-19</radioposx>
-						<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)] | [substring(Container.FolderPath,plugin,left) + Container.HasFiles]</visible>
+						<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)] | [substring(Container.FolderPath,plugin,left) + Container.HasFiles] | Library.HasContent(musicvideos)</visible>
 					</control>
 					<control type="radiobutton" id="212">
 						<description>Info List</description>
