@@ -1761,6 +1761,14 @@
 					<texture border="4">views/list/panel/blackpanel.png</texture>
 					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
+				<control type="image">
+					<align>left</align>
+					<posy>150</posy>
+					<posx>920</posx>
+					<width>1000</width>
+					<height>626</height>
+					<texture border="4">windows/common/darkgrey.png</texture>
+				</control>
 				<control type="group">
 					<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 					<control type="label">
@@ -2097,15 +2105,15 @@
 				</control>
 				<control type="fixedlist" id="888">
 					<viewtype label="Right List">list</viewtype>
-					<posx>750</posx>
+					<posx>820</posx>
 					<posy>200</posy>
-					<width>1200</width>
-					<height>500</height>
+					<width>1100</width>
+					<height>550</height>
 					<pagecontrol>80</pagecontrol>
 					<onright>80</onright>
 					<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
 					<onleft condition="Skin.HasSetting(KioskMode)">888</onleft>
-					<focusposition>1</focusposition>
+					<focusposition>2</focusposition>
 					<orientation>vertical</orientation>
 					<scrolltime>300</scrolltime>
 					<preloaditems>2</preloaditems>
@@ -2122,9 +2130,9 @@
 						<control type="label">
 							<posx>1045</posx>
 							<posy>1</posy>
-							<width>1200</width>
+							<width>900</width>
 							<height>40</height>
-							<font>Font-Condensed-S32-B</font>
+							<font>Font-Condensed-S34</font>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>eewhite</textcolor>
@@ -2133,9 +2141,9 @@
 					</itemlayout>
 					<focusedlayout height="110">
 						<control type="image">
-							<posx>-200</posx>
+							<posx>100</posx>
 							<posy>0</posy>
-							<width>1600</width>
+							<width>1100</width>
 							<height>100</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>windows/common/yellow_content.png</texture>
@@ -2147,9 +2155,9 @@
 						<control type="label">
 							<posx>1045</posx>
 							<posy>10</posy>
-							<width>1200</width>
+							<width>900</width>
 							<height>40</height>
-							<font>Font-Condensed-S32-B</font>
+							<font>Font-Condensed-S36-B</font>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>black</textcolor>
@@ -2160,7 +2168,7 @@
 							<posy>50</posy>
 							<width>540</width>
 							<height>40</height>
-							<font>Font-Condensed-S32</font>
+							<font>Font-Condensed-S36</font>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>black</textcolor>
@@ -2172,7 +2180,7 @@
 							<posy>50</posy>
 							<width>540</width>
 							<height>40</height>
-							<font>Font-Condensed-S32</font>
+							<font>Font-Condensed-S36</font>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>black</textcolor>
@@ -2184,7 +2192,7 @@
 							<posy>50</posy>
 							<width>540</width>
 							<height>40</height>
-							<font>Font-Condensed-S32</font>
+							<font>Font-Condensed-S36</font>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>black</textcolor>
