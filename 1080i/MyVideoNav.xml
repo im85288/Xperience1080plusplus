@@ -625,6 +625,7 @@
                         <radioposx>-19</radioposx>
                         <visible>Control.IsVisible(888) + Container.Content(tvshows)</visible>
                     </control>
+                    
                 </control>
                
                 <!-- Toggle views -->

@@ -2131,6 +2131,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
+					
 					<focusedlayout height="110">
 						<control type="image">
 							<posx>-200</posx>
