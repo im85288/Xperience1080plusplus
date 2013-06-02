@@ -950,7 +950,7 @@
 								<include>visiblehidefadeinfo</include>
 								<posx>300</posx>
 								<posy>80</posy>
-								<width>1000</width>
+								<width>1050</width>
 								<height>56</height>
 								<label>$INFO[VideoPlayer.Title]</label>
 								<textcolor>black</textcolor>
@@ -1006,11 +1006,11 @@
 							</control>
 							<control type="label">
 								<include>visiblehidefadeinfo</include>
-								<posx>1460</posx>
+								<posx>1700</posx>
 								<posy>90</posy>
-								<width>540</width>
+								<width>300</width>
 								<height>38</height>
-								<align>left</align>
+								<align>right</align>
 								<label>$INFO[System.Time]$INFO[VideoPlayer.EndTime, → ,]</label>
 								<font>Font-Condensed-S45</font>
 								<textcolor>black</textcolor>
