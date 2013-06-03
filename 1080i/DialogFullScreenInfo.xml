@@ -143,6 +143,16 @@
 					<height>49</height>
 					<aspect>keepaspect</aspect>
 					<texture>colourflags/posters/imdb.png</texture>
+					<visible>!Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>-116</posy>
+					<width>108</width>
+					<height>49</height>
+					<aspect>keepaspect</aspect>
+					<texture>noncolourflags/posters/imdb.png</texture>
+					<visible>Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 				</control>
 				<control type="label">
 					<posx>89</posx>

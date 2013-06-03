@@ -1343,9 +1343,17 @@
                         <height>66</height>
                         <aspect>keepaspect</aspect>
                         <texture>$VAR[MovieMPAAVar,colourflags/mpaa/movie/,.png]</texture>
-                        <visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies)</visible>
+                        <visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
                      </control>
-                     
+                     <control type="image">
+                        <posx>165</posx>
+                        <posy>585</posy>
+                        <width>100</width>
+                        <height>66</height>
+                        <aspect>keepaspect</aspect>
+                        <texture>$VAR[MovieMPAAVar,noncolourflags/mpaa/movie/,.png]</texture>
+                        <visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+                     </control>
                      <control type="image">
                         <posx>255</posx>
                         <posy>577</posy>
@@ -1353,9 +1361,17 @@
                         <height>76</height>
                         <aspect>keepaspect</aspect>
                         <texture>$VAR[AudioFlagVar,colourflags/audio/,.png]</texture>
-                        <visible>!IsEmpty(ListItem.AudioCodec) + Container.Content(movies)</visible>
+                        <visible>!IsEmpty(ListItem.AudioCodec) + Container.Content(movies) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
                      </control>
-                     
+                      <control type="image">
+                        <posx>255</posx>
+                        <posy>577</posy>
+                        <width>130</width>
+                        <height>76</height>
+                        <aspect>keepaspect</aspect>
+                        <texture>$VAR[AudioFlagVar,noncolourflags/audio/,.png]</texture>
+                        <visible>!IsEmpty(ListItem.AudioCodec) + Container.Content(movies) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+                     </control>
                      <control type="image">
                         <posx>465</posx>
                         <posy>590</posy>
@@ -1363,9 +1379,17 @@
                         <height>49</height>
                         <aspect>keepaspect</aspect>
                         <texture>colourflags/posters/imdb.png</texture>
-                         <visible>!IsEmpty(ListItem.Rating) + Container.Content(movies)</visible>                  
+                         <visible>!IsEmpty(ListItem.Rating) + Container.Content(movies) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>                  
                      </control>
-                
+                 <control type="image">
+                        <posx>465</posx>
+                        <posy>590</posy>
+                        <width>108</width>
+                        <height>49</height>
+                        <aspect>keepaspect</aspect>
+                        <texture>noncolourflags/posters/imdb.png</texture>
+                         <visible>!IsEmpty(ListItem.Rating) + Container.Content(movies) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>                  
+                     </control>
                 	<control type="label">
                         <posx>550</posx>
                         <posy>587</posy>
@@ -1399,9 +1423,18 @@
                         <height>62</height>
                         <colordiffuse>eewhite</colordiffuse>
                        <texture>$INFO[ListItem.Studio,colourflags/studios/,.png]</texture>
-                        <visible>!IsEmpty(ListItem.Studio) + !Container.Content(movies)</visible>
+                        <visible>!IsEmpty(ListItem.Studio) + !Container.Content(movies) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
                     </control>
-                    
+                     <control type="image">
+                        <posx>30</posx>
+                        <posy>590</posy>                  
+                		<include>visiblehidefadeinfo</include>
+                        <width>97</width>
+                        <height>62</height>
+                        <colordiffuse>eewhite</colordiffuse>
+                       <texture>$INFO[ListItem.Studio,noncolourflags/studios/,.png]</texture>
+                        <visible>!IsEmpty(ListItem.Studio) + !Container.Content(movies) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+                    </control>
                     <control type="image">
                         <posx>130</posx>
                         <posy>590</posy>
@@ -1410,9 +1443,18 @@
                         <height>64</height>
                         <colordiffuse>eewhite</colordiffuse>
                         <texture>$INFO[ListItem.MPAA,colourflags/rating/,.png]</texture>
-                        <visible>!IsEmpty(ListItem.Mpaa) + !Container.Content(movies)</visible>
+                        <visible>!IsEmpty(ListItem.Mpaa) + !Container.Content(movies) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
                     </control>
-                
+                <control type="image">
+                        <posx>130</posx>
+                        <posy>590</posy>
+                		<include>visiblehidefadeinfo</include>
+                        <width>97</width>
+                        <height>64</height>
+                        <colordiffuse>eewhite</colordiffuse>
+                        <texture>$INFO[ListItem.MPAA,noncolourflags/rating/,.png]</texture>
+                        <visible>!IsEmpty(ListItem.Mpaa) + !Container.Content(movies) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+                    </control>
                 	 <control type="image">
                         <posx>455</posx>
                         <posy>596</posy>
@@ -1420,9 +1462,17 @@
                         <height>49</height>
                         <aspect>keepaspect</aspect>
                         <texture>colourflags/posters/imdb.png</texture>
-                         <visible>!IsEmpty(ListItem.Rating) + !Container.Content(movies)</visible>                  
+                         <visible>!IsEmpty(ListItem.Rating) + !Container.Content(movies) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>                  
                      </control>
-                
+                <control type="image">
+                        <posx>455</posx>
+                        <posy>596</posy>
+                        <width>108</width>
+                        <height>49</height>
+                        <aspect>keepaspect</aspect>
+                        <texture>noncolourflags/posters/imdb.png</texture>
+                         <visible>!IsEmpty(ListItem.Rating) + !Container.Content(movies) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>                  
+                     </control>
                 	<control type="label">
                         <posx>540</posx>
                         <posy>593</posy>

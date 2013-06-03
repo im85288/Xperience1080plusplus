@@ -1856,7 +1856,17 @@
 						<height>40</height>
 						<colordiffuse>eewhite</colordiffuse>
 						<texture>$INFO[ListItem.Property(Album_Label),colourflags/music/recordlabel/,.png]</texture>
-						<visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
+						<visible>!IsEmpty(ListItem.Property(Album_Label)) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>		
+					</control>
+					<control type="image">
+						<posx>520</posx>
+						<posy>785</posy>
+						<include>visiblehidefadeinfo</include>
+						<width>97</width>
+						<height>40</height>
+						<colordiffuse>eewhite</colordiffuse>
+						<texture>$INFO[ListItem.Property(Album_Label),noncolourflags/music/recordlabel/,.png]</texture>
+						<visible>!IsEmpty(ListItem.Property(Album_Label)) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>		
 					</control>
 					<control type="image">
 						<posx>1700</posx>
@@ -1864,7 +1874,15 @@
 						<width>48</width>
 						<height>40</height>
 						<texture>$INFO[ListItem.DiscNumber,colourflags/discnumber/,.png]</texture>
-						<visible>!IsEmpty(ListItem.DiscNumber)</visible>
+						<visible>!IsEmpty(ListItem.DiscNumber) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+					</control>
+					<control type="image">
+						<posx>1700</posx>
+						<posy>785</posy>
+						<width>48</width>
+						<height>40</height>
+						<texture>$INFO[ListItem.DiscNumber,noncolourflags/discnumber/,.png]</texture>
+						<visible>!IsEmpty(ListItem.DiscNumber) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 					</control>
 					<control type="image">
 						<posx>1690</posx>
@@ -1872,7 +1890,15 @@
 						<width>120</width>
 						<height>50</height>
 						<texture>$INFO[ListItem.FileExtension,colourflags/audio/,.png]</texture>
-						<visible>!IsEmpty(ListItem.FileExtension)</visible>
+						<visible>!IsEmpty(ListItem.FileExtension) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+					</control>
+					<control type="image">
+						<posx>1690</posx>
+						<posy>835</posy>
+						<width>120</width>
+						<height>50</height>
+						<texture>$INFO[ListItem.FileExtension,noncolourflags/audio/,.png]</texture>
+						<visible>!IsEmpty(ListItem.FileExtension) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 					</control>
 					<control type="image">
 						<posx>1650</posx>
@@ -1880,7 +1906,15 @@
 						<width>204</width>
 						<height>56</height>
 						<texture fallback="colourflags/music/rating/rating0.png">$INFO[ListItem.StarRating,colourflags/music/rating/,]</texture>
-						<visible>!IsEmpty(ListItem.StarRating) + Container.Content(Songs)</visible>
+						<visible>!IsEmpty(ListItem.StarRating) + Container.Content(Songs) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+					</control>
+					<control type="image">
+						<posx>1650</posx>
+						<posy>885</posy>
+						<width>204</width>
+						<height>56</height>
+						<texture fallback="noncolourflags/music/rating/rating0.png">$INFO[ListItem.StarRating,noncolourflags/music/rating/,]</texture>
+						<visible>!IsEmpty(ListItem.StarRating) + Container.Content(Songs) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 					</control>
 					<control type="textbox"> <!-- album description -->
 						<posx>1040</posx>
@@ -2066,14 +2100,29 @@
 							<height>68</height>
 							<aspect>keepaspect</aspect>
 							<texture>$INFO[ListItem.Property(Album_Label),colourflags/music/recordlabel/,.png]</texture>
-							<visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
+							<visible>!IsEmpty(ListItem.Property(Album_Label)) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 						</control>
 						<control type="image">
 							<width>90</width>
 							<height>68</height>
 							<aspect>keepaspect</aspect>
+							<texture>$INFO[ListItem.Property(Album_Label),noncolourflags/music/recordlabel/,.png]</texture>
+							<visible>!IsEmpty(ListItem.Property(Album_Label)) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+						</control>
+						
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<aspect>keepaspect</aspect>
 							<texture>$INFO[ListItem.DiscNumber,colourflags/discnumber/,.png]</texture>
-							<visible>!IsEmpty(ListItem.DiscNumber)</visible>
+							<visible>!IsEmpty(ListItem.DiscNumber) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+						</control>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<aspect>keepaspect</aspect>
+							<texture>$INFO[ListItem.DiscNumber,noncolourflags/discnumber/,.png]</texture>
+							<visible>!IsEmpty(ListItem.DiscNumber) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 						</control>
 					</control>
 					<control type="grouplist">
@@ -2093,13 +2142,26 @@
 							<height>68</height>
 							<aspect>keepaspect</aspect>
 							<texture>$INFO[ListItem.FileExtension,colourflags/audio/,.png]</texture>
-							<visible>!IsEmpty(ListItem.FileExtension)</visible>
+							<visible>!IsEmpty(ListItem.FileExtension) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+						</control>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<aspect>keepaspect</aspect>
+							<texture>$INFO[ListItem.FileExtension,noncolourflags/audio/,.png]</texture>
+							<visible>!IsEmpty(ListItem.FileExtension) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 						</control>
 						<control type="image">
 							<width>90</width>
 							<height>68</height>
 							<texture fallback="colourflags/music/rating/rating0.png">$INFO[ListItem.StarRating,colourflags/music/rating/,]</texture>
-							<visible>!IsEmpty(ListItem.StarRating) + Container.Content(Songs)</visible>
+							<visible>!IsEmpty(ListItem.StarRating) + Container.Content(Songs) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+						</control>
+						<control type="image">
+							<width>90</width>
+							<height>68</height>
+							<texture fallback="colourflags/music/rating/rating0.png">$INFO[ListItem.StarRating,noncolourflags/music/rating/,]</texture>
+							<visible>!IsEmpty(ListItem.StarRating) + Container.Content(Songs) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 						</control>
 					</control>
 				</control>

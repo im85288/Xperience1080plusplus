@@ -220,6 +220,39 @@
 			</control>
 		</control>
 	</include>
+	<include name="InfoNonColourFlagsAlternateOSD">
+		<control type="image">
+			<include>AlternateAspectDimensionsSmall</include>
+			<texture>$INFO[VideoPlayer.VideoResolution,noncolourflags/resolution/,.png]</texture>
+			<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+			<aspectratio align="left" aligny="top">keep</aspectratio>
+		</control>
+		<control type="image">
+			<include>AlternateAspectDimensionsSmall</include>
+			<texture>$INFO[VideoPlayer.VideoAspect,noncolourflags/aspectratio/,.png]</texture>
+			<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+			<aspectratio align="left" aligny="top">keep</aspectratio>
+		</control>
+		<control type="group">
+			<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
+			<control type="image">
+				<include>AlternateAspectDimensionsSmall</include>
+				<texture>$INFO[VideoPlayer.videocodec,noncolourflags/source/,.png]</texture>
+				<visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) |
+					substring(VideoPlayer.VideoCodec,dx50)]
+				</visible>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+			<control type="image">
+				<include>AlternateAspectDimensionsSmall</include>
+				<texture>noncolourflags/source/divx.png</texture>
+				<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) |
+					substring(VideoPlayer.VideoCodec,dx50)
+				</visible>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+		</control>
+	</include>
 	<include name="InfoFlagsOSD2">
 		<control type="image">
 			<include>AspectDimensionsSmall</include>
@@ -267,6 +300,40 @@
 			<control type="image">
 				<include>AlternateAspectDimensionsSmall</include>
 				<texture>$VAR[MovieMPAAVarOSD,colourflags/mpaa/movie/,.png]</texture>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+		</control>
+		<!-- <control type="group"> <visible>!IsEmpty(VideoPlayer.Studio)</visible> <control type="image"> <include>AlternateAspectDimensionsSmall</include> <texture>$INFO[VideoPlayer.Studio,colourflags/studios/,.png]</texture> 
+			<aspectratio align="left" aligny="top">keep</aspectratio> </control> </control> 
+		<control type="group">
+			<visible>!IsEmpty(MusicPlayer.Property(Album_Label))</visible>
+			<control type="image">
+				<include>AlternateAspectDimensionsSmall</include>
+				<texture>$INFO[MusicPlayer.Property(Album_Label),colourflags/music/recordlabel/,.png]</texture>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+		</control> -->
+	</include>
+	<include name="InfoNonColourFlagsAlternateOSD2">
+		<control type="image">
+			<include>AlternateAspectDimensionsSmall</include>
+			<texture>$INFO[VideoPlayer.AudioCodec,noncolourflags/audio/,.png]</texture>
+			<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
+			<aspectratio align="left" aligny="top">keep</aspectratio>
+		</control>
+		<control type="group">
+			<visible>!VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.MPAA)</visible>
+			<control type="image">
+				<include>AlternateAspectDimensionsSmall</include>
+				<texture>$INFO[VideoPlayer.Mpaa,noncolourflags/rating/,.png]</texture>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+		</control>
+		<control type="group">
+			<visible>VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.MPAA)</visible>
+			<control type="image">
+				<include>AlternateAspectDimensionsSmall</include>
+				<texture>$VAR[MovieMPAAVarOSD,noncolourflags/mpaa/movie/,.png]</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 			</control>
 		</control>

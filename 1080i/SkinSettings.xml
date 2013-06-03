@@ -872,6 +872,13 @@
 						<onclick>Skin.ToggleSetting(ShowSmallerOSDHeader.Enabled)</onclick>
 						<label>Show smaller header osd</label>
 					</control>
+					<control type="radiobutton" id="8012">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(UseNonColourFlags.Enabled)</selected>
+						<onclick>Skin.ToggleSetting(UseNonColourFlags.Enabled)</onclick>
+						<label>Use black and white flags</label>
+					</control>
 				</control>
 				<!-- Background Settings -->
 				<control type="grouplist" id="5">
