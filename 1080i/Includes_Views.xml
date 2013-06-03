@@ -68,7 +68,7 @@
 	<include name="AddonViews">
 		<include>Viewtype-AddonThumbnail</include>
 		<include>Viewtype-AddonList</include>
-		<include>Viewtype-RightList</include>
+		<include condition="Control.IsVisible(10025)">Viewtype-RightList</include>
 	</include>
 	<include name="VideoPlaylistViews">
 		<include>Viewtype-List</include>
