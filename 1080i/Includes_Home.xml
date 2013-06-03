@@ -4032,6 +4032,19 @@
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
 									</control>
+									<control type="label">
+										<posx>307</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label2]</label>
+										<font>Font-Condensed-S31</font>
+										<textcolor>77white</textcolor>
+										<align>right</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>!IsEmpty(ListItem.Label2)</visible>
+									</control>
 								</control>
 							</control>
 						</itemlayout>
@@ -4115,6 +4128,19 @@
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
 										</control>
+										<control type="label">
+											<posx>307</posx>
+											<posy>241</posy>
+											<width>283</width>
+											<height>66</height>
+											<label>$INFO[ListItem.Label2]</label>
+											<font>Font-Condensed-S31</font>
+											<textcolor>77white</textcolor>
+											<align>right</align>
+											<aligny>center</aligny>
+											<textoffsetx>20</textoffsetx>
+											<visible>!IsEmpty(ListItem.Label2)</visible>
+										</control>
 									</control>
 									<control type="image">
 										<posx>3</posx>
@@ -4135,6 +4161,7 @@
 						<content>
 							<item id="1">
 								<label>Music Videos</label>
+								<label2>$INFO[Window.Property(MusicVideos.Count)]</label2>
 								<onclick condition="Library.HasContent(musicvideos)">ActivateWindow(videos,musicvideotitles,return)</onclick>
 								<icon>windows/home/icons/musicvideos.png</icon>
 								<property name="showlabel">$LOCALIZE[20389]</property>
