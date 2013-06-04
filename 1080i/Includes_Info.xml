@@ -470,7 +470,7 @@
 					<visible>!Player.HasVideo + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + Window.IsVisible(10000)</visible>
 				</control>
 				<control type="image">
-					<posx>-172</posx>
+					<posx>-119</posx>
 					<posy>112</posy>
 					<width>280</width>
 					<height>150</height>
@@ -638,7 +638,7 @@
 					<visible>!Player.HasVideo + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + Window.IsVisible(10000)</visible>
 				</control>
 				<control type="image">
-					<posx>-172</posx>
+					<posx>-119</posx>
 					<posy>112</posy>
 					<width>280</width>
 					<height>150</height>

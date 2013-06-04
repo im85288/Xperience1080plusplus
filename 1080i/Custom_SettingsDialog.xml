@@ -68,6 +68,14 @@
                     <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
                     <label>$LOCALIZE[20343]</label>
                 </control>
+                <control type="radiobutton" id="2111">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomePictures)</selected>
+                    <onclick>Skin.ToggleSetting(HomePictures)</onclick>
+                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
+                    <label>$LOCALIZE[1]</label>
+                </control>
                 <control type="radiobutton" id="2104">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
@@ -113,6 +121,14 @@
                     <onclick>Skin.ToggleSetting(HomeLiveTVTiles)</onclick>
                     <label>...$LOCALIZE[41220]</label>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2207)">Conditional</animation>
+                </control>
+                <control type="radiobutton" id="2210">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomePicturesTiles)</selected>
+                    <onclick>Skin.ToggleSetting(HomePicturesTiles)</onclick>
+                    <label>...$LOCALIZE[1]</label>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2210)">Conditional</animation>
                 </control>
                 <control type="radiobutton" id="2208">
                     <width>1210</width>
