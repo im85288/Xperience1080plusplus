@@ -5287,7 +5287,6 @@
 							<aspect>keepaspect</aspect>
 							<texture>$VAR[MovieMPAAVar,colourflags/mpaa/movie/,.png]</texture>
 							<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
-							
 						</control>
 						<control type="image">
 							<posx>165</posx>
@@ -5297,7 +5296,6 @@
 							<aspect>keepaspect</aspect>
 							<texture>$VAR[MovieMPAAVar,noncolourflags/mpaa/movie/,.png]</texture>
 							<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
-							
 						</control>
 						<control type="image">
 							<posx>255</posx>
@@ -6134,7 +6132,7 @@
 						<width>97</width>
 						<height>62</height>
 						<colordiffuse>eewhite</colordiffuse>
-						<texture>$INFO[ListItem.Studio,colourflags/studios/,.png]</texture> 
+						<texture>$INFO[ListItem.Studio,colourflags/studios/,.png]</texture>
 						<visible>!IsEmpty(ListItem.Studio) + !substring(ListItem.Path,videodb://1/7,left) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 					</control>
 					<control type="image">
@@ -6144,7 +6142,7 @@
 						<width>97</width>
 						<height>62</height>
 						<colordiffuse>eewhite</colordiffuse>
-						<texture>$INFO[ListItem.Studio,noncolourflags/studios/,.png]</texture> 
+						<texture>$INFO[ListItem.Studio,noncolourflags/studios/,.png]</texture>
 						<visible>!IsEmpty(ListItem.Studio) + !substring(ListItem.Path,videodb://1/7,left) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 					</control>
 					<control type="image">
@@ -6630,7 +6628,7 @@
 						<posx>800</posx>
 						<posy>190</posy>
 						<width>1080</width>
-						<height>560</height>
+						<height>555</height>
 						<pagecontrol>80</pagecontrol>
 						<onright>80</onright>
 						<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
@@ -6646,14 +6644,14 @@
 								<posx>350</posx>
 								<posy>0</posy>
 								<width>800</width>
-								<height>40</height>
+								<height>41</height>
 								<texture>views/list/other/separator.png</texture>
 							</control>
 							<control type="label">
 								<posx>1045</posx>
 								<posy>1</posy>
 								<width>690</width>
-								<height>40</height>
+								<height>36</height>
 								<font>Font-Condensed-S36</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -6661,10 +6659,19 @@
 								<scroll>true</scroll>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
+							<control type="image">
+								<posx>299</posx>
+								<posy>-2</posy>
+								<width>40</width>
+								<height>40</height>
+								<aspect>keepaspect</aspect>
+								<texture>$VAR[RightListBannerOverlayNF]</texture>
+								<visible>Container.Content(Movies)</visible>
+							</control>
 						</itemlayout>
 						<focusedlayout condition="!Skin.HasSetting(ShowRightListBanner)" height="110">
 							<control type="image">
-								<posx>300</posx>
+								<posx>302</posx>
 								<posy>0</posy>
 								<width>764</width>
 								<height>100</height>
@@ -6677,7 +6684,7 @@
 								<visible>!Container.Content(Movies)</visible>
 							</control>
 							<control type="image">
-								<posx>298</posx>
+								<posx>302</posx>
 								<posy>0</posy>
 								<width>764</width>
 								<height>100</height>
@@ -6692,7 +6699,7 @@
 							<control type="label">
 								<posx>1045</posx>
 								<posy>10</posy>
-								<width>940</width>
+								<width>690</width>
 								<height>40</height>
 								<font>Font-Condensed-S38-B</font>
 								<align>right</align>
@@ -6705,7 +6712,7 @@
 								<posy>50</posy>
 								<width>540</width>
 								<height>40</height>
-								<font>Font-Condensed-S32</font>
+								<font>Font-Condensed-S32-B</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>black</textcolor>
@@ -6716,7 +6723,7 @@
 								<posy>50</posy>
 								<width>540</width>
 								<height>40</height>
-								<font>Font-Condensed-S32</font>
+								<font>Font-Condensed-S32-B</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>black</textcolor>
@@ -6728,7 +6735,7 @@
 								<posy>50</posy>
 								<width>540</width>
 								<height>40</height>
-								<font>Font-Condensed-S32</font>
+								<font>Font-Condensed-S32-B</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>black</textcolor>
@@ -6740,7 +6747,7 @@
 								<posy>50</posy>
 								<width>540</width>
 								<height>40</height>
-								<font>Font-Condensed-S32</font>
+								<font>Font-Condensed-S32-B</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>black</textcolor>
@@ -6752,24 +6759,20 @@
 								<posy>50</posy>
 								<width>540</width>
 								<height>40</height>
-								<font>Font-Condensed-S32</font>
+								<font>Font-Condensed-S32-B</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>black</textcolor>
 								<label>$INFO[ListItem.Duration,$LOCALIZE[180]: , $LOCALIZE[12391]]</label>
-								<visible>Container.Content(Episodes)</visible>
+								<visible>Container.Content(Episodes) | [Container.Content(Movies) + !substring(ListItem.Path,videodb://1/7,left)]</visible>
 							</control>
-							<control type="label">
-								<posx>1040</posx>
-								<posy>50</posy>
-								<width>940</width>
-								<height>40</height>
-								<font>Font-Condensed-S32</font>
-								<align>right</align>
-								<aligny>center</aligny>
-								<textcolor>black</textcolor>
-								<label>$VAR[DurationAndDirectorVar]</label>
-								<visible>Container.Content(Movies) + !substring(ListItem.Path,videodb://1/7,left)</visible>
+							<control type="image">
+								<posx>302</posx>
+								<posy>0</posy>
+								<width>88</width>
+								<height>88</height>
+								<texture>$VAR[RightListBannerOverlayFo]</texture>
+								<visible>Container.Content(Movies)</visible>
 							</control>
 						</focusedlayout>
 						<focusedlayout condition="Skin.HasSetting(ShowRightListBanner) + Container.Content(TvShows)" height="110">
@@ -6917,12 +6920,12 @@
 					<visible>![!Skin.HasSetting(novideomediacase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]
 					</visible>
 					<control type="image"><!-- Filmes/Fotos/Arquivos reflexo -->
-						<posx>-15</posx>
-						<posy>180</posy>
+						<posx>-8</posx>
+						<posy>129</posy>
 						<width>400</width>
 						<height>650</height>
 						<fadetime>200</fadetime>
-						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<aspectratio align="center" aligny="top">stretch</aspectratio>
 						<texture background="true">$VAR[PosterViewPoster]</texture>
 						<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
 						<bordersize>5</bordersize>
@@ -6930,7 +6933,7 @@
 				</control>
 				<control type="group"><!-- FILMES ESTOJO -->
 					<!-- <include>Animation_Fade</include> -->
-					<visible>!Skin.HasSetting(novideomediacase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					<control type="image"><!-- Poster for movies -->
 						<posx>20</posx>
 						<posy>180</posy>

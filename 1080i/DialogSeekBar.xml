@@ -353,8 +353,9 @@
 								<posx>340</posx>
 								<posy>-1035</posy>
 								<width>420</width>
-								<height>42</height>
+								<height>38</height>
 								<align>center</align>
+								<aligny>top</aligny>
 								<label>$LOCALIZE[112]</label>
 								<font>Font-Condensed-S38</font>
 								<shadowcolor>88e5e5e5</shadowcolor>

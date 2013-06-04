@@ -342,6 +342,14 @@
 		<value condition="Container.ListItem.IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/banner-p-nf.png]</value>
 		<value condition="Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/banner-w-nf.png]</value>
 	</variable>
+	<variable name="RightListBannerOverlayFo">
+		<value condition="Container.ListItem.IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/rightlistbanner-p-fo.png]</value>
+		<value condition="Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/rightlistbanner-w-fo.png]</value>
+	</variable>
+	<variable name="RightListBannerOverlayNF">
+		<value condition="Container.ListItem.IsResumable + Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/banner-p-nf.png]</value>
+		<value condition="Skin.HasSetting(BWatched)">$INFO[ListItem.Overlay,overlays/blacks/,/banner-w-nf.png]</value>
+	</variable>
 	<variable name="AddonOverlay">
 		<value condition="stringcompare(ListItem.Label2,$LOCALIZE[24098])">overlays/addons/broken.png</value>
 		<value condition="stringcompare(ListItem.Label2,$LOCALIZE[305])">overlays/addons/enabled.png</value>
