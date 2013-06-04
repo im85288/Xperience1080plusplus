@@ -578,7 +578,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>VideoPlayer.Content(movies) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]</visible>
+				<visible>[[VideoPlayer.Content(movies) + IsEmpty(Player.Art(clearart)) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]]</visible>
 			</control>
 			<control type="image">
 				<posx>1360</posx>
@@ -589,7 +589,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>VideoPlayer.Content(movies) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
+				<visible>[[VideoPlayer.Content(movies) + IsEmpty(Player.Art(clearart)) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)] + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek]] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
 			</control>
 			<control type="image">
 				<posx>1500</posx>
