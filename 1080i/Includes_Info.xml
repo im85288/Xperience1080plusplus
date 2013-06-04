@@ -1,9 +1,7 @@
 <includes>
 	<include name="Common-Clock">
 		<control type="group">
-			<animation type="WindowOpen"
-				condition="Window.IsActive(loginscreen) | [Window.IsActive(startup) + !Window.Previous(loginscreen)] | Window.Previous(fullscreenvideo) | Window.Previous(visualisation) | Window.Previous(slideshow)"
-				reversible="false">
+			<animation type="WindowOpen" condition="Window.IsActive(loginscreen) | [Window.IsActive(startup) + !Window.Previous(loginscreen)] | Window.Previous(fullscreenvideo) | Window.Previous(visualisation) | Window.Previous(slideshow)" reversible="false">
 				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
 			</animation>
 			<animation type="WindowClose" condition="Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow)" reversible="false">
@@ -78,12 +76,9 @@
 			</control>
 		</control>
 	</include>
-	
 	<include name="Common-FanartAwareClock">
 		<control type="group">
-			<animation type="WindowOpen"
-				condition="Window.IsActive(loginscreen) | [Window.IsActive(startup) + !Window.Previous(loginscreen)] | Window.Previous(fullscreenvideo) | Window.Previous(visualisation) | Window.Previous(slideshow)"
-				reversible="false">
+			<animation type="WindowOpen" condition="Window.IsActive(loginscreen) | [Window.IsActive(startup) + !Window.Previous(loginscreen)] | Window.Previous(fullscreenvideo) | Window.Previous(visualisation) | Window.Previous(slideshow)" reversible="false">
 				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
 			</animation>
 			<animation type="WindowClose" condition="Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow)" reversible="false">
@@ -195,10 +190,8 @@
 			</control>
 		</control>
 	</include>
-	
 	<variable name="OptionsButtonTexture">
-		<value
-			condition="Window.IsActive(programs) + [Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(60) | Control.IsVisible(61) | [Control.IsVisible(50) + substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)]]">buttons/options-right.png</value>
+		<value condition="Window.IsActive(programs) + [Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(60) | Control.IsVisible(61) | [Control.IsVisible(50) + substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)]]">buttons/options-right.png</value>
 		<value condition="Window.IsActive(programs) + [Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58)]">buttons/options-down.png</value>
 		<value condition="Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(60) | Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(502)">buttons/options-leftright.png</value>
 		<value condition="Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(55) | Window.IsActive(weather)">buttons/options-updown.png</value>
@@ -232,13 +225,10 @@
 				<height>100</height>
 				<texture>$VAR[OptionsButtonTexture]</texture>
 				<include>homebuttonsanim3</include>
-				<visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) +
-					!Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) +
-					!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) +
-					!Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) +
-					!Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) +
-					!Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) +
-					!Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo)</visible>
+				<visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) +
+					!Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) +
+					!Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo)
+				</visible>
 			</control>
 			<control type="label">
 				<description>Options Label</description>
@@ -250,13 +240,10 @@
 				<font>Font-Condensed-S34</font>
 				<textcolor>eewhite2</textcolor>
 				<include>homebuttonsanim4</include>
-				<visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) +
-					!Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) +
-					!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) +
-					!Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) +
-					!Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) +
-					!Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) +
-					!Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo)</visible>
+				<visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) +
+					!Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) +
+					!Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo)
+				</visible>
 			</control>
 		</control>
 	</include>
@@ -287,13 +274,10 @@
 				<texture>$VAR[OptionsButtonTexture]</texture>
 				<include>homebuttonsanim3</include>
 				<colordiffuse>eewhite</colordiffuse>
-				<visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) +
-					!Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) +
-					!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) +
-					!Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) +
-					!Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) +
-					!Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) +
-					!Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo) + Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) +
+					!Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) +
+					!Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo) + Skin.HasSetting(MoreBackgroundOpacity)
+				</visible>
 			</control>
 			<control type="image">
 				<description>Options Button texture</description>
@@ -301,13 +285,10 @@
 				<height>100</height>
 				<texture>$VAR[OptionsButtonTexture]</texture>
 				<include>homebuttonsanim3</include>
-				<visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) +
-					!Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) +
-					!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) +
-					!Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) +
-					!Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) +
-					!Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) +
-					!Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo) + !Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) +
+					!Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) +
+					!Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo) + !Skin.HasSetting(MoreBackgroundOpacity)
+				</visible>
 			</control>
 			<control type="label">
 				<description>Options Label</description>
@@ -319,13 +300,10 @@
 				<font>Font-Condensed-S34</font>
 				<textcolor>eewhite</textcolor>
 				<include>homebuttonsanim4</include>
-				<visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) +
-					!Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) +
-					!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) +
-					!Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) +
-					!Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) +
-					!Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) +
-					!Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo) + Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) +
+					!Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) +
+					!Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo) + Skin.HasSetting(MoreBackgroundOpacity)
+				</visible>
 			</control>
 			<control type="label">
 				<description>Options Label</description>
@@ -337,13 +315,10 @@
 				<font>Font-Condensed-S34</font>
 				<textcolor>eewhite2</textcolor>
 				<include>homebuttonsanim4</include>
-				<visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) +
-					!Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) +
-					!Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) + !Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) +
-					!Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) +
-					!Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) +
-					!Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) + !Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) +
-					!Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo) + !Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(HideOptionsButton) + !Window.IsVisible(movieinformation) + !Window.IsVisible(script-Actors-DialogInfo.xml) + !Window.IsVisible(script-Actors-DialogVideoInfo.xml) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(playercontrols) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(filebrowser) +
+					!Window.IsVisible(networksetup) + !Window.IsVisible(mediasource) + !Window.IsVisible(ProfileSettings) + !Window.IsVisible(LockSettings) + !Window.IsVisible(contentsettings) + !Window.IsVisible(songinformation) + !Window.IsVisible(addonsettings) + !Window.IsVisible(textviewer) + !Window.IsVisible(selectdialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(filestackingdialog) + !Window.IsVisible(1122) + !Window.IsVisible(smartplaylisteditor) + !Window.IsVisible(pvrgroupmanager) +
+					!Window.IsVisible(pvrtimersetting) + !Window.IsVisible(pvrguidesearch) + !Window.IsVisible(pvrchannelmanager) + !Window.IsVisible(pvrguideinfo) + !Window.IsVisible(pvrrecordinginfo) + !Skin.HasSetting(MoreBackgroundOpacity)
+				</visible>
 			</control>
 		</control>
 	</include>
@@ -431,6 +406,11 @@
 		<value condition="Player.HasAudio + !Pvr.IsPlayingRadio">$INFO[MusicPlayer.Artist]</value>
 		<value condition="Player.HasAudio + Pvr.IsPlayingRadio">$INFO[MusicPlayer.ChannelName]</value>
 	</variable>
+	
+	<variable name="NowPlayingThumb">
+		<value condition="Player.HasVideo + VideoPlayer.Content(episodes)">$INFO[Player.Art(fanart)]</value>
+		<value condition="Player.HasVideo">$INFO[Player.Art(thumb)]</value>
+	</variable>
 	<include name="Common-NowPlaying">
 		<control type="group">
 			<posx>1741</posx>
@@ -467,6 +447,38 @@
 					<textcolor>smallinfohome</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
+				</control>
+				<control type="image">
+					<posx>-130</posx>
+					<posy>110</posy>
+					<width>190</width>
+					<height>190</height>
+					<texture background="true" fallback="cdart/vinyl.png">$INFO[Player.FolderPath,,cdart.png]</texture>
+					<animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
+					<visible>[Player.HasAudio + Skin.HasSetting(CDArt.Enabled) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)] + Window.IsVisible(10000)</visible>
+				</control>
+				<control type="image">
+					<posx>-130</posx>
+					<posy>160</posy>
+					<width>200</width>
+					<height>150</height>
+					<texture background="true" fallback="views/fallbacks/DefaultAudio.png/square-small.png">$INFO[Player.Art(thumb)]</texture>
+					<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio>scale</aspectratio>
+					<animation effect="fade" time="400">VisibleChange</animation>
+					<visible>!Player.HasVideo + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + Window.IsVisible(10000)</visible>
+				</control>
+				<control type="image">
+					<posx>-172</posx>
+					<posy>112</posy>
+					<width>280</width>
+					<height>150</height>
+					<texture background="true" fallback="views/fallbacks/DefaultAudio.png/square-small.png">$VAR[NowPlayingThumb]</texture>
+					<aspectratio>stretch</aspectratio>
+					<align>right</align>
+					<aligny>top</aligny>
+					<visible>Player.HasVideo + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + Window.IsVisible(10000)</visible>
 				</control>
 				<control type="image">
 					<description>Now Playing - Paused</description>
@@ -538,7 +550,6 @@
 			</control>
 		</control>
 	</include>
-	
 	<include name="Common-FanartAwareNowPlaying">
 		<control type="group">
 			<posx>1741</posx>
@@ -551,7 +562,7 @@
 				<effect type="zoom" start="100" end="50" center="1745,100" tween="sine" easing="inout" time="300" />
 			</animation>
 			<control type="group">
-			<control type="label">
+				<control type="label">
 					<description>Title label</description>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -604,6 +615,38 @@
 					<scroll>false</scroll>
 					<align>right</align>
 					<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				</control>
+				<control type="image">
+					<posx>-130</posx>
+					<posy>105</posy>
+					<width>195</width>
+					<height>195</height>
+					<texture background="true" fallback="cdart/bd.png">$INFO[Player.FolderPath,,cdart.png]</texture>
+					<animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
+					<visible>Player.HasAudio + Skin.HasSetting(CDArt.Enabled) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + Window.IsVisible(10000)</visible>
+				</control>
+				<control type="image">
+					<posx>-130</posx>
+					<posy>160</posy>
+					<width>200</width>
+					<height>150</height>
+					<texture background="true" fallback="views/fallbacks/DefaultAudio.png/square-small.png">$INFO[Player.Art(thumb)]</texture>
+					<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio>scale</aspectratio>
+					<animation effect="fade" time="1000">VisibleChange</animation>
+					<visible>!Player.HasVideo + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + Window.IsVisible(10000)</visible>
+				</control>
+				<control type="image">
+					<posx>-172</posx>
+					<posy>112</posy>
+					<width>280</width>
+					<height>150</height>
+					<texture background="true" fallback="views/fallbacks/DefaultAudio.png/square-small.png">$VAR[NowPlayingThumb]</texture>
+					<aspectratio>stretch</aspectratio>
+					<align>right</align>
+					<aligny>top</aligny>
+					<visible>Player.HasVideo + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + Window.IsVisible(10000)</visible>
 				</control>
 				<control type="image">
 					<description>Now Playing - Paused</description>
@@ -741,7 +784,6 @@
 			</control>
 		</control>
 	</include>
-	
 	<include name="Common-Home-Info">
 		<include>Common-Clock</include>
 		<include>Common-NowPlaying</include>
