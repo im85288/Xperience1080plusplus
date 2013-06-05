@@ -473,17 +473,9 @@
 								</control>
 							</control>
 							<control type="image">
-								<posx>10</posx>
-								<posy>39</posy>
-								<width>276</width>
-								<height>394</height>
-								<texture border="30">osd/fullscreen/cover-shadow.png</texture>
-								<aspectratio>stretch</aspectratio>
-							</control>
-							<control type="image">
-								<posx>17</posx>
-								<posy>-99</posy>
-								<width>300</width>
+								<posx>0</posx>
+								<posy>-97</posy>
+								<width>320</width>
 								<height>500</height>
 								<texture background="true" fallback="views/fallbacks/DefaultAudio.png/medium.png">$INFO[Player.Art(thumb)]</texture>
 								<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
@@ -640,7 +632,6 @@
 									<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
 									<include condition="!Skin.HasSetting(UseNonColourFlags.Enabled)">InfoFlagsAlternateOSD</include>
 									<include condition="Skin.HasSetting(UseNonColourFlags.Enabled)">InfoNonColourFlagsAlternateOSD</include>
-								
 								</control>
 								<control type="grouplist">
 									<posx>110</posx>
@@ -652,9 +643,8 @@
 									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
 									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
 									<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
-										<include condition="!Skin.HasSetting(UseNonColourFlags.Enabled)">InfoFlagsAlternateOSD2</include>
+									<include condition="!Skin.HasSetting(UseNonColourFlags.Enabled)">InfoFlagsAlternateOSD2</include>
 									<include condition="Skin.HasSetting(UseNonColourFlags.Enabled)">InfoNonColourFlagsAlternateOSD2</include>
-								
 								</control>
 							</control>
 							<control type="group">
@@ -690,17 +680,9 @@
 							</control>
 							<control type="group">
 								<control type="image">
-									<posx>10</posx>
-									<posy>39</posy>
-									<width>276</width>
-									<height>394</height>
-									<texture border="30">osd/fullscreen/cover-shadow.png</texture>
-									<aspectratio>stretch</aspectratio>
-								</control>
-								<control type="image">
-									<posx>17</posx>
-									<posy>-99</posy>
-									<width>300</width>
+									<posx>0</posx>
+									<posy>-94</posy>
+									<width>320</width>
 									<height>500</height>
 									<texture background="true" fallback="views/fallbacks/DefaultAudio.png/medium.png">$INFO[Player.Art(tvshow.poster)]</texture>
 									<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
@@ -1157,9 +1139,8 @@
 									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
 									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
 									<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
-										<include condition="!Skin.HasSetting(UseNonColourFlags.Enabled)">InfoFlagsAlternateOSD</include>
+									<include condition="!Skin.HasSetting(UseNonColourFlags.Enabled)">InfoFlagsAlternateOSD</include>
 									<include condition="Skin.HasSetting(UseNonColourFlags.Enabled)">InfoNonColourFlagsAlternateOSD</include>
-								
 								</control>
 								<control type="grouplist">
 									<posx>110</posx>
@@ -1171,9 +1152,8 @@
 									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
 									<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
 									<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
-										<include condition="!Skin.HasSetting(UseNonColourFlags.Enabled)">InfoFlagsAlternateOSD2</include>
+									<include condition="!Skin.HasSetting(UseNonColourFlags.Enabled)">InfoFlagsAlternateOSD2</include>
 									<include condition="Skin.HasSetting(UseNonColourFlags.Enabled)">InfoNonColourFlagsAlternateOSD2</include>
-								
 								</control>
 							</control>
 						</control>

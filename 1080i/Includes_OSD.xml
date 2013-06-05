@@ -131,18 +131,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>Skin.HasSetting(ShowClearArt) + !IsEmpty(Player.Art(tvshow.clearart) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]</visible>
-			</control>
-			<control type="image">
-				<posx>1420</posx>
-				<posy>470</posy>
-				<width>450</width>
-				<height>270</height>
-				<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]$INFO[Player.Art(clearlogo)]</texture>
-				<aspectratio>stretch</aspectratio>
-				<align>right</align>
-				<aligny>top</aligny>
-				<visible>Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]</visible>
+				<visible>!IsEmpty(Player.Art(tvshow.clearart)) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]</visible>
 			</control>
 			<control type="image">
 				<posx>1420</posx>
@@ -153,7 +142,18 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>Skin.HasSetting(ShowClearArt) + !IsEmpty(Player.Art(tvshow.clearart) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
+				<visible>!IsEmpty(Player.Art(tvshow.clearart)) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
+			</control>
+			<control type="image">
+				<posx>1420</posx>
+				<posy>470</posy>
+				<width>450</width>
+				<height>270</height>
+				<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]$INFO[Player.Art(clearlogo)]</texture>
+				<aspectratio>stretch</aspectratio>
+				<align>right</align>
+				<aligny>top</aligny>
+				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]]</visible>
 			</control>
 			<control type="image">
 				<posx>1360</posx>
@@ -164,9 +164,8 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>Skin.HasSetting(ShowClearArt) + !IsEmpty(Player.Art(tvshow.clearlogo) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
+				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)] + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek]] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
 			</control>
-		
 			<control type="group">
 				<visible>stringcompare(Skin.String(OSDTVShowsImage),poster) | [stringcompare(Skin.String(OSDTVShowsImage),clearart) + IsEmpty(Player.Art(tvshow.clearart))] | [stringcompare(Skin.String(OSDTVShowsImage),clearlogo) + IsEmpty(Player.Art(tvshow.clearlogo))]
 				</visible>
@@ -546,7 +545,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>!VideoPlayer.Content(movies) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]</visible>
+				<visible>!IsEmpty(Player.Art(tvshow.clearart)) + [Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]</visible>
 			</control>
 			<control type="image">
 				<posx>1420</posx>
@@ -557,7 +556,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>!VideoPlayer.Content(movies) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled) + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
+				<visible>!IsEmpty(Player.Art(tvshow.clearart)) + [Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)] + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
 			</control>
 			<control type="image">
 				<posx>1420</posx>
@@ -568,7 +567,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>[[VideoPlayer.Content(movies) + IsEmpty(Player.Art(clearart)) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]]</visible>
+				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]]</visible>
 			</control>
 			<control type="image">
 				<posx>1360</posx>
@@ -579,7 +578,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>[[VideoPlayer.Content(movies) + IsEmpty(Player.Art(clearart)) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)] + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek]] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
+				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + Skin.HasSetting(ShowClearArt) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)] + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek]] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
 			</control>
 			<control type="image">
 				<posx>1405</posx>
