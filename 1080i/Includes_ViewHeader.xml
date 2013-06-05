@@ -259,9 +259,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-				IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(1122) + !Window.IsActive(addoninformation)
-			</visible>
+			<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(1122) + !Window.IsActive(addoninformation)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -469,9 +467,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>!Window.IsActive(addoninformation) + !Window.IsActive(1122) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +
-				IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))
-			</visible>
+			<visible>!Window.IsActive(addoninformation) + !Window.IsActive(1122) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">

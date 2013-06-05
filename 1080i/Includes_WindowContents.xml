@@ -401,7 +401,7 @@
 			<include>FullscreenDimensions</include>
 			<texture>windows/common/black_content.png</texture>
 			<animation effect="fade" time="300" start="0" end="95" tween="sine" easing="out"
-				condition="!Window.IsActive(mediafilter) + !Window.IsVisible(contextmenu) + !Window.IsActive(script-Actors-DialogVideoInfo.xml">Visible</animation>
+				condition="!Window.IsActive(mediafilter) + !Window.IsVisible(contextmenu) + !Window.IsActive(script-Actors-DialogVideoInfo.xml)">Visible</animation>
 			<animation effect="fade" time="300" start="95" end="0" tween="sine" easing="in">Hidden</animation>
 			<visible>[[Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] |
 				Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) |
