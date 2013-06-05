@@ -529,6 +529,15 @@
 						<onclick>Skin.ToggleSetting(BlacksPrograms)</onclick>
 						<label>$LOCALIZE[41129]</label>
 					</control>
+					<control type="button" id="2015">
+						<description>Set pictures path</description>
+						<label>Set Path to Pictures Slideshow</label>
+						<onclick>Skin.SetPath(PicturesDir)</onclick>
+						<width>1210</width>
+						<texturefocus border="150,3,150,3">windows/settings/images/right-focus-arrow-fo.png</texturefocus>
+						<texturenofocus border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
+						<include>SettingsCategoryDefaultButtonVars</include>
+					</control>
 					<control type="radiobutton" id="2006">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>

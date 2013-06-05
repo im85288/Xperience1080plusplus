@@ -3563,8 +3563,22 @@
 						<height>150</height>
 						<texture>windows/home/item-shadow.png</texture>
 					</control>
+					<control type="multiimage">
+						<posx>387</posx>
+						<posy>-5</posy>
+						<width>772</width>
+						<height>580</height>
+						<timeperimage>10000</timeperimage>
+						<randomize>true</randomize>
+						<fadetime>600</fadetime>
+						<loop>yes</loop>
+						<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+						<animation effect="fade" start="100" delay="500" end="0" time="10">Hidden</animation>
+						<aspectratio>scale</aspectratio>
+						<imagepath background="true">$INFO[Skin.String(PicturesDir)]</imagepath>
+					</control>		Ï
 					<control type="panel" id="1001">
-						<posx>470</posx>
+						<posx>70</posx>
 						<posy>-24</posy>
 						<width>313</width>
 						<height>620</height>
