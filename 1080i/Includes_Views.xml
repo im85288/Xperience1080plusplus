@@ -368,24 +368,20 @@
 	
 	</variable>
 	<variable name="RightListBannerOverlayFo">
-		<value condition="Container.Content(movies)">$INFO[ListItem.Overlay,overlays/blacks/,/rightlistbanner-w-fo.png]</value>
-		<value condition="!Container.Content(movies)">$INFO[ListItem.Overlay,overlays/blackstv/,/rightlistbanner-w-fo.png]</value>
+		<value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/rightlistbanner-w-fo.png]</value>
+		<value condition="Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/blacks/,/rightlistbanner-w-fo.png]</value>	
+		<value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/,/rightlistbanner-w-fo.png]</value>
+		<value condition="Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/blackstv/,/rightlistbanner-w-fo.png]</value>
 	</variable>
-	<variable name="RightListBannerOverlayNF">
-		<value condition="Container.Content(movies)"> $INFO[ListItem.Overlay,overlays/blacks/,/rightlistbanner-w-fo.png]</value>
-			<value condition="!Container.Content(movies)"> $INFO[ListItem.Overlay,overlays/blackstv/,/rightlistbanner-w-fo.png]</value>
 	
-	</variable>
 	<variable name="Top250RightListBannerOverlayFo">
-		<value condition="Container.Content(movies)">$INFO[ListItem.Overlay,overlays/blacks/,/rightlistbanner-w-fo.png]</value>
-		<value condition="Container.Content(movies)">$INFO[ListItem.Overlay,overlays/blackstv/,/rightlistbanner-w-fo.png]</value>
-		
-	</variable>
-	<variable name="Top250RightListBannerOverlayNF">
-		<value condition="Container.Content(movies)">$INFO[ListItem.Overlay,overlays/blacks/,/banner-w-nf.png]</value>
-			<value condition="Container.Content(movies)">$INFO[ListItem.Overlay,overlays/blackstv/,/banner-w-nf.png]</value>
+			<value condition="!Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/movies/,/rightlistbanner-w-fo.png]</value>
+		<value condition="Skin.HasSetting(BWatched) + Container.Content(movies)">$INFO[ListItem.Overlay,overlays/blacks/,/rightlistbanner-w-fo.png]</value>	
+		<value condition="!Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/,/rightlistbanner-w-fo.png]</value>
+		<value condition="Skin.HasSetting(BWatched) + !Container.Content(movies)">$INFO[ListItem.Overlay,overlays/blackstv/,/rightlistbanner-w-fo.png]</value>
 	
 	</variable>
+
 	<variable name="AddonOverlay">
 		<value condition="stringcompare(ListItem.Label2,$LOCALIZE[24098])">overlays/addons/broken.png</value>
 		<value condition="stringcompare(ListItem.Label2,$LOCALIZE[305])">overlays/addons/enabled.png</value>
