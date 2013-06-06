@@ -728,7 +728,7 @@
 						<include>SettingsCategoryRadioButtonVars</include>
 						<selected>Skin.HasSetting(BWatched)</selected>
 						<onclick>Skin.ToggleSetting(BWatched)</onclick>
-						<label>Use Blacks Watched Indicators</label>
+						<label>Show only watched Indicators</label>
 					</control>
 					<control type="radiobutton" id="3009">
 						<width>1210</width>

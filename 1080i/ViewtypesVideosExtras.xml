@@ -6018,17 +6018,17 @@
 				</control>
 				<control type="image">
 					<align>left</align>
-					<posy>773</posy>
+					<posy>776</posy>
 					<posx>1700</posx>
 					<width>220</width>
-					<height>202</height>
-					<texture border="4">views/list/panel/blackpanel.png</texture>
+					<height>199</height>
+					<texture>views/list/panel/blackpanel.png</texture>
 					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="image">
 					<posy>830</posy>
-					<posx>400</posx>
-					<width>1300</width>
+					<posx>419</posx>
+					<width>1280</width>
 					<height>85</height>
 					<texture border="4">views/list/panel/blackpanel.png</texture>
 					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
@@ -6325,7 +6325,7 @@
 						<width>1250</width>
 						<height>50</height>
 						<label>$INFO[Container(888).ListItem.PlotOutline,[COLOR=midgrey]$LOCALIZE[207] [/COLOR], ]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>eewhite</textcolor>
 						<font>Font-Condensed-S38-B</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -6342,7 +6342,7 @@
 						<width>1250</width>
 						<height>50</height>
 						<label>$INFO[Container(888).ListItem.Plot,[COLOR=midgrey]$LOCALIZE[207] [/COLOR], ]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>eewhite</textcolor>
 						<font>Font-Condensed-S38-B</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -6359,7 +6359,7 @@
 						<width>1250</width>
 						<height>50</height>
 						<label>$INFO[Container(888).ListItem.Plot,[COLOR=midgrey]$LOCALIZE[207] [/COLOR], ]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>eewhite</textcolor>
 						<font>Font-Condensed-S38-B</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -6621,6 +6621,16 @@
 					<width>820</width>
 					<height>626</height>
 					<texture border="4">views/list/panel/panel2.png</texture>
+					<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+				</control>
+				<control type="image">
+					<align>left</align>
+					<posy>150</posy>
+					<posx>1100</posx>
+					<width>820</width>
+					<height>626</height>
+					<texture>dialogs/dialogWindow.png</texture>
+					<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 				</control>
 				<control type="group">
 					<control type="fixedlist" id="888">
@@ -6628,7 +6638,7 @@
 						<posx>800</posx>
 						<posy>190</posy>
 						<width>1080</width>
-						<height>555</height>
+						<height>550</height>
 						<pagecontrol>80</pagecontrol>
 						<onright>80</onright>
 						<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
@@ -6646,6 +6656,29 @@
 								<width>800</width>
 								<height>41</height>
 								<texture>views/list/other/separator.png</texture>
+								<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="image">
+								<posx>320</posx>
+								<posy>0</posy>
+								<width>800</width>
+								<height>41</height>
+								<texture>views/list/other/separator.png</texture>
+								<colordiffuse>black</colordiffuse>
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="label">
+								<posx>1045</posx>
+								<posy>1</posy>
+								<width>690</width>
+								<height>36</height>
+								<font>Font-Condensed-S36</font>
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>black</textcolor>
+								<scroll>true</scroll>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
 							<control type="label">
 								<posx>1045</posx>
@@ -6658,6 +6691,7 @@
 								<textcolor>eewhite</textcolor>
 								<scroll>true</scroll>
 								<label>$INFO[ListItem.Label]</label>
+								<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
 							<control type="image">
 								<posx>299</posx>
@@ -6666,7 +6700,16 @@
 								<height>40</height>
 								<aspect>keepaspect</aspect>
 								<texture>$VAR[RightListBannerOverlayNF]</texture>
-								<visible>Container.Content(Movies)</visible>
+								<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="image">
+								<posx>329</posx>
+								<posy>1</posy>
+								<width>80</width>
+								<height>80</height>
+								<aspect>keepaspect</aspect>
+								<texture>$VAR[RightListBannerOverlayFo]</texture>
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
 						</itemlayout>
 						<focusedlayout condition="!Skin.HasSetting(ShowRightListBanner)" height="110">
@@ -6681,7 +6724,20 @@
 									<effect type="zoom" start="0" right="100" center="300,50" time="200" reversible="false" />
 									<effect type="fade" start="0" end="100" time="100" reversible="false" />
 								</animation>
-								<visible>!Container.Content(Movies)</visible>
+								<visible>!Container.Content(Movies) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="image">
+								<posx>329</posx>
+								<posy>0</posy>
+								<width>750</width>
+								<height>100</height>
+								<aspectratio>stretch</aspectratio>
+								<texture>windows/common/magenta_content.png</texture>
+								<animation type="focus">
+									<effect type="zoom" start="100" right="200" center="300,50" time="200" reversible="false" />
+									<effect type="fade" start="100" end="200" time="100" reversible="false" />
+								</animation>
+								<visible>!Container.Content(Movies) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
 							<control type="image">
 								<posx>302</posx>
@@ -6694,7 +6750,20 @@
 									<effect type="zoom" start="0" right="100" center="300,50" time="200" reversible="false" />
 									<effect type="fade" start="0" end="100" time="100" reversible="false" />
 								</animation>
-								<visible>Container.Content(Movies)</visible>
+								<visible>Container.Content(Movies) + !Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="image">
+								<posx>329</posx>
+								<posy>0</posy>
+								<width>750</width>
+								<height>100</height>
+								<aspectratio>stretch</aspectratio>
+								<texture>windows/common/cyan_content.png</texture>
+								<animation type="focus">
+									<effect type="zoom" start="100" right="200" center="300,50" time="200" reversible="false" />
+									<effect type="fade" start="100" end="200" time="100" reversible="false" />
+								</animation>
+								<visible>Container.Content(Movies) + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
 							<control type="label">
 								<posx>1045</posx>
@@ -6772,7 +6841,15 @@
 								<width>88</width>
 								<height>88</height>
 								<texture>$VAR[RightListBannerOverlayFo]</texture>
-								<visible>Container.Content(Movies)</visible>
+								<visible>!Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
+							</control>
+							<control type="image">
+								<posx>329</posx>
+								<posy>0</posy>
+								<width>88</width>
+								<height>88</height>
+								<texture>$VAR[RightListBannerOverlayFo]</texture>
+								<visible>Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
 						</focusedlayout>
 						<focusedlayout condition="Skin.HasSetting(ShowRightListBanner) + Container.Content(TvShows)" height="110">
@@ -7759,10 +7836,10 @@
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="image">
-								<posx>299</posx>
-								<posy>-2</posy>
-								<width>40</width>
-								<height>40</height>
+								<posx>300</posx>
+								<posy>1</posy>
+								<width>80</width>
+								<height>80</height>
 								<aspect>keepaspect</aspect>
 								<texture>$VAR[Top250RightListBannerOverlayFo]</texture>
 								<visible>Container.Content(Movies)</visible>
@@ -7849,7 +7926,7 @@
 								<visible>Container.Content(Episodes) | [Container.Content(Movies) + !substring(ListItem.Path,videodb://1/7,left)]</visible>
 							</control>
 							<control type="image">
-								<posx>302</posx>
+								<posx>300</posx>
 								<posy>0</posy>
 								<width>88</width>
 								<height>88</height>
