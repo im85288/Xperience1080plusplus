@@ -77,7 +77,7 @@
 			<include>FullscreenDimensions</include>
 			<visible>Player.HasAudio + Skin.HasSetting(OSDVisualisation.Enabled) + Skin.HasSetting(HomeVisualisation.Enabled)</visible>
 		</control>
-		<control type="image"> 
+		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture>windows/common/overlay2.png</texture>
 		</control>
@@ -87,7 +87,7 @@
 			<include>FullscreenDimensions</include>
 			<visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
 		</control>
-		<control type="image"> 
+		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture>windows/common/overlay2.png</texture>
 		</control>
@@ -129,6 +129,46 @@
 			<visible>Skin.HasSetting(Stage.Enabled)</visible>
 		</control>
 	</include>
+	<include name="Common3SkinSettingsDecisionOverlay">
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
+		</control>
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
+		</control>
+		<control type="image"> <!-- show even more fanart but not on homescreen -->
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/overlay2.png</texture>
+			<visible>Skin.HasSetting(MoreHomeBackgroundOpacity) + Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(script-Actors-DialogInfo.xml)</visible>
+		</control>
+		<control type="image"> <!-- show even more fanart and also on homescreen -->
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/fanartoverlay.png</texture>
+			<visible>!Skin.HasSetting(MoreHomeBackgroundOpacity) + Skin.HasSetting(MoreBackgroundOpacity)  + !Window.IsActive(script-Actors-DialogInfo.xml)</visible>
+		</control>
+		<control type="image"> <!-- show more fanart but not on homescreen -->
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/overlay.png</texture>
+			<visible>Skin.HasSetting(HomeBackgroundOpacity) + Skin.HasSetting(BackgroundOpacity)  + !Window.IsActive(script-Actors-DialogInfo.xml)</visible>
+		</control>
+		<control type="image"> <!-- show more fanart and also on homescreen -->
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/overlay2.png</texture>
+			<visible>!Skin.HasSetting(HomeBackgroundOpacity) + Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(script-Actors-DialogInfo.xml)</visible>
+		</control>
+		<control type="image"> <!-- neither show more or show even more -->
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/overlay.png</texture>
+			<visible>!Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(script-Actors-DialogInfo.xml)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture>windows/common/stage-dark.png</texture>
+			<visible>Skin.HasSetting(Stage.Enabled)</visible>
+		</control>
+	</include>
 	<include name="CommonItems">
 		<include>CommonContent</include>
 		<include>BackgroundFanart</include>
@@ -143,6 +183,14 @@
 		<include>CommonContent</include>
 		<include>BackgroundFanart</include>
 		<include>CommonSkinSettingsDecisionOverlay</include>
+	</include>
+	<include name="CommonItems3">
+		<include>CommonContent</include>
+		<include>Common3SkinSettingsDecisionOverlay</include>
+	</include>
+	<include name="CommonItems4">
+		<include>CommonContent</include>
+		<include>Common4SkinSettingsDecisionOverlay</include>
 	</include>
 	<include name="CommonItemsMusicOSD">
 		<include condition="Skin.HasSetting(OSDVisualisation.Enabled) + ![System.HasAddon(script.artistslideshow) + Skin.HasSetting(ArtistSlideShow.Enabled)]">OSDVisualisation</include>
@@ -235,8 +283,8 @@
 			<texture background="true" fallback=".">$INFO[Container(82).ListItem.Icon]</texture>
 			<fadetime>600</fadetime>
 			<include>Animation_FanartFade</include>
-			<visible>[Control.HasFocus(82) + !Container(20).HasFocus(7)] + [stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)] +
-				![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
+			<visible>[Control.HasFocus(82) + !Container(20).HasFocus(7)] + [stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)] + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]
+			</visible>
 		</control>
 		<control type="image">
 			<description>Horizontal featured/ongoing/spotlight items fanarts</description>
@@ -400,17 +448,12 @@
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture>windows/common/black_content.png</texture>
-			<animation effect="fade" time="300" start="0" end="95" tween="sine" easing="out"
-				condition="!Window.IsActive(mediafilter) + !Window.IsVisible(contextmenu) + !Window.IsActive(script-Actors-DialogVideoInfo.xml)">Visible</animation>
+			<animation effect="fade" time="300" start="0" end="95" tween="sine" easing="out" condition="!Window.IsActive(mediafilter) + !Window.IsVisible(contextmenu) + !Window.IsActive(script-Actors-DialogVideoInfo.xml)">Visible</animation>
 			<animation effect="fade" time="300" start="95" end="0" tween="sine" easing="in">Hidden</animation>
-			<visible>[[Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] |
-				Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) |
-				Window.IsActive(screencalibration) | Window.IsActive(numericinput) | Window.IsActive(filestackingdialog) | Window.IsActive(LockSettings)] + !Window.IsActive(movieinformation) +
-				!Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation) + !Window.IsActive(script-globalsearch-infodialog.xml)] | Window.IsActive(smartplaylisteditor) |
-				Window.IsActive(smartplaylistrule) | Window.IsActive(pictureinfo) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(3001) |
-				Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3007) | Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(mediafilter) |
-				Window.IsActive(mediafilter) | Window.IsActive(pvrgroupmanager) | Window.IsActive(pvrtimersetting) | Window.IsActive(pvrguidesearch) | Window.IsActive(pvrchannelmanager) |
-				Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo)</visible>
+			<visible>[[Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) | Window.IsActive(screencalibration) | Window.IsActive(numericinput) | Window.IsActive(filestackingdialog) | Window.IsActive(LockSettings)] +
+				!Window.IsActive(movieinformation) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation) + !Window.IsActive(script-globalsearch-infodialog.xml)] | Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(pictureinfo) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(3001) | Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3007) |
+				Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(mediafilter) | Window.IsActive(mediafilter) | Window.IsActive(pvrgroupmanager) | Window.IsActive(pvrtimersetting) | Window.IsActive(pvrguidesearch) | Window.IsActive(pvrchannelmanager) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo)
+			</visible>
 		</control>
 	</include>
 	<include name="FadeBackgroundMovieInfo">
@@ -419,9 +462,8 @@
 			<texture>windows/common/black_content.png</texture>
 			<animation effect="fade" time="300" start="0" end="95" tween="sine" easing="out">Visible</animation>
 			<animation effect="fade" time="300" start="95" end="0" tween="sine" easing="in">Hidden</animation>
-			<visible>Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | Window.IsActive(yesnodialog) | Window.IsActive(virtualkeyboard) |
-				Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(numericinput) |
-				Window.IsActive(3004) | Window.IsActive(DialogSelect.xml)</visible>
+			<visible>Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | Window.IsActive(yesnodialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(numericinput) | Window.IsActive(3004) | Window.IsActive(DialogSelect.xml)
+			</visible>
 		</control>
 	</include>
 	<include name="FadeBackgroundContentContext">
@@ -429,8 +471,8 @@
 			<include>FullscreenDimensions</include>
 			<texture>windows/common/black2.png</texture>
 			<include>OpenCloseAnimationTwo</include>
-			<visible>[ControlGroup(9000).HasFocus() | Window.IsActive(contextmenu)] + !Window.IsActive(shutdownmenu) + !Window.IsActive(movieinformation) + !Window.IsActive(1122) +
-				!Window.IsActive(addoninformation) + !Window.IsActive(musicinformation)</visible>
+			<visible>[ControlGroup(9000).HasFocus() | Window.IsActive(contextmenu)] + !Window.IsActive(shutdownmenu) + !Window.IsActive(movieinformation) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation)
+			</visible>
 		</control>
 	</include>
 	<include name="FadeBackgroundButtonMenu">
