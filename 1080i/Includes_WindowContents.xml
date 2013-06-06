@@ -141,27 +141,27 @@
 		<control type="image"> <!-- show even more fanart but not on homescreen -->
 			<include>FullscreenDimensions</include>
 			<texture>windows/common/overlay2.png</texture>
-			<visible>Skin.HasSetting(MoreHomeBackgroundOpacity) + Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(script-Actors-DialogInfo.xml)</visible>
+			<visible>Skin.HasSetting(MoreHomeBackgroundOpacity) + Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(script-Actors-ContextMenu.xml)</visible>
 		</control>
 		<control type="image"> <!-- show even more fanart and also on homescreen -->
 			<include>FullscreenDimensions</include>
 			<texture>windows/common/fanartoverlay.png</texture>
-			<visible>!Skin.HasSetting(MoreHomeBackgroundOpacity) + Skin.HasSetting(MoreBackgroundOpacity)  + !Window.IsActive(script-Actors-DialogInfo.xml)</visible>
+			<visible>!Skin.HasSetting(MoreHomeBackgroundOpacity) + Skin.HasSetting(MoreBackgroundOpacity)  + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(script-Actors-ContextMenu.xml)</visible>
 		</control>
 		<control type="image"> <!-- show more fanart but not on homescreen -->
 			<include>FullscreenDimensions</include>
 			<texture>windows/common/overlay.png</texture>
-			<visible>Skin.HasSetting(HomeBackgroundOpacity) + Skin.HasSetting(BackgroundOpacity)  + !Window.IsActive(script-Actors-DialogInfo.xml)</visible>
+			<visible>Skin.HasSetting(HomeBackgroundOpacity) + Skin.HasSetting(BackgroundOpacity)  + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(script-Actors-ContextMenu.xml)</visible>
 		</control>
 		<control type="image"> <!-- show more fanart and also on homescreen -->
 			<include>FullscreenDimensions</include>
 			<texture>windows/common/overlay2.png</texture>
-			<visible>!Skin.HasSetting(HomeBackgroundOpacity) + Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(script-Actors-DialogInfo.xml)</visible>
+			<visible>!Skin.HasSetting(HomeBackgroundOpacity) + Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(script-Actors-ContextMenu.xml)</visible>
 		</control>
 		<control type="image"> <!-- neither show more or show even more -->
 			<include>FullscreenDimensions</include>
 			<texture>windows/common/overlay.png</texture>
-			<visible>!Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(script-Actors-DialogInfo.xml)</visible>
+			<visible>!Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(script-Actors-ContextMenu.xml)</visible>
 		</control>
 		<control type="image">
 			<include>FullscreenDimensions</include>
