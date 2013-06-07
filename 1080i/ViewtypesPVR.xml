@@ -864,8 +864,8 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>black</textcolor>
-								<selectedcolor>black</selectedcolor>
+								<textcolor>blue</textcolor>
+								<selectedcolor>blue</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasEpg + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
@@ -920,8 +920,8 @@
 								<font>Font-Condensed-S75-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
-								<textcolor>black</textcolor>
-								<selectedcolor>black</selectedcolor>
+								<textcolor>blue</textcolor>
+								<selectedcolor>blue</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasTimer | ListItem.IsRecording + Skin.HasSetting(AlternateOSDLiveTv.Enabled)</visible>
 							</control>
