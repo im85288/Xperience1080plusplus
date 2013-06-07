@@ -2463,6 +2463,8 @@
 					<onright condition="!System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">825</onright>
 					<!-- <onright>CancelAlarm(HomeTileMove,true)</onright> <onright>CancelAlarm(HomeTileMoveTwo,true)</onright> <onright>CancelAlarm(HomeTileMoveThree,true)</onright> <onright condition="!Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright> <onright>Control.Move(20,1)</onright> <onright condition="!Skin.HasSetting(HomeMusic)">425</onright> <onright condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">625</onright> <onright condition="Skin.HasSetting(HomeMusic) 
 						+ Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">725</onright> <onright condition="Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">825</onright> <onclick condition="!Library.HasContent(tvshows)">ActivateWindow(videos,files,return)</onclick> <onclick condition="Library.HasContent(tvshows)">ActivateWindow(videos,tvshowtitles,return)</onclick> -->
+					<onclick condition="!Library.HasContent(tvshows)">ActivateWindow(videos,files,return)</onclick>
+					<onclick condition="Library.HasContent(tvshows)">ActivateWindow(videos,tvshowtitles,return)</onclick>
 					<onup>ActivateWindow(3021)</onup>
 					<ondown>301</ondown>
 				</control>
@@ -3518,7 +3520,7 @@
 					<!-- <onleft condition="System.HasAddon(script.globalsearch)">Control.Move(20,-1)</onleft> <onleft condition="System.HasAddon(script.globalsearch)">125</onleft> <onleft conition="!System.HasAddon(script.globalsearch)">RunScript(special://skin/extras/scripts/setClearProperty.py,BounceLeft)</onleft> <onright>AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onright> <onright>AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onright> <onright>Control.Move(20,1)</onright> 
 						<onright condition="!Skin.HasSetting(HomeHome)">525</onright> <onright condition="Skin.HasSetting(HomeHome) + !Skin.HasSetting(HomeMovies)">225</onright> <onright condition="Skin.HasSetting(HomeHome) + Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">325</onright> <onright condition="Skin.HasSetting(HomeHome) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMusic)">425</onright> <onright condition="Skin.HasSetting(HomeHome) + Skin.HasSetting(HomeMovies) 
 						+ Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">625</onright> <onright condition="Skin.HasSetting(HomeHome) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">725</onright> <onright condition="Skin.HasSetting(HomeHome) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">825</onright> -->
-					<onclick>ActivateWindow(pvr)</onclick>
+					<onclick condition="!Library.HasContent(pictures)">ActivateWindow(pictures)</onclick>
 					<onup>80</onup>
 					<ondown>1001</ondown>
 				</control>
