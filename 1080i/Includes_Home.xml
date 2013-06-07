@@ -3575,8 +3575,9 @@
 						<animation effect="fade" start="0" end="100" time="0">Visible</animation>
 						<animation effect="fade" start="100" delay="500" end="0" time="10">Hidden</animation>
 						<aspectratio>scale</aspectratio>
-						<imagepath background="true">$INFO[Skin.String(PicturesDir)]</imagepath>
-					</control>		Ï
+						<imagepath background="true" fallback="pictures.png">$INFO[Skin.String(PicturesDir)]</imagepath>
+					</control>
+					Ï
 					<control type="panel" id="1001">
 						<posx>70</posx>
 						<posy>-24</posy>
@@ -3611,24 +3612,7 @@
 									<posy>19</posy>
 									<width>293</width>
 									<height>293</height>
-									<texture border="7">windows/home/tile.png</texture>
-									<visible>[Skin.HasSetting(HomeBackgroundOpacity) | Skin.HasSetting(MoreHomeBackgroundOpacity)] + !Skin.HasSetting(HomePicturesTiles)</visible>
-								</control>
-								<control type="image">
-									<posx>19</posx>
-									<posy>19</posy>
-									<width>293</width>
-									<height>293</height>
-									<texture border="7">windows/home/tile2.png</texture>
-									<visible>[!Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(MoreHomeBackgroundOpacity)] + !Skin.HasSetting(HomePicturesTiles)</visible>
-								</control>
-								<control type="image">
-									<posx>19</posx>
-									<posy>19</posy>
-									<width>293</width>
-									<height>293</height>
 									<texture border="7">windows/home/tile-pictures.png</texture>
-									<visible>Skin.HasSetting(HomePicturesTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3673,24 +3657,7 @@
 										<posy>19</posy>
 										<width>293</width>
 										<height>293</height>
-										<texture border="7">windows/home/tile.png</texture>
-										<visible>[Skin.HasSetting(HomeBackgroundOpacity) | Skin.HasSetting(MoreHomeBackgroundOpacity)] + !Skin.HasSetting(HomePicturesTiles)</visible>
-									</control>
-									<control type="image">
-										<posx>19</posx>
-										<posy>19</posy>
-										<width>293</width>
-										<height>293</height>
-										<texture border="7">windows/home/tile2.png</texture>
-										<visible>[!Skin.HasSetting(HomeBackgroundOpacity) + !Skin.HasSetting(MoreHomeBackgroundOpacity)] + !Skin.HasSetting(HomePicturesTiles)</visible>
-									</control>
-									<control type="image">
-										<posx>19</posx>
-										<posy>19</posy>
-										<width>293</width>
-										<height>293</height>
 										<texture border="7">windows/home/tile-pictures.png</texture>
-										<visible>Skin.HasSetting(HomePicturesTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
