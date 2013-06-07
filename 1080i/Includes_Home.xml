@@ -459,9 +459,6 @@
 			</control>
 		</control>
 	</include>
-	<include name="HomeControlListFocus2">
-		<focusposition>2</focusposition>
-	</include>
 	<include name="HomeControlListFocus1">
 		<focusposition>1</focusposition>
 	</include>
@@ -477,9 +474,8 @@
 			<width>2</width>
 			<onup>21</onup>
 			<orientation>horizontal</orientation>
-			<include condition="System.HasAddon(script.globalsearch) + System.GetBool(pvrmanager.enabled)">HomeControlListFocus1</include>
-			<include condition="[!System.HasAddon(script.globalsearch) + System.GetBool(pvrmanager.enabled)] | [System.HasAddon(script.globalsearch) + !System.GetBool(pvrmanager.enabled)]">HomeControlListFocus0</include>
-			<include condition="!System.HasAddon(script.globalsearch) + !System.GetBool(pvrmanager.enabled)">HomeControlListFocus0</include>
+			<include condition="System.HasAddon(script.globalsearch)">HomeControlListFocus1</include>
+			<include condition="!System.HasAddon(script.globalsearch)">HomeControlListFocus0</include>
 			<scrolltime>0</scrolltime>
 			<viewtype>list</viewtype>
 			<itemlayout width="2" height="2" />
@@ -780,7 +776,7 @@
 						<effect type="slide" start="1500" end="0" tween="cubic" easing="out" time="700" />
 						<effect type="fade" start="25" end="100" tween="sine" easing="in" time="350" delay="250" />
 					</animation>
-					<animation type="WindowClose" condition="[Container(20).HasFocus(1) + !System.GetBool(pvrmanager.enabled)] | [Container(20).HasFocus(9) + System.GetBool(pvrmanage" reversible="true">
+					<animation type="WindowClose" condition="Container(20).HasFocus(1)" reversible="true">
 						<effect type="slide" start="0" end="500" tween="sine" delay="250" easing="out" time="350" />
 						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="350" time="250" />
 					</animation>
@@ -792,13 +788,12 @@
 						<effect type="zoom" start="100" end="150" center="1160,386" tween="sine" delay="250" easing="out" time="350" />
 						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="350" time="250" />
 					</animation>
-					<animation type="WindowOpen" condition="Container(20).HasFocus(3) | [Container(20).HasFocus(4) + Skin.HasSetting(HomeMovies)] | [Container(20).HasFocus(6) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)] | [Container(20).HasFocus(7) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic)] | [Container(20).HasFocus(8) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)]"
-						reversible="true">
+					<animation type="WindowOpen"
+						condition="Container(20).HasFocus(3) | [Container(20).HasFocus(4) + Skin.HasSetting(HomeMovies)] | [Container(20).HasFocus(9) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)] |  [Container(20).HasFocus(10) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled)] |  [Container(20).HasFocus(5) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures)]  | [Container(20).HasFocus(6) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) ] | [Container(20).HasFocus(7) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)]" reversible="true">
 						<effect type="slide" start="-1500" end="0" tween="cubic" easing="out" time="700" />
 						<effect type="fade" start="25" end="100" tween="sine" easing="in" time="350" delay="250" />
 					</animation>
-					<animation type="WindowClose" condition="Container(20).HasFocus(3) | [Container(20).HasFocus(4) + Skin.HasSetting(HomeMovies)] | [Container(20).HasFocus(6) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)] | [Container(20).HasFocus(7) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic)] | [Container(20).HasFocus(8) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)]"
-						reversible="true">
+					<animation type="WindowClose" condition="Container(20).HasFocus(3) | [Container(20).HasFocus(4) + Skin.HasSetting(HomeMovies)] | [Container(20).HasFocus(9) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)] |  [Container(20).HasFocus(10) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled)] |  [Container(20).HasFocus(5) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures)]  | [Container(20).HasFocus(6) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) ] | [Container(20).HasFocus(7) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)]" reversible="true">
 						<effect type="slide" start="0" end="-500" tween="sine" delay="250" easing="out" time="350" />
 						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="350" time="250" />
 					</animation>
@@ -1675,11 +1670,15 @@
 						<effect type="zoom" start="100" end="150" center="1160,386" tween="sine" delay="250" easing="out" time="350" />
 						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="350" time="250" />
 					</animation>
-					<animation type="WindowOpen" condition="Container(20).HasFocus(4) | [Container(20).HasFocus(5) + Skin.HasSetting(HomeTVShows)] | [Container(20).HasFocus(6) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic)] | [Container(20).HasFocus(7) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)]" reversible="true">
+					<animation type="WindowOpen"
+						condition="Container(20).HasFocus(4) | [Container(20).HasFocus(9) + Skin.HasSetting(HomeTVShows)] |  [Container(20).HasFocus(10) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled)] |  [Container(20).HasFocus(5) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures)]  | [Container(20).HasFocus(6) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) ] | [Container(20).HasFocus(7) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)]"
+						reversible="true">
 						<effect type="slide" start="-1500" end="0" tween="cubic" easing="out" time="700" />
 						<effect type="fade" start="25" end="100" tween="sine" easing="in" time="350" delay="250" />
 					</animation>
-					<animation type="WindowClose" condition="Container(20).HasFocus(4) | [Container(20).HasFocus(5) + Skin.HasSetting(HomeTVShows)] | [Container(20).HasFocus(6) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic)] | [Container(20).HasFocus(7) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)]" reversible="true">
+					<animation type="WindowClose"
+						condition="Container(20).HasFocus(4) | [Container(20).HasFocus(9) + Skin.HasSetting(HomeTVShows)] |  [Container(20).HasFocus(10) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled)] |  [Container(20).HasFocus(5) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures)]  | [Container(20).HasFocus(6) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) ] | [Container(20).HasFocus(7) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)]"
+						reversible="true">
 						<effect type="slide" start="0" end="-500" tween="sine" delay="250" easing="out" time="350" />
 						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="350" time="250" />
 					</animation>
