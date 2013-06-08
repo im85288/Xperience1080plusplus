@@ -789,11 +789,14 @@
 						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="350" time="250" />
 					</animation>
 					<animation type="WindowOpen"
-						condition="Container(20).HasFocus(3) | [Container(20).HasFocus(4) + Skin.HasSetting(HomeMovies)] | [Container(20).HasFocus(9) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)] |  [Container(20).HasFocus(10) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled)] |  [Container(20).HasFocus(5) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures)]  | [Container(20).HasFocus(6) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) ] | [Container(20).HasFocus(7) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)]" reversible="true">
+						condition="Container(20).HasFocus(3) | [Container(20).HasFocus(4) + Skin.HasSetting(HomeMovies)] | [Container(20).HasFocus(9) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)] |  [Container(20).HasFocus(10) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled)] |  [Container(20).HasFocus(5) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures)]  | [Container(20).HasFocus(6) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) ] | [Container(20).HasFocus(7) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)]"
+						reversible="true">
 						<effect type="slide" start="-1500" end="0" tween="cubic" easing="out" time="700" />
 						<effect type="fade" start="25" end="100" tween="sine" easing="in" time="350" delay="250" />
 					</animation>
-					<animation type="WindowClose" condition="Container(20).HasFocus(3) | [Container(20).HasFocus(4) + Skin.HasSetting(HomeMovies)] | [Container(20).HasFocus(9) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)] |  [Container(20).HasFocus(10) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled)] |  [Container(20).HasFocus(5) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures)]  | [Container(20).HasFocus(6) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) ] | [Container(20).HasFocus(7) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)]" reversible="true">
+					<animation type="WindowClose"
+						condition="Container(20).HasFocus(3) | [Container(20).HasFocus(4) + Skin.HasSetting(HomeMovies)] | [Container(20).HasFocus(9) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)] |  [Container(20).HasFocus(10) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled)] |  [Container(20).HasFocus(5) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures)]  | [Container(20).HasFocus(6) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) ] | [Container(20).HasFocus(7) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)]"
+						reversible="true">
 						<effect type="slide" start="0" end="-500" tween="sine" delay="250" easing="out" time="350" />
 						<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="350" time="250" />
 					</animation>
@@ -3729,12 +3732,14 @@
 				<description>Music</description>
 				<visible>!Skin.HasSetting(HomeMusic)</visible>
 				<control type="button" id="425">
-					<!-- <onleft>CancelAlarm(HomeTileMove,true)</onleft> <onleft>CancelAlarm(HomeTileMoveTwo,true)</onleft> <onleft>CancelAlarm(HomeTileMoveThree,true)</onleft> <onleft condition="!Skin.HasSetting(HomeTVShows)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onleft> <onleft condition="Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft> <onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft> 
-						<onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft> <onleft>Control.Move(20,-1)</onleft> <onleft condition="!Skin.HasSetting(HomeTVShows)">325</onleft> <onleft condition="Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">225</onleft> <onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">525</onleft> -->
-					<onleft condition="!Skin.HasSetting(HomePictures)">CancelAlarm(HomeTileMove,true)</onleft>
-					<onleft condition="!Skin.HasSetting(HomePictures)">CancelAlarm(HomeTileMoveTwo,true)</onleft>
-					<onleft condition="!Skin.HasSetting(HomePictures)">CancelAlarm(HomeTileMoveThree,true)</onleft>
-					<onleft condition="!Skin.HasSetting(HomePictures)">Control.Move(20,-1)</onleft>
+					<onleft>CancelAlarm(HomeTileMove,true)</onleft>
+					<onleft>CancelAlarm(HomeTileMoveTwo,true)</onleft>
+					<onleft>CancelAlarm(HomeTileMoveThree,true)</onleft>
+					<onleft condition="!Skin.HasSetting(HomeTVShows)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onleft>
+					<onleft condition="Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
+					<onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
+					<onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+					<onleft>Control.Move(20,-1)</onleft>
 					<onleft condition="!Skin.HasSetting(HomePictures)">1025</onleft>
 					<onleft condition="Skin.HasSetting(HomePictures) + System.GetBool(pvrmanager.enabled)">925</onleft>
 					<onleft condition="Skin.HasSetting(HomePictures) + !Skin.HasSetting(HomeTVShows)+ !System.GetBool(pvrmanager.enabled)">325</onleft>
